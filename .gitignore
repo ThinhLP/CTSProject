@@ -1,0 +1,14 @@
+logs
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+**/.DS_Store
+c/
+/.sbtserver
+/project/.sbtserver
+/project/.sbtserver.lock
+/project/play-fork-run.sbt
