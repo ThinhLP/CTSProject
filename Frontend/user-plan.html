@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traisy - Hệ thống Đào tạo trực tuyến cho Doanh nghiệp</title>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+</head>
+
+<body>
+    <div class="left-panel">
+        <div class="logo-wrapper">
+            <img class="logo" src="resources/images/Bold_Logo.png" />
+        </div>
+        <div class="user-info">
+            <img class="user-avatar" src="resources/images/man.png" />
+            <span>Nguyen Van Ahihi</span>
+        </div>
+        <div class="navigator-wrapper">
+            <div class="nav-title">DANH SÁCH KẾ HOẠCH</div>
+            <ul class="nav-items">
+                <li><a href="#">Đào tạo lập trình viên Web Fullstack</a></li>
+                <li><a href="#">Đào tạo Designer chuyên nghiệp</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-panel">
+        <div class="fake-panel"></div>
+        <div class="main-content-wrapper">
+            <div class="right-panel-user-info">
+                <img class="right-panel-user-avatar" src="resources/images/man.png" />
+                <ul class="menu-logged-in">
+                    <li><a href="#">Kế hoạch đang tham gia</a></li>
+                    <li><a href="#">Quản lý tài khoản</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="main-content-title">Kế hoạch đang tham gia</div>
+                <!-- YOUR CONTENT HERE !-->
+                <div class="cards-wrapper">
+                    <div class="card-horizontal">
+                        <div class="card-img" style="background-image: url(resources/images/plan1.png)"></div>
+                        <div class="card-info">
+                            <div class="card-title ellipsis">Đào tạo lập trình viên Web Full stack</div>
+                            <div class="card-subtitle"><span class="plan-time">Từ 03/01/2018 đến 20/8/2018</span></div>
+                            <div class="card-description">Chương trình đào tạo kéo dài trong 8 tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Web. Từ design, frontend đến backend. </div>
+                            <div class="card-action">
+                                <button class="primary-button button">Học</button>
+                                <button class="flat-button button">Chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-horizontal">
+                        <div class="card-img" style="background-image: url(resources/images/plan2.jpg)"></div>
+                        <div class="card-info">
+                            <div class="card-title ellipsis">Đào tạo Designer chuyên nghiệp</div>
+                            <div class="card-subtitle"><span class="plan-time">Từ 06/09/2018 đến 31/12/2018</span></div>
+                            <div class="card-description">Chương trình đào tạo kéo dài trong cả chục tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Design, UI UX. </div>
+                            <div class="card-action">
+                                <button class="primary-button button">Học</button>
+                                <button class="flat-button button">Chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- For javascript -->
+    <script src="resources/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/traisy.min.js"></script>
+    <script>
+        $(function() {
+            console.log('Loading successfully!');
+        });
+    </script>
+</body>
+</html>

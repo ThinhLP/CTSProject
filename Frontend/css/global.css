@@ -153,6 +153,7 @@ ul {
 .main-content-title {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 40px;
 }
 
 .menu-logged-in {
@@ -211,4 +212,81 @@ ul {
 }
 .menu-logged-in li:hover a {
     color: #333;
+}
+
+/* Format for button */
+.button {
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 3px;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: #16AF32;
+    color: #fff;
+}
+
+.flat-button {
+    color: #16AF32;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Format for card */
+.ellipsis {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.cards-wrapper {
+    width: 100%;
+}
+
+.card-horizontal {
+    width: 90%;
+    display: flex;
+    min-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.card-img {
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 150px;
+}
+
+.card-info {
+    width: 70%;
+    padding: 6px 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    cursor: pointer;
+}
+.card-subtitle {
+    font-weight: 400px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #999;
+}
+.card-description {
+    font-size: 14px;
+    text-align: justify;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 80px;
+}
+.card-action {
+    text-align: right;
 }
