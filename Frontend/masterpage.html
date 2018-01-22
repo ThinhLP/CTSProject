@@ -32,7 +32,7 @@
         <div class="fake-panel"></div>
         <div class="main-content-wrapper">
             <div class="right-panel-user-info">
-                <img class="right-panel-user-avatar" src="resources/images/man.png" />
+                <img class="right-panel-user-avatar" src="resources/images/man.png" collapsed="true" target=".menu-logged-in" />
                 <ul class="menu-logged-in">
                     <li><a href="#">Kế hoạch đang tham gia</a></li>
                     <li><a href="#">Quản lý tài khoản</a></li>
@@ -52,7 +52,7 @@
     <script src="dist/js/traisy.min.js"></script>
     <script>
         $(function() {
-            console.log('Loading successfully!');
+            var page = new MasterPage();
         });
     </script>
 </body>

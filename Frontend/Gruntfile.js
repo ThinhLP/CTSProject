@@ -2,6 +2,8 @@ module.exports = function (grunt) {
     'use strict';
     var jsSources = [
         'js/components/*.js',
+        'js/modules/*.js',
+        'js/utils/*.js',
     ];
     // Project configuration.
     grunt.initConfig({

@@ -12,3 +12,4 @@ c/
 /project/.sbtserver
 /project/.sbtserver.lock
 /project/play-fork-run.sbt
+/Frontend/node_modules

@@ -222,17 +222,24 @@ ul {
     outline: none;
     display: inline-block;
     cursor: pointer;
+    border: none;
+    transition: 0.123s all ease-in-out;
 }
 
 .primary-button {
     background-color: #16AF32;
     color: #fff;
 }
+.primary-button:hover {
+    background-color: #388E3C;
+}
 
 .flat-button {
     color: #16AF32;
     background-color: transparent;
-    border-color: transparent;
+}
+.flat-button:hover {
+    color: #388E3C;
 }
 
 /* Format for card */
