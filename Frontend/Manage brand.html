@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traisy - Hệ thống Đào tạo trực tuyến cho Doanh nghiệp</title>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/managebrand.css" />
+</head>
+
+<body>
+    <div class="left-panel">
+        <div class="logo-wrapper">
+            <img class="logo" src="resources/images/Bold_Logo.png" />
+        </div>
+        <div class="user-info">
+            <img class="user-avatar" src="resources/images/man.png" />
+            <span>Nguyen Van Ahihi</span>
+        </div>
+        <div class="navigator-wrapper">
+            <!--            <div class="nav-title">DANH SÁCH KẾ HOẠCH</div>-->
+            <ul class="nav-items">
+                <li><a href="#">Thống kê</a></li>
+                <li><a href="#">Quản lý người dùng</a></li>
+                <li><a href="#">Quản lý kế hoạch</a></li>
+                <li><a href="#">Quản lý thương hiệu</a></li>
+                <li><a href="#">Quản lý kĩ năng</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-panel">
+        <div class="fake-panel"></div>
+        <div class="main-content-wrapper">
+            <div class="right-panel-user-info">
+                <img class="right-panel-user-avatar" src="resources/images/man.png" collapsed="true" target=".menu-logged-in" />
+                <ul class="menu-logged-in">
+                    <li><a href="#">Kế hoạch đang tham gia</a></li>
+                    <li><a href="#">Quản lý tài khoản</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="main-content-title">Quản lý thương hiệu</div>
+                <div class="form-group row" style="padding-bottom: 15px">
+                    <label class="col-sm-2 col-form-label">Tên thương hiệu</label>
+                    <div class="col-sm-10" style="padding : 0px">
+                        <input class="form-control" id="inputPassword" placeholder="Cocacola" style="width: 50%">
+                    </div>
+                </div>
+                <div class="form-group row" style="padding-bottom: 15px">
+                    <label class="col-sm-2 col-form-label">Logo</label>
+                    <div style="width: 50%">
+                        <img src="resources/images/logo_example.png" class="sizepicture" />
+                        <button type="button" class="btn-add btn btn-primary" style="float: right">Chọn</button>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Mô tả thương hiệu</label>
+                    <div style="width: 50%">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- For javascript -->
+            <script src="resources/jquery-3.3.1.min.js"></script>
+            <script src="dist/js/traisy.min.js"></script>
+            <script>
+                $(function() {
+                    var page = new MasterPage();
+                });
+
+            </script>
+</body>
+
+</html>
