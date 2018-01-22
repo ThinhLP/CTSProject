@@ -117,6 +117,7 @@ ul {
 .right-panel {
     width: 100%;
     display: flex;
+    padding-bottom: 30px;
 }
 
 .fake-panel {
@@ -216,7 +217,7 @@ ul {
 
 /* Format for button */
 .button {
-    padding: 8px 15px;
+    padding: 5px 12px;
     text-align: center;
     border-radius: 3px;
     outline: none;
@@ -250,17 +251,18 @@ ul {
 }
 
 .cards-wrapper {
-    width: 100%;
+    width: 90%;
 }
 
 .card-horizontal {
-    width: 90%;
+    width: 100%;
     display: flex;
     min-height: 150px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 40px;
     cursor: pointer;
+    position: relative;
 }
 
 .card-img {
@@ -296,4 +298,28 @@ ul {
 }
 .card-action {
     text-align: right;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+.card-progress-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.card-progress-bar {
+    flex: 5;
+    background-color: #e6e6e6;
+}
+.completed-progress {
+    background-color: #16AF32;
+    height: 4px;
+    border-radius: 10px;
+}
+.percentage {
+    flex: 1;
+    text-align: right;
+    color: #999;
 }

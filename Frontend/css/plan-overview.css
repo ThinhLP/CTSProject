@@ -1,0 +1,96 @@
+.plan-time {
+    display: block;
+    font-weight: 400px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.plan-overview-wrapper {
+    width: 100%;
+}
+
+.plan-intro-wrapper {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+}
+
+.plan-image {
+    width: 40%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 200px;
+}
+
+.plan-description {
+    width: 60%;
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.section-heading {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+
+.programs-list {
+    width: 100%;
+    
+}
+.program-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.stepper {
+    width: 70%;
+}
+
+/* Format fo course card */
+.course-card {
+    margin-bottom: 0;
+    height: 100px;
+}
+
+.course-card .card-img {
+    width: 30%;
+    height: 100px;
+    
+}
+
+.course-card .card-info {
+    width: 70%;
+    padding: 6px 15px;
+    height: 100px;
+    
+}
+
+.program-title {
+     width: 70%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.program-title i {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.program-wrapper .stepper {
+    display: none;
+}
+
+.program-wrapper:first-child .stepper{
+    display: block;
+}
+
+
