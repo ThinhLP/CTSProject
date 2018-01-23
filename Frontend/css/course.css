@@ -1,0 +1,128 @@
+.course-panel {
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.course-content {
+    width: 90%;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 500px;
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12), 0px 1px 4px rgba(0, 0, 0, 0.12);*/
+}
+
+.course-panel .title {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.course-image {
+    width: 50%;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+}
+
+.course-info {
+    flex: 1;
+    position: relative;
+}
+
+.course-info h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.course-lecture-container {
+    position: relative;
+    width: 100%;
+}
+
+.navbar {
+    border: 0;
+    border-radius: 3px;
+    padding: .625rem 0;
+    margin-bottom: 15px;
+}
+
+.navbar-lecture {
+    height: 60px;
+    background: #F5F5F5;
+    color: #3c4858;
+    font-weight: 100;
+    padding: 20px;
+}
+
+.lecture-name {
+    position: relative;
+    color: inherit;
+    height: 50px;
+    font-size: 1.125rem;
+    line-height: 30px;
+    padding: .625rem 0;
+}
+
+.lecture-option {
+    display: flex !important;
+}
+
+.navbar-otpion {
+    align-items: center;
+    margin-left: auto !important;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.option-item {
+    padding: 1em;
+    cursor: pointer;
+}
+
+.table .btn {
+    width: 35px;
+    height: 35px;
+    margin: 0px;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.table > thead:first-child > tr:first-child > th {
+    border-top: 0;
+}
+
+.btn {
+    font-weight: 400;
+    line-height: 1.428571;
+    letter-spacing: 0;
+    border: 0;
+    border-radius: .2rem;
+    transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+    will-change: box-shadow, transform;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
+}
+
+.btn-edit {
+    color: #fff;
+    background-color: #16AF32;
+    border-color: #16AF32;
+    box-shadow: 0 2px 2px 0 rgba(76, 175, 80, .14), 0 3px 1px -2px rgba(76, 175, 80, .2), 0 1px 5px 0 rgba(76, 175, 80, .12);
+}
+
+.btn-edit:active,
+.btn-edit:hover {
+    box-shadow: 0 14px 26px -12px rgba(76, 175, 80, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(76, 175, 80, .2);
+}
+
+.btn-edit-course-info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
