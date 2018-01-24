@@ -1,101 +1,48 @@
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+* {
+    font-weight: 100;
+}
+
 .course-panel {
     padding-top: 10px;
-    padding-left: 30px;
-}
-
-.course-content {
-    width: 90%;
-    border-radius: 5px;
-    background-color: #fff;
-    height: 500px;
-    position: relative;
-    padding: 15px 20px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    /*box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12), 0px 1px 4px rgba(0, 0, 0, 0.12);*/
-}
-
-.course-panel .title {
-    font-size: 25px;
-    font-weight: 400;
-}
-
-.course-image {
-    width: 50%;
-    background-size: 200%;
-    background-repeat: no-repeat;
-    margin-right: 30px;
-}
-
-.course-info {
-    flex: 1;
-    position: relative;
-}
-
-.course-info h2 {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.course-lecture-container {
-    position: relative;
-    width: 100%;
-}
-
-.navbar {
-    border: 0;
-    border-radius: 3px;
-    padding: .625rem 0;
-    margin-bottom: 15px;
-}
-
-.navbar-lecture {
-    height: 60px;
-    background: #F5F5F5;
-    color: #3c4858;
-    font-weight: 100;
-    padding: 20px;
-}
-
-.lecture-name {
-    position: relative;
-    color: inherit;
-    height: 50px;
-    font-size: 1.125rem;
-    line-height: 30px;
-    padding: .625rem 0;
-}
-
-.lecture-option {
-    display: flex !important;
-}
-
-.navbar-otpion {
-    align-items: center;
-    margin-left: auto !important;
-    display: flex;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-}
-
-.option-item {
-    padding: 1em;
-    cursor: pointer;
-}
-
-.table .btn {
-    width: 35px;
-    height: 35px;
-    margin: 0px;
-    padding: 5px;
-    border-radius: 30px;
-}
-
-.table > thead:first-child > tr:first-child > th {
-    border-top: 0;
 }
 
 .btn {
@@ -109,20 +56,179 @@
     box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
 }
 
-.btn-edit {
+.btn-green {
     color: #fff;
     background-color: #16AF32;
     border-color: #16AF32;
     box-shadow: 0 2px 2px 0 rgba(76, 175, 80, .14), 0 3px 1px -2px rgba(76, 175, 80, .2), 0 1px 5px 0 rgba(76, 175, 80, .12);
 }
 
-.btn-edit:active,
-.btn-edit:hover {
+.btn-green:active,
+.btn-green:hover {
     box-shadow: 0 14px 26px -12px rgba(76, 175, 80, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(76, 175, 80, .2);
 }
 
-.btn-edit-course-info {
+.btn-green-course-info {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.btn-green-course-info > i {
+    padding-right: 12px;
+}
+
+.content {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.87);
+    background: #fff;
+    height: 50vh;
+}
+
+.content-header {
+    z-index: 3;
+}
+
+.content-header-icon {
+    float: left;
+}
+
+.content [data-background-color] {
+    color: #FFFFFF;
+    margin: -20px 15px 0;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.content [data-background-color="green"] {
+    background: linear-gradient(60deg, #16AF32, #118927);
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(13, 105, 30, 0.4);
+}
+
+.content .content-header.content-header-icon i {
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+}
+
+.content .content-info {
+    padding: 15px 20px;
+    position: relative;
+}
+
+.content .info-title {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-weight: 300;
+}
+
+.content .content-header.content-header-icon + .content-info .info-title {
+    padding-bottom: 15px;
+}
+
+.info {
+    margin: 0px 15px;
+    height: 81%;
+    position: relative;
+}
+
+.info .info-text {
+    height: 100%;
+}
+
+.info .info-picture {
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.info .info-text h6 {
+    font-weight: 300;
+}
+
+.navbar {
+    border: 0;
+    border-radius: 3px;
+    padding: .625rem 0;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+}
+
+.navbar-lecture {
+    color: #000;
+    background-color: #FAFAFA !important;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+}
+
+.lecture-container {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    align-items: center;
+}
+
+.lecture-title {
+    position: relative;
+    font-size: 1.125rem;
+    font-weight: 100;
+    line-height: 30px;
+    padding: .625rem 0;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.nav-action {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: auto !important;
+}
+
+.nav-action .nav-item .nav-link {
+    position: relative;
+    color: inherit;
+    padding: .9375rem;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    line-height: 20px;
+}
+
+.table-responsive {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.table > thead:first-child > tr:first-child > th {
+    border-top: 0;
+}
+
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #ddd;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.progress-bar.progress-bar-primary {
+    background: #2196f3 !important;
 }
