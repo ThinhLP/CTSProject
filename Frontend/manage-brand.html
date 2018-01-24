@@ -27,8 +27,8 @@
                 <li><a href="#">Thống kê</a></li>
                 <li><a href="#">Quản lý người dùng</a></li>
                 <li><a href="#">Quản lý kế hoạch</a></li>
-                <li><a href="#">Quản lý thương hiệu</a></li>
-                <li><a href="#">Quản lý kĩ năng</a></li>
+                <li><a href="manage-brand.html">Quản lý thương hiệu</a></li>
+                <li><a href="manage-skill.html">Quản lý kĩ năng</a></li>
             </ul>
         </div>
     </div>
@@ -53,9 +53,9 @@
                 </div>
                 <div class="form-group row" style="padding-bottom: 15px">
                     <label class="col-sm-2 col-form-label">Logo</label>
-                    <div style="width: 50%">
-                        <img src="resources/images/logo_example.png" class="sizepicture" />
-                        <button type="button" class="btn-add btn btn-primary" style="float: right">Chọn</button>
+                    <div class="brand-logo-wrapper">
+                        <img src="resources/images/brand1.jpg" class="sizepicture" />
+                        <button type="button" class="choose-image-btn button primary-button">Chọn</button>
                     </div>
                 </div>
 
@@ -66,17 +66,19 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
 
-            <!-- For javascript -->
-            <script src="resources/jquery-3.3.1.min.js"></script>
-            <script src="dist/js/traisy.min.js"></script>
-            <script>
-                $(function() {
-                    var page = new MasterPage();
-                });
 
-            </script>
+    <!-- For javascript -->
+    <script src="resources/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/traisy.min.js"></script>
+    <script>
+        $(function() {
+            var page = new MasterPage();
+        });
+    </script>
 </body>
 
 </html>

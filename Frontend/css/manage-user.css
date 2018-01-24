@@ -1,0 +1,74 @@
+.border-bottom-shadow {
+    -webkit-box-shadow:0 4px 6px -6px #dee2e6;
+    -moz-box-shadow:0 4px 6px -6px #dee2e6;
+    box-shadow:0px 5px 1px -1px #dee2e6;
+}
+
+.detail {
+    color: deepskyblue;
+}
+
+.viewMode {
+    display: none;
+}
+
+.viewMode {
+    display: table-cell;
+}
+
+.editable {
+    display: none;
+}
+
+.group-button{
+    text-align: right;
+}
+
+.label {
+    color: white;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.label-danger {
+    background: #d9534f;
+}
+
+.label-success {
+    background: #5cb85c;
+}
+
+.search-text {
+    display: inline-block;
+    width: 200px;
+}
+
+.btn-Add {
+    text-align: right;
+}
+
+.btn-info {
+    height: 35px;
+    /*width: 35px;*/
+    margin: 0!important;
+    /*line-height: 10px!important;*/
+    padding: 0 10px;
+}
+
+.form-group {
+    margin: 0!important;
+}
+
+th {
+    padding-top: 0!important;
+}
+
+label {
+    margin-top: 10px;
+}
+
+select {
+    min-height: 40px;
+}

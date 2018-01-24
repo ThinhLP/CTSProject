@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traisy - Hệ thống Đào tạo trực tuyến cho Doanh nghiệp</title>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+</head>
+
+<body>
+
+    <div class="left-panel">
+        <div class="logo-wrapper">
+            <img class="logo" src="resources/images/Bold_Logo.png" />
+        </div>
+        <div class="user-info">
+            <img class="user-avatar" src="resources/images/man.png" />
+            <span>Nguyen Van Ahihi</span>
+        </div>
+        <div class="navigator-wrapper">
+            <div class="nav-title">DANH SÁCH KẾ HOẠCH</div>
+            <ul class="nav-items">
+                <li><a href="#">Thống kê</a></li>
+                <li><a href="#">Quản lý người dùng</a></li>
+                <li><a href="#">Quản lý kế hoạch</a></li>
+                <li><a href="#">Quản lý thương hiệu</a></li>
+                <li><a href="#">Quản lý kĩ năng</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-panel">
+        <div class="fake-panel"></div>
+        <div class="main-content-wrapper">
+            <div class="right-panel-user-info">
+                <img class="right-panel-user-avatar" src="resources/images/man.png" />
+                <ul class="menu-logged-in">
+                    <li><a href="#">Kế hoạch đang tham gia</a></li>
+                    <li><a href="#">Quản lý tài khoản</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="main-content-title">Quản lý người dùng</div>
+                <div class="form-group">
+                    <input type="text" placeholder="nhập thông tin cần tim" class="form-control search-text" id="txtSearch">
+                    <button type="button" class="btn display-inline">Tìm</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <label>Thông tin user mới</label>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-signin">
+
+                                        <label>Tên đăng nhập</label>
+                                        <input type="text" id="inputEmail" class="form-control" placeholder="" required="" autofocus="">
+                                        <label>Mật khẩu</label>
+                                        <input type="password" id="inputPassword" class="form-control" placeholder="" required="">
+                                        <label>ngày tháng năm sinh</label>
+                                        <input type="date" id="inputDate" class="form-control" required="">
+                                        <label>Chức vụ</label>
+                                        <select class="form-control">
+                                        <option selected>Leaner</option>
+                                        <option>Author</option>
+                                        <option selected="">Manager</option>
+                                    </select>
+                                        <label>Chức danh</label>
+                                        <input type="password" id="inputCD" class="form-control" placeholder="" required="">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Tạo</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên người dùng</th>
+                                <th>Email</th>
+                                <th>Chức vụ</th>
+                                <th>Trạng thái</th>
+                                <th class="btn-Add">
+                                    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Thêm người dùng</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Đặng Thế Anh</td>
+                                <td>Anhdtse61372@fpt.edu.vn</td>
+                                <td>
+                                    <select class="form-control">
+                                <option selected>Leaner</option>
+                                <option>Author</option>
+                                <option selected="">Manager</option>
+                            </select>
+                                </td>
+                                <td>
+                                    <select class="form-control">
+                                <option selected>Hoạt động</option>
+                                <option>Khóa</option>
+                            </select>
+                                </td>
+                                <td><a class="detail" href="#">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>John</td>
+                                <td>Smith@gmail.com</td>
+                                <td>
+                                    <select class="form-control">
+                                <option>Leaner</option>
+                                <option selected>Author</option>
+                                <option >Manager</option>
+                            </select>
+                                </td>
+                                <td>
+                                    <select class="form-control">
+                                <option>Hoạt động</option>
+                                <option selected>Khóa</option>
+                            </select>
+                                </td>
+                                <td><a class="detail" href="#">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Jane</td>
+                                <td>Doe@gmail.com</td>
+                                <td>
+                                    <select class="form-control">
+                                <option>Hoạt động</option>
+                                <option selected>Khóa</option>
+                            </select>
+                                </td>
+                                <td>
+                                    <select class="form-control">
+                                <option>Hoạt động</option>
+                                <option selected>Khóa</option>
+                            </select>
+                                </td>
+                                <td><a class="detail" href="#">Xem chi tiết</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- For javascript -->
+    <script src="resources/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="dist/js/traisy.min.js"></script>
+    <script>
+    </script>
+</body>
+</html>
