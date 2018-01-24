@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Traisy - Hệ thống Đào tạo trực tuyến cho Doanh nghiệp</title>
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/course.css" />
@@ -42,152 +43,278 @@
                 </ul>
             </div>
             <div class="course-panel">
-                <!-- Thông tin chung -->
-                <div>
-                    <h3 class="title">
-                        <i class="fa fa-info-circle" aria-hidden="true" style="margin-right: 20px"></i> Thông tin chung
-                    </h3>
-                    <div class="course-content">
-                        <div class="course-image" style="background-image: url(./resources/images/course_picture.png)"></div>
-                        <div class="course-info">
-                            <h2>Java OOP</h2>
-                            <h6>
-                                Java là ngôn ngữ lập trình sử dụng phổ biến nhất thế giới. Java có thể được dùng để xây dựng nhiều ứng dụng khác nhau như viết các ứng dụng web, mạng xã hội; xây dựng các ứng dụng quản lý trong doanh nghiệp, siêu thị, bệnh viện, ngân hàng...Những điều bạn được học trong khóa Java căn bản: Tìm hiểu kiến thức cơ bản của Java và cách thức lập trình hướng đối tượng của Java. Tìm hiểu kiểu dữ liệu chuỗi trong Java và các biểu thức có quy tắc, thường gọi là Regular Expression. Kỹ thuật xử lý lỗi phát sinh trong quá trình thực thi chương trình, gọi là Exception Handling. Tìm hiểu các loại dữ liệu trong bộ Collection Framework của Java. Khóa học được xây dựng dựng trên mô hình Project-based, có nghĩa bạn sẽ xây dựng project xuyên suốt trong khóa học. Khóa học bao gồm 4 phần chính, cũng tương đương bạn sẽ xây dựng một ứng dụng được nâng cấp phiên bản 4 lần.
-                            </h6>
-                            <button class="btn btn-edit btn-edit-course-info">
-                        <i class="fa fa-pencil" aria-hidden="true" style="padding-right: 12px"></i>
-                        Chỉnh sửa
-                        </button>
+                <!-- Thông tin khoá học -->
+                <div class="col-md-12">
+                    <div class="content">
+                        <div class="content-header content-header-icon" data-background-color="green">
+                            <i class="material-icons">description</i>
+                        </div>
+                        <div class="content-info">
+                            <h4 class="info-title">Khoá học Java căn bản</h4>
+                        </div>
+                        <div class="row info">
+                            <div class="col-md-6 info-picture" style="background-image: url(./resources/images/course_picture.png)"></div>
+                            <div class="col-md-6 info-text">
+                                <h6>
+                                    Java là ngôn ngữ lập trình sử dụng phổ biến nhất thế giới. Java có thể được dùng để xây dựng nhiều ứng dụng khác nhau như viết các ứng dụng web, mạng xã hội; xây dựng các ứng dụng quản lý trong doanh nghiệp, siêu thị, bệnh viện, ngân hàng...Những điều bạn được học trong khóa Java căn bản: Tìm hiểu kiến thức cơ bản của Java và cách thức lập trình hướng đối tượng của Java. Tìm hiểu kiểu dữ liệu chuỗi trong Java và các biểu thức có quy tắc, thường gọi là Regular Expression.
+                                </h6>
+                                <button class="btn btn-green btn-green-course-info"><i class="fa fa-pencil" aria-hidden="true"></i>Chỉnh sửa</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Nội dung khoá học -->
-                <div>
-                    <h3 class="title">
-                        <i class="fa fa-align-left" aria-hidden="true" style="margin-right: 20px"></i>Nội dung khoá học</h3>
-                    <div class="course-content">
-                        <div class="course-lecture-container">
-                            <section class="navbar navbar-lecture">
-                                <div class="lecture-name">Chương 1: Khởi tạo biến môi trường</div>
-                                <div class="lecture-option">
-                                    <ul class="navbar-otpion">
-                                        <li class="option-item">
-                                            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                                        </li>
-                                        <li class="option-item">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </li>
-                                        <li class="option-item">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </li>
-                                    </ul>
+                <div class="col-md-12">
+                    <div class="content">
+                        <div class="content-header content-header-icon" data-background-color="green"><i class="material-icons">receipt</i></div>
+                        <div class="content-info">
+                            <h4 class="info-title">Nội dung khoá học</h4>
+                        </div>
+                        <div class="row info">
+                            <div class="navbar navbar-lecture">
+                                <div class="lecture-container">
+                                    <h4 class="lecture-title">Chương 1: Java Căn Bản</h4>
+                                    <div class="lecture-action">
+                                        <ul class="nav-action">
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">keyboard_arrow_down</i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">mode_edit</i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">delete</i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </section>
-                            <section class="navbar navbar-lecture">
-                                <div class="lecture-name">Chương 2: String - Regular Expression</div>
-                                <div class="lecture-option">
-                                    <ul class="navbar-otpion">
-                                        <li class="option-item">
-                                            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                                        </li>
-                                        <li class="option-item">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </li>
-                                        <li class="option-item">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </li>
-                                    </ul>
+                            </div>
+                            <div class="navbar navbar-lecture">
+                                <div class="lecture-container">
+                                    <h4 class="lecture-title">Chương 2: Java Vỡ Lòng</h4>
+                                    <div class="lecture-action">
+                                        <ul class="nav-action">
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">keyboard_arrow_down</i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">mode_edit</i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">delete</i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </section>
-                            <section class="navbar navbar-lecture">
-                                <div class="lecture-name">Chương 3: Giới thiệu Exception -Exception Handling</div>
-                                <div class="lecture-option">
-                                    <ul class="navbar-otpion">
-                                        <li class="option-item">
-                                            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                                        </li>
-                                        <li class="option-item">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </li>
-                                        <li class="option-item">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </li>
-                                    </ul>
+                            </div>
+                            <div class="navbar navbar-lecture">
+                                <div class="lecture-container">
+                                    <h4 class="lecture-title">Chương 3: Java Nâng Cao</h4>
+                                    <div class="lecture-action">
+                                        <ul class="nav-action">
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">keyboard_arrow_down</i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">mode_edit</i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#pablo" class="nav-link"><i class="material-icons">delete</i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </section>
-                            <button class="btn btn-edit btn-edit-course-info">
-                        <i class="fa fa-plus" aria-hidden="true" style="padding-right: 12px"></i>
-                        Thêm chương mới
-                    </button>
+                            </div>
+                            <button class="btn btn-green btn-green-course-info"><i class="fa fa-plus" aria-hidden="true"></i>Thêm chương mới</button>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Thống kê học viên-->
-                <div>
-                    <h3 class="title">
-                        <i class="fa fa-line-chart" aria-hidden="true" style="margin-right: 20px"></i>Thống kê học viên</h3>
-                    <div class="course-content">
+            <!-- Danh sách học viên tham gia -->
+            <div class="col-md-12">
+                <div class="content">
+                    <div class="content-header content-header-icon" data-background-color="green">
+                        <i class="material-icons">view_list</i>
                     </div>
-                </div>
-
-                <!-- Danh sách học viên chờ duyệt -->
-                <div>
-                    <h3 class="title">
-                        <i class="fa fa-check-square-o" aria-hidden="true" style="margin-right: 20px"></i>Danh sách học viên hiện tại</h3>
-                    <div class="course-content table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Họ Tên</th>
-                                    <th>Ngày tham gia</th>
-                                    <th>Tiến trình hiện tại</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Võ Thạch Nguyên</td>
-                                    <td>19/01/2018</td>
-                                    <td>
-                                        <div class="card-progress-wrapper">
-                                            <div class="card-progress-bar">
-                                                <div class="completed-progress" style="width: 20%;"></div>
-                                            </div>
-                                            <div class="percentage">20%</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Lê Phúc Thịnh</td>
-                                    <td>19/01/2018</td>
-                                    <td>
-                                        <div class="card-progress-wrapper">
-                                            <div class="card-progress-bar">
-                                                <div class="completed-progress" style="width: 50%;"></div>
-                                            </div>
-                                            <div class="percentage">50%</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Phạm Chánh Hưng</td>
-                                    <td>19/01/2018</td>
-                                    <td>
-                                        <div class="card-progress-wrapper">
-                                            <div class="card-progress-bar">
-                                                <div class="completed-progress" style="width: 69%;"></div>
-                                            </div>
-                                            <div class="percentage">69%</div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="content-info">
+                        <h4 class="info-title">Danh sách học viên tham gia</h4>
+                    </div>
+                    <div class="material-datatables">
+                        <div id="datatables_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="dataTables_length" id="datatables_length"><label class="form-group form-group-sm">Show <select name="datatables_length" aria-controls="datatables" class="form-control"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="-1">All</option></select> entries<span class="material-input"></span></label></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="datatables_filter" class="dataTables_filter"><label class="form-group form-group-sm is-empty"><input type="search" class="form-control" placeholder="Search records" aria-controls="datatables"><span class="material-input"></span></label></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="datatables" class="table table-striped table-no-bordered table-hover dataTable dtr-inline" cellspacing="0" width="100%" style="width: 100%;" role="grid" aria-describedby="datatables_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th class="sorting_asc" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" style="width: 256px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Name</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" style="width: 373px;" aria-label="Position: activate to sort column ascending">Position</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" style="width: 193px;" aria-label="Office: activate to sort column ascending">Office</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" style="width: 88px;" aria-label="Age: activate to sort column ascending">Age</th>
+                                                <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" style="width: 167px;" aria-label="Date: activate to sort column ascending">Date</th>
+                                                <th class="disabled-sorting text-right sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" style="width: 184px;" aria-label="Actions: activate to sort column ascending">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th rowspan="1" colspan="1">Name</th>
+                                                <th rowspan="1" colspan="1">Position</th>
+                                                <th rowspan="1" colspan="1">Office</th>
+                                                <th rowspan="1" colspan="1">Age</th>
+                                                <th rowspan="1" colspan="1">Start date</th>
+                                                <th class="text-right" rowspan="1" colspan="1">Actions</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr role="row" class="odd">
+                                                <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>33</td>
+                                                <td>2008/11/28</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td class="sorting_1" tabindex="0">Angelica Ramos</td>
+                                                <td>Chief Executive Officer (CEO)</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2009/10/09</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td tabindex="0" class="sorting_1">Ashton Cox</td>
+                                                <td>Junior Technical Author</td>
+                                                <td>San Francisco</td>
+                                                <td>66</td>
+                                                <td>2009/01/12</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td class="sorting_1" tabindex="0">Bradley Greer</td>
+                                                <td>Software Engineer</td>
+                                                <td>London</td>
+                                                <td>41</td>
+                                                <td>2012/10/13</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1" tabindex="0">Brenden Wagner</td>
+                                                <td>Software Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>28</td>
+                                                <td>2011/06/07</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td tabindex="0" class="sorting_1">Brielle Williamson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>2012/12/02</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1" tabindex="0">Caesar Vance</td>
+                                                <td>Pre-Sales Support</td>
+                                                <td>New York</td>
+                                                <td>21</td>
+                                                <td>2011/12/12</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td tabindex="0" class="sorting_1">Cedric Kelly</td>
+                                                <td>Senior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2012/03/29</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1" tabindex="0">Charde Marshall</td>
+                                                <td>Regional Director</td>
+                                                <td>San Francisco</td>
+                                                <td>36</td>
+                                                <td>2008/10/16</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td tabindex="0" class="sorting_1">Colleen Hurst</td>
+                                                <td>Javascript Developer</td>
+                                                <td>San Francisco</td>
+                                                <td>39</td>
+                                                <td>2009/09/15</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a>
+                                                    <a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="material-icons">dvr</i></a>
+                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="dataTables_info" id="datatables_info" role="status" aria-live="polite">Showing 1 to 25 of 40 entries</div>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="dataTables_paginate paging_full_numbers" id="datatables_paginate">
+                                        <ul class="pagination">
+                                            <li class="paginate_button first disabled" id="datatables_first"><a href="#" aria-controls="datatables" data-dt-idx="0" tabindex="0">First</a></li>
+                                            <li class="paginate_button previous disabled" id="datatables_previous"><a href="#" aria-controls="datatables" data-dt-idx="1" tabindex="0">Previous</a></li>
+                                            <li class="paginate_button active"><a href="#" aria-controls="datatables" data-dt-idx="2" tabindex="0">1</a></li>
+                                            <li class="paginate_button "><a href="#" aria-controls="datatables" data-dt-idx="3" tabindex="0">2</a></li>
+                                            <li class="paginate_button next" id="datatables_next"><a href="#" aria-controls="datatables" data-dt-idx="4" tabindex="0">Next</a></li>
+                                            <li class="paginate_button last" id="datatables_last"><a href="#" aria-controls="datatables" data-dt-idx="5" tabindex="0">Last</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
