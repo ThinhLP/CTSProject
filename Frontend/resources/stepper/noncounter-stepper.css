@@ -129,14 +129,14 @@ ul.stepper>li:not(:last-of-type) {
 }
 
 ul.stepper .step:not(:last-of-type).active {
-    margin-bottom: 36px;
+/*    margin-bottom: 36px;*/
 }
 
 ul.stepper .step:before {
     position: absolute;
     top: 12px;
     counter-increment: section;
-/*    content: counter(section);*/
+    content: counter(section);
     content: ' ';
     height: 28px;
     width: 28px;
@@ -293,7 +293,7 @@ ul.stepper .step-content {
     }
 }
 
-ul.stepper>.step:not(:last-of-type):after {
+ul.stepper>.step:after {
     content: '';
     position: absolute;
     top: 50px;
@@ -306,14 +306,23 @@ ul.stepper>.step:not(:last-of-type):after {
     transition: all 0.4s;
 }
 
+ul.stepper>.step.active:after {
+    height: 93%;
+    height: calc(100% - 12px);
+}
+/*
 ul.stepper>.step.active:not(:last-child):after {
     height: 93%;
     height: calc(100% - 12px);
 }
+*/
 
 ul.stepper>.step[data-last="true"]:after {
+/*
     height: 0;
     width: 0;
+*/
+    height: calc(100% - 60px);
 }
 
 ul.stepper>.step[data-last="true"] {

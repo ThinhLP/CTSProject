@@ -28,6 +28,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -40,7 +41,7 @@ ul {
 /* Format for left panel */
 
 .left-panel {
-    width: 22%;
+    width: 80px;
     height: 100vh;
     background-color: #455A64;
     position: fixed;
@@ -61,36 +62,42 @@ ul {
 }
 
 .logo {
+    display: none;
     width: 120px;
+}
+
+.compact-logo {
+    display: block;
+    width: 40px;
 }
 
 .user-info {
     width: 100%;
-    /*
+    padding: 25px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-*/
-    padding-left: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
 }
 
 .user-avatar {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    margin-right: 25px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .user-info span {
     font-weight: 300;
     font-size: 16px;
+    display: none;
+    margin-top: 10px;
 }
 
 .navigator-wrapper {
-    padding-left: 25px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .nav-title {
@@ -98,17 +105,60 @@ ul {
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 20px;
+    display: none;
 }
 
 .nav-items li {
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 15px;
     font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.nav-items li i {
+    font-size: 18px;
+    width: 5%;
+    height: 50px;
+    display: inline-block;
+    vertical-align: center;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.nav-item-name {
+    display: none;
 }
 
 .nav-items li a:hover {
     color: #fff;
     text-decoration: none;
+}
+
+.item-label {
+    position: absolute;
+    display: block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.88);
+    color: #fff;
+    display: none;
+    width: 250px;
+    text-align: left;
+    left: 90px;
+    top: -10px;
+}
+
+.item-label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: rgba(0, 0, 0, 0.88);
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
 }
 
 
@@ -121,22 +171,19 @@ ul {
 }
 
 .fake-panel {
-    width: 22%;
+    width: 90px;
 }
 
 .main-content-wrapper {
-    width: 78%;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 35px;
+    width: calc(100% - 80px);
+    padding: 15px 50px 25px 50px;
 }
 
-.right-panel-user-info {
+.right-panel-header {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
     position: relative;
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .right-panel-user-avatar {
@@ -144,17 +191,16 @@ ul {
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.main-content {
-    padding-top: 10px;
-    padding-left: 30px;
-}
+.main-content {}
 
-.main-content-title {
+.right-panel-title {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 40px;
 }
 
 .menu-logged-in {
@@ -170,6 +216,7 @@ ul {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-color: #ccc;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
 }
 
 .menu-logged-in:after {
@@ -199,6 +246,7 @@ ul {
     transform: translateX(-100%);
     z-index: 700
 }
+
 .menu-logged-in li {
     font-size: 15px;
     color: #333;
@@ -207,15 +255,19 @@ ul {
     padding: 10px 15px;
     white-space: nowrap;
 }
+
 .menu-logged-in li:hover {
     background-color: #f1f1f1;
     cursor: pointer;
 }
+
 .menu-logged-in li:hover a {
     color: #333;
 }
 
+
 /* Format for button */
+
 .button {
     padding: 5px 12px;
     text-align: center;
@@ -231,6 +283,7 @@ ul {
     background-color: #16AF32;
     color: #fff;
 }
+
 .primary-button:hover {
     background-color: #388E3C;
 }
@@ -239,55 +292,72 @@ ul {
     color: #16AF32;
     background-color: transparent;
 }
+
 .flat-button:hover {
     color: #388E3C;
 }
 
+
 /* Format for card */
+
 .ellipsis {
-    white-space: nowrap; 
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
 }
 
 .cards-wrapper {
-    width: 90%;
+    width: 100%;
 }
 
 .card-horizontal {
-    width: 100%;
     display: flex;
-    min-height: 150px;
+    min-height: 175px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 40px;
     cursor: pointer;
     position: relative;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    transition: all 0.3s ease;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+
+.card-horizontal:hover {
+    box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2);
 }
 
 .card-img {
-    width: 30%;
+    width: 40%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 150px;
+    min-height: 173px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .card-info {
-    width: 70%;
+    width: 60%;
+    min-height: 198px;
     padding: 6px 15px;
+    position: relative;
 }
 
 .card-title {
     font-weight: bold;
     cursor: pointer;
 }
+
 .card-subtitle {
     font-weight: 400px;
     margin-bottom: 10px;
     font-size: 12px;
     color: #999;
 }
+
 .card-description {
     font-size: 14px;
     text-align: justify;
@@ -296,28 +366,31 @@ ul {
     text-overflow: ellipsis;
     height: 80px;
 }
+
 .card-action {
     text-align: right;
     position: absolute;
-    right: 10px;
+    right: 20px;
     bottom: 10px;
 }
-
 
 .card-progress-wrapper {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
+
 .card-progress-bar {
     flex: 5;
     background-color: #e6e6e6;
 }
+
 .completed-progress {
     background-color: #16AF32;
     height: 4px;
     border-radius: 10px;
 }
+
 .percentage {
     flex: 1;
     text-align: right;
