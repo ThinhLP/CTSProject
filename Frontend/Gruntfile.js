@@ -3,6 +3,7 @@ module.exports = function (grunt) {
     var jsSources = [
         'js/components/*.js',
         'js/modules/*.js',
+        'js/modules/learner/*.js',
         'js/utils/*.js',
     ];
     // Project configuration.

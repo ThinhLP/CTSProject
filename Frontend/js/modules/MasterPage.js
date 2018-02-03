@@ -6,7 +6,7 @@ function MasterPage() {
 
     var userAvatarTooltip = new PopupTooltip('.right-panel-user-avatar', 0);
 
-    var compactNavItemHoverTooltip = new HoverTooltip('.compact-nav-items i');
+    var compactNavItemHoverTooltip = new HoverTooltip('.compact-nav-items li');
 
     var MIN_DESKTOP_WIDTH = 1200;
 
@@ -17,7 +17,6 @@ function MasterPage() {
         } else {
             $('.nav-items').removeClass('compact-nav-items');
         }
-        console.log(windowWidth);
     };
 
     var onDocumentReadyEvents = function () {

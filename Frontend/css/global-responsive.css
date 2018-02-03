@@ -45,9 +45,12 @@
     }
     .nav-title {
         display: block;
+        padding: 0 20px;
     }
     .nav-items li {
         text-align: left;
+        padding-left: 25px;
+        padding-right: 20px;
     }
     .nav-item-name {
         width: 85%;
@@ -57,7 +60,9 @@
         vertical-align: top;
     }
     .navigator-wrapper {
+        /*
         padding-left: 25px;
         padding-right: 20px;
+*/
     }
 }

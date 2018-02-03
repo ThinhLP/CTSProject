@@ -34,10 +34,10 @@
         <div class="navigator-wrapper">
             <div class="nav-title">DANH SÁCH KẾ HOẠCH</div>
             <ul class="nav-items">
-                <li><a href="#"><i class="fa fa-calendar" target="#item-label-1"></i><span class="nav-item-name">Đào tạo lập trình viên Web Fullstack</span></a>
+                <li class="active" target="#item-label-1"><a href="#"><i class="fa fa-calendar"></i><span class="nav-item-name">Đào tạo lập trình viên Web Fullstack</span></a>
                     <span class="item-label" id="item-label-1">Đào tạo lập trình viên Web Fullstack</span>
                 </li>
-                <li><a href="#"><i class="fa fa-calendar" target="#item-label-2"></i><span id="nav-item-2" class="nav-item-name">Đào tạo Designer chuyên nghiệp</span></a>
+                <li target="#item-label-2"><a href="#"><i class="fa fa-calendar"></i><span id="nav-item-2" class="nav-item-name">Đào tạo Designer chuyên nghiệp</span></a>
                     <span class="item-label" id="item-label-2">Đào tạo Designer chuyên nghiệp</span>
                 </li>
             </ul>
@@ -67,7 +67,7 @@
                     <div class="section-heading">CHƯƠNG TRÌNH ĐÀO TẠO</div>
                     <div class="programs-list">
                         <div class="program-wrapper" id="program-1">
-                            <div class="program-title" collapsed="false" target="#program-1 .stepper">Front end Developer <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+                            <div class="program-title" collapsed="false" target="#program-1 .stepper">Front end Developer <i class="rotate-arrow fa fa-chevron-up" aria-hidden="true"></i></div>
                             <ul class="stepper">
                                 <li class="step active">
                                     <div class="step-title">
@@ -107,7 +107,7 @@
                             </ul>
                         </div>
                         <div class="program-wrapper" id="program-2">
-                            <div class="program-title" collapsed="true" target="#program-2 .stepper">Back end Developer <i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                            <div class="program-title" collapsed="true" target="#program-2 .stepper">Back end Developer <i class="rotate-arrow fa fa-chevron-down" aria-hidden="true"></i></div>
                             <ul class="stepper">
                                 <li class="step active">
                                     <div class="step-title">
@@ -131,7 +131,7 @@
                                 </li>
                                 <li class="step active">
                                     <div class="step-title">
-                                        <div class="card-horizontal">
+                                        <div class="card-horizontal course-card">
                                             <div class="card-img" style="background-image: url(resources/images/course1.jpeg)"></div>
                                             <div class="card-info">
                                                 <div class="card-title ellipsis">Nhập môn Javascript</div>
@@ -160,7 +160,7 @@
     <script src="dist/js/traisy.min.js"></script>
     <script>
         $(function() {
-            var page = new MasterPage();
+            var page = new PlanOverviewPage();
             $('.stepper').activateStepper();
 
         });
