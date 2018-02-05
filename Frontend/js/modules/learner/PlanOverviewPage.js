@@ -1,7 +1,7 @@
 function PlanOverviewPage() {
     var instance = MasterPage.call(this);
 
-    var programTitleSelector = '.program-title'
+    var programTitleSelector = '.program-title';
 
     var programCollapse = new Collapse(programTitleSelector, 300, true);
     var arrowHandler = function ($target, collapsed) {

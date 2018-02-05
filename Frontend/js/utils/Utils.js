@@ -21,5 +21,26 @@ var Utils = {
             $arrow.removeClass(rotateActiveReverse);
         }
     },
-
+    callJsonAjax: function (url, method, data, onSuccess, onFail) {
+        $.ajax({
+            url: url,
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: method,
+            dataType: 'json',
+            data: JSON.stringify(data),
+            success: function (data) {
+                if (onSuccess) {
+                    onSuccess(data);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                if (onFail) {
+                    onFail(jqXHR, textStatus, errorThrown);
+                }
+            }
+        });
+    }
 };
