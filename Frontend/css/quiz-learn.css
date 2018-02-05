@@ -1,0 +1,115 @@
+.plan-time {
+    display: block;
+    font-weight: 400px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.plan-overview-wrapper {
+    width: 100%;
+}
+
+.plan-intro-wrapper {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+}
+
+.plan-image {
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.plan-description {
+    width: 50%;
+    font-size: 15px;
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.section-heading {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.programs-list {
+    width: 100%;
+}
+
+.program-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stepper {
+    width: 85%;
+}
+
+
+/* Format fo course card */
+
+.course-card {
+    margin-left: 40px;
+}
+
+.program-title {
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.program-title i {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.program-wrapper .stepper {
+    display: none;
+}
+
+.program-wrapper:first-child .stepper {
+    display: block;
+}
+
+.title-quiz {
+    font-weight: bold;
+}
+
+.answer-quiz {
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.time-quiz {
+    text-align: center;
+    color: red;
+    padding: 30px;
+}
+
+.quiz-contain {
+    padding: 10px;
+}
+
+.quiz-wrapper {
+    padding-top: 20px;
+}
+
+.video-wrapper {
+    padding-top: 10px;
+}
+
+
+/* Responsive */
+
+@media (min-width:1200px) {}
