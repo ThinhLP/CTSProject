@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traisy - Hệ thống Đào tạo trực tuyến cho Doanh nghiệp</title>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/course.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+</head>
+
+
+<body>
+<div class="left-panel">
+    <div class="logo-wrapper">
+        <img class="logo" src="resources/images/Bold_Logo.png" />
+    </div>
+    <div class="user-info">
+        <img class="user-avatar" src="resources/images/man.png" />
+        <span>Nguyen Van Ahihi</span>
+    </div>
+    <div class="navigator-wrapper">
+        <div class="nav-title">KHOÁ HỌC CĂN BẢN VỀ JAVA OOP</div>
+        <ul class="nav-items">
+            <li><a href="#">Thông tin chung</a></li>
+            <li><a href="#">Nội dung khoá học</a></li>
+            <li><a href="#">Thống tin học viên</a></li>
+        </ul>
+    </div>
+</div>
+<div class="right-panel">
+    <div class="fake-panel"></div>
+    <div class="main-content-wrapper">
+        <div class="right-panel-user-info">
+            <img class="right-panel-user-avatar" src="resources/images/man.png" collapsed="true" target=".menu-logged-in" />
+            <ul class="menu-logged-in">
+                <li><a href="#">Quản lý tài khoản</a></li>
+                <li><a href="#">Đăng xuất</a></li>
+            </ul>
+        </div>
+        <div class="course-panel">
+
+            <!-- Nội dung khoá học -->
+            <div>
+                <h3 class="title">
+                    <i class="fa fa-align-left" aria-hidden="true" style="margin-right: 20px"></i>Kết quả bài thi</h3>
+                <div class="quiz">
+                    <div class="course-lecture-container">
+                        <!--quiz single choice-->
+                        <div class="single-choice quiz">
+                            <div class="quiz-question">
+                                <p class="">1. Nội dung câu cau hỏi 1</p>
+                            </div>
+                            <div class="answer">
+                                <div class="quiz-answer">
+                                    <input type="radio" checked name="answer1" value="false" > đúng <i class="fa fa-check " aria-hidden="true"></i>
+                                </div>
+                                <div class="quiz-answer">
+                                    <input type="radio" name="answer1" value="false" > thế anh 01
+                                </div>
+                     
+                            </div>
+                        </div>
+						<div class="correct-optional">
+                                    Đáp án đúng: <strong>đúng</strong> 
+                                </div>
+
+                        <!--quiz input answer-->
+                        <div class="single-choice quiz">
+                            <div class="quiz-question">
+                                <p class="">2. Nội dung câu cau hỏi 2</p>
+                            </div>
+                            <div class="answer">
+                                <div class="quiz-answer">
+                                    Câu trả lời:<br>
+									<br>
+									<input type="text" name="answer" value="thế anh 02"> <i class="fa fa-check " aria-hidden="true"></i>
+										<br>
+                            </div>
+                              
+                            </div>
+                        </div>
+						<div class="correct-optional">
+                                    Đáp án đúng: <strong>thế anh 02</strong>
+                                </div>
+
+                        <!--quiz multiple choice-->
+                        <div class="multiple-choice quiz">
+                            <div class="quiz-question">
+                                <p class="">3. Tên các tỉnh thuộc đồng bằng sông cửu long</p>
+                            </div>
+                            <div class="answer">
+                                <div class="quiz-answer">
+                                    <input type="checkbox" checked name="answer1" value="false" > Kiên Giang <i class="fa fa-check " aria-hidden="true"></i>
+                                </div>
+                                <div class="quiz-answer">
+                                    <input type="checkbox" name="answer1" value="false" > Hà Giang
+                                </div>
+                                <div class="quiz-answer">
+                                    <input type="checkbox" checked name="answer1" value="false" > Bắc Cạn <i class="fa fa-times " aria-hidden="true"></i>
+                                </div>
+                                <div class="quiz-answer">
+                                    <input type="checkbox" checked name="answer1" value="false" > Trà Vinh <i class="fa fa-check " aria-hidden="true"></i>
+                                </div>
+                                <div class="quiz-answer">
+                                    <input type="checkbox" name="answer1" value="false" > Lâm Đồng
+                                </div>
+                              
+                            </div>
+                        </div>
+						<div class="correct-optional">
+                                    Đáp án đúng: <strong>Kiên Giang,
+                                    Trà Vinh</strong>
+                                </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- For javascript -->
+<script src="resources/jquery-3.3.1.min.js"></script>
+<script src="dist/js/traisy.min.js"></script>
+<script>
+    $(function() {
+        var page = new MasterPage();
+    });
+
+</script>
+</body>

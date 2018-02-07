@@ -1,0 +1,143 @@
+
+
+.quiz {
+   
+	width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px 20px; 
+}
+
+.quiz-question {
+
+}
+
+.course-lecture-container {
+	width: 100%;
+}
+
+.quiz-single-choice {
+
+}
+.quiz-results{
+	background-color: antiquewhite;
+    padding: 13px;
+    margin-top: 30px;
+	margin-bottom: 25px;
+	margin: auto;
+	
+}
+.center {
+	width : 100%;
+    height : 100%;
+    margin-left: 150px;
+	
+}
+.button{
+	margin-left : 70px;
+}
+.w100-rela{
+position: relative;
+width:100%;
+}
+.center-form{
+	margin-left:50%;
+	transform: translateX(-50%);
+	text-align:center;
+}
+
+.correct-optional {
+    background-color: antiquewhite;
+    padding: 13px;
+    margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+.correct {
+	border: 2px solid #1e7e34!important;
+}
+
+.wrong {
+    border: 2px solid firebrick!important;
+}
+
+.fa-check {
+    color: #1e7e34!important;
+}
+
+.fa-times {
+    color: firebrick!important;
+}
+
+.quiz-answer {
+    padding: 5px;
+   margin: 10px 20px;
+}
+
+.quiz-content {
+    width: 90%;
+    border-radius: 5px;
+    height: 100%;
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.qz-rs{
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    text-align: center;
+    border: 10px solid #3ccfcf;
+    padding-top: 50px;
+    font-size: 50px;
+    font-weight: 800;
+    background-color: #fff;
+    color: #455A64;
+    margin: 0 auto;
+}
+
+.ztr-css{
+    display: block;
+
+    color: #Fff;
+    padding: 10px;
+}
+
+.ztr-course-panel {
+    padding-top: 0;
+}
+
+.ztr-rela {
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    width: 60%;
+    padding-top: 20px;
+    box-shadow: 0 0.01125rem 0.7rem 0 rgba(0,0,0,0.24);
+}
+
+.ztr-action{
+    margin-top: 20px;
+}
+
+.ztr-action .ztr-btn {
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ztr-back {
+    background-color: #c9ceeb;
+    float: left;
+}
+
+.ztr-next {
+    background-color: #fcdb88;
+    color: #455358;
+}
