@@ -110,6 +110,44 @@
 }
 
 
+.question-quiz {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.choice-quiz {
+    margin-left: 10px;
+}
+
+.submit-button {
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.comment-wrapper {
+    padding: 50px;
+}
+
+.comment-avatar {
+    width: 120px;
+    height: 120px;
+}
+
+.comment-area {
+    margin-left: 20px;
+    width: 700px;
+}
+
+.send-button {
+    margin-left: 140px;
+    margin-top: 10px;
+}
+
+.user-name {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
 /* Responsive */
 
 @media (min-width:1200px) {}
