@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traisy - Hệ thống Đào tạo trực tuyến cho Doanh nghiệp</title>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/global-responsive.css" />
+    <link rel="stylesheet" href="css/course-v2.css" />
+</head>
+
+
+<body>
+    <div class="left-panel">
+        <!--<div class="logo-wrapper">
+            <a href="#"><img class="logo" src="resources/images/Bold_Logo.png" />
+                <img class="compact-logo" src="resources/images/Bold_TS.png" />
+            </a>
+        </div>
+        <div class="user-info">
+            <img class="user-avatar" src="resources/images/man.png" />
+            <span class="user-fullname ellipsis">Nguyen Van Ahihi</span>
+        </div>
+        <div class="navigator-wrapper">
+            <div class="nav-title"></div>
+            <ul class="nav-items">
+                <li><a href="#"><i class="fa fa-clone"></i><span class="nav-item-name">Thông tin chung</span></a>
+                </li>
+                <li><a href="#"><i class="fa fa-th-list"></i><span class="nav-item-name">Nội dung khoá học</span></a>
+                </li>
+                <li><a href="#"><i class="fa fa-users"></i><span class="nav-item-name">Danh sách học viên</span></a>
+                </li>
+                <li><a href="#"><i class="fa fa-comments"></i><span class="nav-item-name">Đóng góp &amp; Phản hồi</span></a>
+                </li>
+            </ul>
+        </div>-->
+    </div>
+    <div class="right-panel">
+        <div class="wrapper">
+            <div class="nav-top">
+                <div class="nav-top-title"><i class="fa fa-clone"></i>Thông tin</div>
+                <ul>
+                    <li>
+                        <a class="active">Giới thiệu</a>
+                        <a>Hình ảnh</a>
+                        <a>Nội dung khoá học</a>
+                        <a>Danh sách học viên</a>
+                        <a>Yêu cầu đóng góp</a>
+                        <a>Đề xuất cải thiện</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-container col-md-10">
+            <!-- Nội dung -->
+            <div class="section-wrapper">
+                <div class="section-heading col-md-3">
+                    <h2 class="sub-heading">
+                        <span class="big">Giới thiệu</span>
+                        <br/>
+                        <span class="small">Thông tin sơ lược về khoá học</span>
+                    </h2>
+                </div>
+                <div class="section-content col-md-9">
+                    <div>
+                        <div class="content-detail">
+                            <label>Tên khoá học</label><br/>
+                            <input name="name" type="text" class="form-input" />
+                        </div>
+                        <div class="content-detail">
+                            <label>Mô tả</label><br/>
+                            <div class="editor">
+                                <textarea name="name" class="form-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="content-detail">
+                            <label>Địa chỉ liên kết</label><br/>
+                            <div class="url-link">
+                                <span class="prefix">/program/course/</span>
+                                <input name="name" type="text" class="form-input" />
+                                <span class="postfix">/</span>
+                            </div>
+                        </div>
+                        <div class="content-action">
+                            <button class="btn btn-green">Lưu chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hình ảnh -->
+            <div class="section-wrapper">
+                <div class="section-heading col-md-3">
+                    <h2 class="sub-heading">
+                        <span class="big">Hình ảnh</span>
+                        <br/>
+                        <span class="small">Hỉnh ảnh giới thiệu khoá học</span>
+                    </h2>
+                </div>
+                <div class="section-content col-md-9">
+                    <div>
+                        <div class="content-detail">
+                            <label>Hình ảnh</label><br/>
+                            <div class="row">
+                                <div class="col-lg-9 col-md-8 col-xs-12">
+                                    <img src="resources/images/course_picture.png" class="course-image" style="width: 480px" />
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-xs-12" style="padding-left: 30px;">
+                                    <button class="btn btn-orange">Chọn ảnh</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bài học -->
+            <div class="section-wrapper">
+                <div class="section-heading col-md-3">
+                    <h2 class="sub-heading">
+                        <span class="big">Nội dung khoá học</span>
+                        <br/>
+                        <span class="small">Tất cả bài học</span>
+                    </h2>
+                </div>
+                <div class="section-content col-md-9">
+
+                </div>
+            </div>
+
+            <!-- Học viên -->
+            <div class="section-wrapper">
+                <div class="section-heading col-md-3">
+                    <h2 class="sub-heading">
+                        <span class="big">Học viên</span>
+                        <br/>
+                        <span class="small">Danh sách học viên thuộc khoá học</span>
+                    </h2>
+                </div>
+                <div class="section-content col-md-9">
+
+                </div>
+            </div>
+
+            <!-- Đóng góp -->
+            <div class="section-wrapper">
+                <div class="section-heading col-md-3">
+                    <h2 class="sub-heading">
+                        <span class="big">Đóng góp</span>
+                        <br/>
+                        <span class="small">Đóng góp từ học viên</span>
+                    </h2>
+                </div>
+                <div class="section-content col-md-9">
+
+                </div>
+            </div>
+
+            <!-- Đề xuất cải tiến-->
+            <div class="section-wrapper">
+                <div class="section-heading col-md-3">
+                    <h2 class="sub-heading">
+                        <span class="big">Đề xuất cải tiến</span>
+                        <br/>
+                        <span class="small">Cải tiến từ học viên</span>
+                    </h2>
+                </div>
+                <div class="section-content col-md-9">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
