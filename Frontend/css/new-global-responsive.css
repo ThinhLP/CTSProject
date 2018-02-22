@@ -1,0 +1,46 @@
+/*
+@media (min-width:1200px) {
+    .left-panel {
+        width: 22%;
+    }
+    .logo-wrapper {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #212338;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 65px;
+    }
+    .logo {
+        display: block;
+    }
+    .compact-logo {
+        display: none;
+    }
+    .user-avatar {
+        width: 35px;
+        height: 35px;
+        margin-left: 15px;
+        margin-right: 20px;
+    }
+    
+    .user-fullname {
+        display: block;
+    }
+    
+    .fake-panel {
+        width: 22%;
+    }
+    .main-container {
+        width: 78%;
+        padding: 15px 70px 25px 70px;
+    }
+    .right-panel .nav-top {
+        left: 22%;
+    }
+    
+}
+*/

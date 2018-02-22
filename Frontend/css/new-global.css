@@ -1,0 +1,335 @@
+/* primaryColor: #1ea69a
+#292c44
+#212338
+*/
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f5f5f5;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.left-panel {
+    width: 225px;
+    height: 100vh;
+    background-color: #292c44;
+    /*    background-color: #212338;*/
+    position: fixed;
+    padding: 0;
+    color: #fff;
+    z-index: 1000;
+    /*    transition: 0.3s ease-in-out all;*/
+}
+
+.logo-wrapper {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    height: 56px;
+    align-items: center;
+    padding-left: 15px;
+    position: relative;
+}
+
+.search-btn {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    right: 20px;
+}
+
+.search-btn:hover {
+    color: #fff;
+}
+
+.logo {
+    display: block;
+    width: 80px;
+}
+
+.right-panel {
+    width: 100%;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.fake-panel {
+    width: 225px;
+    min-width: 225px;
+    /*    transition: 0.3s ease-in-out all;*/
+}
+
+.main-container {
+    position: relative;
+    width: calc(100% - 225px);
+    padding: 15px 40px 25px 40px;
+    font-size: 15px;
+    min-width: 800px;
+}
+
+.user-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+    background-color: #212338;
+}
+
+.user-detail {
+    display: flex;
+    align-items: center;
+}
+
+.user-detail:hover {
+    color: #fff;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.user-fullname {
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    width: 100px;
+}
+
+.user-action {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #292c44;
+}
+
+.user-menu {
+    position: absolute;
+    width: 225px;
+    background-color: #fff;
+    color: #80848e;
+    top: -100%;
+    transform: translateY(-17px);
+    left: 0;
+    font-size: 13px;
+    margin: 0;
+    display: none;
+}
+
+.user-menu li {
+    padding: 10px 15px;
+}
+
+.user-menu li:hover a {
+    color: #000;
+}
+
+.user-menu li:hover {
+    background-color: #fbfbfb;
+}
+
+.navigator-wrapper {
+    width: 100%;
+    font-size: 13px;
+}
+
+.main-navigator {
+    padding: 10px 10px 0 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.minor-navigator {
+    padding: 20px 10px 0 15px;
+}
+
+
+/* Dashboard nav item */
+
+.nav-items {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-items a:hover {
+    color: #fff;
+}
+
+.dashboard-item {
+    min-height: 30px;
+    margin-bottom: 10px;
+}
+
+.dashboard-item a {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-item i {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dashboard-item.active,
+.course-item.active,
+.nav-title:hover a,
+.add-button:hover {
+    color: #fff;
+}
+
+.nav-title-wrapper {
+    color: #babbc3;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.add-button {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 16px;
+}
+
+.course-item {
+    height: 20px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.content-wrapper {
+    margin-top: 60px;
+}
+
+
+/* Format for nav top */
+
+.nav-top {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 225px;
+    padding-right: 30px;
+    height: 56px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 3px 0 #e6e9ec;
+    box-shadow: 1px 2px 3px 0 #e6e9ec;
+    align-items: center;
+}
+
+.nav-top-info {
+    display: flex;
+    align-items: center;
+}
+
+.nav-top-title {
+    font-weight: bold;
+}
+
+.nav-top-title i {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.hamburger-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50px;
+    color: #ccc;
+}
+
+.hamburger-button:hover {
+    color: #1ea69a;
+}
+
+.nav-top-menu-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.top-menu-item {
+    height: 55px;
+    line-height: 55px;
+    margin: 0 10px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.top-menu-item:hover {
+    color: #000;
+}
+
+.top-menu-item.active {
+    color: #000;
+    border-bottom: 2px solid #1ea69a;
+}
+
+.content-wrapper:not(:first-child) {
+    display: none;
+}
