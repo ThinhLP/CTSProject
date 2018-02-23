@@ -29,6 +29,8 @@ function ManageMasterpage() {
             left: 0
         }, 250);
 
+        $('.nav-top').css('width', '100%');
+
     };
 
     var showLeftPanel = function () {
@@ -53,16 +55,22 @@ function ManageMasterpage() {
         });
 
         $('.nav-top').animate({
-            left: '225px'
+            left: '225px',
+            width: 'calc(100% - 225px)'
         }, 250);
+
+        $('.nav-top').css('width', 'calc(100% - 225px)');
+
     };
 
     var handleLeftPanel = function () {
         var windowWidth = $(window).width();
         if (windowWidth <= MIN_DESKTOP_WIDTH) {
             hideLeftPanel();
+            $('.nav-top').css('width', '100%');
         } else {
             showLeftPanel();
+            $('.nav-top').css('width', 'calc(100% - 225px)');
         }
     };
 
@@ -89,11 +97,11 @@ function ManageMasterpage() {
 
     var addEventHandlers = function () {
         // document ready
-        // onDocumentReadyEvents();
+        onDocumentReadyEvents();
 
         // Window resize
         $(window).resize(function () {
-            //   onWindowResizeEvents();
+            onWindowResizeEvents();
         });
     };
 

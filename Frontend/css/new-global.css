@@ -98,7 +98,7 @@ ul {
 .main-container {
     position: relative;
     width: calc(100% - 225px);
-    padding: 15px 40px 25px 40px;
+    padding: 40px 60px 25px 60px;
     font-size: 15px;
     min-width: 800px;
 }
@@ -262,6 +262,10 @@ ul {
 /* Format for nav top */
 
 .nav-top {
+    position: relative;
+}
+
+.fix-nav-top {
     display: flex;
     position: fixed;
     z-index: 1000;
@@ -276,18 +280,18 @@ ul {
     align-items: center;
 }
 
+.none-nav-top {
+    position: absolute;
+    top: 0;
+    left: 225px;
+    height: 56px;
+    line-height: 56px;
+    z-index: 1000;
+}
+
 .nav-top-info {
     display: flex;
     align-items: center;
-}
-
-.nav-top-title {
-    font-weight: bold;
-}
-
-.nav-top-title i {
-    display: inline-block;
-    margin-right: 10px;
 }
 
 .hamburger-button {
@@ -332,4 +336,153 @@ ul {
 
 .content-wrapper:not(:first-child) {
     display: none;
+}
+
+.nav-top-title {
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.nav-top-title i {
+    margin-right: 15px;
+}
+
+.nav-top-action {
+    position: absolute;
+    right: 60px;
+}
+
+
+/* Format for card */
+
+.card-horizontal {
+    display: flex;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    transition: all 0.3s ease;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+    margin-bottom: 60px;
+}
+
+.card-horizontal:hover {
+    box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2);
+}
+
+.card-img {
+    width: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 173px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.card-info {
+    width: 60%;
+    min-height: 198px;
+    padding: 6px 15px;
+    position: relative;
+}
+
+.card-title {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-subtitle {
+    font-weight: 400px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.card-description {
+    font-size: 14px;
+    text-align: justify;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 80px;
+}
+
+.card-action {
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.card-progress-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-progress-bar {
+    flex: 5;
+    background-color: #e6e6e6;
+}
+
+.completed-progress {
+    background-color: #16AF32;
+    height: 4px;
+    border-radius: 10px;
+}
+
+.percentage {
+    flex: 1;
+    text-align: right;
+    color: #999;
+}
+
+
+/* Format for button */
+
+.button {
+    padding: 5px 12px;
+    text-align: center;
+    border-radius: 3px;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    transition: 0.123s all ease-in-out;
+    font-size: 15px;
+}
+
+.button i {
+    margin-right: 10px;
+}
+
+.primary-button {
+    background-color: #1ea69a;
+    color: #fff;
+}
+
+.primary-button:hover {
+    background-color: #388E3C;
+}
+
+.primary-flat-button {
+    color: #1ea69a;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.primary-flat-button:hover {
+    color: #388E3C;
+}
+
+.flat-button {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: transparent;
 }
