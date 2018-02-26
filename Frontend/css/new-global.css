@@ -488,6 +488,16 @@ ul {
     border: 1px solid #1b958a;
 }
 
+.outline-button {
+    color: #1b958a;
+    background-color: #FFF;
+    border: 1px solid #eee;
+}
+
+.outline-button:hover {
+    border: 1px solid #1b958a;
+}
+
 .btn-orange {
     background-color: #ff7f45;
     border: 1px solid #ff7f45;
