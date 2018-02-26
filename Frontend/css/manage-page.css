@@ -33,6 +33,10 @@ h2.sub-heading .small {
     margin-bottom: 25px;
 }
 
+.section-content .content-detail:last-child {
+    margin-bottom: 10px;
+}
+
 .section-content .content-detail label {
     font-size: 13px!important;
     margin-bottom: 5px;
@@ -124,8 +128,22 @@ h2.sub-heading .small {
 
 .form-input {
     width: 100%;
+    outline: none;
 }
 
 .form-input:focus {
     border-color: #c2c2c2;
+}
+
+.course-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@media(min-width: 770px) {
+    .course-image {
+        margin-bottom: 0;
+    }
 }

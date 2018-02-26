@@ -257,6 +257,10 @@ ul {
 .content-wrapper {
     margin-top: 60px;
     font-size: 14px;
+}
+
+.section-wrapper {
+    width: 100%;
     display: flex;
 }
 
