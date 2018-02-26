@@ -276,6 +276,7 @@ ul {
     position: fixed;
     z-index: 1000;
     width: 100%;
+    min-width: 800px;
     top: 0;
     left: 225px;
     padding-right: 30px;
