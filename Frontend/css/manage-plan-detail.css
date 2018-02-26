@@ -1,0 +1,135 @@
+.user-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-card {
+    width: 150px;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.user-card-image {
+    text-align: center;
+    position: relative;
+}
+
+.user-card-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user-card-info {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.user-card-info span {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-card-name {
+    font-weight: bold;
+}
+
+.user-card-title {
+    font-weight: 400;
+    font-size: 12px;
+    color: #333;
+}
+
+.user-card-action {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.remove-user {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.remove-user:hover {
+    color: #333;
+}
+
+.user-card:hover .remove-user {
+    display: block;
+}
+
+
+/* Format for banner */
+
+.banner-wrapper {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+}
+
+.banner {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 15px;
+    line-height: 15px;
+    color: #fff;
+    border: 1px solid #1ea69a;
+    font-size: 10px;
+    text-align: center;
+    background: #1ea69a;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .15) inset, 0 6px 10px rgba(0, 0, 0, .15);
+}
+
+.left-banner,
+.right-banner {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 0px;
+    border: 7.5px solid #1ea69a;
+    border-right: 5px solid #1b958a;
+    border-bottom-color: #1b958a;
+    border-left-color: transparent;
+    transform: rotate(-5deg);
+    top: 5px;
+    left: -15px;
+}
+
+.right-banner {
+    left: auto;
+    right: -15px;
+    border-left: 5px solid #1b958a;
+    border-right: 7.5px solid transparent;
+    transform: rotate(5deg);
+}
+
+
+/* Format for program list */
+
+.programs-list {
+    width: 100%;
+}
+
+.program-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stepper {
+    width: 85%;
+}
