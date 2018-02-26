@@ -129,7 +129,7 @@ ul.stepper>li:not(:last-of-type) {
 }
 
 ul.stepper .step:not(:last-of-type).active {
-/*    margin-bottom: 36px;*/
+    /*    margin-bottom: 36px;*/
 }
 
 ul.stepper .step:before {
@@ -150,7 +150,7 @@ ul.stepper .step:before {
 
 ul.stepper .step.active:before,
 ul.stepper .step.done:before {
-    background-color: #16AF32;
+    background-color: #1ea69a;
 }
 
 ul.stepper .step.done:before {
@@ -176,7 +176,7 @@ ul.stepper .step-title {
 @media only screen and (min-width: 993px) {
     ul.stepper.horizontal .step.active .step-title:before,
     ul.stepper.horizontal .step.done .step-title:before {
-        background-color: #16AF32;
+        background-color: #1EA69A;
     }
     ul.stepper.horizontal .step.done .step-title:before {
         content: '\e5ca';
@@ -258,7 +258,7 @@ ul.stepper .step-title:after {
 }
 
 ul.stepper .step-title:hover {
-/*    background-color: rgba(0, 0, 0, 0.06);*/
+    /*    background-color: rgba(0, 0, 0, 0.06);*/
 }
 
 ul.stepper .step.active .step-title {
@@ -310,6 +310,8 @@ ul.stepper>.step.active:after {
     height: 93%;
     height: calc(100% - 12px);
 }
+
+
 /*
 ul.stepper>.step.active:not(:last-child):after {
     height: 93%;
@@ -318,7 +320,7 @@ ul.stepper>.step.active:not(:last-child):after {
 */
 
 ul.stepper>.step[data-last="true"]:after {
-/*
+    /*
     height: 0;
     width: 0;
 */

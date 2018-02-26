@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
     <link rel="stylesheet" href="./css/manage-page.css" />
     <link rel="stylesheet" href="./css/manage-plan-detail.css" />
+    <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
 
+    <script src="resources/jquery-3.3.1.min.js"></script>
+    <script src="resources/stepper/materialize-stepper.js"></script>
 
 </head>
 
@@ -96,6 +99,7 @@
                         </h2>
                     </div>
                     <div class="section-content col-md-9 col-sm-12">
+
                         <div class="content-detail">
                             <label>Tên kế hoạch</label><br/>
                             <input name="name" type="text" class="form-input" />
@@ -145,6 +149,14 @@
                     </div>
                     <div class="section-content col-md-9 col-sm-12">
                         <div class="content-detail">
+                            <div class="row">
+                                <div class="content-detail col-md-5">
+                                    <input name="name" type="text" class="form-input" placeholder="Tìm kiếm giảng viên" />
+                                </div>
+                                <div class="col-lg-7 col-md-4 col-xs-12" style="text-align: right;">
+                                    <button class="button primary-button"><i class="fa fa-plus"></i>Thêm giảng viên</button>
+                                </div>
+                            </div>
                             <div class="user-list-wrapper">
                                 <div class="user-card">
                                     <div class="user-card-image">
@@ -242,6 +254,14 @@
                         </h2>
                     </div>
                     <div class="section-content col-md-9 col-sm-12">
+                        <div class="row">
+                            <div class="content-detail col-md-5">
+                                <input name="name" type="text" class="form-input" placeholder="Tìm kiếm học viên" />
+                            </div>
+                            <div class="col-lg-7 col-md-4 col-xs-12" style="text-align: right;">
+                                <button class="button primary-button"><i class="fa fa-plus"></i>Thêm học viên</button>
+                            </div>
+                        </div>
                         <div class="content-detail">
                             <div class="user-list-wrapper">
                                 <div class="user-card">
