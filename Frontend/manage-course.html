@@ -96,20 +96,18 @@
                         </h2>
                     </div>
                     <div class="section-content col-md-9">
-                        <div>
-                            <div class="content-detail">
-                                <label>Tên khoá học</label><br/>
-                                <input name="name" type="text" class="form-input" />
+                        <div class="content-detail">
+                            <label>Tên khoá học</label><br/>
+                            <input name="name" type="text" class="form-input" />
+                        </div>
+                        <div class="content-detail">
+                            <label>Mô tả</label><br/>
+                            <div class="editor">
+                                <textarea name="name" class="form-textarea"></textarea>
                             </div>
-                            <div class="content-detail">
-                                <label>Mô tả</label><br/>
-                                <div class="editor">
-                                    <textarea name="name" class="form-textarea"></textarea>
-                                </div>
-                            </div>
-                            <div class="content-action">
-                                <button class="save-plan-info-btn button primary-button">Lưu chỉnh sửa</button>
-                            </div>
+                        </div>
+                        <div class="content-action">
+                            <button class="save-plan-info-btn button primary-button">Lưu chỉnh sửa</button>
                         </div>
                     </div>
                 </div>
@@ -124,25 +122,33 @@
                         </h2>
                     </div>
                     <div class="section-content col-md-9">
-                        <div>
-                            <div class="content-detail">
-                                <label>Hình ảnh</label><br/>
-                                <div class="row">
-                                    <div class="col-lg-9 col-md-8 col-xs-12">
-                                        <img src="resources/images/course_picture.png" class="course-image" style="width: 480px" />
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-xs-12" style="text-align: right;">
-                                        <button class="button primary-button">Chọn ảnh</button>
-                                    </div>
+                        <div class="content-detail">
+                            <label>Hình ảnh</label><br/>
+                            <div class="row">
+                                <div class="col-lg-9 col-md-8 col-xs-12">
+                                    <img src="resources/images/course_picture.png" class="course-image" style="width: 480px" />
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-xs-12" style="text-align: right;">
+                                    <button class="button primary-button">Chọn ảnh</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+            <!-- Bài học -->
             <div class="content-wrapper" id="course-wrapper">
-                <h1>Day la bai hoc</h1>
+                <div class="section-wrapper row">
+                    <div class="section-heading col-md-3">
+                        <h2 class="sub-heading">
+                            <span class="big">Bài học</span><br/>
+                            <span class="small">Nội dung khoá học</span>
+                        </h2>
+                    </div>
+                    <div class="section-content col-md-9">
+
+                    </div>
+                </div>
             </div>
             <div class="content-wrapper" id="trainee-wrapper">
                 <div class="section-wrapper row">
@@ -153,152 +159,145 @@
                         </h2>
                     </div>
                     <div class="section-content col-md-9">
-                        <div>
-                            <div class="row">
-                                <div class="content-detail col-md-5">
-                                    <input name="name" type="text" class="form-input" placeholder="Tìm kiếm học viên" />
-                                </div>
-                                <div class="col-lg-7 col-md-4 col-xs-12" style="text-align: right;">
-                                    <button class="button primary-button">Thêm học viên</button>
+                        <div class="content-detail col-md-4">
+                            <input name="name" type="text" class="form-input" placeholder="Tìm kiếm học viên" />
+                        </div>
+                        <div class="content-detail learner-list">
+                            <div class="container-fluid">
+                                <div class="row centered">
+                                    <div class="col-sm-3 col-md-3">
+                                        <div class="learner">
+                                            <div class="progress-circle p10">
+                                                <span>10%</span>
+                                                <div class="left-half-clipper">
+                                                    <div class="first50-bar"></div>
+                                                    <div class="value-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="learner-info">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Ngày tham gia: 19/02/2018</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3">
+                                        <div class="learner">
+                                            <div class="progress-circle over50 p100">
+                                                <span>100%</span>
+                                                <div class="left-half-clipper">
+                                                    <div class="first50-bar"></div>
+                                                    <div class="value-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="learner-info">
+                                                <span class="big">Nguyễn Thị Tiên</span><br/>
+                                                <span class="small">Ngày tham gia: 21/05/2017</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3">
+                                        <div class="learner">
+                                            <div class="progress-circle over50 p62">
+                                                <span>62%</span>
+                                                <div class="left-half-clipper">
+                                                    <div class="first50-bar"></div>
+                                                    <div class="value-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="learner-info">
+                                                <span class="big">Lâm Á Hân</span><br/>
+                                                <span class="small">Ngày tham gia: 11/11/2017</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3">
+                                        <div class="learner">
+                                            <div class="progress-circle p34">
+                                                <span>34%</span>
+                                                <div class="left-half-clipper">
+                                                    <div class="first50-bar"></div>
+                                                    <div class="value-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="learner-info">
+                                                <span class="big">Đặng Hoàng Kim</span><br/>
+                                                <span class="small">Ngày tham gia: 05/12/2017</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3">
+                                        <div class="learner">
+                                            <div class="progress-circle over50 p78">
+                                                <span>78%</span>
+                                                <div class="left-half-clipper">
+                                                    <div class="first50-bar"></div>
+                                                    <div class="value-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="learner-info">
+                                                <span class="big">Lê Phúc Thịnh</span><br/>
+                                                <span class="small">Ngày tham gia: 26/02/2018</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3">
+                                        <div class="learner">
+                                            <div class="progress-circle p44">
+                                                <span>44%</span>
+                                                <div class="left-half-clipper">
+                                                    <div class="first50-bar"></div>
+                                                    <div class="value-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="learner-info">
+                                                <span class="big">Lý Nhã Kì</span><br/>
+                                                <span class="small">Ngày tham gia: 12/01/2018</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3">
+                                        <div class="learner">
+                                            <div class="progress-circle p55">
+                                                <span>55%</span>
+                                                <div class="left-half-clipper">
+                                                    <div class="first50-bar"></div>
+                                                    <div class="value-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="learner-info">
+                                                <span class="big">Phạm Chánh Hưng</span><br/>
+                                                <span class="small">Ngày tham gia: 03/12/2017</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3">
+                                        <div class="learner">
+                                            <div class="progress-circle over50 p97">
+                                                <span>97%</span>
+                                                <div class="left-half-clipper">
+                                                    <div class="first50-bar"></div>
+                                                    <div class="value-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="learner-info">
+                                                <span class="big">Đinh Thuỳ Trang</span><br/>
+                                                <span class="small">Ngày tham gia: 08/12/2017</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="content-detail learner-list">
-                                <div class="container-fluid">
-                                    <div class="row centered">
-                                        <div class="col-sm-3 col-md-3">
-                                            <div class="learner">
-                                                <div class="progress-circle p10">
-                                                    <span>10%</span>
-                                                    <div class="left-half-clipper">
-                                                        <div class="first50-bar"></div>
-                                                        <div class="value-bar"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="learner-info">
-                                                    <span class="big">Võ Thạch Nguyên</span><br/>
-                                                    <span class="small">Ngày tham gia: 19/02/2018</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <div class="learner">
-                                                <div class="progress-circle over50 p100">
-                                                    <span>100%</span>
-                                                    <div class="left-half-clipper">
-                                                        <div class="first50-bar"></div>
-                                                        <div class="value-bar"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="learner-info">
-                                                    <span class="big">Nguyễn Thị Tiên</span><br/>
-                                                    <span class="small">Ngày tham gia: 21/05/2017</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <div class="learner">
-                                                <div class="progress-circle over50 p62">
-                                                    <span>62%</span>
-                                                    <div class="left-half-clipper">
-                                                        <div class="first50-bar"></div>
-                                                        <div class="value-bar"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="learner-info">
-                                                    <span class="big">Lâm Á Hân</span><br/>
-                                                    <span class="small">Ngày tham gia: 11/11/2017</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <div class="learner">
-                                                <div class="progress-circle p34">
-                                                    <span>34%</span>
-                                                    <div class="left-half-clipper">
-                                                        <div class="first50-bar"></div>
-                                                        <div class="value-bar"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="learner-info">
-                                                    <span class="big">Đặng Hoàng Kim</span><br/>
-                                                    <span class="small">Ngày tham gia: 05/12/2017</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <div class="learner">
-                                                <div class="progress-circle over50 p78">
-                                                    <span>78%</span>
-                                                    <div class="left-half-clipper">
-                                                        <div class="first50-bar"></div>
-                                                        <div class="value-bar"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="learner-info">
-                                                    <span class="big">Lê Phúc Thịnh</span><br/>
-                                                    <span class="small">Ngày tham gia: 26/02/2018</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <div class="learner">
-                                                <div class="progress-circle p44">
-                                                    <span>44%</span>
-                                                    <div class="left-half-clipper">
-                                                        <div class="first50-bar"></div>
-                                                        <div class="value-bar"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="learner-info">
-                                                    <span class="big">Lý Nhã Kì</span><br/>
-                                                    <span class="small">Ngày tham gia: 12/01/2018</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <div class="learner">
-                                                <div class="progress-circle p55">
-                                                    <span>55%</span>
-                                                    <div class="left-half-clipper">
-                                                        <div class="first50-bar"></div>
-                                                        <div class="value-bar"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="learner-info">
-                                                    <span class="big">Phạm Chánh Hưng</span><br/>
-                                                    <span class="small">Ngày tham gia: 03/12/2017</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <div class="learner">
-                                                <div class="progress-circle over50 p97">
-                                                    <span>97%</span>
-                                                    <div class="left-half-clipper">
-                                                        <div class="first50-bar"></div>
-                                                        <div class="value-bar"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="learner-info">
-                                                    <span class="big">Đinh Thuỳ Trang</span><br/>
-                                                    <span class="small">Ngày tham gia: 08/12/2017</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="com-md-6 pagination-container">
-                                    <div style="display: inline-block">
-                                        <ul class="pagination">
-                                            <li class="page-item"><a href="#" class="page-link">&#9664;<div class="ripple-container"></div></a></li>
-                                            <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                            <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                            <li class="active page-item"><a href="#" class="page-link">3</a></li>
-                                            <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                            <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                            <li class="page-item"><a href="#" class="page-link">&#9654;</a></li>
-                                        </ul>
-                                    </div>
+                            <div class="pagination-container">
+                                <div style="display: inline-block">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a href="#" class="page-link">&#9664;<div class="ripple-container"></div></a></li>
+                                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                        <li class="active page-item"><a href="#" class="page-link">3</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">&#9654;</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -362,7 +361,7 @@
                         <h2 class="sub-heading">
                             <span class="big">Đề xuất cải tiến</span>
                             <br/>
-                            <span class="small">Yều cầu cải tiến từ học viên</span>
+                            <span class="small">Yều cầu cải tiến từ quản lí</span>
                         </h2>
                     </div>
                     <div class="section-content col-md-9">
@@ -406,8 +405,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
     </div>
 
     <script src="./resources/jquery-3.3.1.min.js"></script>
