@@ -16,10 +16,11 @@
     transform: translate(-50%, -50%);
     min-height: 500px;
 }
+
 .logo-container {
     padding: 40px 0;
-    color: #16AF32;
-} 
+    color: #1ea69a;
+}
 
 .logo-container img {
     width: 150px;
@@ -42,5 +43,5 @@
 
 .copy-right {
     color: #999;
-    font-size: 14px;
+    font-size: 13px;
 }
