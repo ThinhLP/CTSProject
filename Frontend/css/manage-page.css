@@ -1,0 +1,131 @@
+.section-heading {
+    padding-left: 0px !important;
+}
+
+.section-heading h2.sub-heading {
+    margin-top: 10px;
+    padding-right: 10px;
+    color: #555765;
+}
+
+h2.sub-heading {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: .1px;
+    margin-bottom: 20px;
+    color: #545665;
+}
+
+h2.sub-heading .big {
+    font-weight: bolder;
+}
+
+h2.sub-heading .small {
+    line-height: 19px;
+    margin-top: 13px;
+    color: rgba(71, 80, 94, .55);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+.section-content .content-detail {
+    margin-bottom: 25px;
+}
+
+.section-content .content-detail label {
+    font-size: 13px!important;
+    margin-bottom: 5px;
+    color: #47505e!important;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.section-content .content-detail .form-input {
+    border: 1px solid #dbdbdb;
+    color: #20272d;
+    font-size: 13px;
+    line-height: 1.467;
+    padding: 8px 14px;
+    height: 44px;
+    border-radius: 5px;
+    box-shadow: none;
+    font-weight: 700;
+}
+
+.section-content .content-detail .form-textarea {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: auto;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #47505e!important;
+    font-size: 13px;
+    resize: none;
+    font-weight: 700;
+}
+
+.section-content .content-action {
+    background: #fefefe;
+    height: 85px;
+    line-height: 85px;
+    margin: 30px -35px -30px;
+    border-top: 1px solid #eee;
+    text-align: right;
+    padding-right: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.section-content {
+    padding-top: 0;
+    background: #fff;
+    display: block;
+    margin-top: -1px;
+    margin-bottom: 20px;
+    padding: 30px 35px 30px;
+    border-radius: 5px;
+    border: 1px solid #e7eaed;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.editor {
+    height: 300px;
+    border: 1px solid #ccc !important;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: text;
+    position: relative;
+    overflow: auto;
+    margin: 0 !important;
+    padding: 8px 14px;
+    min-height: 80px;
+    outline: none;
+    white-space: normal;
+    border: 1px solid #eee;
+    font-size: 14px;
+    line-height: 1.6em;
+    background: #fff;
+    z-index: auto;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-input:focus {
+    border-color: #c2c2c2;
+}

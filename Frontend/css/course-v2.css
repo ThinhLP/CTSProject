@@ -4,11 +4,7 @@
     font-weight: 400;
     src: url(https://example.com/MaterialIcons-Regular.eot);
     /* For IE6-8 */
-    src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .material-icons {
@@ -24,7 +20,6 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
@@ -335,7 +330,6 @@ h2.sub-heading .small {
     border-radius: 0px !important;
 }
 
-
 .prefix {
     width: 150px;
     border-bottom-right-radius: 0px !important;
@@ -414,12 +408,6 @@ h2.sub-heading .small {
     margin-left: 120px;
     margin-top: 30px;
 }
-
-
-
-
-
-
 
 .btn {
     font-family: inherit;
