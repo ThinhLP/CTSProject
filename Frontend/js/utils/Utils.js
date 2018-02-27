@@ -42,5 +42,21 @@ var Utils = {
                 }
             }
         });
+    },
+    showSnackbar: function (message, duration) {
+        var $snackbar = $("#snackbar");
+
+        if (!duration) {
+            duration = 2500;
+        }
+
+        $snackbar.text(message);
+        $snackbar.addClass('show');
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () {
+            $snackbar.removeClass('show');
+        }, duration);
     }
+
 };
