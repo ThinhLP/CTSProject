@@ -49,7 +49,7 @@ h2.sub-heading .small {
     width: 100%;
 }
 
-.section-content .content-detail .form-input {
+.form-input {
     border: 1px solid #dbdbdb;
     color: #20272d;
     font-size: 13px;
@@ -61,7 +61,7 @@ h2.sub-heading .small {
     font-weight: 700;
 }
 
-.section-content .content-detail .form-textarea {
+.form-textarea {
     position: relative;
     height: 100%;
     margin: 0;
