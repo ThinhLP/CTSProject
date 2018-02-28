@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quản lý khoá học | Traisy</title>
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -141,26 +139,29 @@
             <!-- Bài học -->
             <div class="content-wrapper" id="course-wrapper">
                 <div class="section-wrapper row">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPlanModal">
+  Launch demo modal
+</button>
                     <div class="col-md-12 curriculum">
                         <ol class="list-unstyled">
                             <li class="curriculum-item">
                                 <div class="curriculum-heading curriculum-wrapper">
                                     <i class="fa fa-bars move-section"></i>
-                                    <span class="checkbox-container"><input type="checkbox"/>
-                                    </span>
                                     <span class="title">
                                     <span class="section-curriculum-name">Chương 1: Basic Types</span>
                                     <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
                                     </span>
                                     <div class="pull-right">
-                                        <button id="addNewLecture" class="button primary-button">Thêm bài học</button>
+                                        <button id="addNewLecture" class="button primary-button">
+                                        <i class="fa fa-plus"></i>Thêm bài học</button>
+                                        <button id="removeLecture" class="button btn-orange button-only-icon"><i class="fa fa-trash"></i></button>
+                                        <button class="button outline-button button-only-icon"><i class="fa fa-angle-down"></i></button>
                                     </div>
                                 </div>
                                 <ol class="list-unstyled">
                                     <li class="curriculum-lecture-item">
                                         <div class="curriculum-lecture-heading curriculum-wrapper">
                                             <i class="fa fa-bars move-section"></i>
-                                            <span class="checkbox-container"><input type="checkbox"/></span>
                                             <span class="title">
                                     <span class="section-curriculum-name">Bài 1: Numbers, Characters, Booleans, Arrays and Strings</span>
                                             <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
@@ -169,7 +170,7 @@
                                                 <div class="btn-group">
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-trash"></i></button>
+                                                    <button id="removeLectureSection" class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -177,7 +178,6 @@
                                     <li class="curriculum-lecture-item">
                                         <div class="curriculum-lecture-heading curriculum-wrapper">
                                             <i class="fa fa-bars move-section"></i>
-                                            <span class="checkbox-container"><input type="checkbox"/></span>
                                             <span class="title">
                                     <span class="section-curriculum-name">Bài 2: Control Flow: if, when, for, while</span>
                                             <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
@@ -196,21 +196,21 @@
                             <li class="curriculum-item">
                                 <div class="curriculum-heading curriculum-wrapper">
                                     <i class="fa fa-bars move-section"></i>
-                                    <span class="checkbox-container"><input type="checkbox"/>
-                                    </span>
                                     <span class="title">
                                     <span class="section-curriculum-name">Chương 2: Classes and Inheritance</span>
                                     <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
                                     </span>
                                     <div class="pull-right">
-                                        <button id="addNewLecture" class="button primary-button">Thêm bài học</button>
+                                        <button id="addNewLecture" class="button primary-button">
+                                        <i class="fa fa-plus"></i>Thêm bài học</button>
+                                        <button id="removeLecture" class="button btn-orange button-only-icon"><i class="fa fa-trash"></i></button>
+                                        <button class="button outline-button button-only-icon"><i class="fa fa-angle-down"></i></button>
                                     </div>
                                 </div>
                                 <ol class="list-unstyled">
                                     <li class="curriculum-lecture-item">
                                         <div class="curriculum-lecture-heading curriculum-wrapper">
                                             <i class="fa fa-bars move-section"></i>
-                                            <span class="checkbox-container"><input type="checkbox"/></span>
                                             <span class="title">
                                     <span class="section-curriculum-name">Bài 1: Classes, Constructors và Inheritance</span>
                                             <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
@@ -227,7 +227,6 @@
                                     <li class="curriculum-lecture-item">
                                         <div class="curriculum-lecture-heading curriculum-wrapper">
                                             <i class="fa fa-bars move-section"></i>
-                                            <span class="checkbox-container"><input type="checkbox"/></span>
                                             <span class="title">
                                     <span class="section-curriculum-name">Bài 2: Overriding Methods, Overriding Rules và Overriding Properties</span>
                                             <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
@@ -244,7 +243,6 @@
                                     <li class="curriculum-lecture-item">
                                         <div class="curriculum-lecture-heading curriculum-wrapper">
                                             <i class="fa fa-bars move-section"></i>
-                                            <span class="checkbox-container"><input type="checkbox"/></span>
                                             <span class="title">
                                     <span class="section-curriculum-name">Bài 3: Abstract Classes</span>
                                             <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
@@ -261,7 +259,6 @@
                                     <li class="curriculum-lecture-item">
                                         <div class="curriculum-lecture-heading curriculum-wrapper">
                                             <i class="fa fa-bars move-section"></i>
-                                            <span class="checkbox-container"><input type="checkbox"/></span>
                                             <span class="title">
                                     <span class="section-curriculum-name">Bài 4: Companion Objects</span>
                                             <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
@@ -536,6 +533,28 @@
         </div>
     </div>
 
+    <div id="addPlanModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <strong class="modal-title">Nhập tên kế hoạch</strong>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="txtPlanName">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button primary-button">Thêm</button>
+
+                    <button type="button" class="button flat-button" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div id="newLecture" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -580,27 +599,92 @@
                 <button class="button primary-button">Lưu</button>
             </div>
         </div>
+    </div>
 
+    <div id="deleteLecture" class="modal">
+        <div class="modal-content">
+            <div class="top-modal">
+                <div style="float:left">
+                    <p>Bạn muốn xoá chương học này ?</p>
+                </div>
+            </div>
+            <div class="main-modal">
+                Không thể hoàn tác khi đã xoá
+            </div>
+            <div class="modal-action">
+                <button class="close button">Đóng</button>
+                <button class="button primary-button">Xoá</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteSection" class="modal">
+        <div class="modal-content">
+            <div class="top-modal">
+                <div style="float:left">
+                    <p>Bạn muốn xoá bài học này ?</p>
+                </div>
+            </div>
+            <div class="main-modal">
+                Không thể hoàn tác khi đã xoá
+            </div>
+            <div class="modal-action">
+                <button class="close button">Đóng</button>
+                <button class="button primary-button">Xoá</button>
+            </div>
+        </div>
     </div>
 
     <script src="./resources/jquery-3.3.1.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
     <script src="./dist/js/traisy.min.js"></script>
     <script>
         $(function() {
             var page = new ManageMasterpage();
         });
-        var modal = document.getElementById('newLecture');
-        var btn = document.getElementById("addNewLecture");
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() {
-            modal.style.display = "none";
+
+        var addLectureModal = document.getElementById('newLecture');
+        var addNewLecture = document.getElementById("addNewLecture");
+        var closeInAdd = document.getElementsByClassName("close")[0];
+        closeInAdd.onclick = function() {
+            addLectureModal.style.display = "none";
         }
-        btn.onclick = function() {
-            modal.style.display = "block";
+        addNewLecture.onclick = function() {
+            addLectureModal.style.display = "block";
         }
         window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target == addLectureModal) {
+                addLectureModal.style.display = "none";
+            }
+        }
+
+        var removeLectureModal = document.getElementById('deleteLecture');
+        var removeLecture = document.getElementById("removeLecture");
+        var closeInRemove = document.getElementsByClassName("close")[1];
+        closeInRemove.onclick = function() {
+            removeLectureModal.style.display = "none";
+        }
+        removeLecture.onclick = function() {
+            removeLectureModal.style.display = "block";
+        }
+        window.onclick = function(event) {
+            if (event.target == removeLectureModal) {
+                removeLectureModal.style.display = "none";
+            }
+        }
+
+        var removeLectureSectionModal = document.getElementById('deleteSection');
+        var removeLectureSection = document.getElementById("removeLectureSection");
+        var closeSection = document.getElementsByClassName("close")[2];
+        closeSection.onclick = function() {
+            removeLectureSectionModal.style.display = "none";
+        }
+        removeLectureSection.onclick = function() {
+            removeLectureSectionModal.style.display = "block";
+        }
+        window.onclick = function(event) {
+            if (event.target == removeLectureSectionModal) {
+                removeLectureSectionModal.style.display = "none";
             }
         }
 

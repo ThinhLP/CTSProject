@@ -84,3 +84,80 @@
 /* Responsive */
 
 @media (min-width:1200px) {}
+
+/* New CSS */
+
+.result-container {
+    margin-top: 20px;
+}
+
+.search-box {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.centered > div {
+    height: auto;
+}
+
+.result {
+    border-radius: 6px !important;
+    border: 1px solid #eee;
+    display: flex;
+    text-align: left;
+    padding: 0;
+    height: auto;
+}
+
+.result-avatar {
+    border-radius: 6px !important;
+    height: 70px;
+    width: 70px;
+}
+
+.result-info {
+    width: 100%;
+    background: red;
+}
+
+.learner-result {
+    padding: 10px;
+    width: 100%;
+}
+
+.learner-result .big {
+    font-size: 15px;
+}
+
+/*.checkbox-container {
+    display: none;
+}*/
+
+.check-box {
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+}
+
+.add:hover {
+    color: #1b958a;
+    cursor: pointer;
+}
+
+.check-box i {
+    color: #eee;
+    margin-right: -15px;
+    font-size: 2.2em;
+    line-height: 70px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.checked {
+    color: #1b958a;
+    position: absolute;
+}
+
+i.fa-check-circle {
+    color: #1b958a;
+}

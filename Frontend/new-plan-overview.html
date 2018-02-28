@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quản lý khoá học | Traisy</title>
+    <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/new-global.css" />
+    <link rel="stylesheet" href="./css/new-global-responsive.css" />
+    <link rel="stylesheet" href="./css/manage-page.css" />
+    <link rel="stylesheet" href="./css/manage-plan-detail.css" />
+    <link rel="stylesheet" href="./css/manage-course.css" />
+    <link rel="stylesheet" href="./css/plan-overview.css" />
+</head>
+
+
+<body>
+    <div class="left-panel">
+        <div class="logo-wrapper">
+            <a href="#"><img class="logo" src="../resources/images/logo_traisy1.png" />
+            </a>
+            <span class="search-btn"><i class="fa fa-search"></i></span>
+        </div>
+
+        <div class="user-info">
+            <a class="user-detail" href="#">
+                <img class="user-avatar" src="../resources/images/man.png" />
+                <span class="user-fullname ellipsis">Nguyen Van Ahihi</span>
+            </a>
+            <div class="user-action" target=".user-menu" collapsed="true">
+                <i class="fa fa-angle-up"></i>
+            </div>
+            <ul class="user-menu">
+                <li><a href="#">Chương trình của tôi</a></li>
+                <li><a href="#">Đăng xuất</a></li>
+            </ul>
+        </div>
+        <div class="navigator-wrapper main-navigator">
+            <ul class="nav-items">
+                <li class="dashboard-item"><a href="#"><i class="fa fa-clone"></i><span class="nav-item-name">Thống kê</span></a>
+                </li>
+                <li class="active dashboard-item"><a href="#"><i class="fa fa-th-list"></i><span class="nav-item-name">Quản lý kế hoạch</span></a>
+                </li>
+                <li class="dashboard-item"><a href="#"><i class="fa fa-comments"></i><span class="nav-item-name">Quản lý thương hiệu</span></a>
+                </li>
+                <li class="dashboard-item"><a href="#"><i class="fa fa-users"></i><span class="nav-item-name">Quản lý người dùng</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="navigator-wrapper minor-navigator">
+            <div class="nav-title-wrapper">
+                <span class="nav-title"><a href="#">Danh sách kế hoạch</a></span>
+                <span class="add-button"><i class="fa fa-plus-circle"></i></span>
+            </div>
+            <ul class="nav-items">
+                <li class="course-item"><a href="#"><span class="nav-item-name">Đào tạo lập trình</span></a>
+                </li>
+                <li class="course-item"><a href="#"><span class="nav-item-name">Đào tạo kĩ năng làm việc nhóm</span></a>
+                </li>
+                <li class="course-item"><a href="#"><span class="nav-item-name">Thiết kế chuyên nghiệp</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-panel">
+        <div class="fake-panel"></div>
+        <div class="nav-top fix-nav-top">
+            <div class="nav-top-info">
+                <span class="hamburger-button">
+                        <i class="fa fa-bars"></i>
+                    </span>
+            </div>
+            <ul class="nav-top-menu-wrapper">
+                <li class="top-menu-item active" target="#plan-introduction"><a>Giới thiệu</a></li>
+                <li class="top-menu-item" target="#plan-image-wrapper"><a>Hình ảnh</a></li>
+                <li class="top-menu-item" target="#course-wrapper"><a>Bài học</a></li>
+                <li class="top-menu-item" target="#trainee-wrapper"><a>Học viên</a></li>
+                <li class="top-menu-item" target="#contribute-wrapper"><a>Đóng góp<span class="notification">5</span></a></li>
+                <li class="top-menu-item" target="#propose-wrapper"><a>Đề xuất cải tiến
+                <span class="notification">7</span></a></li>
+            </ul>
+        </div>
+        <div class="main-container">
+            <!-- ------------------------------------------------------------ -->
+
+            <!--<div class="modal-content">
+                <div class="main-modal">
+                    <div class="top-modal-search">
+                        <input name="name" type="text" class="form-input" placeholder="Tìm kiếm học viên" />
+                        <button class="button outline-button">Đóng</button>
+                    </div>
+
+                    <div class="content-detail learner-list">
+                        <div class="container-fluid result-container">
+                            <div class="row centered">
+                                <div class="col-md-6">
+                                    <div style="padding-right: 2px;">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Ngày tham gia: 19/02/2018</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding-right: 2px;">
+                                    <div class="learner result">
+                                        <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                        <div class="learner-info learner-result">
+                                            <span class="big">Võ Thạch Nguyên</span><br/>
+                                            <span class="small">Ngày tham gia: 19/02/2018</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-container">
+                            <div style="display: inline-block">
+                                <ul class="pagination">
+                                    <li class="page-item"><a href="#" class="page-link">&#9664;<div class="ripple-container"></div></a></li>
+                                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                    <li class="active page-item"><a href="#" class="page-link">3</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">&#9654;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <strong class="modal-title">Thêm học viên</strong>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="search-box"><input name="name" type="text" class="form-input" placeholder="Tìm kiếm học viên" /></div>
+                            <div class="container-fluid result-container">
+                                <div class="row centered">
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Tổng giám đốc</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Bảo vệ</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Tổng giám đốc</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Bảo vệ</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Tổng giám đốc</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Bảo vệ</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Tổng giám đốc</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Bảo vệ</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Tổng giám đốc</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="learner result">
+                                            <img src="resources/images/avatar.jpg" class="result-avatar" />
+                                            <div class="learner-info learner-result">
+                                                <span class="big">Võ Thạch Nguyên</span><br/>
+                                                <span class="small">Bảo vệ</span>
+                                            </div>
+                                            <div class="check-box">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination-container">
+                                <div style="display: inline-block">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a href="#" class="page-link">&#9664;<div class="ripple-container"></div></a></li>
+                                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                        <li class="active page-item"><a href="#" class="page-link">3</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                        <li class="page-item"><a href="#" class="page-link">&#9654;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button primary-button">Lưu</button>
+                            <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./resources/jquery-3.3.1.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./dist/js/traisy.min.js"></script>
+    <script>
+        $('.check-box').on('click', function() {
+            $(this).children('i').toggleClass('fa-plus-circle').toggleClass('fa-check-circle');
+        })
+
+    </script>
+</body>
