@@ -33,6 +33,18 @@ h2.sub-heading .small {
     margin-bottom: 25px;
 }
 
+.start-end {
+    display: flex;
+}
+
+.start-end div.content-detail {
+    width: 47%;
+}
+
+.start-end div.fake-content-detail {
+    width: 6%;
+}
+
 .section-content .content-detail:last-child {
     margin-bottom: 10px;
 }

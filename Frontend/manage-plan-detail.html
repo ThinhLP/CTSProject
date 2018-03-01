@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quản lý kế hoạch | Traisy</title>
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap-datepicker3.min.css" />
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/new-global.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
@@ -16,9 +18,10 @@
     <link rel="stylesheet" href="./css/manage-plan-detail.css" />
     <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
 
+    <script src="./resources/bootstrap/js/bootstrap-datepicker.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap-datepicker.vi.min.js"></script>
     <script src="resources/jquery-3.3.1.min.js"></script>
     <script src="resources/stepper/materialize-stepper.js"></script>
-
 </head>
 
 
@@ -99,7 +102,6 @@
                         </h2>
                     </div>
                     <div class="section-content col-md-9 col-sm-12">
-
                         <div class="content-detail">
                             <label>Tên kế hoạch</label><br/>
                             <input name="name" type="text" class="form-input" />
@@ -110,134 +112,145 @@
                                 <textarea name="name" class="form-textarea"></textarea>
                             </div>
                         </div>
+                        <div class="content-detail start-end">
+                            <div class="content-detail">
+                                <label>Ngày bắt đầu</label><br/>
+                                <input type="text" class="form-input" data-provide="datepicker">
+                            </div>
+                            <div class="fake-content-detail"></div>
+                            <div class="content-detail">
+                                <label>Ngày kết thúc</label><br/>
+                                <input type="text" class="form-input" data-provide="datepicker">
+                            </div>
+                        </div>
                         <div class="content-action">
-                            <button class="save-plan-info-btn button primary-button">Lưu chỉnh sửa</button>
+                            <button class="save-plan-info-btn button primary-button ">Lưu chỉnh sửa</button>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="content-wrapper" id="plan-image-wrapper">
-                <div class="section-wrapper row">
-                    <div class="section-heading col-md-3 col-sm-12">
-                        <h2 class="sub-heading">
-                            <span class="big">Hình ảnh</span>
+            <div class="content-wrapper " id="plan-image-wrapper ">
+                <div class="section-wrapper row ">
+                    <div class="section-heading col-md-3 col-sm-12 ">
+                        <h2 class="sub-heading ">
+                            <span class="big ">Hình ảnh</span>
                             <br/>
-                            <span class="small">Hình ảnh giới thiệu kế hoạch</span>
+                            <span class="small ">Hình ảnh giới thiệu kế hoạch</span>
                         </h2>
                     </div>
-                    <div class="section-content col-md-9 col-sm-12">
-                        <div class="content-detail">
-                            <div class="row">
-                                <div class="course-image-wrapper col-lg-9 col-md-8 col-xs-12">
-                                    <img src="resources/images/course_picture.png" class="course-image" />
+                    <div class="section-content col-md-9 col-sm-12 ">
+                        <div class="content-detail ">
+                            <div class="row ">
+                                <div class="course-image-wrapper col-lg-9 col-md-8 col-xs-12 ">
+                                    <img src="resources/images/course_picture.png " class="course-image " />
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-xs-12">
-                                    <button class="change-pic-btn button primary-button">Chọn ảnh</button>
+                                <div class="col-lg-3 col-md-4 col-xs-12 ">
+                                    <button class="change-pic-btn button primary-button ">Chọn ảnh</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper" id="author-wrapper">
-                <div class="section-wrapper row">
-                    <div class="section-heading col-md-3 col-sm-12">
-                        <h2 class="sub-heading">
-                            <span class="big">Danh sách giảng viên</span>
+            <div class="content-wrapper " id="author-wrapper ">
+                <div class="section-wrapper row ">
+                    <div class="section-heading col-md-3 col-sm-12 ">
+                        <h2 class="sub-heading ">
+                            <span class="big ">Danh sách giảng viên</span>
                         </h2>
                     </div>
-                    <div class="section-content col-md-9 col-sm-12">
-                        <div class="content-detail">
-                            <div class="row">
-                                <div class="content-detail col-md-5">
-                                    <input name="name" type="text" class="form-input" placeholder="Tìm kiếm giảng viên" />
+                    <div class="section-content col-md-9 col-sm-12 ">
+                        <div class="content-detail ">
+                            <div class="row ">
+                                <div class="content-detail col-md-5 ">
+                                    <input name="name " type="text " class="form-input " placeholder="Tìm kiếm giảng viên " />
                                 </div>
-                                <div class="col-lg-7 col-md-4 col-xs-12" style="text-align: right;">
-                                    <button class="button primary-button"><i class="fa fa-plus"></i>Thêm giảng viên</button>
+                                <div class="col-lg-7 col-md-4 col-xs-12 " style="text-align: right; ">
+                                    <button class="button primary-button "><i class="fa fa-plus "></i>Thêm giảng viên</button>
                                 </div>
                             </div>
-                            <div class="user-list-wrapper">
-                                <div class="user-card">
-                                    <div class="user-card-image">
-                                        <img src="./resources/images/Image_4.png" />
-                                        <div class="banner-wrapper">
-                                            <span class="left-banner"></span>
-                                            <span class="right-banner"></span>
-                                            <span class="banner">Giảng viên</span>
+                            <div class="user-list-wrapper ">
+                                <div class="user-card ">
+                                    <div class="user-card-image ">
+                                        <img src="./resources/images/Image_4.png " />
+                                        <div class="banner-wrapper ">
+                                            <span class="left-banner "></span>
+                                            <span class="right-banner "></span>
+                                            <span class="banner ">Giảng viên</span>
                                         </div>
                                     </div>
 
-                                    <div class="user-card-info">
-                                        <span class="user-card-name">Lê Phúc Thịnh</span>
-                                        <span class="user-card-title">Project Manager</span>
+                                    <div class="user-card-info ">
+                                        <span class="user-card-name ">Lê Phúc Thịnh</span>
+                                        <span class="user-card-title ">Project Manager</span>
                                     </div>
 
-                                    <div class="user-card-action">
-                                        <span class="remove-user"><i class="fa fa-times-circle"></i></span>
+                                    <div class="user-card-action ">
+                                        <span class="remove-user "><i class="fa fa-times-circle "></i></span>
                                     </div>
 
                                 </div>
 
-                                <div class="user-card">
-                                    <div class="user-card-image">
-                                        <img src="./resources/images/man.png" />
-                                        <div class="banner-wrapper">
-                                            <span class="left-banner"></span>
-                                            <span class="right-banner"></span>
-                                            <span class="banner">Giảng viên</span>
+                                <div class="user-card ">
+                                    <div class="user-card-image ">
+                                        <img src="./resources/images/man.png " />
+                                        <div class="banner-wrapper ">
+                                            <span class="left-banner "></span>
+                                            <span class="right-banner "></span>
+                                            <span class="banner ">Giảng viên</span>
                                         </div>
                                     </div>
 
-                                    <div class="user-card-info">
-                                        <span class="user-card-name">Võ Thạch Nguyên</span>
-                                        <span class="user-card-title">Project Manager</span>
+                                    <div class="user-card-info ">
+                                        <span class="user-card-name ">Võ Thạch Nguyên</span>
+                                        <span class="user-card-title ">Project Manager</span>
                                     </div>
 
-                                    <div class="user-card-action">
-                                        <span class="remove-user"><i class="fa fa-times-circle"></i></span>
+                                    <div class="user-card-action ">
+                                        <span class="remove-user "><i class="fa fa-times-circle "></i></span>
                                     </div>
 
                                 </div>
 
-                                <div class="user-card">
-                                    <div class="user-card-image">
-                                        <img src="./resources/images/plan1.png" />
-                                        <div class="banner-wrapper">
-                                            <span class="left-banner"></span>
-                                            <span class="right-banner"></span>
-                                            <span class="banner">Giảng viên</span>
+                                <div class="user-card ">
+                                    <div class="user-card-image ">
+                                        <img src="./resources/images/plan1.png " />
+                                        <div class="banner-wrapper ">
+                                            <span class="left-banner "></span>
+                                            <span class="right-banner "></span>
+                                            <span class="banner ">Giảng viên</span>
                                         </div>
                                     </div>
 
-                                    <div class="user-card-info">
-                                        <span class="user-card-name">Phạm Chánh Hưng</span>
-                                        <span class="user-card-title">Human Resource</span>
+                                    <div class="user-card-info ">
+                                        <span class="user-card-name ">Phạm Chánh Hưng</span>
+                                        <span class="user-card-title ">Human Resource</span>
                                     </div>
 
-                                    <div class="user-card-action">
-                                        <span class="remove-user"><i class="fa fa-times-circle"></i></span>
+                                    <div class="user-card-action ">
+                                        <span class="remove-user "><i class="fa fa-times-circle "></i></span>
                                     </div>
 
                                 </div>
 
-                                <div class="user-card">
-                                    <div class="user-card-image">
-                                        <img src="./resources/images/plan1.png" />
-                                        <div class="banner-wrapper">
-                                            <span class="left-banner"></span>
-                                            <span class="right-banner"></span>
-                                            <span class="banner">Giảng viên</span>
+                                <div class="user-card ">
+                                    <div class="user-card-image ">
+                                        <img src="./resources/images/plan1.png " />
+                                        <div class="banner-wrapper ">
+                                            <span class="left-banner "></span>
+                                            <span class="right-banner "></span>
+                                            <span class="banner ">Giảng viên</span>
                                         </div>
                                     </div>
 
-                                    <div class="user-card-info">
-                                        <span class="user-card-name">Đặng Thế Anh</span>
-                                        <span class="user-card-title">Senior Developer</span>
+                                    <div class="user-card-info ">
+                                        <span class="user-card-name ">Đặng Thế Anh</span>
+                                        <span class="user-card-title ">Senior Developer</span>
                                     </div>
 
-                                    <div class="user-card-action">
-                                        <span class="remove-user"><i class="fa fa-times-circle"></i></span>
+                                    <div class="user-card-action ">
+                                        <span class="remove-user "><i class="fa fa-times-circle "></i></span>
                                     </div>
 
                                 </div>
@@ -246,52 +259,52 @@
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper" id="trainee-wrapper">
-                <div class="section-wrapper row">
-                    <div class="section-heading col-md-3 col-sm-12">
-                        <h2 class="sub-heading">
-                            <span class="big">Danh sách học viên</span>
+            <div class="content-wrapper " id="trainee-wrapper ">
+                <div class="section-wrapper row ">
+                    <div class="section-heading col-md-3 col-sm-12 ">
+                        <h2 class="sub-heading ">
+                            <span class="big ">Danh sách học viên</span>
                         </h2>
                     </div>
-                    <div class="section-content col-md-9 col-sm-12">
-                        <div class="row">
-                            <div class="content-detail col-md-5">
-                                <input name="name" type="text" class="form-input" placeholder="Tìm kiếm học viên" />
+                    <div class="section-content col-md-9 col-sm-12 ">
+                        <div class="row ">
+                            <div class="content-detail col-md-5 ">
+                                <input name="name " type="text " class="form-input " placeholder="Tìm kiếm học viên " />
                             </div>
-                            <div class="col-lg-7 col-md-4 col-xs-12" style="text-align: right;">
-                                <button class="button primary-button"><i class="fa fa-plus"></i>Thêm học viên</button>
+                            <div class="col-lg-7 col-md-4 col-xs-12 " style="text-align: right; ">
+                                <button class="button primary-button "><i class="fa fa-plus "></i>Thêm học viên</button>
                             </div>
                         </div>
-                        <div class="content-detail">
-                            <div class="user-list-wrapper">
-                                <div class="user-card">
-                                    <div class="user-card-image">
-                                        <img src="./resources/images/Image_4.png" />
+                        <div class="content-detail ">
+                            <div class="user-list-wrapper ">
+                                <div class="user-card ">
+                                    <div class="user-card-image ">
+                                        <img src="./resources/images/Image_4.png " />
                                     </div>
 
-                                    <div class="user-card-info">
-                                        <span class="user-card-name">Lê Phúc Thịnh</span>
-                                        <span class="user-card-title">Developer</span>
+                                    <div class="user-card-info ">
+                                        <span class="user-card-name ">Lê Phúc Thịnh</span>
+                                        <span class="user-card-title ">Developer</span>
                                     </div>
 
-                                    <div class="user-card-action">
-                                        <span class="remove-user"><i class="fa fa-times-circle"></i></span>
+                                    <div class="user-card-action ">
+                                        <span class="remove-user "><i class="fa fa-times-circle "></i></span>
                                     </div>
 
                                 </div>
 
-                                <div class="user-card">
-                                    <div class="user-card-image">
-                                        <img src="./resources/images/Image_4.png" />
+                                <div class="user-card ">
+                                    <div class="user-card-image ">
+                                        <img src="./resources/images/Image_4.png " />
                                     </div>
 
-                                    <div class="user-card-info">
-                                        <span class="user-card-name">Lê Phúc Thịnh</span>
-                                        <span class="user-card-title">Developer</span>
+                                    <div class="user-card-info ">
+                                        <span class="user-card-name ">Lê Phúc Thịnh</span>
+                                        <span class="user-card-title ">Developer</span>
                                     </div>
 
-                                    <div class="user-card-action">
-                                        <span class="remove-user"><i class="fa fa-times-circle"></i></span>
+                                    <div class="user-card-action ">
+                                        <span class="remove-user "><i class="fa fa-times-circle "></i></span>
                                     </div>
 
                                 </div>
@@ -301,81 +314,81 @@
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper" id="plan-content-wrapper">
-                <div class="programs-list">
-                    <div class="program-wrapper" id="program-1">
-                        <div class="program-title" collapsed="false" target="#program-1 .stepper">Front end Developer <i class="rotate-arrow fa fa-chevron-up" aria-hidden="true"></i></div>
-                        <ul class="stepper">
-                            <li class="step active">
-                                <div class="step-title">
-                                    <div class="card-horizontal course-card">
-                                        <div class="card-info">
-                                            <div class="card-title ellipsis">Lập trình với HTML và CSS</div>
-                                            <div class="card-subtitle"><span class="plan-time">Nguyễn Thị Cà Pháo</span></div>
-                                            <div class="card-progress-wrapper">
-                                                <div class="card-progress-bar">
-                                                    <div class="completed-progress" style="width: 20%;"></div>
+            <div class="content-wrapper " id="plan-content-wrapper ">
+                <div class="programs-list ">
+                    <div class="program-wrapper " id="program-1 ">
+                        <div class="program-title " collapsed="false " target="#program-1 .stepper ">Front end Developer <i class="rotate-arrow fa fa-chevron-up " aria-hidden="true "></i></div>
+                        <ul class="stepper ">
+                            <li class="step active ">
+                                <div class="step-title ">
+                                    <div class="card-horizontal course-card ">
+                                        <div class="card-info ">
+                                            <div class="card-title ellipsis ">Lập trình với HTML và CSS</div>
+                                            <div class="card-subtitle "><span class="plan-time ">Nguyễn Thị Cà Pháo</span></div>
+                                            <div class="card-progress-wrapper ">
+                                                <div class="card-progress-bar ">
+                                                    <div class="completed-progress " style="width: 20%; "></div>
                                                 </div>
-                                                <div class="percentage">20%</div>
+                                                <div class="percentage ">20%</div>
                                             </div>
-                                            <div class="card-action">
-                                                <button class="flat-button button">Học tiếp</button>
+                                            <div class="card-action ">
+                                                <button class="flat-button button ">Học tiếp</button>
                                             </div>
                                         </div>
-                                        <div class="card-img" style="background-image: url(resources/images/course2.jpeg)"></div>
+                                        <div class="card-img " style="background-image: url(resources/images/course2.jpeg) "></div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="step active">
-                                <div class="step-title">
-                                    <div class="card-horizontal course-card">
-                                        <div class="card-info">
-                                            <div class="card-title ellipsis">Nhập môn Javascript</div>
-                                            <div class="card-subtitle"><span class="plan-time">Lê Thân Thiện</span></div>
+                            <li class="step active ">
+                                <div class="step-title ">
+                                    <div class="card-horizontal course-card ">
+                                        <div class="card-info ">
+                                            <div class="card-title ellipsis ">Nhập môn Javascript</div>
+                                            <div class="card-subtitle "><span class="plan-time ">Lê Thân Thiện</span></div>
 
-                                            <div class="card-action">
-                                                <button class="primary-button button">Tham gia</button>
+                                            <div class="card-action ">
+                                                <button class="primary-button button ">Tham gia</button>
                                             </div>
                                         </div>
-                                        <div class="card-img" style="background-image: url(resources/images/course1.jpeg)"></div>
+                                        <div class="card-img " style="background-image: url(resources/images/course1.jpeg) "></div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="program-wrapper" id="program-2">
-                        <div class="program-title" collapsed="true" target="#program-2 .stepper">Back end Developer <i class="rotate-arrow fa fa-chevron-down" aria-hidden="true"></i></div>
-                        <ul class="stepper">
-                            <li class="step active">
-                                <div class="step-title">
-                                    <div class="card-horizontal course-card">
-                                        <div class="card-img" style="background-image: url(resources/images/course2.jpeg)"></div>
-                                        <div class="card-info">
-                                            <div class="card-title ellipsis">Lập trình với HTML và CSS</div>
-                                            <div class="card-subtitle"><span class="plan-time">Nguyễn Thị Cà Pháo</span></div>
-                                            <div class="card-progress-wrapper">
-                                                <div class="card-progress-bar">
-                                                    <div class="completed-progress" style="width: 20%;"></div>
+                    <div class="program-wrapper " id="program-2 ">
+                        <div class="program-title " collapsed="true " target="#program-2 .stepper ">Back end Developer <i class="rotate-arrow fa fa-chevron-down " aria-hidden="true "></i></div>
+                        <ul class="stepper ">
+                            <li class="step active ">
+                                <div class="step-title ">
+                                    <div class="card-horizontal course-card ">
+                                        <div class="card-img " style="background-image: url(resources/images/course2.jpeg) "></div>
+                                        <div class="card-info ">
+                                            <div class="card-title ellipsis ">Lập trình với HTML và CSS</div>
+                                            <div class="card-subtitle "><span class="plan-time ">Nguyễn Thị Cà Pháo</span></div>
+                                            <div class="card-progress-wrapper ">
+                                                <div class="card-progress-bar ">
+                                                    <div class="completed-progress " style="width: 20%; "></div>
                                                 </div>
-                                                <div class="percentage">20%</div>
+                                                <div class="percentage ">20%</div>
                                             </div>
-                                            <div class="card-action">
-                                                <button class="flat-button button">Học tiếp</button>
+                                            <div class="card-action ">
+                                                <button class="flat-button button ">Học tiếp</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="step active">
-                                <div class="step-title">
-                                    <div class="card-horizontal course-card">
-                                        <div class="card-img" style="background-image: url(resources/images/course1.jpeg)"></div>
-                                        <div class="card-info">
-                                            <div class="card-title ellipsis">Nhập môn Javascript</div>
-                                            <div class="card-subtitle"><span class="plan-time">Lê Thân Thiện</span></div>
+                            <li class="step active ">
+                                <div class="step-title ">
+                                    <div class="card-horizontal course-card ">
+                                        <div class="card-img " style="background-image: url(resources/images/course1.jpeg) "></div>
+                                        <div class="card-info ">
+                                            <div class="card-title ellipsis ">Nhập môn Javascript</div>
+                                            <div class="card-subtitle "><span class="plan-time ">Lê Thân Thiện</span></div>
 
-                                            <div class="card-action">
-                                                <button class="primary-button button">Tham gia</button>
+                                            <div class="card-action ">
+                                                <button class="primary-button button ">Tham gia</button>
                                             </div>
                                         </div>
                                     </div>
@@ -388,13 +401,16 @@
         </div>
     </div>
 
-    <script src="./resources/jquery-3.3.1.min.js"></script>
-    <script src="./dist/js/traisy.min.js"></script>
+    <script src="./resources/jquery-3.3.1.min.js "></script>
+    <script src="./dist/js/traisy.min.js "></script>
     <script>
         $(function() {
             var page = new ManageMasterpage();
         });
 
+        $('.datepicker').datepicker({
+            autoclose: true
+        });
     </script>
 
 </body>
