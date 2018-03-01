@@ -103,7 +103,22 @@
                             <label>Tên kế hoạch</label><br/>
                             <input name="name" type="text" class="form-input" />
                         </div>
-                        <div class="content-detail start-end">
+                        <div class="content-detail">
+                            <label>Thời gian</label><br/>
+                            <div id="sandbox-container">
+                                <div class="input-daterange input-group" id="datepicker">
+                                    <input type="text" class="input-sm form-control" name="start" placeholder="" />
+                                    <span class="input-group-addon">to</span>
+                                    <input type="text" class="input-sm form-control" name="end" />
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="content-detail" id="sandbox-container">
+                            <div class="input-daterange input-group" id="datepicker">
+                                <input type="text" class="input-sm form-control" name="start" />
+                                <span class="input-group-addon">to</span>
+                                <input type="text" class="input-sm form-control" name="end" />
+                            </div>
                             <div class="content-detail">
                                 <label>Ngày bắt đầu</label><br/>
                                 <input type="text" class="form-input datepicker" name="start">
@@ -113,7 +128,7 @@
                                 <label>Ngày kết thúc</label><br/>
                                 <input type="text" class="form-input datepicker" name="end">
                             </div>
-                        </div>
+                        </div>-->
                         <div class="content-detail">
                             <label>Mô tả</label><br/>
                             <div class="editor">
@@ -400,11 +415,11 @@
     </div>
 
     <div class="input-daterange input-group" id="datepicker">
-    <input type="text" class="input-sm form-control" name="start" />
-    <span class="input-group-addon">to</span>
-    <input type="text" class="input-sm form-control" name="end" />
-</div>
-    
+        <input type="text" class="input-sm form-control" name="start" />
+        <span class="input-group-addon">to</span>
+        <input type="text" class="input-sm form-control" name="end" />
+    </div>
+
     <script src="./resources/jquery-3.3.1.min.js "></script>
     <script src="./resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="./resources/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js"></script>
@@ -420,6 +435,8 @@
             language: "vi",
             format: "dd/mm/yyyy"
         });
+
+        $('#sandbox-container .input-daterange').datepicker({});
 
     </script>
 

@@ -133,3 +133,61 @@
 .stepper {
     width: 85%;
 }
+
+
+/* CSS for Add Learner Modal */
+
+.result-container {
+    margin-top: 20px;
+}
+
+.result-container .centered > div {
+    height: auto;
+}
+
+.result {
+    border-radius: 6px !important;
+    border: 1px solid #eee;
+    display: flex;
+    text-align: left;
+    padding: 0;
+    height: auto;
+}
+
+.result-avatar {
+    border-radius: 6px !important;
+    height: 70px;
+    width: 70px;
+}
+
+.search-learner-info {
+    padding: 10px;
+    width: 100%;
+}
+
+.search-learner-info .big {
+    font-size: 15px;
+}
+
+.check-box {
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+}
+
+.check-box i {
+    color: #eee;
+    margin-right: -15px;
+    font-size: 2.2em;
+    line-height: 70px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+i.fa-plus-circle:hover {
+    color: #1b958a;
+}
+
+i.fa-check-circle {
+    color: #1b958a;
+}
