@@ -191,3 +191,15 @@ i.fa-plus-circle:hover {
 i.fa-check-circle {
     color: #1b958a;
 }
+
+/* ------------ */
+
+.input-group-addon {
+    min-width: 70px !important;
+    padding: 0 !important;
+    background: #eee;
+    text-align: center;
+    height: 44px;
+    line-height: 42px !important;
+    border: 1px solid #dbdbdb;
+}

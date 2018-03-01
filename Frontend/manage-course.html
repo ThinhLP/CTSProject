@@ -139,9 +139,6 @@
             <!-- Bài học -->
             <div class="content-wrapper" id="course-wrapper">
                 <div class="section-wrapper row">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPlanModal">
-  Launch demo modal
-</button>
                     <div class="col-md-12 curriculum">
                         <ol class="list-unstyled">
                             <li class="curriculum-item">
@@ -154,7 +151,7 @@
                                     <div class="pull-right">
                                         <button id="addNewLecture" class="button primary-button">
                                         <i class="fa fa-plus"></i>Thêm bài học</button>
-                                        <button id="removeLecture" class="button btn-orange button-only-icon"><i class="fa fa-trash"></i></button>
+                                        <button class="button btn-orange button-only-icon" data-toggle="modal" data-target="#removeLectureModal"><i class="fa fa-trash"></i></button>
                                         <button class="button outline-button button-only-icon"><i class="fa fa-angle-down"></i></button>
                                     </div>
                                 </div>
@@ -203,7 +200,7 @@
                                     <div class="pull-right">
                                         <button id="addNewLecture" class="button primary-button">
                                         <i class="fa fa-plus"></i>Thêm bài học</button>
-                                        <button id="removeLecture" class="button btn-orange button-only-icon"><i class="fa fa-trash"></i></button>
+                                        <button class="button btn-orange button-only-icon" data-toggle="modal" data-target="#removeLectureModal"><i class="fa fa-trash"></i></button>
                                         <button class="button outline-button button-only-icon"><i class="fa fa-angle-down"></i></button>
                                     </div>
                                 </div>
@@ -534,7 +531,24 @@
         </div>
     </div>
 
-    <div id="addPlanModal" class="modal fade" role="dialog">
+    <div id="removeLectureModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <strong class="modal-title">Bạn muốn xoá chương học này ?</strong>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Không thể hoàn tác khi đã xoá</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="addPlanModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -554,10 +568,10 @@
             </div>
 
         </div>
-    </div>
+    </div>-->
 
-    <div id="newLecture" class="modal">
-        <!-- Modal content -->
+    <!--<div id="newLecture" class="modal">
+         Modal content 
         <div class="modal-content">
             <div class="top-modal">
                 <div style="float:left">
@@ -600,9 +614,9 @@
                 <button class="button primary-button">Lưu</button>
             </div>
         </div>
-    </div>
+    </div>-->
 
-    <div id="deleteLecture" class="modal">
+    <!--<div id="deleteLecture" class="modal">
         <div class="modal-content">
             <div class="top-modal">
                 <div style="float:left">
@@ -617,9 +631,9 @@
                 <button class="button primary-button">Xoá</button>
             </div>
         </div>
-    </div>
+    </div>-->
 
-    <div id="deleteSection" class="modal">
+    <!--<div id="deleteSection" class="modal">
         <div class="modal-content">
             <div class="top-modal">
                 <div style="float:left">
@@ -634,7 +648,7 @@
                 <button class="button primary-button">Xoá</button>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <script src="./resources/jquery-3.3.1.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
@@ -644,7 +658,7 @@
             var page = new ManageMasterpage();
         });
 
-        var addLectureModal = document.getElementById('newLecture');
+        /*var addLectureModal = document.getElementById('newLecture');
         var addNewLecture = document.getElementById("addNewLecture");
         var closeInAdd = document.getElementsByClassName("close")[0];
         closeInAdd.onclick = function() {
@@ -687,7 +701,7 @@
             if (event.target == removeLectureSectionModal) {
                 removeLectureSectionModal.style.display = "none";
             }
-        }
+        }*/
 
     </script>
 </body>

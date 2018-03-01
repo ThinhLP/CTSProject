@@ -107,35 +107,18 @@
                             <label>Thời gian</label><br/>
                             <div id="sandbox-container">
                                 <div class="input-daterange input-group" id="datepicker">
-                                    <input type="text" class="input-sm form-control" name="start" placeholder="" />
-                                    <span class="input-group-addon">to</span>
-                                    <input type="text" class="input-sm form-control" name="end" />
+                                    <input type="text" class="input-sm form-control form-input" name="start" placeholder="Bắt đầu" />
+                                    <span class="input-group-addon">đến</span>
+                                    <input type="text" class="input-sm form-control form-input" name="end" placeholder="Kết thúc" />
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="content-detail" id="sandbox-container">
-                            <div class="input-daterange input-group" id="datepicker">
-                                <input type="text" class="input-sm form-control" name="start" />
-                                <span class="input-group-addon">to</span>
-                                <input type="text" class="input-sm form-control" name="end" />
-                            </div>
-                            <div class="content-detail">
-                                <label>Ngày bắt đầu</label><br/>
-                                <input type="text" class="form-input datepicker" name="start">
-                            </div>
-                            <div class="fake-content-detail"></div>
-                            <div class="content-detail">
-                                <label>Ngày kết thúc</label><br/>
-                                <input type="text" class="form-input datepicker" name="end">
-                            </div>
-                        </div>-->
                         <div class="content-detail">
                             <label>Mô tả</label><br/>
                             <div class="editor">
                                 <textarea name="name" class="form-textarea"></textarea>
                             </div>
                         </div>
-
                         <div class="content-action">
                             <button class="save-plan-info-btn button primary-button ">Lưu chỉnh sửa</button>
                         </div>
@@ -430,13 +413,11 @@
             var page = new ManageMasterpage();
         });
 
-        $('.datepicker').datepicker({
+        $('#sandbox-container .input-daterange').datepicker({
             autoclose: true,
             language: "vi",
             format: "dd/mm/yyyy"
         });
-
-        $('#sandbox-container .input-daterange').datepicker({});
 
     </script>
 
