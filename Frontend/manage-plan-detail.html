@@ -103,15 +103,15 @@
                             <label>Tên kế hoạch</label><br/>
                             <input name="name" type="text" class="form-input" />
                         </div>
-                         <div class="content-detail start-end">
+                        <div class="content-detail start-end">
                             <div class="content-detail">
                                 <label>Ngày bắt đầu</label><br/>
-                                <input type="text" class="form-input datepicker">
+                                <input type="text" class="form-input datepicker" name="start">
                             </div>
                             <div class="fake-content-detail"></div>
                             <div class="content-detail">
                                 <label>Ngày kết thúc</label><br/>
-                                <input type="text" class="form-input datepicker">
+                                <input type="text" class="form-input datepicker" name="end">
                             </div>
                         </div>
                         <div class="content-detail">
@@ -120,7 +120,7 @@
                                 <textarea name="name" class="form-textarea"></textarea>
                             </div>
                         </div>
-                
+
                         <div class="content-action">
                             <button class="save-plan-info-btn button primary-button ">Lưu chỉnh sửa</button>
                         </div>
@@ -128,7 +128,7 @@
                 </div>
 
             </div>
-            <div class="content-wrapper " id="plan-image-wrapper ">
+            <div class="content-wrapper" id="plan-image-wrapper">
                 <div class="section-wrapper row ">
                     <div class="section-heading col-md-3 col-sm-12 ">
                         <h2 class="sub-heading ">
@@ -151,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper " id="author-wrapper ">
+            <div class="content-wrapper" id="author-wrapper">
                 <div class="section-wrapper row ">
                     <div class="section-heading col-md-3 col-sm-12 ">
                         <h2 class="sub-heading ">
@@ -257,7 +257,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper " id="trainee-wrapper ">
+            <div class="content-wrapper" id="trainee-wrapper">
                 <div class="section-wrapper row ">
                     <div class="section-heading col-md-3 col-sm-12 ">
                         <h2 class="sub-heading ">
@@ -312,20 +312,20 @@
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper " id="plan-content-wrapper ">
-                <div class="programs-list ">
-                    <div class="program-wrapper " id="program-1 ">
-                        <div class="program-title " collapsed="false " target="#program-1 .stepper ">Front end Developer <i class="rotate-arrow fa fa-chevron-up " aria-hidden="true "></i></div>
-                        <ul class="stepper ">
-                            <li class="step active ">
-                                <div class="step-title ">
-                                    <div class="card-horizontal course-card ">
-                                        <div class="card-info ">
-                                            <div class="card-title ellipsis ">Lập trình với HTML và CSS</div>
-                                            <div class="card-subtitle "><span class="plan-time ">Nguyễn Thị Cà Pháo</span></div>
-                                            <div class="card-progress-wrapper ">
-                                                <div class="card-progress-bar ">
-                                                    <div class="completed-progress " style="width: 20%; "></div>
+            <div class="content-wrapper" id="plan-content-wrapper">
+                <div class="programs-list">
+                    <div class="program-wrapper" id="program-1 ">
+                        <div class="program-title" collapsed="false " target="#program-1 .stepper">Front end Developer <i class="rotate-arrow fa fa-chevron-up" aria-hidden="true "></i></div>
+                        <ul class="stepper">
+                            <li class="step active">
+                                <div class="step-title">
+                                    <div class="card-horizontal course-card">
+                                        <div class="card-info">
+                                            <div class="card-title ellipsis">Lập trình với HTML và CSS</div>
+                                            <div class="card-subtitle"><span class="plan-time ">Nguyễn Thị Cà Pháo</span></div>
+                                            <div class="card-progress-wrapper">
+                                                <div class="card-progress-bar">
+                                                    <div class="completed-progress" style="width: 20%; "></div>
                                                 </div>
                                                 <div class="percentage ">20%</div>
                                             </div>
@@ -399,6 +399,12 @@
         </div>
     </div>
 
+    <div class="input-daterange input-group" id="datepicker">
+    <input type="text" class="input-sm form-control" name="start" />
+    <span class="input-group-addon">to</span>
+    <input type="text" class="input-sm form-control" name="end" />
+</div>
+    
     <script src="./resources/jquery-3.3.1.min.js "></script>
     <script src="./resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="./resources/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js"></script>
