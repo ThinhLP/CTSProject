@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quản lý kế hoạch | Traisy</title>
-    <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap-datepicker3.min.css" />
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
+
+    <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/new-global.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
@@ -18,10 +19,6 @@
     <link rel="stylesheet" href="./css/manage-plan-detail.css" />
     <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
 
-    <script src="./resources/bootstrap/js/bootstrap-datepicker.min.js"></script>
-    <script src="./resources/bootstrap/js/bootstrap-datepicker.vi.min.js"></script>
-    <script src="resources/jquery-3.3.1.min.js"></script>
-    <script src="resources/stepper/materialize-stepper.js"></script>
 </head>
 
 
@@ -106,23 +103,24 @@
                             <label>Tên kế hoạch</label><br/>
                             <input name="name" type="text" class="form-input" />
                         </div>
+                        <div class="content-detail start-end">
+                            <div class="content-detail">
+                                <label>Ngày bắt đầu</label><br/>
+                                <input type="text" class="form-input datepicker" name="start">
+                            </div>
+                            <div class="fake-content-detail"></div>
+                            <div class="content-detail">
+                                <label>Ngày kết thúc</label><br/>
+                                <input type="text" class="form-input datepicker" name="end">
+                            </div>
+                        </div>
                         <div class="content-detail">
                             <label>Mô tả</label><br/>
                             <div class="editor">
                                 <textarea name="name" class="form-textarea"></textarea>
                             </div>
                         </div>
-                        <div class="content-detail start-end">
-                            <div class="content-detail">
-                                <label>Ngày bắt đầu</label><br/>
-                                <input type="text" class="form-input" data-provide="datepicker">
-                            </div>
-                            <div class="fake-content-detail"></div>
-                            <div class="content-detail">
-                                <label>Ngày kết thúc</label><br/>
-                                <input type="text" class="form-input" data-provide="datepicker">
-                            </div>
-                        </div>
+
                         <div class="content-action">
                             <button class="save-plan-info-btn button primary-button ">Lưu chỉnh sửa</button>
                         </div>
@@ -130,7 +128,7 @@
                 </div>
 
             </div>
-            <div class="content-wrapper " id="plan-image-wrapper ">
+            <div class="content-wrapper" id="plan-image-wrapper">
                 <div class="section-wrapper row ">
                     <div class="section-heading col-md-3 col-sm-12 ">
                         <h2 class="sub-heading ">
@@ -153,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper " id="author-wrapper ">
+            <div class="content-wrapper" id="author-wrapper">
                 <div class="section-wrapper row ">
                     <div class="section-heading col-md-3 col-sm-12 ">
                         <h2 class="sub-heading ">
@@ -259,7 +257,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper " id="trainee-wrapper ">
+            <div class="content-wrapper" id="trainee-wrapper">
                 <div class="section-wrapper row ">
                     <div class="section-heading col-md-3 col-sm-12 ">
                         <h2 class="sub-heading ">
@@ -314,20 +312,20 @@
                     </div>
                 </div>
             </div>
-            <div class="content-wrapper " id="plan-content-wrapper ">
-                <div class="programs-list ">
-                    <div class="program-wrapper " id="program-1 ">
-                        <div class="program-title " collapsed="false " target="#program-1 .stepper ">Front end Developer <i class="rotate-arrow fa fa-chevron-up " aria-hidden="true "></i></div>
-                        <ul class="stepper ">
-                            <li class="step active ">
-                                <div class="step-title ">
-                                    <div class="card-horizontal course-card ">
-                                        <div class="card-info ">
-                                            <div class="card-title ellipsis ">Lập trình với HTML và CSS</div>
-                                            <div class="card-subtitle "><span class="plan-time ">Nguyễn Thị Cà Pháo</span></div>
-                                            <div class="card-progress-wrapper ">
-                                                <div class="card-progress-bar ">
-                                                    <div class="completed-progress " style="width: 20%; "></div>
+            <div class="content-wrapper" id="plan-content-wrapper">
+                <div class="programs-list">
+                    <div class="program-wrapper" id="program-1 ">
+                        <div class="program-title" collapsed="false " target="#program-1 .stepper">Front end Developer <i class="rotate-arrow fa fa-chevron-up" aria-hidden="true "></i></div>
+                        <ul class="stepper">
+                            <li class="step active">
+                                <div class="step-title">
+                                    <div class="card-horizontal course-card">
+                                        <div class="card-info">
+                                            <div class="card-title ellipsis">Lập trình với HTML và CSS</div>
+                                            <div class="card-subtitle"><span class="plan-time ">Nguyễn Thị Cà Pháo</span></div>
+                                            <div class="card-progress-wrapper">
+                                                <div class="card-progress-bar">
+                                                    <div class="completed-progress" style="width: 20%; "></div>
                                                 </div>
                                                 <div class="percentage ">20%</div>
                                             </div>
@@ -401,7 +399,16 @@
         </div>
     </div>
 
+    <div class="input-daterange input-group" id="datepicker">
+    <input type="text" class="input-sm form-control" name="start" />
+    <span class="input-group-addon">to</span>
+    <input type="text" class="input-sm form-control" name="end" />
+</div>
+    
     <script src="./resources/jquery-3.3.1.min.js "></script>
+    <script src="./resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="./resources/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js"></script>
+    <script src="resources/stepper/materialize-stepper.js"></script>
     <script src="./dist/js/traisy.min.js "></script>
     <script>
         $(function() {
@@ -409,8 +416,11 @@
         });
 
         $('.datepicker').datepicker({
-            autoclose: true
+            autoclose: true,
+            language: "vi",
+            format: "dd/mm/yyyy"
         });
+
     </script>
 
 </body>

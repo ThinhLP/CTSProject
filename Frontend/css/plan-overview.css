@@ -134,11 +134,6 @@
     position: relative;
 }
 
-.add:hover {
-    color: #1b958a;
-    cursor: pointer;
-}
-
 .check-box i {
     color: #eee;
     margin-right: -15px;
@@ -151,6 +146,10 @@
 .checked {
     color: #1b958a;
     position: absolute;
+}
+
+i.fa-plus-circle:hover {
+    color: #1b958a;
 }
 
 i.fa-check-circle {
