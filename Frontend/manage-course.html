@@ -140,6 +140,7 @@
             <div class="content-wrapper" id="course-wrapper">
                 <div class="section-wrapper row">
                     <div class="col-md-12 curriculum">
+                        <div class="curriculum-add-lecture"><button class="button btn-orange" data-toggle="modal" data-target="#createLectureModal"><i class="fa fa-plus"></i>Thêm chương mới</button></div>
                         <ol class="list-unstyled">
                             <li class="curriculum-item">
                                 <div class="curriculum-heading curriculum-wrapper">
@@ -149,7 +150,7 @@
                                     <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
                                     </span>
                                     <div class="pull-right">
-                                        <button id="addNewLecture" class="button primary-button">
+                                        <button class="button primary-button" data-toggle="modal" data-target="#createSectionModal">
                                         <i class="fa fa-plus"></i>Thêm bài học</button>
                                         <button class="button btn-orange button-only-icon" data-toggle="modal" data-target="#removeLectureModal"><i class="fa fa-trash"></i></button>
                                         <button class="button outline-button button-only-icon"><i class="fa fa-angle-down"></i></button>
@@ -167,7 +168,7 @@
                                                 <div class="btn-group">
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button id="removeLectureSection" class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-trash"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,7 +184,7 @@
                                                 <div class="btn-group">
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-trash"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -216,7 +217,7 @@
                                                 <div class="btn-group">
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-trash"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -232,7 +233,7 @@
                                                 <div class="btn-group">
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-trash"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -248,7 +249,7 @@
                                                 <div class="btn-group">
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-trash"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -264,7 +265,7 @@
                                                 <div class="btn-group">
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-trash"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -531,6 +532,7 @@
         </div>
     </div>
 
+    <!-- Xoá 1 chương học -->
     <div id="removeLectureModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -542,6 +544,111 @@
                     <p>Không thể hoàn tác khi đã xoá</p>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Xoá 1 bài học -->
+    <div id="removeSectionModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <strong class="modal-title">Bạn muốn xoá bài học này ?</strong>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Không thể hoàn tác khi đã xoá</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thêm chương học mới -->
+    <div id="createLectureModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <strong class="modal-title">Thêm chương mới</strong>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input name="name" type="text" class="form-input" placeholder="Nhập tên chương học" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button primary-button">Lưu</button>
+                    <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thêm bài học mới -->
+    <div id="createSectionModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <strong class="modal-title">Thêm bài học</strong>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input name="name" type="text" class="form-input" placeholder="Tên bài học" />
+                    <div class="type-lecture-wrapper">
+                        <div class="type-item col-md-2 select" target="#text-lecture-wrapper">
+                            <div class="type-container">
+                                <span><i class="fa fa-font"></i></span><br/>
+                                <span>Văn bản</span>
+                            </div>
+                        </div>
+                        <div class="type-item col-md-2 unselect" target="#powerpoint-lecture-wrapper">
+                            <div class="type-container">
+                                <span><i class="fa fa-file-powerpoint-o"></i></span><br/>
+                                <span>Powerpoint</span>
+                            </div>
+                        </div>
+                        <div class="type-item col-md-2 unselect" target="#video-lecture-wrapper">
+                            <div class="type-container">
+                                <span><i class="fa fa-video-camera"></i></span><br/>
+                                <span>Video</span>
+                            </div>
+                        </div>
+                        <div class="type-item col-md-2 unselect" target="#quiz-lecture-wrapper">
+                            <div class="type-container">
+                                <span><i class="fa fa-question"></i></span><br/>
+                                <span>Quiz</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-content-wrapper">
+                        <div id="text-lecture-wrapper">
+                            <div class="editor">
+                                <textarea name="name" class="form-textarea">Nội dung bài học</textarea>
+                            </div>
+                        </div>
+                        <div id="powerpoint-lecture-wrapper">
+                            <div class="choose-file"><button class="button outline-button">Chọn tập tin</button></div>
+                        </div>
+                        <div id="video-lecture-wrapper">
+                            <div class="choose-file"><button class="button outline-button">Chọn tập tin</button></div>
+                        </div>
+                        <div id="quiz-lecture-wrapper">
+                            <div class="add-question">
+                                <input name="name" type="text" class="form-input" placeholder="Nhập câu hỏi" />
+                                <div class="input-group">
+                                    <div class="input-group-addon"><input type="checkbox" /></div>
+                                    <input name="name" type="text" class="form-input" placeholder="Câu trả lời" />
+                                </div>
+                                <button class="button btn-orange">Thêm câu hỏi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button primary-button">Lưu</button>
                     <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
                 </div>
             </div>
@@ -657,6 +764,10 @@
         $(function() {
             var page = new ManageMasterpage();
         });
+
+        $('.type-item').on('click', function() {
+            $(this).toggleClass('unselect').toggleClass('select');
+        })
 
         /*var addLectureModal = document.getElementById('newLecture');
         var addNewLecture = document.getElementById("addNewLecture");

@@ -870,7 +870,7 @@ ul {
 
 .modal-action > button {
     min-width: 100px !important;
-}
+}*/
 
 .choose-file {
     text-align: center;
@@ -899,6 +899,10 @@ ul {
     margin-top: 10px;
 }
 
+.add-question .input-group .input-group-addon {
+    min-width: 10px !important;
+}
+
 .input-group {
     position: relative;
     display: table;
@@ -913,4 +917,56 @@ ul {
     border-top: 1px solid rgb(219, 219, 219);
     border-left: 1px solid rgb(219, 219, 219);
     border-bottom: 1px solid rgb(219, 219, 219);
-}*/
+}
+
+.curriculum-add-lecture {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.type-lecture-wrapper {
+    display: flex;
+    margin-top: 20px;
+}
+
+.type-content-wrapper {
+    margin-top: 20px;
+}
+
+.type-item {
+    text-align: center;
+    height: 100px;
+    margin-right: 10px;
+    color: #dbdbdb;
+    background-color: #FFF;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.unselect {
+    color: #dbdbdb;
+    background-color: #FFF;
+    border: 1px solid #dbdbdb;
+}
+
+.select {
+    color: #fff;
+    background-color: #1b958a;
+    border: 1px solid #1b958a;
+}
+
+.type-item i {
+    font-size: 1.8em;
+}
+
+.type-container {
+    margin-top: 10%;
+}
+
+.unselect:hover {
+    color: #1b958a;
+    border: 1px solid #1b958a;
+}
