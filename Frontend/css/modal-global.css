@@ -1,0 +1,23 @@
+/*.modal-body {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.modal-body i {
+    color: #d4604b;
+    font-size: 5em;
+}
+
+.modal-body h5 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-body p {
+    line-height: 12px;
+    font-weight: 200;
+}*/
+
+.modal-body p {
+    font-size: 15px;
+}

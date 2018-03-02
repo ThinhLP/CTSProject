@@ -636,14 +636,15 @@
                             <div class="choose-file"><button class="button outline-button">Chọn tập tin</button></div>
                         </div>
                         <div id="quiz-lecture-wrapper">
-                            <div class="add-question">
+                            <button class="button btn-orange">Tạo bài quiz</button>
+                            <!--<div class="add-question">
                                 <input name="name" type="text" class="form-input" placeholder="Nhập câu hỏi" />
                                 <div class="input-group">
                                     <div class="input-group-addon"><input type="checkbox" /></div>
                                     <input name="name" type="text" class="form-input" placeholder="Câu trả lời" />
                                 </div>
                                 <button class="button btn-orange">Thêm câu hỏi</button>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -768,51 +769,6 @@
         $('.type-item').on('click', function() {
             $(this).toggleClass('unselect').toggleClass('select');
         })
-
-        /*var addLectureModal = document.getElementById('newLecture');
-        var addNewLecture = document.getElementById("addNewLecture");
-        var closeInAdd = document.getElementsByClassName("close")[0];
-        closeInAdd.onclick = function() {
-            addLectureModal.style.display = "none";
-        }
-        addNewLecture.onclick = function() {
-            addLectureModal.style.display = "block";
-        }
-        window.onclick = function(event) {
-            if (event.target == addLectureModal) {
-                addLectureModal.style.display = "none";
-            }
-        }
-
-        var removeLectureModal = document.getElementById('deleteLecture');
-        var removeLecture = document.getElementById("removeLecture");
-        var closeInRemove = document.getElementsByClassName("close")[1];
-        closeInRemove.onclick = function() {
-            removeLectureModal.style.display = "none";
-        }
-        removeLecture.onclick = function() {
-            removeLectureModal.style.display = "block";
-        }
-        window.onclick = function(event) {
-            if (event.target == removeLectureModal) {
-                removeLectureModal.style.display = "none";
-            }
-        }
-
-        var removeLectureSectionModal = document.getElementById('deleteSection');
-        var removeLectureSection = document.getElementById("removeLectureSection");
-        var closeSection = document.getElementsByClassName("close")[2];
-        closeSection.onclick = function() {
-            removeLectureSectionModal.style.display = "none";
-        }
-        removeLectureSection.onclick = function() {
-            removeLectureSectionModal.style.display = "block";
-        }
-        window.onclick = function(event) {
-            if (event.target == removeLectureSectionModal) {
-                removeLectureSectionModal.style.display = "none";
-            }
-        }*/
 
     </script>
 </body>
