@@ -22,26 +22,44 @@ var Utils = {
         }
     },
     callJsonAjax: function (url, method, data, onSuccess, onFail) {
-        $.ajax({
-            url: url,
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            type: method,
-            dataType: 'json',
-            data: JSON.stringify(data),
-            success: function (data) {
-                if (onSuccess) {
-                    onSuccess(data);
+        if (method == "GET") {
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function (data) {
+                    if (onSuccess) {
+                        onSuccess(data);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (onFail) {
+                        onFail(jqXHR, textStatus, errorThrown);
+                    }
                 }
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                if (onFail) {
-                    onFail(jqXHR, textStatus, errorThrown);
+            });
+        } else {
+            $.ajax({
+                url: url,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: method,
+                dataType: 'json',
+                data: JSON.stringify(data),
+                success: function (data) {
+                    if (onSuccess) {
+                        onSuccess(data);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (onFail) {
+                        onFail(jqXHR, textStatus, errorThrown);
+                    }
                 }
-            }
-        });
+            });
+        }
+
     },
     showSnackbar: function (message, duration) {
         var $snackbar = $("#snackbar");
@@ -57,6 +75,11 @@ var Utils = {
         setTimeout(function () {
             $snackbar.removeClass('show');
         }, duration);
+    },
+    notify: function(title, message) {
+        $('#notify-modal .modal-title').text(title);
+        $('#notify-modal .modal-body').text(message);
+        $('#notify-modal').modal('show');
     }
 
 };
