@@ -477,6 +477,11 @@ ul {
     text-align: center;
 }
 
+.button:hover {
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
 .primary-button {
     background-color: #1ea69a;
     border: 1px solid #1ea69a;
@@ -486,6 +491,18 @@ ul {
     color: #FFF;
     background-color: #1b958a;
     border: 1px solid #1b958a;
+}
+
+.danger-outline-button {
+    color: #d4604b;
+    background-color: #fff;
+    border: 1px solid #e6c6b8;
+}
+
+.danger-outline-button:hover {
+    color: #d4604b;
+    background-color: #fff;
+    border: 1px solid #d4604b;
 }
 
 .outline-button {

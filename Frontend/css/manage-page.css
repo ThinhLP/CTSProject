@@ -22,7 +22,7 @@ h2.sub-heading .big {
 
 h2.sub-heading .small {
     line-height: 19px;
-    margin-top: 13px;
+    margin-top: 10px;
     color: rgba(71, 80, 94, .55);
     font-size: 12px;
     font-weight: 500;
@@ -57,12 +57,22 @@ h2.sub-heading .small {
     font-weight: 500;
 }
 
+.remove-section {
+    border-top: 1px solid #dbdbdb;
+    margin-top: 35px;
+    padding-top: 50px;
+}
+
+.remove-section .content-detail {
+    margin-bottom: 0px !important;
+}
+
 .form-input {
     width: 100%;
 }
 
 .form-input {
-    border: 1px solid #dbdbdb;
+    border: 1px solid #ccc;
     color: #20272d;
     font-size: 13px;
     line-height: 1.467;
@@ -96,9 +106,13 @@ h2.sub-heading .small {
     margin: 30px -35px -30px;
     border-top: 1px solid #eee;
     text-align: right;
-    padding-right: 30px;
+    padding-right: 35px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.extended-action > div.remove-action {
+    text-align: left;
 }
 
 .section-content {
@@ -127,7 +141,7 @@ h2.sub-heading .small {
     position: relative;
     overflow: auto;
     margin: 0 !important;
-    padding: 8px 14px;
+    padding: 14px 14px;
     min-height: 80px;
     outline: none;
     white-space: normal;
@@ -165,14 +179,23 @@ h2.sub-heading .small {
 
 .search-box input {
     position: absolute;
+    border-color: #f5f5f5;
 }
 
-.search-box span.icon-search {
+.search-box div.icon-search {
+    border-radius: 6px !important;
     position: absolute;
     height: 44px;
     right: 0;
     line-height: 44px;
     color: #9E9E9E;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search-box div.icon-search:hover {
+    background: #fafafa;
 }
 
 span.icon-search i {
