@@ -930,7 +930,8 @@ ul {
 
 .input-group {
     position: relative;
-/*
+    display: table !important;
+    /*
     display: table;
     border-collapse: separate;
 */
