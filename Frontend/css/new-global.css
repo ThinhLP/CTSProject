@@ -521,6 +521,16 @@ ul {
     border: 1px solid #ff7f45;
 }
 
+.gray-outline-orange-button {
+    color: #ff7f45;
+    background-color: #FFF;
+    border: 1px solid #eee;
+}
+
+.gray-outline-orange-button:hover {
+    border: 1px solid #ff7f45;
+}
+
 .btn-orange {
     background-color: #ff7f45;
     border: 1px solid #ff7f45;

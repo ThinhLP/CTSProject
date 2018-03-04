@@ -787,6 +787,19 @@ ul {
     font-size: 16px;
     vertical-align: -1px;
     line-height: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    cursor: pointer;
+    color: #63707e;
+}
+
+.edit-name-curriculum:hover,
+.curriculum-lecture-action:hover {
+    background: #dce1e3;
+    text-align: center;
+    -webkit-transition: .25s;
+    transition: .25s;
 }
 
 .icon-gray {
@@ -828,12 +841,14 @@ ul {
 
 .curriculum-lecture-action {
     background: none;
-    color: #ccc!important;
+    color: #63707e;
     text-align: center;
+    border-radius: 50% !important;
     font-weight: 600!important;
     display: inline-block;
     cursor: pointer;
-    padding: 8px 20px 7px!important;
+    width: 40px;
+    height: 40px;
 }
 
 .choose-file {

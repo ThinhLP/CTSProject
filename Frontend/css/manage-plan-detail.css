@@ -228,8 +228,13 @@ i.fa-check-circle {
 
 /* ----------------- */
 
-.new-plan img {
+.new-plan img,
+    {
     width: 60%;
+}
+
+.empty-program img {
+    width: 10%;
 }
 
 .course-card {
@@ -256,4 +261,105 @@ i.fa-check-circle {
 
 .program-wrapper:first-child .stepper {
     display: block;
+}
+
+.card-course {
+    height: auto;
+    padding: 15px;
+    display: flex;
+}
+
+.card-course .course-info {
+    margin-left: 20px;
+}
+
+.card-course .empty-program {
+    height: 150px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card-course .empty-program img {
+    width: 10%;
+}
+
+.card-course .course-learning-process {
+    /*width: 25%;
+    display: table-cell;
+    vertical-align: middle;*/
+}
+
+.card-course .course-learning-process img {
+    width: 100%;
+    padding: 5px;
+    border-radius: 50% !important;
+}
+
+.card-course .course-learning-process .darker {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50% !important;
+    height: 100%;
+}
+
+.card-course .progress-circle:after {
+    background-color: transparent;
+}
+
+.card-course .progress-circle span {
+    text-align: center;
+    display: block;
+    color: #ff7f45;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 66px;
+    line-height: 66px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+}
+
+/*.card-course .progress-circle .value-bar {
+    border: 0.45em solid #fff;
+}*/
+
+.card-course .course-learning-process .progress-circle {
+    font-size: 16px;
+    background-image: url(./resources/images/avatar.jpg);
+    background-size: contain;
+}
+
+.card-course h4,
+h5 {
+    color: #3c4858;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.card-course h5 {
+    margin-top: 15px;
+}
+
+
+.card-course p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.card-course .course-action {
+    text-align: right;
+    width: 60%;
+    display: block;
+    position: relative;
+}
+
+.card-course .course-action > div {
+    display: inline-block;
+    bottom: 0px;
+    position: absolute;
+    right: 0;
 }
