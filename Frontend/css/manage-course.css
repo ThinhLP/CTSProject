@@ -27,8 +27,8 @@ ul {
     margin-top: 0;
 }
 
-.pagination > .page-item > .page-link,
-.pagination > .page-item > span {
+.pagination>.page-item>.page-link,
+.pagination>.page-item>span {
     border: 0;
     border-radius: 30px!important;
     transition: all .3s;
@@ -62,12 +62,12 @@ ul {
     border: 0 solid #ddd;
 }
 
-.pagination > .page-item.active > a,
-.pagination > .page-item.active > a:focus,
-.pagination > .page-item.active > a:hover,
-.pagination > .page-item.active > span,
-.pagination > .page-item.active > span:focus,
-.pagination > .page-item.active > span:hover {
+.pagination>.page-item.active>a,
+.pagination>.page-item.active>a:focus,
+.pagination>.page-item.active>a:hover,
+.pagination>.page-item.active>span,
+.pagination>.page-item.active>span:focus,
+.pagination>.page-item.active>span:hover {
     background-color: #1ea69a;
     border-color: #1ea69a;
     /*box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);*/
@@ -94,7 +94,7 @@ ul {
     font-size: 0;
 }
 
-.centered > div {
+.centered>div {
     float: none;
     display: inline-block;
     text-align: left;
@@ -127,6 +127,7 @@ ul {
     content: " ";
 }
 
+
 /* Text inside the control */
 
 .progress-circle span {
@@ -150,6 +151,7 @@ ul {
     /* clips the whole left half*/
 }
 
+
 /* when p>50, don't clip left half*/
 
 .progress-circle.over50 .left-half-clipper {
@@ -171,8 +173,8 @@ ul {
     /*background-color: #4D642D;*/
     /* for debug */
     box-sizing: border-box;
-
 }
+
 
 /* Progress bar filling the whole right half for values above 50% */
 
@@ -598,6 +600,7 @@ ul {
     transform: rotate(360deg);
 }
 
+
 /* New Feedback */
 
 .feedback-panel {
@@ -605,7 +608,7 @@ ul {
     align-items: flex-start;
 }
 
-.feedback-panel > .float-left {
+.feedback-panel>.float-left {
     padding: 5px;
 }
 
@@ -704,7 +707,7 @@ ul {
 
 /*-----------------------------*/
 
-.curriculum > ol > li {
+.curriculum>ol>li {
     margin-bottom: 30px;
     border: 1px solid #dedede;
     -webkit-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, .04);
@@ -724,11 +727,16 @@ ul {
     line-height: 20px;
 }
 
+.curriculum-item .lecture-list-wrapper {
+    display: none;
+}
+
 .curriculum-heading {
     background: #fff;
 }
 
 .curriculum-wrapper {
+    /*
     padding: 7px 15px 16px 5px;
     z-index: 5;
     position: relative;
@@ -748,15 +756,96 @@ ul {
     -webkit-box-shadow: 1px 1px 0 0 rgba(0, 0, 0, .05);
     box-shadow: 1px 1px 0 0 rgba(0, 0, 0, .05);
     border-left: 2px solid transparent;
+    display: flex;
+*/
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    display: flex;
+    user-select: none;
+    background: #fff;
+    margin-bottom: 1px;
+    border-radius: 1px;
+    font-size: 15px;
+    font-weight: 700;
+    -webkit-box-shadow: 1px 1px 0 0 rgba(0, 0, 0, .05);
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, .05);
+    border-left: 2px solid transparent;
+}
+
+.section-heading .heading-action {
+    font-size: 18px;
+    font-weight: 500;
+    color: #495869;
+}
+
+.heading-action {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.increment-section {
+    position: relative;
+    padding-left: 30px;
+}
+
+.increment-section,
+.increment-lecture {
+    white-space: nowrap;
+    padding: 7px 0;
+}
+
+div.section-action {
+    flex-basis: 25%;
+}
+
+div.section-action {
+    flex-basis: 35%;
+    text-align: right;
+    user-select: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.section-action button {
+    margin-right: 10px;
 }
 
 .curriculum-wrapper .move-section {
-    float: left;
-    margin-top: 13px;
-    margin-left: 14px;
     color: #ccc;
-    left: -4px;
     cursor: move;
+    margin-right: 10px;
+}
+
+div.heading-action .editable-heading {
+    padding: 7px 5px;
+    margin-left: 5px;
+}
+
+.heading-action .editable-heading {
+    max-width: 550px;
+}
+
+.heading-action .editable-heading {
+    max-width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.editable-heading {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.editable-heading {
+    border: .5px solid transparent;
+    border-radius: 2px;
+    padding: 5px;
+    outline: none;
 }
 
 .title {
@@ -765,18 +854,12 @@ ul {
     font-size: 14px;
     line-height: 42px;
     margin-left: 15px;
-    width: calc(100% - 450px);
-    display: block;
-    float: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: flex;
 }
 
 .section-curriculum-name {
     max-width: calc(100% - 22px);
-    display: block;
-    float: left;
+    display: flex;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -1060,11 +1143,11 @@ ul {
     border-bottom: 0;
 }
 
-.tab-selection > li.active {
+.tab-selection>li.active {
     z-index: 2;
 }
 
-.tab-selection > li.active > a {
+.tab-selection>li.active>a {
     border-radius: 0;
     font-weight: bolder;
     font-size: 13px;
@@ -1079,7 +1162,7 @@ ul {
     box-shadow: 1px 0 0 0 rgba(0, 0, 0, .04);
 }
 
-.tab-selection > li.active > a:hover {
+.tab-selection>li.active>a:hover {
     border-radius: 0;
     font-weight: bolder;
     font-size: 13px;
@@ -1094,7 +1177,7 @@ ul {
     box-shadow: 1px 0 0 0 rgba(0, 0, 0, .04);
 }
 
-.tab-selection > li > a {
+.tab-selection>li>a {
     border-width: 2px;
     padding: 14px 24px;
     font-size: 13px;
@@ -1108,7 +1191,7 @@ ul {
     cursor: pointer;
 }
 
-.tab-selection > li > a:hover {
+.tab-selection>li>a:hover {
     background-color: transparent;
     border-color: transparent;
     border-bottom-color: transparent;
@@ -1116,7 +1199,7 @@ ul {
     color: #ff7f45;
 }
 
-.tab-selection > li {
+.tab-selection>li {
     margin-top: 0;
     position: relative;
     float: left;

@@ -686,3 +686,16 @@ However, delay the fade out process for 2.5 seconds */
         opacity: 0;
     }
 }
+
+/* Rotate arrow */
+.rotate-arrow {
+    transition: 0.3s ease-out;
+}
+
+.rotate-active {
+    transform: rotate(180deg);
+}
+
+.rotate-reverse {
+    transform: rotate(-180deg);
+}

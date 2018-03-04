@@ -162,131 +162,47 @@
                     <div class="col-md-12 curriculum">
                         <div class="curriculum-add-lecture"><button class="button btn-orange" data-toggle="modal" data-target="#createLectureModal"><i class="fa fa-plus"></i>Thêm chương mới</button></div>
                         <ol class="list-unstyled">
-                            <li class="curriculum-item">
+                            <li class="curriculum-item" id="section-1">
                                 <div class="curriculum-heading curriculum-wrapper">
-                                    <i class="fa fa-bars move-section"></i>
-                                    <span class="title">
-                                    <span class="section-curriculum-name">Chương 1: Basic Types</span>
-                                    <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
-                                    </span>
-                                    <div class="pull-right">
+                                    <div class="heading-action section-heading-action">
+                                        <div class="increment-section">
+                                            <i class="fa fa-bars move-section"></i> Chương <span class="sec_no">1</span>:</div>
+                                        <div class="editable-heading section-title" contenteditable="false" spellcheck="false">Chuong so 1</div>
+
+                                    </div>
+                                    <div class="section-action">
                                         <button class="button primary-button" data-toggle="modal" data-target="#createSectionModal">
                                         <i class="fa fa-plus"></i>Thêm bài học</button>
                                         <button class="button btn-orange button-only-icon" data-toggle="modal" data-target="#removeLectureModal"><i class="fa fa-trash"></i></button>
-                                        <button class="button outline-button button-only-icon"><i class="fa fa-angle-down"></i></button>
+                                        <button class="button outline-button button-only-icon expand-section rotate-arrow" collapsed="true" target="#section-1 .lecture-list-wrapper"><i class="fa fa-angle-down  rotate-arrow"></i></button>
                                     </div>
                                 </div>
-                                <ol class="list-unstyled">
+                                <ol class="list-unstyled lecture-list-wrapper">
                                     <li class="curriculum-lecture-item">
                                         <div class="curriculum-lecture-heading curriculum-wrapper">
-                                            <i class="fa fa-bars move-section"></i>
-                                            <span class="title">
-                                    <span class="section-curriculum-name">Bài 1: Numbers, Characters, Booleans, Arrays and Strings</span>
-                                            <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
-                                            </span>
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
-                                                </div>
+                                            <div class="heading-action section-heading-action">
+                                                <div class="increment-section">
+                                                    <i class="fa fa-bars move-section"></i>Bài <span class="lec_no">1</span>:</div>
+                                                <div class="editable-heading lecture-title" contenteditable="false" spellcheck="false">Bai so 1</div>
+                                            </div>
+                                            <div class="section-action">
+                                                <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
+                                                <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
+                                                <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="curriculum-lecture-item">
                                         <div class="curriculum-lecture-heading curriculum-wrapper">
-                                            <i class="fa fa-bars move-section"></i>
-                                            <span class="title">
-                                    <span class="section-curriculum-name">Bài 2: Control Flow: if, when, for, while</span>
-                                            <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
-                                            </span>
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
-                                                </div>
+                                            <div class="heading-action section-heading-action">
+                                                <div class="increment-section">
+                                                    <i class="fa fa-bars move-section"></i>Bài <span class="lec_no">1</span>:</div>
+                                                <div class="editable-heading lecture-title" contenteditable="false" spellcheck="false">Bai so 1</div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ol>
-                            </li>
-                            <li class="curriculum-item">
-                                <div class="curriculum-heading curriculum-wrapper">
-                                    <i class="fa fa-bars move-section"></i>
-                                    <span class="title">
-                                    <span class="section-curriculum-name">Chương 2: Classes and Inheritance</span>
-                                    <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
-                                    </span>
-                                    <div class="pull-right">
-                                        <button id="addNewLecture" class="button primary-button">
-                                        <i class="fa fa-plus"></i>Thêm bài học</button>
-                                        <button class="button btn-orange button-only-icon" data-toggle="modal" data-target="#removeLectureModal"><i class="fa fa-trash"></i></button>
-                                        <button class="button outline-button button-only-icon"><i class="fa fa-angle-down"></i></button>
-                                    </div>
-                                </div>
-                                <ol class="list-unstyled">
-                                    <li class="curriculum-lecture-item">
-                                        <div class="curriculum-lecture-heading curriculum-wrapper">
-                                            <i class="fa fa-bars move-section"></i>
-                                            <span class="title">
-                                    <span class="section-curriculum-name">Bài 1: Classes, Constructors và Inheritance</span>
-                                            <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
-                                            </span>
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="curriculum-lecture-item">
-                                        <div class="curriculum-lecture-heading curriculum-wrapper">
-                                            <i class="fa fa-bars move-section"></i>
-                                            <span class="title">
-                                    <span class="section-curriculum-name">Bài 2: Overriding Methods, Overriding Rules và Overriding Properties</span>
-                                            <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
-                                            </span>
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="curriculum-lecture-item">
-                                        <div class="curriculum-lecture-heading curriculum-wrapper">
-                                            <i class="fa fa-bars move-section"></i>
-                                            <span class="title">
-                                    <span class="section-curriculum-name">Bài 3: Abstract Classes</span>
-                                            <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
-                                            </span>
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="curriculum-lecture-item">
-                                        <div class="curriculum-lecture-heading curriculum-wrapper">
-                                            <i class="fa fa-bars move-section"></i>
-                                            <span class="title">
-                                    <span class="section-curriculum-name">Bài 4: Companion Objects</span>
-                                            <button class="edit-name-curriculum icon-gray"><i class="fa fa-pencil"></i></button>
-                                            </span>
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
-                                                </div>
+                                            <div class="section-action">
+                                                <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
+                                                <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
+                                                <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                             </div>
                                         </div>
                                     </li>
@@ -810,7 +726,7 @@
     <script src="./dist/js/traisy.min.js"></script>
     <script>
         $(function() {
-            var page = new ManageMasterpage();
+            var page = new ManageCourse();
         });
 
         $('.type-item').on('click', function() {
