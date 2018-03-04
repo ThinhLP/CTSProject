@@ -5,8 +5,8 @@ var Utils = {
             $target.has(event.target).length === 0;
     },
     rotateArrow: function ($arrow, collapsed) {
-        var iconChevronDown = 'fa-chevron-down';
-        var iconChevronUp = 'fa-chevron-up';
+        var iconChevronDown = 'fa-angle-down';
+        var iconChevronUp = 'fa-angle-up';
         var rotateActive = 'rotate-active';
         var rotateActiveReverse = 'rotate-reverse';
         if (collapsed && !$arrow.hasClass(rotateActive) && $arrow.hasClass(iconChevronUp)) {
