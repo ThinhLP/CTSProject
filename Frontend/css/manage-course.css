@@ -1129,7 +1129,6 @@ ul {
     background: #c35220;
     color: #fff;
     position: relative;
-    z-index: 10000;
     line-height: 29px;
     font-size: 12px;
     font-weight: 600;

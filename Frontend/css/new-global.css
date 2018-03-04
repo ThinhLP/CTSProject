@@ -44,15 +44,14 @@ ul {
 }
 
 .left-panel {
-    width: 225px;
     height: 100vh;
     background-color: #292c44;
-    /*    background-color: #212338;*/
     position: fixed;
     padding: 0;
     color: #fff;
     z-index: 1000;
-    /*    transition: 0.3s ease-in-out all;*/
+    width: 0px; 
+    display: none;
 }
 
 .logo-wrapper {
@@ -90,14 +89,13 @@ ul {
 }
 
 .fake-panel {
-    width: 225px;
-    min-width: 225px;
-    /*    transition: 0.3s ease-in-out all;*/
+    width: 0px;
+    display: none;
 }
 
 .main-container {
     position: relative;
-    width: calc(100% - 225px);
+    width: 100%;
     padding: 40px 60px 25px 60px;
     font-size: 15px;
     min-width: 800px;
@@ -278,7 +276,7 @@ ul {
     width: 100%;
     min-width: 800px;
     top: 0;
-    left: 225px;
+    left: 0;
     padding-right: 30px;
     height: 56px;
     background-color: #fff;
