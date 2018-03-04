@@ -24,7 +24,7 @@ label.invalid.active {
 
 ul.stepper {
     counter-reset: section;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     /*max-width: 800px;*/
 }

@@ -898,8 +898,10 @@ ul {
 
 .input-group {
     position: relative;
+/*
     display: table;
     border-collapse: separate;
+*/
 }
 
 .input-group-addon {

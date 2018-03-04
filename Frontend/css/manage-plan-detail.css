@@ -131,7 +131,7 @@
 }
 
 .stepper {
-    width: 85%;
+    width: 95%;
 }
 
 
@@ -227,3 +227,30 @@ i.fa-check-circle {
 .no-result h5 {
     color: rgba(0, 0, 0, 0.6);
 }
+
+.course-card {
+    margin-bottom: 0;
+    margin-left: 40px;
+    width: 90%;
+    
+}
+
+.program-title {
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.program-title i {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.program-wrapper .stepper {
+    display: none;
+}
+
+.program-wrapper:first-child .stepper {
+    display: block;
+}
+

@@ -76,10 +76,16 @@ var Utils = {
             $snackbar.removeClass('show');
         }, duration);
     },
-    notify: function(title, message) {
+    notify: function (title, message) {
         $('#notify-modal .modal-title').text(title);
         $('#notify-modal .modal-body').text(message);
         $('#notify-modal').modal('show');
+    },
+    convertDateStringToTimeStamp: function (date) {
+        // from format dd/mm/yyyy
+        date = date.split("/");
+        var newDate = date[1] + "/" + date[0] + "/" + date[2];
+        return new Date(newDate).getTime();
     }
 
 };
