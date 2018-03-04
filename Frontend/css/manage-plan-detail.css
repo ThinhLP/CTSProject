@@ -227,3 +227,9 @@ i.fa-check-circle {
 .no-result h5 {
     color: rgba(0, 0, 0, 0.6);
 }
+
+/* ----------------- */
+
+.new-plan img {
+    width: 60%;
+}
