@@ -29,7 +29,7 @@ h2.sub-heading .small {
     letter-spacing: .5px;
 }
 
-.section-content .content-detail {
+.content-detail {
     margin-bottom: 25px;
 }
 
@@ -57,6 +57,25 @@ h2.sub-heading .small {
     font-weight: 500;
 }
 
+.content-detail.new-plan {
+    height: 500px;
+    text-align: center;
+}
+
+.new-plan > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.new-plan h5 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bolder;
+}
+
 .remove-section {
     border-top: 1px solid #dbdbdb;
     margin-top: 35px;
@@ -81,6 +100,10 @@ h2.sub-heading .small {
     border-radius: 5px;
     box-shadow: none;
     font-weight: 700;
+}
+
+.has-error {
+    border-color: #d4604b;
 }
 
 .form-textarea {
@@ -153,12 +176,16 @@ h2.sub-heading .small {
 }
 
 .form-input {
-    width: 100%;
+    width: 100% !important;
     outline: none;
 }
 
 .form-input:focus {
     border-color: #c2c2c2;
+}
+
+.form-input.has-error:focus {
+    border-color: #d4604b;
 }
 
 .course-image {

@@ -8,7 +8,6 @@
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
 
@@ -17,6 +16,7 @@
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
     <link rel="stylesheet" href="./css/manage-page.css" />
     <link rel="stylesheet" href="./css/manage-plan-detail.css" />
+    <link rel="stylesheet" href="./css/manage-course.css" />
     <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
 
 
@@ -102,7 +102,11 @@
                     <div class="section-content col-md-9 col-sm-12">
                         <div class="content-detail">
                             <label>Tên kế hoạch</label><br/>
-                            <input name="name" type="text" class="form-input" />
+                            <input name="name" type="text" class="form-input has-error" />
+                            <div id="error-tooltip" class="alert-tooltip" style="display: inline-block">
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                <span>Không được để trống</span>
+                            </div>
                         </div>
                         <div class="content-detail">
                             <label>Thời gian</label><br/>
@@ -317,7 +321,18 @@
                 </div>
             </div>
             <div class="content-wrapper" id="plan-content-wrapper">
-                <div class="programs-list">
+                <div class="section-wrapper row">
+                    <div class="section-content col-md-12 col-sm-12">
+                        <div class="content-detail new-plan">
+                            <div>
+                                <img src="./resources/images/new-plan.svg" />
+                                <h5>Hãy tạo khoá học đầu tiên</h5>
+                                <button class="button primary-button ">Thêm khoá học</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="programs-list">
                     <div class="program-wrapper" id="program-1 ">
                         <div class="program-title" collapsed="false " target="#program-1 .stepper">Front end Developer <i class="rotate-arrow fa fa-chevron-up" aria-hidden="true "></i></div>
                         <ul class="stepper">
@@ -398,18 +413,14 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
 
-    <div class="input-daterange input-group" id="datepicker">
-        <input type="text" class="input-sm form-control" name="start" />
-        <span class="input-group-addon">to</span>
-        <input type="text" class="input-sm form-control" name="end" />
-    </div>
-
     <script src="./resources/jquery-3.3.1.min.js "></script>
+    <script src="./resources/popper.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
     <script src="./resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="./resources/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js"></script>
     <script src="resources/stepper/materialize-stepper.js"></script>
@@ -417,6 +428,7 @@
     <script>
         $(function() {
             var page = new ManageMasterpage();
+            $('#input-tooltip').tooltip();
         });
 
         $('#sandbox-container .input-daterange').datepicker({
