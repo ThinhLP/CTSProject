@@ -21,3 +21,7 @@
 .modal-body p {
     font-size: 15px;
 }
+
+#createProgramMoal #sandbox-container .input-group {
+    display: flex;
+}

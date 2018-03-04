@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
     <link rel="stylesheet" href="./css/new-global.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
     <link rel="stylesheet" href="./css/manage-page.css" />
@@ -87,7 +88,7 @@
         </div>
         <div class="main-container">
 
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#confirmModal">Open Modal</button>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#createProgramMoal">Open Modal</button>
 
             <!-- Xoá 1 chương học -->
             <div id="myModal" class="modal fade" role="dialog">
@@ -107,6 +108,7 @@
                 </div>
             </div>
 
+            <!-- Confirm Modal -->
             <div id="confirmModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -125,16 +127,76 @@
                 </div>
             </div>
 
+            <!-- Feedback Popup -->
+            <div id="addFeedBackMoal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <strong class="modal-title">Thêm phản hồi</strong>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="editor">
+                                <textarea name="name" class="form-textarea" placeholder="Nội dung phản hồi"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button primary-button" data-dismiss="modal">Gửi phản hồi</button>
+                            <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create Program Popup -->
+            <div id="createProgramMoal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <strong class="modal-title">Thêm phản hồi</strong>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="content-detail">
+                                <label>Tên chương trình</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Thời gian</label><br/>
+                                <div id="sandbox-container">
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control form-input" name="start" placeholder="Bắt đầu" />
+                                        <span class="input-group-addon">đến</span>
+                                        <input type="text" class="input-sm form-control form-input" name="end" placeholder="Kết thúc" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button primary-button" data-dismiss="modal">Thêm</button>
+                            <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
 
     <script src="./resources/jquery-3.3.1.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="./resources/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js"></script>
     <script src="./dist/js/traisy.min.js"></script>
     <script>
         $(function() {
             var page = new ManageMasterpage();
+        });
+
+        $('#sandbox-container .input-daterange').datepicker({
+            autoclose: true,
+            language: "vi",
+            format: "dd/mm/yyyy"
         });
 
     </script>
