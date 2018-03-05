@@ -235,7 +235,7 @@ i.fa-check-circle {
 .empty-title {
     display: block;
     font-size: 18px;
-    font-weight:bold;
+    font-weight: bold;
     margin: 20px 0;
 }
 
@@ -304,8 +304,11 @@ i.fa-check-circle {
 
 .card-course .course-learning-process img {
     width: 100%;
-    padding: 5px;
     border-radius: 50% !important;
+}
+
+.card-course .course-learning-process .course-learning-image {
+    width: 80px;
 }
 
 .card-course .course-learning-process .darker {
