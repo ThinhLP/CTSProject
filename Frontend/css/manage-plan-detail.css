@@ -228,9 +228,20 @@ i.fa-check-circle {
 
 /* ----------------- */
 
-.new-plan img,
-    {
-    width: 60%;
+.new-plan img {
+    width: 150px;
+}
+
+.empty-title {
+    display: block;
+    font-size: 18px;
+    font-weight:bold;
+    margin: 20px 0;
+}
+
+.empty-plan-wrapper {
+    width: 80%;
+    text-align: center;
 }
 
 .empty-program img {
@@ -362,4 +373,8 @@ h5 {
     bottom: 0px;
     position: absolute;
     right: 0;
+}
+
+.create-program-btn {
+    margin-right: 20px;
 }

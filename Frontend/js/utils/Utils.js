@@ -82,6 +82,9 @@ var Utils = {
         $('#notify-modal').modal('show');
     },
     convertDateStringToTimeStamp: function (date) {
+        if (!date || date.length == 0) {
+            return 0;
+        }
         // from format dd/mm/yyyy
         date = date.split("/");
         var newDate = date[1] + "/" + date[0] + "/" + date[2];
