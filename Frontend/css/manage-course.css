@@ -761,7 +761,7 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
     display: flex;
     user-select: none;
     background: #fff;
@@ -784,6 +784,7 @@ ul {
     display: flex;
     position: relative;
     flex-direction: row;
+    height: 51px;
 }
 
 .increment-section {
@@ -795,6 +796,8 @@ ul {
 .increment-lecture {
     white-space: nowrap;
     padding: 7px 0;
+    height: 36px;
+    line-height: 36px;
 }
 
 div.section-action {
@@ -818,12 +821,14 @@ div.section-action {
 .curriculum-wrapper .move-section {
     color: #ccc;
     cursor: move;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 div.heading-action .editable-heading {
     padding: 7px 5px;
     margin-left: 5px;
+    height: 36px;
+    line-height: 36px;
 }
 
 .heading-action .editable-heading {
@@ -836,13 +841,22 @@ div.heading-action .editable-heading {
     text-overflow: ellipsis;
 }
 
+.heading-action .editable-heading.input-name {
+    height: 51px;
+    width: 400px;
+}
+
+.heading-action .editable-heading input {
+    height: 36px;
+}
+
 .editable-heading {
     display: inline-block;
     cursor: pointer;
 }
 
 .editable-heading {
-    border: .5px solid transparent;
+    /*border: .5px solid transparent;*/
     border-radius: 2px;
     padding: 5px;
     outline: none;
@@ -882,12 +896,11 @@ div.heading-action .editable-heading {
     color: #63707e;
 }
 
-.edit-name-curriculum:hover,
 .curriculum-lecture-action:hover {
-    background: #dce1e3;
+    /*background: #dce1e3;
     text-align: center;
     -webkit-transition: .25s;
-    transition: .25s;
+    transition: .25s;*/
 }
 
 .icon-gray {
@@ -935,8 +948,7 @@ div.heading-action .editable-heading {
     font-weight: 600!important;
     display: inline-block;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    margin-left: 15px;
 }
 
 .choose-file {

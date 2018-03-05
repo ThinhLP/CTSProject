@@ -504,19 +504,24 @@ ul {
 }
 
 .outline-button {
-    color: #1b958a;
+    color: #1ea69a;
     background-color: #FFF;
-    border: 1px solid #eee;
+    border: 1px solid #1ea69a;
 }
 
 .outline-button:hover {
-    border: 1px solid #1b958a;
+    /*border: 1px solid #1b958a;*/
+    background-color: #d2edea;
 }
 
 .outline-orange-button {
     color: #ff7f45;
     background-color: #FFF;
     border: 1px solid #ff7f45;
+}
+
+.outline-orange-button:hover {
+    background-color: #ffe5d9;
 }
 
 .gray-outline-orange-button {
