@@ -432,18 +432,22 @@
                                 </div>
                     </div>
                     <ol class="list-unstyled">
+                        <!-- Có progress bar -->
                         <li class="curriculum-lecture-item">
                             <div class="curriculum-lecture-heading curriculum-wrapper card-course">
-                                <div class="course-learning-process">
-                                    <div class="progress-circle p10">
-                                        <span style="background-image: url(./resources/images/christian.jpg)">10%</span>
-                                        <div class="left-half-clipper">
-                                            <div class="first50-bar"></div>
-                                            <div class="value-bar"></div>
+                                <div class="course-thumbnail has-progress-bar">
+                                    <img src="./resources/images/course1.jpeg" class="course-image" />
+                                    <div class="course-learning-process">
+                                        <div class="progress-circle p10">
+                                            <span>10%</span>
+                                            <div class="left-half-clipper">
+                                                <div class="first50-bar"></div>
+                                                <div class="value-bar"></div>
+                                            </div>
                                         </div>
                                     </div>
-
                                 </div>
+
                                 <div class="course-info">
                                     <h4>Lập trình với HTML và CSS</h4>
                                     <p>HTML/CSS có thể nói là khởi đầu của mọi tất cả vấn đề liên quan tới web, dù bạn là người làm nghành nào, miễn là có đụng tới quản trị web thì ít nhất phải biết qua hai cái này. Nếu bạn có ý định học lập trình web thì lại càng nên thành thạo hai cái này, nếu bạn là blogger chuyên viết bài thì cũng nên nắm cái này.</p>
@@ -456,9 +460,51 @@
                                 </div>
                             </div>
                         </li>
+                        <!-- Không có progress bar -->
+                        <li class="curriculum-lecture-item">
+                            <div class="curriculum-lecture-heading curriculum-wrapper card-course">
+                                <div class="course-thumbnail no-progress-bar">
+                                    <img src="./resources/images/course1.jpeg" class="course-image" />
+                                </div>
+
+                                <div class="course-info">
+                                    <h4>Lập trình với HTML và CSS</h4>
+                                    <p>HTML/CSS có thể nói là khởi đầu của mọi tất cả vấn đề liên quan tới web, dù bạn là người làm nghành nào, miễn là có đụng tới quản trị web thì ít nhất phải biết qua hai cái này. Nếu bạn có ý định học lập trình web thì lại càng nên thành thạo hai cái này, nếu bạn là blogger chuyên viết bài thì cũng nên nắm cái này.</p>
+                                </div>
+                                <div class="course-action">
+                                    <div>
+                                        <button class="button outline-button"><i class="fa fa-sign-in" aria-hidden="true"></i>Học tiếp</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li class="curriculum-lecture-item">
+                            <div class="curriculum-lecture-heading curriculum-wrapper card-course">
+                                <div class="course-learning-process">
+                                    <div class="progress-circle p0">
+                                        <span>0%</span>
+                                        <div class="left-half-clipper">
+                                            <div class="first50-bar"></div>
+                                            <div class="value-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-info">
+                                    <h4>Lập trình với HTML và CSS</h4>
+                                    <p>HTML/CSS có thể nói là khởi đầu của mọi tất cả vấn đề liên quan tới web, dù bạn là người làm nghành nào, miễn là có đụng tới quản trị web thì ít nhất phải biết qua hai cái này. Nếu bạn có ý định học lập trình web thì lại càng nên thành thạo hai cái này, nếu bạn là blogger chuyên viết bài thì cũng nên nắm cái này.</p>
+                                </div>
+                                <div class="course-action">
+                                    <button class="button outline-button"><i class="fa fa-sign-in" aria-hidden="true"></i>Tham gia</button>
+                                </div>
+                            </div>
+                        </li>
                         <li class="curriculum-lecture-item">
                             <div class="curriculum-lecture-heading curriculum-wrapper card-course">
                                 <div class="course-learning-process">
+                                    <div class="course-learning-image">
+                                        <img src="./resources/images/course1.jpeg" class="none-participate" />
+                                    </div>
                                     <div class="progress-circle p0">
                                         <span>0%</span>
                                         <div class="left-half-clipper">
@@ -475,35 +521,9 @@
                                     <div>
                                         <button class="button outline-button"><i class="fa fa-sign-in" aria-hidden="true"></i>Tham gia</button>
                                     </div>
-
                                 </div>
                             </div>
-                        </li>
-                        <li class="curriculum-lecture-item">
-                            <div class="curriculum-lecture-heading curriculum-wrapper card-course">
-                                <div class="course-learning-process">
-                                    <div class="course-learning-image">
-                                        <img src="./resources/images/course1.jpeg" class="none-participate" />
-                                    </div>
-                                    <!--<div class="progress-circle p0">
-                                        <span>0%</span>
-                                        <div class="left-half-clipper">
-                                            <div class="first50-bar"></div>
-                                            <div class="value-bar"></div>
-                                        </div>
-                                    </div>-->
-                                </div>
-                                <div class="course-info">
-                                    <h4>Lập trình với HTML và CSS</h4>
-                                    <p>HTML/CSS có thể nói là khởi đầu của mọi tất cả vấn đề liên quan tới web, dù bạn là người làm nghành nào, miễn là có đụng tới quản trị web thì ít nhất phải biết qua hai cái này. Nếu bạn có ý định học lập trình web thì lại càng nên thành thạo hai cái này, nếu bạn là blogger chuyên viết bài thì cũng nên nắm cái này.</p>
-                                </div>
-                                <div class="course-action">
-                                    <div>
-                                        <button class="button outline-button"><i class="fa fa-sign-in" aria-hidden="true"></i>Tham gia</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        </li>-->
                     </ol>
                     </li>
                     <li class="curriculum-item">
@@ -520,7 +540,7 @@
                         <ol class="list-unstyled">
                             <li class="curriculum-lecture-item card-course">
                                 <div class="empty-program">
-                                    <img src="./resources/images/school-material.svg" />
+                                    <img src="./resources/images/new-plan.svg" />
                                     <h5>Hãy tạo khoá học đầu tiên</h5>
                                 </div>
                             </li>
