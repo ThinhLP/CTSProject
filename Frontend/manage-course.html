@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quản lý khoá học | Traisy</title>
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./resources/sliptree-bootstrap-tokenfield/dist/css/bootstrap-tokenfield.css" />
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -87,6 +88,7 @@
             </ul>
         </div>
         <div class="main-container">
+            <!-- Giới thiệu -->
             <div class="content-wrapper" id="plan-introduction">
                 <div class="section-wrapper row">
                     <div class="section-heading col-md-3">
@@ -112,7 +114,8 @@
                         </div>
                         <div class="content-detail">
                             <label>Kỹ năng khoá học</label><br/>
-                            <input name="name" type="text" class="form-input" />
+                            <!--<input name="name" type="text" class="form-input" value="HTML5" data-role="tagsinput" />-->
+                            <input type="text" class="form-input" id="tokenfield" value="red,green,blue" />
                         </div>
                         <div class="content-action">
                             <button class="save-plan-info-btn button primary-button">Lưu chỉnh sửa</button>
@@ -848,6 +851,7 @@
 
     <script src="./resources/jquery-3.3.1.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./resources/sliptree-bootstrap-tokenfield/dist/bootstrap-tokenfield.js"></script>
     <script src="./dist/js/traisy.min.js"></script>
     <script>
         $(function() {
@@ -857,6 +861,14 @@
         $('.type-item').on('click', function() {
             $(this).toggleClass('unselect').toggleClass('select');
         });
+
+        $('#tokenfield').tokenfield({
+            autocomplete: {
+                source: ['red', 'blue', 'green', 'yellow', 'violet', 'brown', 'purple', 'black', 'white'],
+                delay: 100
+            },
+            showAutocompleteOnFocus: true
+        })
 
         /* Edit name section */
         $('.curriculum-lecture-action').on('click', function() {
