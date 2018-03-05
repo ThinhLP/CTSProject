@@ -711,3 +711,33 @@ However, delay the fade out process for 2.5 seconds */
 .rotate-reverse {
     transform: rotate(-180deg);
 }
+
+/* Token Field */
+
+.tokenfield {
+    padding-top: 10px !important;
+    padding-bottom: 4px !important;
+}
+
+.tokenfield .token {
+    color: #fff;
+    background-color: #ff986a !important;
+    border: none;
+    margin: 0px 5px 5px 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 30px;
+}
+
+.tokenfield .token .token-label {
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.tokenfield .token .close {
+    color: #fff;
+    text-shadow: none;
+    opacity: 1;
+    line-height: 1.4em;
+}
