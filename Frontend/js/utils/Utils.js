@@ -89,6 +89,16 @@ var Utils = {
         date = date.split("/");
         var newDate = date[1] + "/" + date[0] + "/" + date[2];
         return new Date(newDate).getTime();
+    },
+    convertTimestampToSimpleDate: function (timestamp) {
+        if (!timestamp || timestamp == null) {
+            return '';
+        }
+        var date = new Date(timestamp);
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        return day + '/'  + month + '/' + year;
     }
 
 };
