@@ -785,6 +785,7 @@ ul {
     position: relative;
     flex-direction: row;
     height: 51px;
+    width: calc(100% - 350px);
 }
 
 .increment-section {
@@ -829,6 +830,7 @@ div.heading-action .editable-heading {
     margin-left: 5px;
     height: 36px;
     line-height: 36px;
+    white-space: nowrap;
 }
 
 .heading-action .editable-heading {
@@ -841,9 +843,19 @@ div.heading-action .editable-heading {
     text-overflow: ellipsis;
 }
 
+.section-name,
+.lecture-name {
+    max-width: calc(100% - 15px);
+    display: block;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .heading-action .editable-heading.input-name {
     height: 51px;
     width: 400px;
+    margin-left: -10px;
 }
 
 .heading-action .editable-heading input {
@@ -877,6 +889,14 @@ div.heading-action .editable-heading {
     display: flex;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #1ea69a;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.program-time {
+    font-size: 14px;
+    font-weight: 200;
 }
 
 .program-time i {
@@ -948,7 +968,7 @@ div.heading-action .editable-heading {
     font-weight: 600!important;
     display: inline-block;
     cursor: pointer;
-    margin-left: 15px;
+    margin-left: 5px;
 }
 
 .choose-file {
