@@ -5,6 +5,7 @@ module.exports = function (grunt) {
         'js/modules/*.js',
         'js/modules/learner/*.js',
         'js/modules/author/*.js',
+        'js/modules/manager/*.js',
         'js/utils/*.js',
     ];
     // Project configuration.
