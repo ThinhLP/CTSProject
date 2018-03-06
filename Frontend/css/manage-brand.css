@@ -1,0 +1,27 @@
+.brands-container {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+}
+
+
+.brand-wrapper {
+    width: 30%;
+    display: inline-block;
+    margin: 10px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.brand-wrapper:hover {
+    box-shadow: 0 0 0 2px #97b9bb;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.brand-image {
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid #eee;
+}

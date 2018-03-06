@@ -282,6 +282,8 @@ i.fa-check-circle {
 
 .card-course .course-info {
     margin-left: 20px;
+    width: 170%;
+    height: 140px;
 }
 
 .card-course .empty-program {
@@ -348,7 +350,7 @@ i.fa-check-circle {
 
 .card-course .course-thumbnail {
     position: relative;
-    width: 100%;
+    width: 85%;
 }
 
 .card-course .progress-circle {
