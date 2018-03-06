@@ -101,10 +101,6 @@
                         <div class="content-detail">
                             <label>Tên khoá học</label><br/>
                             <input name="name" type="text" class="form-input" />
-                            <!--<div id="error-tooltip" class="alert-tooltip" style="display: inline-block">
-                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                <span>Không được để trống</span>
-                            </div>-->
                         </div>
                         <div class="content-detail">
                             <label>Mô tả</label><br/>
@@ -114,8 +110,25 @@
                         </div>
                         <div class="content-detail">
                             <label>Kỹ năng khoá học</label><br/>
-                            <!--<input name="name" type="text" class="form-input" value="HTML5" data-role="tagsinput" />-->
-                            <input type="text" class="form-input" id="tokenfield" value="red,green,blue" />
+                            <div class="skill-wrapper">
+                                <div class="skill-data form-input"></div>
+                                <div class="skill-select"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                                <div class="skill-list" style="display: none">
+                                    <ul class="skill-list-wrapper">
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>HTML5</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true"></i><span>HTML5</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>CSS3</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>Kotlin</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>Java</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>Javascript</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>SQL Server</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>MySQL</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>Odoo Server</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>C#</span></li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="visibility: hidden"></i><span>C++</span></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="content-action">
                             <button class="save-plan-info-btn button primary-button">Lưu chỉnh sửa</button>
@@ -935,6 +948,11 @@
 
             parent.find('.lecture-name').text(parent.find('.form-input').val());
         })
+
+        $('.skill-select').on('click', function() {
+            var parent = $(this).closest('.skill-wrapper');
+            parent.find('.skill-list').show();
+        });
 
     </script>
 </body>

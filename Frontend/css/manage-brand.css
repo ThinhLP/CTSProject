@@ -6,10 +6,10 @@
 
 
 .brand-wrapper {
-    width: 30%;
+    width: 20%;
     display: inline-block;
-    margin: 10px;
-    height: 300px;
+    margin: 20px;
+    height: 220px;
     background-color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -48,7 +48,7 @@
 
 .brand-info {
     font-weight: 600;
-    padding: 20px;
+    padding: 15px;
     height: 30%;
     color: #737577;
 }
@@ -58,7 +58,7 @@
 }
 
 .brand-info > div.brand-title {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bolder;
     text-align: left;
     color: #000;
