@@ -300,15 +300,24 @@ i.fa-check-circle {
     /*width: 25%;
     display: table-cell;
     vertical-align: middle;*/
+    width: 100%;
 }
 
-.card-course .course-learning-process img {
+.card-course .has-progress-bar img {
     width: 100%;
-    border-radius: 50% !important;
+    height: 100%;
+    opacity: 3.5;
+    filter: brightness(50%);
+}
+
+.card-course .no-progress-bar img {
+    width: 100%;
+    height: 100%;
 }
 
 .card-course .course-learning-process .course-learning-image {
     width: 80px;
+    height: 80px;
 }
 
 .card-course .course-learning-process .darker {
@@ -326,7 +335,7 @@ i.fa-check-circle {
     display: block;
     color: #ff7f45;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.4);
+    /* background-color: rgba(255, 255, 255, 0.4);*/
     border-radius: 50%;
     width: 66px;
     line-height: 66px;
@@ -335,6 +344,27 @@ i.fa-check-circle {
     top: 50%;
     transform: translate(-50%, -50%);
     background-size: contain;
+}
+
+.card-course .course-thumbnail {
+    position: relative;
+    width: 100%;
+}
+
+.card-course .progress-circle {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-course .course-image,
+.card-course .course-learning-process {
+    position: absolute;
+}
+
+.card-course .course-learning-process {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*.card-course .progress-circle .value-bar {
