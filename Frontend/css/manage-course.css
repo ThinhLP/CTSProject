@@ -760,7 +760,7 @@ ul {
 */
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    /*align-items: center;*/
     padding: 5px 20px;
     display: flex;
     user-select: none;
