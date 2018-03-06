@@ -349,6 +349,7 @@ i.fa-check-circle {
 .card-course .course-thumbnail {
     position: relative;
     width: 100%;
+    min-height: 150px;
 }
 
 .card-course .progress-circle {
