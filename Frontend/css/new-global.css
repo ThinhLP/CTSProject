@@ -580,6 +580,10 @@ ul {
     margin-right: 10px;
 }
 
+.button-only-icon i {
+    margin-right: 0 !important;
+}
+
 .primary-flat-button {
     color: #1ea69a;
     background-color: transparent;

@@ -79,13 +79,14 @@
             </div>
             <ul class="nav-top-menu-wrapper">
                 <li class="top-menu-item active" target="#plan-introduction"><a>Giới thiệu</a></li>
-                <li class="top-menu-item" target="#plan-image-wrapper"><a>Hình ảnh</a></li>
+                <li class="top-menu-item" target="#plan-image-wrapper"><a>Hình ảnh - Video</a></li>
                 <li class="top-menu-item" target="#course-wrapper"><a>Bài học</a></li>
                 <li class="top-menu-item" target="#trainee-wrapper"><a>Học viên</a></li>
-                <li class="top-menu-item" target="#contribute-wrapper"><a>Đóng góp<span class="notification">5</span></a></li>
-                <li class="top-menu-item" target="#propose-wrapper"><a>Đề xuất cải tiến
-                <span class="notification">7</span></a></li>
+                <li class="top-menu-item" target="#contribute-wrapper"><a>Đề xuất chỉnh sửa<span class="notification">5</span></a></li>
             </ul>
+            <div class="nav-top-action">
+                <button class="add-plan-button button outline-orange-button" data-toggle="modal" data-target="#addPlanModal">Công khai</button>
+            </div>
         </div>
         <div class="main-container">
             <!-- Giới thiệu -->
@@ -138,18 +139,33 @@
                 <div class="section-wrapper row next-section">
                     <div class="section-heading col-md-3">
                         <h2 class="sub-heading">
-                            <span class="big">Xoá khóa học</span><br/>
-                            <p class="small">Xoá tất cả các thông tin liên quan</p>
+                            <span class="big">Thiết lập</span><br/>
+                            <p class="small">Thiết lập cho khoá học</p>
                         </h2>
                     </div>
-                    <div class="section-content col-md-9">
-                        <div class="content-detail">
+                    <div class="section-setting col-md-9">
+                        <div class="section-setting-item">
+                            <img src="./resources/images/garbage.svg" />
+                            <h4>Xoá khoá học</h4>
+                        </div>
+                        <div class="section-setting-item">
+                            <img src="./resources/images/send.svg" />
+                            <h4>Gửi kiểm duyệt</h4>
+                        </div>
+                        <!--<div class="section-setting-item">
+                            <img src="./resources/images/internet.svg" />
+                            <h4>Công khai
+                                <h4>
+                        </div>-->
+                    </div>
+
+                    <!--<div class="content-detail">
                             <div class="remove-action">
                                 <button class="save-plan-info-btn button danger-outline-button">
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>Xoá vĩnh viễn khoá học</button>
                             </div>
-                        </div>
-                    </div>
+                        </div>-->
+
                 </div>
             </div>
             <!-- Hình ảnh -->
@@ -585,7 +601,7 @@
                 </div>
             </div>
             <!-- Đề xuất cải tiển -->
-            <div class="content-wrapper" id="propose-wrapper">
+            <!--<div class="content-wrapper" id="propose-wrapper">
                 <div class="section-wrapper row">
                     <div class="section-heading col-md-3">
                         <h2 class="sub-heading">
@@ -632,7 +648,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 

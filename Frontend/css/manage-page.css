@@ -139,7 +139,6 @@ h2.sub-heading .small {
 }
 
 .section-content {
-    padding-top: 0;
     background: #fff;
     display: block;
     margin-top: -1px;
@@ -151,6 +150,48 @@ h2.sub-heading .small {
     box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
+}
+
+.section-setting {
+    width: 100%;
+    display: flex;
+    padding: 0;
+}
+
+.section-setting > div {
+    margin-right: 15px;
+    width: 25%;
+    padding-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.section-setting .section-setting-item {
+    background: #fff;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #e7eaed;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.section-setting > div:hover {
+    box-shadow: 0 0 0 2px #97b9bb;
+    -webkit-transition: .25s;
+    transition: .25s;
+    color: #ff7f45;
+}
+
+.section-setting > div > img {
+    width: 45%;
+}
+
+.section-setting > div > h4 {
+    font-size: 13px;
+    font-weight: bolder;
+    margin-top: 20px;
 }
 
 .editor {
