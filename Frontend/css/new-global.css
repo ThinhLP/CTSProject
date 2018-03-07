@@ -398,7 +398,7 @@ ul {
     min-height: 198px;
     padding: 6px 15px;
     position: relative;
-    background-color: #fff''
+    background-color: #fff;
 }
 
 .card-title {
@@ -742,4 +742,11 @@ However, delay the fade out process for 2.5 seconds */
     text-shadow: none;
     opacity: 1;
     line-height: 1.4em;
+}
+
+.course-image-wrapper {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
 }

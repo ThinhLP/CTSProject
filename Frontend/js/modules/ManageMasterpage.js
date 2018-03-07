@@ -88,11 +88,11 @@ function ManageMasterpage() {
     var userMenuTooltip = new PopupTooltip('.user-action', 0);
 
     var onDocumentReadyEvents = function () {
-        handleLeftPanel();
+       // handleLeftPanel();
     };
 
     var onWindowResizeEvents = function () {
-         handleLeftPanel();
+        // handleLeftPanel();
     };
 
     var addEventHandlers = function () {
