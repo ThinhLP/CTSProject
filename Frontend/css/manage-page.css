@@ -152,6 +152,26 @@ h2.sub-heading .small {
     transition: all .2s ease-in;
 }
 
+.section-detail {
+    display: flex;
+    width: 100%;
+}
+
+.section-detail .section-detail-image {
+    width: 45%;
+    height: 230px;
+}
+
+.section-detail .plan-detail {
+    width: 55%;
+    padding-left: 20px;
+}
+
+.section-detail img {
+    width: 100%;
+    height: 100%;
+}
+
 .section-setting {
     width: 100%;
     display: flex;

@@ -370,10 +370,6 @@ i.fa-check-circle {
     align-items: center;
 }
 
-/*.card-course .progress-circle .value-bar {
-    border: 0.45em solid #fff;
-}*/
-
 .card-course .course-learning-process .progress-circle {
     font-size: 16px;
     background-image: url(./resources/images/avatar.jpg);
@@ -422,4 +418,172 @@ h5 {
 
 .course-list-wrapper {
     display: none;
+}
+
+.plan-containner {}
+
+.plan-wrapper {
+    width: 100%;
+    background: red;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.plan-wrapper:hover {
+    -webkit-transition: .25s;
+    transition: .25s;
+    box-shadow: 1px 2px 3px 0 #e6e9ec;
+}
+
+.plan-wrapper img {
+    width: 35%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.plan-wrapper .plan-detail {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    display: block;
+    position: relative;
+    width: 65%;
+}
+
+.plan-detail h4 {
+    font-size: 15px;
+    color: #1ea69a;
+    font-weight: bolder;
+}
+
+.plan-detail p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.plan-detail p i {
+    margin-right: 5px;
+}
+
+.plan-wrapper .plan-detail .plan-action {
+    text-align: right;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.section-plan-education {
+    padding: 0;
+}
+
+#plan-overview-wrapper .plan-image {
+    top: 0;
+    margin-top: -100px;
+    width: 40%;
+    /*margin-bottom: 30px;*/
+}
+
+#plan-overview-wrapper .plan-image img {
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.5);
+    width: 85%;
+}
+
+#plan-overview-wrapper .section-content {
+    margin-top: 70px;
+    display: flex;
+}
+
+#plan-overview-wrapper .plan-detail {
+    width: 60%;
+    margin-left: -30px;
+}
+
+#plan-overview-wrapper .plan-detail h4 {
+    font-size: 20px;
+    color: #000;
+    font-weight: bolder;
+}
+
+#plan-overview-wrapper .time-and-author {
+    display: flex;
+}
+
+.time-and-author .plan-time,
+.plan-author {
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.time-and-author .plan-time {
+    background-color: #009DDC;
+    margin-right: 10px;
+}
+
+.time-and-author .plan-author {
+    background-color: #FF7F45;
+}
+
+.time-and-author i {
+    margin-right: 5px;
+}
+
+.detail-description {
+    margin-top: 10px;
+    font-weight: 300px;
+}
+
+.plan-education {
+    padding: 0;
+    display: block !important;
+    height: auto;
+}
+
+.plan-education .education-header {
+    height: 80px;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #ccc;*/
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: url(/resources/images/education-top.png);
+}
+
+.plan-education .education-body {
+    height: 500px;
+}
+
+
+.plan-education .education-body .title .program-name {
+    line-height: 42px;
+    font-size: 16px;
+}
+
+/*
+.plan-education img {
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;*/
+
+.education-program {
+    padding: 0;
+}
+
+.education-side-bar {
+    background: red;
+    width: 25%;
+    height: 200px;
 }
