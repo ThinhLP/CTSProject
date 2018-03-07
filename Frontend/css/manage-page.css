@@ -230,10 +230,53 @@ h2.sub-heading .small {
 }
 
 .course-image {
-    display: block;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /*display: block;
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 20px;*/
+}
+
+.course-image:hover {
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.course-image:hover button {
+    /*display: block;*/
+    opacity: 1;
+}
+
+.course-image:hover div.darker {
+    opacity: 0.5;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.course-image .darker {
+    background: #000;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 0.2s linear;
+}
+
+.course-image button {
+    /*display: none;*/
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s linear;
 }
 
 .search-box {

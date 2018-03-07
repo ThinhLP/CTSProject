@@ -44,11 +44,11 @@
         </div>
         <div class="navigator-wrapper main-navigator">
             <ul class="nav-items">
-                <li class="dashboard-item"><a href="#"><i class="fa fa-clone"></i><span class="nav-item-name">Thống kê</span></a>
+                <li class="dashboard-item"><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="nav-item-name">Thống kê</span></a>
                 </li>
-                <li class="active dashboard-item"><a href="#"><i class="fa fa-th-list"></i><span class="nav-item-name">Quản lý kế hoạch</span></a>
+                <li class="active dashboard-item"><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="nav-item-name">Quản lý kế hoạch</span></a>
                 </li>
-                <li class="dashboard-item"><a href="#"><i class="fa fa-comments"></i><span class="nav-item-name">Quản lý thương hiệu</span></a>
+                <li class="dashboard-item"><a href="#"><i class="fa fa-address-card" aria-hidden="true"></i><span class="nav-item-name">Quản lý thương hiệu</span></a>
                 </li>
                 <li class="dashboard-item"><a href="#"><i class="fa fa-users"></i><span class="nav-item-name">Quản lý người dùng</span></a>
                 </li>
@@ -179,12 +179,11 @@
                     </div>
                     <div class="section-content col-md-9">
                         <div class="content-detail">
-                            <label>Hình ảnh</label><br/>
+                            <!--<label>Hình ảnh</label><br/>-->
                             <div class="row">
-                                <div class="col-lg-9 col-md-8 col-xs-12">
-                                    <img src="resources/images/course_picture.png" class="course-image" style="width: 480px" />
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-xs-12" style="text-align: right;">
+                                <div class="course-image">
+                                    <img src="./resources/images/course2.jpeg" />
+                                    <div class="darker"></div>
                                     <button class="button primary-button"><i class="fa fa-camera" aria-hidden="true"></i>Chọn ảnh</button>
                                 </div>
                             </div>
@@ -880,7 +879,6 @@
 
     <script src="./resources/jquery-3.3.1.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./resources/sliptree-bootstrap-tokenfield/dist/bootstrap-tokenfield.js"></script>
     <script src="./dist/js/traisy.min.js"></script>
     <script>
         $(function() {
@@ -969,6 +967,12 @@
             var parent = $(this).closest('.skill-wrapper');
             parent.find('.skill-list').show();
         });
+
+        /*$(document).on('mouseenter', '.course-image', function() {
+            $(this).find(":button").show();
+        }).on('mouseleave', '.divbutton', function() {
+            $(this).find(":button").hide();
+        });*/
 
     </script>
 </body>
