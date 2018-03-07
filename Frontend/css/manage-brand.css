@@ -6,12 +6,14 @@
 
 
 .brand-wrapper {
-    width: 30%;
+    width: 20%;
     display: inline-block;
-    margin: 10px;
-    height: 300px;
+    margin: 20px;
+    height: 220px;
     background-color: #fff;
     border-radius: 5px;
+    cursor: pointer;
+    float: left;
 }
 
 .brand-wrapper:hover {
@@ -24,4 +26,52 @@
     width: 100%;
     height: 70%;
     border-bottom: 1px solid #eee;
+}
+
+.brand-image > img {
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 5px;
+}
+
+.new-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.new-brand > img {
+    width: 70%;
+    height: 70%;
+}
+
+.brand-info {
+    font-weight: 600;
+    padding: 15px;
+    height: 30%;
+    color: #737577;
+}
+
+.brand-info > div.new-brand-action {
+    text-align: center;
+}
+
+.brand-info > div.brand-title {
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: left;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.brand-info > div.brand-description {
+    font-size: 13px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 19px;
 }
