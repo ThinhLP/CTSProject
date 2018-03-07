@@ -754,3 +754,12 @@ However, delay the fade out process for 2.5 seconds */
     background-size: cover;
     margin-bottom: 30px;
 }
+
+.responsive-button span {
+    display: none;
+}
+
+.responsive-button i {
+    margin-right: 0;
+    font-weight: bolder;
+}

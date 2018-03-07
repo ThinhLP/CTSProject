@@ -18,5 +18,15 @@
          width: calc(100% - 225px);
     }
     
+    .responsive-button span {
+        display: inline-block;
+    }
+
+
+    .responsive-button i {
+        margin-right: 10px;
+        font-weight: normal;
+
+    }
 }
 

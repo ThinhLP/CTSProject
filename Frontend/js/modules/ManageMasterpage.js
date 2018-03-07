@@ -88,7 +88,7 @@ function ManageMasterpage() {
     var userMenuTooltip = new PopupTooltip('.user-action', 0);
 
     var onDocumentReadyEvents = function () {
-       // handleLeftPanel();
+        // handleLeftPanel();
     };
 
     var onWindowResizeEvents = function () {
@@ -103,6 +103,22 @@ function ManageMasterpage() {
         $(window).resize(function () {
             onWindowResizeEvents();
         });
+
+        // Event handler when modal popup is shown/hidden
+        $('.modal').on('hidden.bs.modal', function () {
+            var $input = $(this).find('input');
+            if ($input.length > 0) {
+                $input.val('');
+            }
+        });
+
+        $('.modal').on('shown.bs.modal', function () {
+            var $input = $(this).find('input');
+            if ($input.length > 0) {
+                $input.eq(0).focus();
+            }
+        });
+
     };
 
     addEventHandlers();

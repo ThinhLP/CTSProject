@@ -1250,7 +1250,7 @@ div.heading-action .editable-heading {
 }
 
 .nav-top-action {
-    width: 50%;
+    width: 130px;
     text-align: right;
     margin-right: 15px;
 }
@@ -1359,4 +1359,12 @@ div.heading-action .editable-heading {
 
 .skill-list-wrapper li i {
     color: #1ea69a;
+}
+
+.empty-section-list, empty-lecture {
+    display: none;
+}
+
+.empty-lecture {
+   min-height: 60px;
 }
