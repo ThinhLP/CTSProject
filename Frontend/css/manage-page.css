@@ -229,27 +229,39 @@ h2.sub-heading .small {
     border-color: #d4604b;
 }
 
-.course-image {
+.course-media {
     width: 100%;
-    height: 500px;
-    position: relative;
-    display: flex;
+    height: 420px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding-bottom: 15px;
     /*display: block;
     width: 100%;
     height: auto;
     margin-bottom: 20px;*/
 }
 
-.course-image:hover {
+.course-media img {
+    width: 100%;
+    height: 95%;
+}
+
+.course-media-choose {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.course-media-choose button {
+    width: 150px;
+}
+
+/*.course-image:hover {
     -webkit-transition: .25s;
     transition: .25s;
 }
 
 .course-image:hover button {
-    /*display: block;*/
     opacity: 1;
 }
 
@@ -273,11 +285,10 @@ h2.sub-heading .small {
 }
 
 .course-image button {
-    /*display: none;*/
     opacity: 0;
     position: absolute;
     transition: opacity 0.2s linear;
-}
+}*/
 
 .search-box {
     padding-left: 0;
