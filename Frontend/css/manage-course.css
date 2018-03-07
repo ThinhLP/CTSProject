@@ -1361,10 +1361,18 @@ div.heading-action .editable-heading {
     color: #1ea69a;
 }
 
-.empty-section-list, empty-lecture {
+.empty-section-list,
+empty-lecture {
     display: none;
 }
 
 .empty-lecture {
-   min-height: 60px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.empty-lecture img {
+    margin-bottom: 5px;
 }

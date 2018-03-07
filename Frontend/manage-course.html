@@ -219,6 +219,17 @@
                     <div class="col-md-12 curriculum">
                         <div class="curriculum-add-lecture"><button class="button btn-orange" data-toggle="modal" data-target="#createLectureModal"><i class="fa fa-plus"></i>Thêm chương mới</button></div>
                         <ol class="list-unstyled">
+                            <div class="section-wrapper">
+                                <div class="section-content col-md-12 col-sm-12">
+                                    <div class="content-detail new-plan">
+                                        <div>
+                                            <img src="./resources/images/new-section.svg" /><br/>
+                                            <strong>Thêm chương học&nbsp;</strong>
+                                            <!--<br/><button class="button primary-button ">Thêm khoá học</button>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <li class="curriculum-item" id="section-1">
                                 <div class="curriculum-heading curriculum-wrapper">
                                     <div class="heading-action section-heading-action">
@@ -382,6 +393,42 @@
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon cancel-edit-lecture-name"><i class="fa fa-times" aria-hidden="true"></i></button>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="curriculum-item" id="section-1">
+                                <div class="curriculum-heading curriculum-wrapper">
+                                    <div class="heading-action section-heading-action">
+                                        <div class="increment-section">
+                                            <i class="fa fa-bars move-section"></i>Chương <span class="sec_no">1</span>:</div>
+                                        <div class="editable-heading section-title" contenteditable="false" spellcheck="false"><span class="section-name">Chuong so 1</span><button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-pencil" aria-hidden="true"></i></button></div>
+                                        <div class="editable-heading section-title input-name" contenteditable="false" spellcheck="false" style="display: none;">
+                                            <input name="name" type="text" class="form-input" placeholder="Nhập tên chương học" />
+                                        </div>
+                                    </div>
+                                    <div class="section-action">
+                                        <div class="edit-item-content-action">
+                                            <button class="button outline-button button-only-icon add-lecture-btn" title="Thêm bài học" data-toggle="modal" data-target="#createSectionModal">
+                                        <i class="fa fa-plus"></i></button>
+                                            <button class="button outline-orange-button button-only-icon remove-lecture-btn" title="Xoá bài học" data-toggle="modal" data-target="#removeLectureModal"><i class="fa fa-trash"></i></button>
+                                            <button class="button no-outline-button button-only-icon expand-section rotate-arrow" collapsed="true" target="#section-1 .lecture-list-wrapper"><i class="fa fa-angle-down  rotate-arrow"></i></button>
+                                        </div>
+                                        <div class="edit-item-name-action" style="display: none">
+                                            <button class="button outline-button save-edit-name">Đồng ý</button>
+                                            <button class="button outline-orange-button cancel-edit-name">Huỷ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ol class="list-unstyled lecture-list-wrapper">
+                                    <li class="curriculum-lecture-item">
+                                        <div class="curriculum-lecture-heading curriculum-wrapper">
+
+                                            <div class="empty-lecture">
+                                                <img src="./resources/images/new-plan.svg" />
+                                                <h5>Chương học đang trống</h5>
+                                            </div>
+
                                         </div>
                                     </li>
                                 </ol>
@@ -900,11 +947,14 @@
     </div>-->
 
     <script src="./resources/jquery-3.3.1.min.js"></script>
+    <script src="./resources/tippy.all.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
     <script src="./dist/js/traisy.min.js"></script>
     <script>
         $(function() {
             var page = new ManageCourse();
+            tippy('.add-lecture-btn');
+            tippy('.remove-lecture-btn');
         });
 
         $('.type-item').on('click', function() {
