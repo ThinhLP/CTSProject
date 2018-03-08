@@ -73,6 +73,15 @@ function ManageMasterpage() {
             $('.nav-top').css('width', 'calc(100% - 225px)');
         }
     };
+    
+    var handleHamburgerButtonStatus = function() {
+        var windowWidth = $(window).width();
+        if (windowWidth <= MIN_DESKTOP_WIDTH) {
+            $(hamburgerButtonSlt).attr('collapsed', 'true');
+        } else {
+            $(hamburgerButtonSlt).attr('collapsed', 'false');
+        }  
+    };
 
     $(hamburgerButtonSlt).click(function () {
         var isCollapsed = $(this).attr('collapsed') == 'true';
@@ -89,6 +98,7 @@ function ManageMasterpage() {
 
     var onDocumentReadyEvents = function () {
         // handleLeftPanel();
+        handleHamburgerButtonStatus();
     };
 
     var onWindowResizeEvents = function () {

@@ -885,7 +885,7 @@ div.heading-action .editable-heading {
 }
 
 .section-curriculum-name {
-    max-width: calc(100% - 22px);
+/*    max-width: calc(100% - 22px);*/
     display: flex;
     overflow: hidden;
     text-overflow: ellipsis;
