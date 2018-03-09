@@ -885,7 +885,7 @@ div.heading-action .editable-heading {
 }
 
 .section-curriculum-name {
-/*    max-width: calc(100% - 22px);*/
+    /*    max-width: calc(100% - 22px);*/
     display: flex;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1319,9 +1319,24 @@ div.heading-action .editable-heading {
     cursor: pointer;
 }
 
-.skill-wrapper .skill-data {
+.skill-data {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.skill-data div {
+    display: inline-block;
+    background-color: #ff986a;
+    border-radius: 20px;
+    color: #fff;
+    height: 28px;
+    padding: 5px 15px;
+    margin-right: 2px;
+}
+
+.skill-data div i {
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .skill-list {
