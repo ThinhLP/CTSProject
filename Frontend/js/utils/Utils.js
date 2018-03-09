@@ -98,7 +98,20 @@ var Utils = {
         var day = date.getDate();
         var month = date.getMonth() + 1;
         var year = date.getFullYear();
-        return day + '/'  + month + '/' + year;
-    }
+        return day + '/' + month + '/' + year;
+    },
+    updateOrder: function (selector, numberSelector) {
+        $(selector).each(function (index) {
+            console.log(index);
+            $(this).find(numberSelector).html(index + 1);
+        });
+    },
+    isElementHidden: function ($target) {
+        return $target.css('display') === 'none';
+    },
+
+    isElementShown: function ($target) {
+        return $target.css('display') === 'block';
+    },
 
 };

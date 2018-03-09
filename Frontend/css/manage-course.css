@@ -819,7 +819,7 @@ div.section-action {
     margin-right: 10px;
 }
 
-.curriculum-wrapper .move-section {
+.curriculum-wrapper .move-section, .move-lecture {
     color: #ccc;
     cursor: move;
     margin-right: 15px;
@@ -1362,7 +1362,7 @@ div.heading-action .editable-heading {
 }
 
 .empty-section-list,
-empty-lecture {
+.empty-lecture {
     display: none;
 }
 
