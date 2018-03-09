@@ -112,7 +112,11 @@
                         <div class="content-detail">
                             <label>Kỹ năng khoá học</label><br/>
                             <div class="skill-wrapper">
-                                <div class="skill-data form-input"></div>
+                                <div class="skill-data form-input">
+                                    <div class="skill-tag">HTML5<i class="fa fa-times" aria-hidden="true"></i></div>
+                                    <div class="skill-tag">HTML5<i class="fa fa-times" aria-hidden="true"></i></div>
+                                    <div class="skill-tag">HTML5<i class="fa fa-times" aria-hidden="true"></i></div>
+                                </div>
                                 <div class="skill-select"><i class="fa fa-pencil" aria-hidden="true"></i></div>
                                 <div class="skill-list" style="display: none">
                                     <ul class="skill-list-wrapper">
@@ -266,7 +270,7 @@
                                             </div>
                                             <div class="section-action">
                                                 <div class="edit-item-content-action">
-                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye-slash"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
                                                 </div>
@@ -409,8 +413,9 @@
                                     </div>
                                     <div class="section-action">
                                         <div class="edit-item-content-action">
-                                            <button class="button outline-button button-only-icon add-lecture-btn" title="Thêm bài học" data-toggle="modal" data-target="#createSectionModal">
+                                            <button class="button outline-button button-only-icon add-lecture-btn" data-toggle="modal" data-target="#createSectionModal" data-tooltip="Thêm bài học">
                                         <i class="fa fa-plus"></i></button>
+
                                             <button class="button outline-orange-button button-only-icon remove-lecture-btn" title="Xoá bài học" data-toggle="modal" data-target="#removeLectureModal"><i class="fa fa-trash"></i></button>
                                             <button class="button no-outline-button button-only-icon expand-section rotate-arrow" collapsed="true" target="#section-1 .lecture-list-wrapper"><i class="fa fa-angle-down  rotate-arrow"></i></button>
                                         </div>
@@ -668,55 +673,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Đề xuất cải tiển -->
-            <!--<div class="content-wrapper" id="propose-wrapper">
-                <div class="section-wrapper row">
-                    <div class="section-heading col-md-3">
-                        <h2 class="sub-heading">
-                            <span class="big">Đề xuất cải tiến</span><br/>
-                            <span class="small">Yều cầu cải tiến từ quản lí</span>
-                        </h2>
-                    </div>
-                    <div class="section-content col-md-9">
-                        <div class="feedback-panel">
-                            <div class="feedback-user">
-                                <span class="feedback-name">Phạm Chánh Hưng</span>
-                                <span class="feedback-time">19/01/2018 12:21</span>
-                            </div>
-                            <div class="feedback-content">
-                                <p>Wifey made the best Father's Day meal ever. So thankful so happy so blessed. Thank you for making my family We just had fun with the “future” theme !!! It was a fun night all together ... The always rude Kanye Show at 2am Sold Out Famous viewing @ Figueroa and 12th in downtown.</p>
-                            </div>
-                            <div class="feedback-reply">
-                                <button><i class="fa fa-reply"></i> Phản hồi</button>
-                            </div>
-                        </div>
-                        <div class="feedback-reply-panel">
-                            <div class="feedback-user">
-                                <span class="feedback-name">Phạm Chánh Hưng</span>
-                                <span class="feedback-time">19/01/2018 15:33</span>
-                            </div>
-                            <div class="feedback-content">
-                                <p>Wifey made the best Father's Day meal ever. So thankful so happy so blessed. Thank you for making my family We just had fun with the “future” theme !!! It was a fun night all together ... The always rude Kanye Show at 2am Sold Out Famous viewing @ Figueroa and 12th in downtown.</p>
-                            </div>
-                        </div>
-                        <div class="feedback-panel">
-                            <div class="feedback-user">
-                                <span class="feedback-name">Phạm Chánh Hưng</span>
-                                <span class="feedback-time">20/01/2018 09:46</span>
-                            </div>
-                            <div class="feedback-content">
-                                <p>Wifey made the best Father's Day meal ever. So thankful so happy so blessed. Thank you for making my family We just had fun with the “future” theme !!! It was a fun night all together ... The always rude Kanye Show at 2am Sold Out Famous viewing @ Figueroa and 12th in downtown.</p>
-                            </div>
-                            <div class="feedback-reply">
-                                <button><i class="fa fa-reply"></i> Phản hồi</button>
-                            </div>
-                        </div>
-                        <div class="content-action">
-                            <button class="button primary-button">Thêm đề xuất</button>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
         </div>
     </div>
 
@@ -953,7 +909,7 @@
     <script>
         $(function() {
             var page = new ManageCourse();
-            tippy('.add-lecture-btn');
+            /*tippy('.add-lecture-btn');*/
             tippy('.remove-lecture-btn');
         });
 
