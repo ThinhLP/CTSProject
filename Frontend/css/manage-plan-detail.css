@@ -604,6 +604,11 @@ h5 {
     cursor: pointer;
 }
 
+.education-tab-item div {
+    padding-top: 10px;
+    font-size: 15px;
+}
+
 /*.education-side-bar li:last-child {
     border-bottom: 0px;
 }*/

@@ -81,10 +81,8 @@
         <div class="main-container">
             <div class="content-wrapper">
                 <div class="section-content">
-                    <div class="video-container">
-                        <div id="player" class="standard-height"></div>
-                    </div>
-                    <div class="feedback-panel">
+                    <div id="player" class="standard-height"></div>
+                    <!--<div class="feedback-panel">
                         <a class="float-left">
                             <div class="avatar">
                                 <img src="./resources/images/christian.jpg" />
@@ -110,6 +108,74 @@
                                 </div>
                             </div>
                         </div>
+                    </div>-->
+                </div>
+                <div class="section-content education-program ">
+                    <div class="education-side-bar ">
+                        <ul>
+                            <li class="education-tab-item active ">
+                                <img src="./resources/images/chatting.svg">
+                                <div>Thảo luận</div>
+                            </li>
+                            <li class="education-tab-item ">
+                                <br/><span>Ghi chú</span>
+                            </li>
+                            <li class="education-tab-item ">
+                                <br/><span>Tài nguyên bài học</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="program-list ">
+                        <ul>
+                            <li class="program-item ">
+                                <img src="./resources/images/course1.jpeg ">
+                                <div class="program-content ">
+                                    <h4>Lập trình với HTML và CSS</h4>
+                                    <h5><i class="fa fa-user " aria-hidden="true "></i>Giáo sư: Lê Phúc Thịnh</h5>
+                                    <div class="card-progress-wrapper ">
+                                        <div class="card-progress-bar ">
+                                            <div class="completed-progress " style="width: 20%; "></div>
+                                        </div>
+                                        <div class="percentage ">20%</div>
+                                    </div>
+                                </div>
+                                <div class="program-action ">
+                                    <i class="fa fa-sign-in " aria-hidden="true "></i>
+                                </div>
+                            </li>
+                            <li class="program-item ">
+                                <img src="./resources/images/course2.jpeg ">
+                                <div class="program-content ">
+                                    <h4>Lập trình với HTML và CSS</h4>
+                                    <h5><i class="fa fa-user " aria-hidden="true "></i>Giáo sư: Lê Phúc Thịnh</h5>
+                                    <div class="card-progress-wrapper ">
+                                        <div class="card-progress-bar ">
+                                            <div class="completed-progress " style="width: 100%; "></div>
+                                        </div>
+                                        <div class="percentage ">100%</div>
+                                    </div>
+                                </div>
+                                <div class="program-action ">
+                                    <i class="fa fa-sign-in " aria-hidden="true "></i>
+                                </div>
+                            </li>
+                            <li class="program-item ">
+                                <img src="./resources/images/course_picture.png ">
+                                <div class="program-content ">
+                                    <h4>Lập trình với HTML và CSS</h4>
+                                    <h5><i class="fa fa-user " aria-hidden="true "></i>Giáo sư: Lê Phúc Thịnh</h5>
+                                    <div class="card-progress-wrapper ">
+                                        <div class="card-progress-bar ">
+                                            <div class="completed-progress " style="width: 50%; "></div>
+                                        </div>
+                                        <div class="percentage ">50%</div>
+                                    </div>
+                                </div>
+                                <div class="program-action ">
+                                    <i class="fa fa-sign-in " aria-hidden="true "></i>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -125,8 +191,6 @@
     <script>
         $(document).ready(function() {
             var playerData = {
-                // reverse fraction of video aspect ratio
-                // video dimensions: 470px / 250px 480px / 300px
                 key: "$710417913228974",
                 ratio: 9 / 16,
                 brand: {
