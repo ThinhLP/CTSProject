@@ -88,13 +88,10 @@
                         <h4>Đào tạo lập trình viên Web Full stack</h4>
                         <div class="time-and-author">
                             <div class="plan-time"><i class="fa fa-calendar" aria-hidden="true"></i> Từ 19/02/2018 đến 08/03/2018</div>
-                            <div class="plan-author"><i class="fa fa-user" aria-hidden="true"></i> Giáo sư: Lê Phúc Thịnh</div>
                         </div>
                         <div class="detail-description">
                             Chương trình đào tạo kéo dài trong 8 tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Web. Từ design, frontend đến backend. Chương trình đào tạo kéo dài trong 8 tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Web. Từ design, frontend đến backend. Chương trình đào tạo kéo dài trong 8 tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Web. Từ design, frontend đến backend.
                         </div>
-                        <!--<p><i class="fa fa-calendar" aria-hidden="true"></i> Từ 19/02/2018 đến 08/03/2018</p>
-                        <p class="plan-description">Chương trình đào tạo kéo dài trong 8 tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Web. Từ design, frontend đến backend. </p>-->
                     </div>
                 </div>
                 <!--<div class="section-content plan-education">
@@ -166,7 +163,68 @@
             <div class="section-content education-program">
                 <div class="education-side-bar">
                     <ul>
-                        <li>Introduction </li>
+                        <li class="education-tab-item active">
+                            <img src="./resources/images/open-book-unselect.svg" class="item-unselect">
+                            <img src="./resources/images/open-book-select.svg" style="display: none;" class="item-select" />
+                            <br/><span>Introduction to programming</span>
+                        </li>
+                        <li class="education-tab-item">
+                            <img src="./resources/images/open-book-unselect.svg" class="item-unselect">
+                            <img src="./resources/images/open-book-select.svg" style="display: none;" class="item-select" />
+                            <br/><span>Lập trình Javascript với Angular</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="program-list">
+                    <ul>
+                        <li class="program-item">
+                            <img src="./resources/images/course1.jpeg">
+                            <div class="program-content">
+                                <h4>Lập trình với HTML và CSS</h4>
+                                <h5><i class="fa fa-user" aria-hidden="true"></i>Giáo sư: Lê Phúc Thịnh</h5>
+                                <div class="card-progress-wrapper">
+                                    <div class="card-progress-bar">
+                                        <div class="completed-progress" style="width: 20%;"></div>
+                                    </div>
+                                    <div class="percentage">20%</div>
+                                </div>
+                            </div>
+                            <div class="program-action">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="program-item">
+                            <img src="./resources/images/course2.jpeg">
+                            <div class="program-content">
+                                <h4>Lập trình với HTML và CSS</h4>
+                                <h5><i class="fa fa-user" aria-hidden="true"></i>Giáo sư: Lê Phúc Thịnh</h5>
+                                <div class="card-progress-wrapper">
+                                    <div class="card-progress-bar">
+                                        <div class="completed-progress" style="width: 100%;"></div>
+                                    </div>
+                                    <div class="percentage">100%</div>
+                                </div>
+                            </div>
+                            <div class="program-action">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li class="program-item">
+                            <img src="./resources/images/course_picture.png">
+                            <div class="program-content">
+                                <h4>Lập trình với HTML và CSS</h4>
+                                <h5><i class="fa fa-user" aria-hidden="true"></i>Giáo sư: Lê Phúc Thịnh</h5>
+                                <div class="card-progress-wrapper">
+                                    <div class="card-progress-bar">
+                                        <div class="completed-progress" style="width: 50%;"></div>
+                                    </div>
+                                    <div class="percentage">50%</div>
+                                </div>
+                            </div>
+                            <div class="program-action">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -339,6 +397,14 @@
 
         $('.check-box').on('click', function() {
             $(this).children('i').toggleClass('fa-plus-circle').toggleClass('fa-check-circle');
+        })
+
+        $('.education-tab-item').hover(function() {
+            $(this).find('.item-select').show();
+            $(this).find('.item-unselect').hide();
+        }, function() {
+            $(this).find('.item-select').hide();
+            $(this).find('.item-unselect').show();
         })
 
     </script>
