@@ -593,8 +593,14 @@ h5 {
 
 .education-side-bar ul {
     height: 100%;
+    border-radius: 4px;
+    list-style: none;
     background: #fafafa;
     margin-bottom: 0;
+}
+
+.education-side-bar li:first-child {
+    border-top-left-radius: 4px;
 }
 
 .education-side-bar li {
@@ -625,6 +631,7 @@ h5 {
 }
 
 .program-list {
+    border-radius: 4px;
     background: #FFF;
     width: 75%;
 }

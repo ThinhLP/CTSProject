@@ -819,7 +819,8 @@ div.section-action {
     margin-right: 10px;
 }
 
-.curriculum-wrapper .move-section, .move-lecture {
+.curriculum-wrapper .move-section,
+.move-lecture {
     color: #ccc;
     cursor: move;
     margin-right: 15px;
@@ -855,11 +856,17 @@ div.heading-action .editable-heading {
 .heading-action .editable-heading.input-name {
     height: 51px;
     width: 400px;
+    display: flex;
     margin-left: -10px;
 }
 
 .heading-action .editable-heading input {
     height: 36px;
+    margin-right: 10px;
+}
+
+.edit-item-name-action button {
+    margin-right: 5px;
 }
 
 .editable-heading {
