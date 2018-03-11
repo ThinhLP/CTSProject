@@ -23,12 +23,12 @@
 </head>
 
 <body>
-    <div class="left-panel">
-        <div class="logo-wrapper">
+    <div class="left-panel left-panel-learner">
+        <!--<div class="logo-wrapper">
             <a href="#"><img class="logo" src="../resources/images/logo_traisy1.png" />
             </a>
             <span class="search-btn"><i class="fa fa-search"></i></span>
-        </div>
+        </div>-->
 
         <div class="user-info">
             <a class="user-detail" href="#">
@@ -43,34 +43,67 @@
                 <li><a href="#">Đăng xuất</a></li>
             </ul>
         </div>
-        <div class="navigator-wrapper main-navigator">
-            <ul class="nav-items">
-                <li class="dashboard-item"><a href="#"><i class="fa fa-clone"></i><span class="nav-item-name">Thống kê</span></a>
-                </li>
-                <li class="active dashboard-item"><a href="#"><i class="fa fa-th-list"></i><span class="nav-item-name">Quản lý kế hoạch</span></a>
-                </li>
-                <li class="dashboard-item"><a href="#"><i class="fa fa-comments"></i><span class="nav-item-name">Quản lý thương hiệu</span></a>
-                </li>
-                <li class="dashboard-item"><a href="#"><i class="fa fa-users"></i><span class="nav-item-name">Quản lý người dùng</span></a>
-                </li>
-            </ul>
-        </div>
-        <div class="navigator-wrapper minor-navigator">
-            <div class="nav-title-wrapper">
-                <span class="nav-title"><a href="#">Danh sách kế hoạch</a></span>
-                <span class="add-button"><i class="fa fa-plus-circle"></i></span>
+        <div class="navigator-wrapper learner-navigator">
+            <div class="course-info-container">
+                <div class="course-info">
+                    <div class="progress-circle p10 program-learning-progress">
+                        <span>10%</span>
+                        <div class="left-half-clipper">
+                            <div class="first50-bar"></div>
+                            <div class="value-bar"></div>
+                        </div>
+                    </div>
+                    <div class="course-name">Giới thiệu về Javascript</div>
+                </div>
             </div>
-            <ul class="nav-items">
-                <li class="course-item"><a href="#"><span class="nav-item-name">Đào tạo lập trình</span></a>
+            <ul class="nav-items course-list-container">
+                <li class="dashboard-item course-section">
+                    <a href="#">
+                        <div class="chapter"><i class="fa fa-book" aria-hidden="true"></i>Chương 1:</div>
+                        <div class="chapter-name">Variable</div>
+                    </a>
                 </li>
-                <li class="course-item"><a href="#"><span class="nav-item-name">Đào tạo kĩ năng làm việc nhóm</span></a>
-                </li>
-                <li class="course-item"><a href="#"><span class="nav-item-name">Thiết kế chuyên nghiệp</span></a>
+                <li class="dashboard-item course-section">
+                    <a href="#">
+                        <div class="chapter"><i class="fa fa-book" aria-hidden="true"></i>Chương 2:</div>
+                        <div class="chapter-name">Control Flow</div>
+                    </a>
                 </li>
             </ul>
         </div>
+        <div class="lecture-list-container" style="display: none">
+            <div class="lecture-icon">
+                <ul class="nav-items">
+                    <li class="active" data-tooltip="Chương 1: Variable"><i class="fa fa-book" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-book" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-book" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+            <div class="lecture-list">
+                <ul>
+                    <li class="active">
+                        <div class="lecture-chapter">Bài 1:</div>
+                        <div class="lecture-chapter-name">Integer, Double, Character và String</div>
+                    </li>
+                    <li>
+                        <div class="lecture-chapter">Bài 2:</div>
+                        <div class="lecture-chapter-name">If-else, Do-while, While và For-loop</div>
+                    </li>
+                    <li>
+                        <div class="lecture-chapter">Bài 3:</div>
+                        <div class="lecture-chapter-name">Class Inheritance and Anonymous Class</div>
+                    </li>
+                    <li>
+                        <div class="lecture-chapter">Bài 4:</div>
+                        <div class="lecture-chapter-name">Interface và Implement method</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
     </div>
-    <div class="right-panel">
+    <div class="right-panel right-panel-learner">
         <div class="fake-panel"></div>
         <div class="nav-top fix-nav-top">
             <div class="nav-top-info">
@@ -181,7 +214,18 @@
 
         });
 
-        /*$(function() { var page = new ManageMasterpage(); });*/
+        $(function() {
+            var page = new ManageMasterpage();
+        });
+
+
+        $('.course-section').on('click', function() {
+            var parent = $(this).closest('.left-panel-learner');
+
+            parent.find('.course-list-container').hide();
+            parent.find('.lecture-list-container').show();
+
+        })
 
     </script>
 </body>

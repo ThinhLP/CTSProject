@@ -54,6 +54,10 @@ ul {
     display: none;
 }
 
+.left-panel.left-panel-learner {
+    width: 300px;
+}
+
 .logo-wrapper {
     width: 100%;
     text-align: center;
@@ -91,6 +95,14 @@ ul {
 .fake-panel {
     width: 0px;
     display: none;
+}
+
+.right-panel-learner .fake-panel {
+    width: 350px;
+}
+
+.right-panel-learner .fix-nav-top {
+    left: 300px;
 }
 
 .main-container {
@@ -772,6 +784,8 @@ However, delay the fade out process for 2.5 seconds */
 
 /* Tooltips */
 
+/* Normal Tooltip */
+
 [data-tooltip] {
     position: relative;
     z-index: 2;
@@ -823,6 +837,8 @@ However, delay the fade out process for 2.5 seconds */
     visibility: visible;
     opacity: 1;
 }
+
+/* Orange Tooltip */
 
 .video-container {
     margin-bottom: 50px;

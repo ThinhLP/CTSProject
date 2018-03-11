@@ -349,3 +349,124 @@ span.icon-search i {
         margin-bottom: 0;
     }
 }
+
+.learner-navigator {
+    padding-bottom: 10px;
+}
+
+.learner-navigator .course-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, .11);
+    height: 200px;
+}
+
+.learner-navigator .course-info {
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+
+.learner-navigator .course-info .course-name {
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.learner-navigator .course-info .progress-circle {
+    background-color: hsla(0, 0%, 100%, .11);
+}
+
+.learner-navigator .course-info .progress-circle:after {
+    background-color: transparent;
+}
+
+.learner-navigator .course-info .progress-circle span {
+    color: #fff;
+}
+
+.learner-navigator .course-info .value-bar {
+    border: 0.45em solid #1ea69a;
+}
+
+.course-list-container li {
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0;
+    font-size: 15px;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    font-weight: 200;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+}
+
+.course-list-container li:hover {
+    background: #343854;
+}
+
+.lecture-list-container {
+    display: flex;
+    height: calc(100% - 260px);
+    margin-top: -10px;
+}
+
+.lecture-list-container .lecture-icon {
+    width: 60px;
+}
+
+.lecture-list-container .lecture-icon li {
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.lecture-list-container .lecture-icon li.active {
+    background: #343854;
+    color: #fff;
+}
+
+.lecture-list-container .lecture-list {
+    padding: 15px 20px;
+    background: #343854;
+    width: calc(100% - 60px);
+    font-size: 14px;
+    height: 100%;
+}
+
+.lecture-list-container .lecture-list li {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: hsla(0, 0%, 87%, .65);
+    font-weight: 200;
+}
+
+.lecture-list-container .lecture-list li:hover {
+    color: #fff;
+}
+
+.lecture-list-container .lecture-list li.active {
+    color: #fff;
+}
+
+.chapter {
+    width: 50%;
+}
+
+.chapter-name {
+    width: 70%;
+}
+
+.lecture-chapter {
+    width: 25%;
+}
+
+.lecture-chapter-name {
+    width: 85%;
+}
