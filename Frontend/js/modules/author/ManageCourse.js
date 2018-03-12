@@ -107,6 +107,108 @@ function ManageCourse() {
     var countNoOfLecturesInSection = function ($section) {
         return $section.find('.lecture-item').length;
     };
+    
+    // edit section and lecture title
+    var activeSectionEditableMode = function(sectionId) {
+        var sectionContainerSlt = '#section-' + sectionId;
+        var inputContainerSelector = sectionContainerSlt + ' .sec-title-input';
+        var actionContainerSelector = sectionContainerSlt + ' .sec-title-action';
+        var currentTitleSelector = sectionContainerSlt + ' .section-name';
+        var sectionActionSelector = sectionContainerSlt + ' .sec-content-action';
+        var editSecTitleButtonSlt = sectionContainerSlt + ' .edit-sec-title-btn';
+        
+        $(inputContainerSelector).show();
+        $(actionContainerSelector).show();
+        
+        $(sectionActionSelector).hide();
+        $(editSecTitleButtonSlt).hide();
+        $(currentTitleSelector).hide();
+        
+        $(inputContainerSelector + ' input').val($(currentTitleSelector).text());
+        $(inputContainerSelector + ' input').select();
+    };
+    
+    var cancelSectionEditableMode = function(sectionId, isUpdated, newSectionName) {
+        var sectionContainerSlt = '#section-' + sectionId;
+        var inputContainerSelector = sectionContainerSlt + ' .sec-title-input';
+        var actionContainerSelector = sectionContainerSlt + ' .sec-title-action';
+        var currentTitleSelector = sectionContainerSlt + ' .section-name';
+        var sectionActionSelector = sectionContainerSlt + ' .sec-content-action';
+        var editSecTitleButtonSlt = sectionContainerSlt + ' .edit-sec-title-btn';
+        
+        $(inputContainerSelector).hide();
+        $(actionContainerSelector).hide();
+        
+        $(sectionActionSelector).show();
+        $(currentTitleSelector).show();
+        $(editSecTitleButtonSlt).show();  
+        if (isUpdated) {
+            $(currentTitleSelector).text(newSectionName);
+        }
+    };
+    
+     var activeLectureEditableMode = function(lectureId) {
+        var lectureContainerSlt = '#lecture-' + lectureId;
+        var inputContainerSelector = lectureContainerSlt + ' .lec-title-input';
+        var actionContainerSelector = lectureContainerSlt + ' .lec-title-action';
+        var currentTitleSelector = lectureContainerSlt + ' .lecture-name';
+        var lectureActionSelector = lectureContainerSlt + ' .lec-content-action';
+        var editLecTitleButtonSlt = lectureContainerSlt + ' .edit-lec-title-btn';
+        
+        $(inputContainerSelector).show();
+        $(actionContainerSelector).show();
+        
+        $(lectureActionSelector).hide();
+        $(editLecTitleButtonSlt).hide();
+        $(currentTitleSelector).hide();
+        
+        $(inputContainerSelector + ' input').val($(currentTitleSelector).text());
+        $(inputContainerSelector + ' input').select();
+    };
+    
+    var cancelLectureEditableMode = function(lectureId, isUpdated, newLectureName) {
+        var lectureContainerSlt = '#lecture-' + lectureId;
+        var inputContainerSelector = lectureContainerSlt + ' .lec-title-input';
+        var actionContainerSelector = lectureContainerSlt + ' .lec-title-action';
+        var currentTitleSelector = lectureContainerSlt + ' .lecture-name';
+        var lectureActionSelector = lectureContainerSlt + ' .lec-content-action';
+        var editLecTitleButtonSlt = lectureContainerSlt + ' .edit-lec-title-btn';
+        
+        $(inputContainerSelector).hide();
+        $(actionContainerSelector).hide();
+        
+        $(lectureActionSelector).show();
+        $(currentTitleSelector).show();
+        $(editLecTitleButtonSlt).show();  
+        if (isUpdated) {
+            $(currentTitleSelector).text(newLectureName);
+        }
+    };
+    
+    $('body').on('click', '.edit-sec-title-btn', function() {
+        var sectionId = $(this).attr('value');
+        activeSectionEditableMode(sectionId);
+    });
+    
+    $('body').on('click', '.cancel-edit-sec-title', function() {
+        var sectionId = $(this).attr('value');
+        cancelSectionEditableMode(sectionId);
+    });
+    
+     $('body').on('click', '.edit-lec-title-btn', function() {
+        var lectureId = $(this).attr('value');
+        activeLectureEditableMode(lectureId);
+    });
+    
+    $('body').on('click', '.cancel-edit-lec-title', function() {
+        var lectureId = $(this).attr('value');
+        cancelLectureEditableMode(lectureId);
+    });
 
+    instance.activeSectionEditableMode = activeSectionEditableMode;
+    instance.cancelSectionEditableMode = cancelSectionEditableMode;
+    instance.activeLectureEditableMode = activeLectureEditableMode;
+    instance.cancelLectureEditableMode = cancelLectureEditableMode;
+    
     return instance;
 }
