@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Học Quiz | Traisy</title>
+    <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+
+    <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./resources/flowplayer/skin/all-skins.css" />
+    <link rel="stylesheet" href="./resources/flowplayer/skin/functional.css" />
+    <link rel="stylesheet" href="./css/learning-page.css" />
+    <link rel="stylesheet" href="./css/new-global-responsive.css" />
+    <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
+</head>
+
+
+<body>
+    <header class="learner-navbar full-width">
+        <div class="navbar-header">
+            <div class="menu-left">
+                <span>Trở về</span>
+            </div>
+            <div class="lecture-nav">
+                <a class="nav-btn" href="/courses/299583/lectures/4631883" id="lecture_previous_button">
+                <i class="fa fa-arrow-left"></i>&nbsp;<span class="nav-text">Bài học trước</span>
+                </a>
+                <a class="nav-btn complete" href="" id="lecture_complete_button">
+                <span class="nav-text">Hoàn thành ngay và học tiếp</span>&nbsp;<i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="course-sidebar">
+        <h2>Introduction to Javascript</h2>
+        <div class="course-progress">
+            <div class="progressbar">
+                <div class="progressbar-fill" style="min-width: 47%;"></div>
+            </div>
+            <div class="small course-progress"><span class="percentage">47%</span></div>
+        </div>
+        <div class="row lecture-sidebar">
+            <div class="col-sm-12 course-section">
+                <div class="section-title">Chương 1: Javascript căn bản</div>
+                <ul class="section-list">
+                    <li class="section-item completed">
+                        <a class="item">
+                        <span class="status-container"><i class="fa fa-check-circle status-icon" aria-hidden="true"></i></span>
+                        <div class="title-container">
+                        <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
+                        <span class="lecture-name">Bài 1: Hello World</span>
+                        </div>
+                        </a>
+                    </li>
+
+                    <li class="section-item incomplete next-lecture">
+                        <a class="item">
+                        <span class="status-container"><i class="fa fa-adjust status-icon" aria-hidden="true"></i></span>
+                        <div class="title-container">
+                        <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
+                        <span class="lecture-name">Bài 2: Lâp trình hướng đối tượng</span>
+                        </div>
+                        </a>
+                    </li>
+
+                    <li class="section-item incomplete">
+                        <a class="item">
+                        <span class="status-container"><i class="fa fa-circle-o status-icon" aria-hidden="true"></i></span>
+                        <div class="title-container">
+                        <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
+                        <span class="lecture-name">Bài 3: Làm việc với database</span>
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="course-mainbar lecture-content">
+        <h2 id="lecture_heading" class="section-title">Bài 3: Làm việc với database</h2>
+        <div class="quiz-wrapper">
+            <div class="quiz">
+                <div class="quiz-result-title">Kết quả bài quiz: 15/15</div>
+                <div class="quiz-action-result">
+                    <div class="quiz-check btn btn-primary">Kiểm tra</div>
+                    <div class="quiz-do-again btn btn-primary">Làm lại</div>
+                </div>
+                <div class="quiz-result-wrapper">
+                    <div class="quiz-question">
+                        <span>Câu 1: </span> Hello World là gì ?
+                    </div>
+                    <div class="quiz-answer selected incorrect">
+                        <span>Chào thế giới</span>
+                        <div class="quiz-answer-icon">
+                            <i class="fa fa-check quiz-answer-icon-correct" aria-hidden="true"></i>
+                            <i class="fa fa-times quiz-answer-icon-incorrect" style="display: block;" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="quiz-answer">
+                        <span>Chào Nguyên</span>
+                        <div class="quiz-answer-icon">
+                            <i class="fa fa-check quiz-answer-icon-correct" aria-hidden="true"></i>
+                            <i class="fa fa-times quiz-answer-icon-incorrect" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="quiz-answer">
+                        <span>Chào quan viên hai họ</span>
+                        <div class="quiz-answer-icon">
+                            <i class="fa fa-check quiz-answer-icon-correct" aria-hidden="true"></i>
+                            <i class="fa fa-times quiz-answer-icon-incorrect" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="quiz-answer correct">
+                        <span>Chào chư vị bồi thẩm đoàn</span>
+                        <div class="quiz-answer-icon">
+                            <i class="fa fa-check quiz-answer-icon-correct" style="display: block" aria-hidden="true"></i>
+                            <i class="fa fa-times quiz-answer-icon-incorrect" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="quiz-answer">
+                        <span class="quiz-answer-note">Chú thích:</span>&nbsp;Đáp án câu này là Chào Thế Giới, nhưng tui không muốn vậy, tui muốn đáp án đúng là Chào chư vị bồi thẩm đoàn.
+                    </div>
+                </div>
+                <div class="quiz-result-wrapper">
+                    <div class="quiz-question">
+                        <span>Câu 2: </span> SQL là ngôn ngữ gì ?
+                    </div>
+                    <div class="quiz-answer">
+                        <span>Ngôn ngữ lập trình</span>
+                        <div class="quiz-answer-icon">
+                            <i class="fa fa-check quiz-answer-icon-correct" aria-hidden="true"></i>
+                            <i class="fa fa-times quiz-answer-icon-incorrect" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="quiz-answer selected correct">
+                        <span>Ngôn ngữ truy vấn cấu trúc</span>
+                        <div class="quiz-answer-icon">
+                            <i class="fa fa-check quiz-answer-icon-correct" style="display: block;" aria-hidden="true"></i>
+                            <i class="fa fa-times quiz-answer-icon-incorrect" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="quiz-answer">
+                        <span>Ngôn ngữ loài người</span>
+                        <div class="quiz-answer-icon">
+                            <i class="fa fa-check quiz-answer-icon-correct" aria-hidden="true"></i>
+                            <i class="fa fa-times quiz-answer-icon-incorrect" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="quiz-answer">
+                        <span>Ngôn ngữ máy</span>
+                        <div class="quiz-answer-icon">
+                            <i class="fa fa-check quiz-answer-icon-correct" aria-hidden="true"></i>
+                            <i class="fa fa-times quiz-answer-icon-incorrect" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="quiz-answer">
+                        <span class="quiz-answer-note">Chú thích:</span>&nbsp;SQL : Structure Query Language
+                    </div>
+                </div>
+                <div class="quiz-result-wrapper">
+                    <div class="quiz-question">
+                        <span>Câu 3: </span> Hãy viết 1 đoạn văn ngắn mô tả bản thân mình ?
+                    </div>
+                    <div class="quiz-answer selected">
+                        <span>Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. Tui là Võ Thạch Nguyên và tui rất thích đi ngủ. </span>
+                    </div>
+                    <div class="quiz-answer">
+                        <span class="quiz-answer-note">Chú thích:</span>&nbsp;Đoạn văn phải có mở đoạn, thân đoạn và kết đoạn.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./resources/jquery-3.3.1.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./resources/flowplayer/flowplayer.min.js"></script>
+    <script src="./resources/flowplayer/dash/dash.mediaplayer.min.js"></script>
+    <script src="./resources/flowplayer/dash/flowplayer.dashjs.js"></script>
+    <script src="./resources/PlayerLoader.js"></script>
+    <script src="./dist/js/traisy.min.js "></script>
+    <script>
+        $(document).ready(function() {
+            var playerData = {
+                key: "$710417913228974",
+                ratio: 9 / 16,
+                brand: {
+                    showOnOrigin: true,
+                    text: "<a class='block-logo-small'  href='http://block.vn' target='_blank'>block.vn</a>"
+                },
+                embed: false,
+                splash: true,
+                clip: {
+                    autoplay: false,
+                    sources: [{
+                        type: "application/dash+xml",
+                        src: 'http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd'
+                    }],
+                    scaling: 'half'
+                }
+            };
+            playerData.poster = "./resource/images/VideoPoster.jpg";
+            $("#player").flowplayer(playerData);
+
+        });
+
+        $(function() {
+            var page = new ManageMasterpage();
+        });
+
+    </script>
+</body>

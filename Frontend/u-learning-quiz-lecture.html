@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Học video | Traisy</title>
+    <title>Học Quiz | Traisy</title>
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,56 +26,55 @@
             <div class="menu-left">
                 <span>Trở về</span>
             </div>
+            <!--<div class="lecture-nav">
+                <a class="nav-btn" href="/courses/299583/lectures/4631883" id="lecture_previous_button">
+                <i class="fa fa-arrow-left"></i>&nbsp;<span class="nav-text">Bài học trước</span>
+                </a>
+                <a class="nav-btn complete" href="" id="lecture_complete_button">
+                <span class="nav-text">Hoàn thành ngay và học tiếp</span>&nbsp;<i class="fa fa-arrow-right"></i>
+                </a>
+            </div>-->
             <div class="menu-right">
                 <img src="./resources/images/avatar-learner.png" class="default-avatar" />
             </div>
         </div>
     </header>
     <div class="course-sidebar">
-        <img src="./resources/images/default-course-image.png" class="course-image" />
         <h2>Introduction to Javascript</h2>
         <div class="course-progress">
             <div class="progressbar">
                 <div class="progressbar-fill" style="min-width: 47%;"></div>
             </div>
-            <div class="small course-progress"><span class="percentage">47%</span> COMPLETE</div>
+            <div class="small course-progress"><span class="percentage">47%</span></div>
         </div>
-    </div>
-    <div class="course-mainbar" style="display: block;">
-        <h2 class="section-title">
-            Chương trình đào tạo
-        </h2>
-        <div class="row">
+        <div class="row lecture-sidebar">
             <div class="col-sm-12 course-section">
-                <div class="section-title">
-                    Chương 1: Javascript căn bản
-                </div>
+                <div class="section-title">Chương 1: Javascript căn bản</div>
                 <ul class="section-list">
-                    <li class="section-item complete">
-                        <a class="item" data-no-turbolink="true">
+                    <li class="section-item completed">
+                        <a class="item">
                         <span class="status-container"><i class="fa fa-check-circle status-icon" aria-hidden="true"></i></span>
                         <div class="title-container">
-                        <div class="btn-primary btn-sm pull-right">Start</div>
                         <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
                         <span class="lecture-name">Bài 1: Hello World</span>
                         </div>
                         </a>
                     </li>
+
                     <li class="section-item incomplete next-lecture">
-                        <a class="item" data-no-turbolink="true">
+                        <a class="item">
                         <span class="status-container"><i class="fa fa-adjust status-icon" aria-hidden="true"></i></span>
                         <div class="title-container">
-                        <div class="btn-primary btn-sm pull-right">Start</div>
                         <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
                         <span class="lecture-name">Bài 2: Lâp trình hướng đối tượng</span>
                         </div>
                         </a>
                     </li>
+
                     <li class="section-item incomplete">
-                        <a class="item" data-no-turbolink="true">
+                        <a class="item">
                         <span class="status-container"><i class="fa fa-circle-o status-icon" aria-hidden="true"></i></span>
                         <div class="title-container">
-                        <div class="btn-primary btn-sm pull-right">Start</div>
                         <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
                         <span class="lecture-name">Bài 3: Làm việc với database</span>
                         </div>
@@ -85,4 +84,58 @@
             </div>
         </div>
     </div>
+    <div class="course-mainbar lecture-content">
+        <h2 id="lecture_heading" class="section-title">Bài 3: Làm việc với database</h2>
+        <div class="quiz-wrapper">
+            <div class="quiz">
+                <div class="quiz-progress">1/15</div>
+                <div class="quiz-question">Hello World là gì ?</div>
+                <div class="quiz-answer selected">Chào thế giới</div>
+                <div class="quiz-answer">Chào Nguyên</div>
+                <div class="quiz-answer">Chào quan viên hai họ</div>
+                <div class="quiz-answer">Chào chư vị bồi thẩm đoàn</div>
+                <div class="quiz-action">
+                    <div class="quiz-next pull-right btn btn-primary">Kế tiếp</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./resources/jquery-3.3.1.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./resources/flowplayer/flowplayer.min.js"></script>
+    <script src="./resources/flowplayer/dash/dash.mediaplayer.min.js"></script>
+    <script src="./resources/flowplayer/dash/flowplayer.dashjs.js"></script>
+    <script src="./resources/PlayerLoader.js"></script>
+    <script src="./dist/js/traisy.min.js "></script>
+    <script>
+        $(document).ready(function() {
+            var playerData = {
+                key: "$710417913228974",
+                ratio: 9 / 16,
+                brand: {
+                    showOnOrigin: true,
+                    text: "<a class='block-logo-small'  href='http://block.vn' target='_blank'>block.vn</a>"
+                },
+                embed: false,
+                splash: true,
+                clip: {
+                    autoplay: false,
+                    sources: [{
+                        type: "application/dash+xml",
+                        src: 'http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd'
+                    }],
+                    scaling: 'half'
+                }
+            };
+            playerData.poster = "./resource/images/VideoPoster.jpg";
+            $("#player").flowplayer(playerData);
+
+        });
+
+        $(function() {
+            var page = new ManageMasterpage();
+        });
+
+    </script>
 </body>
