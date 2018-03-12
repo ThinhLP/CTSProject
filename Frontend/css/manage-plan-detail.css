@@ -393,7 +393,7 @@ i.fa-check-circle {
 .card-course h4,
 h5 {
     color: #3c4858;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 14px;
 }
 
@@ -646,9 +646,9 @@ h5 {
 
 .program-item {
     width: 100%;
-    height: 150px;
+    height: 135px;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .program-item:last-child {
@@ -656,9 +656,9 @@ h5 {
 }
 
 .program-item img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 115px;
+    height: 115px;
+    border-radius: 5%;
     z-index: 2;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
 }
@@ -666,27 +666,56 @@ h5 {
 
 .program-item div.program-content {
     z-index: 1;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: -50px;
     width: 100%;
-    padding-left: 70px;
+    height: 115px;
+    padding-left: 15px;
     padding-top: 15px;
-    padding-right: 100px;
     padding-bottom: 15px;
     background: #FAFAFA;
 }
 
 .program-item div.program-action {
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     background: #FAFAFA;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
+    height: 115px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 30px;
+    width: 250px;
+    position: relative;
+}
+
+.program-item div.program-action button {
+    margin-top: 5px;
+    width: 80%;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background: #1ea69a;
+    padding: 5px 5px;
+}
+
+.program-item div.program-action button:hover {
+    background: #18847b;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.program-item div.program-action > span.percent {
+    font-size: 30px;
+    font-weight: 100;
+    color: #ff7f45;
+    padding-right: 0px;
 }
 
 .program-item div h4 {
