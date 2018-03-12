@@ -626,6 +626,10 @@ header .lecture-nav a.nav-btn:hover {
     color: #33353a;
 }
 
+.user-dashboard .center-container {
+    margin-left: 137px;
+}
+
 .search-plan-container {
     display: flex;
     width: 100%;

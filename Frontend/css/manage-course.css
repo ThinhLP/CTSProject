@@ -983,7 +983,7 @@ div.heading-action .editable-heading {
     bottom: 0px;
     width: 100%;
     display: block;
-    padding: 100px;
+    padding: 30px;
     z-index: 500;
     border-width: 2px;
     border-style: dashed;
@@ -992,6 +992,44 @@ div.heading-action .editable-heading {
     border-radius: 5px;
     margin: 0px !important;
 }
+
+.choose-file .file-container {
+    background: #000;
+    width: 100%;
+    height: 400px;
+}
+
+.choose-file .file-description {
+    text-align: left;
+    font-size: 15px;
+    display: flex;
+    margin-top: 10px;
+    color: #000;
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    font-weight: 500;
+    color: #20272d;
+}
+
+.choose-file .file-description .file-description-name {
+    width: 70%;
+}
+
+.choose-file .file-description .file-description-time {
+    width: 40%;
+    text-align: right;
+}
+
+.choose-file .file-description i {
+    margin-right: 10px;
+}
+
+.choose-file .file-action {
+    margin-top: 10px;
+}
+
 
 #quiz-lecture-wrapper {
     text-align: center;
