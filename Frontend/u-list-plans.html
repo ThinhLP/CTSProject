@@ -45,14 +45,24 @@
             </ul>
         </div>
         <div class="main user-dashboard">
-            <h1>Danh sách kế hoạch đang tham gia</h1>
-            <div class="plan-list">
+            <div class="search-plan-container">
+                <div class="search-input">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Tìm kiếm kế hoạch" />
+                </div>
+                <!--                <div class="search-filter">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>-->
+            </div>
+            <!--<h1>Danh sách kế hoạch đang tham gia</h1>-->
+            <div class="plan-list" id="all-plans-wrapper">
                 <a href="./u-plan-overview.html" class="plan-card" target="_self">
                     <div class="plan-image">
                         <img src="./resources/images/course1.jpeg" />
                     </div>
                     <div class="plan-info">
                         <p class="plan-name">Đào tạo Front-End Web Developer</p>
+                        <p class="plan-timeline">Từ 19/02/2018 đến 03/03/2018</p>
                         <p class="plan-description">Chương trình đào tạo kéo dài trong 8 tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Web. Từ design, frontend đến backend.</p>
                     </div>
                 </a>
@@ -62,15 +72,20 @@
                     </div>
                     <div class="plan-info">
                         <p class="plan-name">Đào tạo Mobile Developer</p>
+                        <p class="plan-timeline">Từ 19/02/2018 đến 03/03/2018</p>
                         <p class="plan-description">Chương trình đào tạo kéo dài trong 8 tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Web. Từ design, frontend đến backend.</p>
                     </div>
                 </a>
                 <a href="./u-plan-overview.html" class="plan-card" target="_self">
                     <div class="plan-image">
+                        <div class="plan-outdate">
+                            <div><i class="fa fa-exclamation-circle" aria-hidden="true"></i><br/>Kế hoạch hết hạn</div>
+                        </div>
                         <img src="./resources/images/course_picture.png" />
                     </div>
                     <div class="plan-info">
                         <p class="plan-name">Đào tạo hack like, hack nick facebook</p>
+                        <p class="plan-timeline">Từ 19/02/2018 đến 03/03/2018</p>
                         <p class="plan-description">Chương trình đào tạo kéo dài trong 8 tháng nhằm giúp lập trình viên có nhiều kiến thức chuyên sâu về Web. Từ design, frontend đến backend.</p>
                     </div>
                 </a>

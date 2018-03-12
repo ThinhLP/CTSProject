@@ -626,6 +626,45 @@ header .lecture-nav a.nav-btn:hover {
     color: #33353a;
 }
 
+.search-plan-container {
+    display: flex;
+    width: 100%;
+}
+
+.search-plan-container .search-input {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+    height: 60px;
+    background: #fff;
+    position: relative;
+    border-radius: 5px;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 20px #e3e7ea;
+    transition: 0.15s all ease-in;
+    background-position: center top;
+}
+
+.search-plan-container .search-input {
+    width: 50%;
+    font-size: 15px;
+}
+
+.search-plan-container .search-input input {
+    border: none;
+    margin-left: 10px;
+    width: 90%;
+    outline: 0;
+    color: #000;
+    font-weight: 600;
+}
+
+.search-input i {
+    font-size: 18px;
+    color: #323232;
+}
+
 .plan-list {
     display: flex;
     flex-wrap: wrap;
@@ -636,10 +675,10 @@ header .lecture-nav a.nav-btn:hover {
 .plan-detail,
 .plan-education-program {
     display: block;
-    width: 400px;
+    width: 412px;
     margin: 20px;
     padding: 0px;
-    min-height: 300px;
+    min-height: 400px;
     position: relative;
     border-radius: 5px;
     background-size: 130%;
@@ -677,7 +716,7 @@ header .lecture-nav a.nav-btn:hover {
 }
 
 .plan-detail .plan-overview-info .plan-time {
-    background-color: #ff7f45;
+    background-color: #1ea69a;
     padding: 5px 10px;
     border-radius: 30px;
     color: #fff;
@@ -707,7 +746,7 @@ header .lecture-nav a.nav-btn:hover {
     position: absolute;
     width: 100%;
     bottom: 0px;
-    height: 140px;
+    height: 175px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 5px;
@@ -733,9 +772,37 @@ header .lecture-nav a.nav-btn:hover {
     box-shadow: 0px 2px 21px 0 #c1c5c5;
 }
 
-.plan-list .plan-card .plan-image img {
-    border-radius: 5px;
+.plan-list .plan-card .plan-image {
+    position: relative;
+}
+
+.plan-list .plan-card .plan-image .plan-outdate {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
     width: 100%;
+    height: 226px;
+}
+
+.plan-list .plan-card .plan-image .plan-outdate > div {
+    margin-top: 60px;
+    font-size: 25px;
+    color: #FFF;
+}
+
+.plan-list .plan-card .plan-image .plan-outdate > div > i {
+    font-size: 60px;
+}
+
+.plan-list .plan-card .plan-image img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    z-index: 1;
 }
 
 
@@ -750,6 +817,17 @@ header .lecture-nav a.nav-btn:hover {
     word-wrap: break-word;
 }
 
+.plan-list .plan-card .plan-timeline {
+    font-size: 13px;
+    color: #323232;
+    font-weight: 500;
+    line-height: 17px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    letter-spacing: 0.53px;
+}
+
+
 .plan-list .plan-card .plan-description {
     font-size: 13px;
     padding-bottom: 14px;
@@ -759,7 +837,7 @@ header .lecture-nav a.nav-btn:hover {
     margin-top: 6px;
     margin-bottom: 4px;
     letter-spacing: 0.53px;
-    word-wrap: break-word;
+    /*word-wrap: break-word;*/
 }
 
 /* LEARNING QUIZ */
