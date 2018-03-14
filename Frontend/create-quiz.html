@@ -84,21 +84,21 @@
             </div>
         </div>
         <div class="main-container">
-            <div class="content-wrapper">
+            <div class="content-wrapper" style="display: none;">
                 <div class="col-md-12">
                     <div class="lecture-content-wrapper">
                         <ul class="tab-selection">
                             <li class="tab-item active">
-                                <a href="#" target="#text-lecture-wrapper">Văn bản</a>
+                                <a href="#" target="#text-lecture-wrapper">Quiz</a>
                             </li>
                             <li class="tab-item">
-                                <a href="#" target="#powerpoint-lecture-wrapper">Powerpoint</a>
+                                <a href="#" target="#powerpoint-lecture-wrapper">Văn bản</a>
                             </li>
                             <li class="tab-item">
                                 <a href="#" target="#video-lecture-wrapper">Video</a>
                             </li>
                             <li class="tab-item">
-                                <a href="#" target="#quiz-lecture-wrapper">Quiz</a>
+                                <a href="#" target="#quiz-lecture-wrapper">Powerpoint</a>
                             </li>
                         </ul>
                     </div>
@@ -233,6 +233,27 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="content-wrapper col-md-12" style="display: block">
+                <!-- Chưa có file -->
+                <div class="section-content resource-container" style="display: none;">
+                    <label>Tài nguyên bài học</label><br/>
+                    <div class="file-resource">
+                        <img src="./resources/images/icon-kb-search.svg" />
+                    </div>
+                    <div class="choose-file"><button class="button outline-button">Thêm tập tin</button></div>
+                </div>
+                <!-- Có file -->
+                <div class="section-content resource-container" style="display: block">
+                    <label>Tài nguyên bài học</label><br/>
+                    <div class="file-resource">
+                        <div class="file-name"><i class="fa fa-file" aria-hidden="true"></i> IntroductionToJavascript.mp4</div>
+                        <div class="resourse-control">
+                            <button><!--<i class="fa fa-trash" aria-hidden="true"></i>-->Xoá</button>
+                        </div>
+                    </div>
+                    <div class="choose-file"><button class="button outline-button">Thêm tập tin</button></div>
                 </div>
             </div>
         </div>
