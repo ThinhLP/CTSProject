@@ -1,17 +1,18 @@
 .section-report-chart {
-    border-top: 3px solid #ff7f45;
     padding: 0;
 }
 
 .section-report-chart .chart-title {
     padding: 10px 20px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top: 1px solid #e7eaed;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 3px solid #ff7f45;
+    border-bottom: 1px solid #e7eaed;
 }
 
-.section-report-chart .chart-title i {
-    margin-right: 10px;
+.section-report-chart .chart-title .chart-icon {
+    margin-right: 15px;
+    color: #ff7f45;
 }
 
 .section-report-chart .chart-container {
