@@ -1,3 +1,16 @@
+.content-wrapper {
+    display: flex;
+    padding: 0;
+}
+
+.calendar-timetable-wrapper {
+    padding: 15px 15px 15px 15px;
+}
+
+.plan-progress-wrapper {
+    padding: 15px 15px 15px 0px;
+}
+
 .section-report-chart {
     padding: 0;
 }

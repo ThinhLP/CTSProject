@@ -574,6 +574,16 @@ ul {
     background-color: #ffe5d9;
 }
 
+.gray-outline-green-button {
+    color: #1ea69a;
+    background-color: #FFF;
+    border: 1px solid #eee;
+}
+
+.gray-outline-green-button:hover {
+    border: 1px solid #1ea69a;
+}
+
 .gray-outline-orange-button {
     color: #ff7f45;
     background-color: #FFF;

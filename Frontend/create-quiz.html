@@ -149,11 +149,13 @@
                             <div class="section-content">
                                 <div class="content-detail">
                                     <div class="add-question">
-                                        <!-- Câu hỏi trắc nghiệm -->
-                                        <div id="multiple-choice-question">
+                                        <div>
                                             <div class="question-container">
+                                                <div class="question-order">
+                                                    <span>Câu 1: </span>
+                                                </div>
                                                 <div class="question-content">
-                                                    <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " />
+                                                    <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " value="Hello World là gì ?" />
                                                 </div>
                                                 <div class="question-type">
                                                     <div class="dropdown">
@@ -165,64 +167,18 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                                <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                                <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                                <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                                <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div class="editor">
-                                                <textarea name="name" class="form-textarea" placeholder="Ghi chú câu hỏi"></textarea>
-                                            </div>
-                                        </div>
-
-                                        <!-- Câu hỏi đúng sai -->
-                                        <div id="true-false-question" style="display: none;">
-                                            <div class="question-container">
-                                                <div class="question-content">
-                                                    <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " />
-                                                </div>
-                                                <div class="question-type">
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-primary form-input dropdown-toggle" type="button" data-toggle="dropdown">Đúng sai<span class="caret"></span></button>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#">Trắc nghiệm</a></li>
-                                                            <li><a href="#">Đúng sai</a></li>
-                                                            <li><a href="#">Tự luận</a></li>
-                                                        </ul>
-                                                    </div>
+                                                <div class="question-expand">
+                                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
                                                 </div>
                                             </div>
-                                            <div class="input-group">
-                                                <div class="input-group-addon prefix">Đúng</div>
-                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                            </div>
-                                            <div class="input-group">
-                                                <div class="input-group-addon prefix">Sai</div>
-                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                            </div>
-                                        </div>
 
-                                        <!-- Câu hỏi tự luận -->
-                                        <div id="true-false-question" style="display: none;">
+                                            <!-- Câu hỏi tự luận -->
                                             <div class="question-container">
+                                                <div class="question-order">
+                                                    <span>Câu 2: </span>
+                                                </div>
                                                 <div class="question-content">
-                                                    <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " />
+                                                    <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " value="Thế nào là lập trình hướng đối tượng ?" />
                                                 </div>
                                                 <div class="question-type">
                                                     <div class="dropdown">
@@ -234,96 +190,119 @@
                                                         </ul>
                                                     </div>
                                                 </div>
+                                                <div class="question-expand">
+                                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                </div>
                                             </div>
-                                            <div class="editor">
-                                                <textarea name="name" class="form-textarea" placeholder="Nội dung câu hỏi"></textarea>
+                                            <div id="essay-question-wrapper" class="question-body" style="display: block">
+                                                <div class="input-group">
+                                                    <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                </div>
+                                                <div class="question-explanation">
+                                                    <h5>Giải thích đáp án</h5>
+                                                    <div class="editor">
+                                                        <textarea name="name" class="form-textarea"></textarea>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="quiz-control">
-                                            <button class="button btn-orange">Thêm câu hỏi</button>
-                                            <button class="button btn-orange">Thêm câu trả lời</button>
+                                            <!-- Câu hỏi True/False -->
+                                            <div class="question-container">
+                                                <div class="question-order">
+                                                    <span>Câu 3: </span>
+                                                </div>
+                                                <div class="question-content">
+                                                    <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " value="Javascript và Java có giống nhau không ?" />
+                                                </div>
+                                                <div class="question-type">
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-primary form-input dropdown-toggle" type="button" data-toggle="dropdown">Đúng sai<span class="caret"></span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Trắc nghiệm</a></li>
+                                                            <li><a href="#">Đúng sai</a></li>
+                                                            <li><a href="#">Tự luận</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="question-expand">
+                                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div id="truefalse-question-wrapper" class="question-body" style="display: block">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                    <input name="name" type="text " class="form-input" value="Đúng" readonly />
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                    <input name="name" type="text " class="form-input" value="Sai" readonly />
+                                                </div>
+                                                <div class="question-explanation">
+                                                    <h5>Giải thích đáp án</h5>
+                                                    <div class="editor">
+                                                        <textarea name="name" class="form-textarea"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Câu hỏi MultipleChoice -->
+                                            <div class="question-container">
+                                                <div class="question-order">
+                                                    <span>Câu 4: </span>
+                                                </div>
+                                                <div class="question-content">
+                                                    <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " value="Hello World là gì ?" />
+                                                </div>
+                                                <div class="question-type">
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-primary form-input dropdown-toggle" type="button" data-toggle="dropdown">Trắc nghiệm<span class="caret"></span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Trắc nghiệm</a></li>
+                                                            <li><a href="#">Đúng sai</a></li>
+                                                            <li><a href="#">Tự luận</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="question-expand">
+                                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div id="multiple-question-wrapper" class="question-body" style="display: block">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                    <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                    <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                    <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                    <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                    <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                    <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                    <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                    <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                                </div>
+                                                <button class="button gray-outline-green-button add-answer"><i class="fa fa-plus-square" aria-hidden="true"></i>Thêm câu trả lời</button>
+                                                <div class="question-explanation">
+                                                    <h5>Giải thích đáp án</h5>
+                                                    <div class="editor">
+                                                        <textarea name="name" class="form-textarea"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <button class="button btn-orange">Thêm câu hỏi</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="content-wrapper col-md-12" style="display: block;">
-                <div class="section-content col-md-12 add-question">
-                    <ul class="list-added-question">
-                        <li class="question-item">
-                            <div class="question-control">
-                                <button class="button primary-button button-only-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                <button class="button outline-orange-button button-only-icon"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                            </div>
-                            <div class="question-content">
-                                <strong class="question-text">Câu 1: Captain America với Iron man ai giàu hơn</strong>
-                                <ul class="question-answers">
-                                    <li class="answers"><span class="answer-text">Ironman</span></li>
-                                    <li class="answers"><span class="answer-text">Batman</span></li>
-                                    <li class="answers"><span class="answer-text">Thạch Nguyên</span></li>
-                                    <li class="answers correct-answer"><span class="answer-text">Black Panther</span></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="question-item">
-                            <div class="question-control">
-                                <button class="button primary-button button-only-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                <button class="button outline-orange-button button-only-icon"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                            </div>
-                            <div class="question-content">
-                                <strong class="question-text">Câu 2: Captain America với Iron man ai giàu hơn</strong>
-                                <ul class="question-answers">
-                                    <li class="answers"><span class="answer-text">Ironman</span></li>
-                                    <li class="answers"><span class="answer-text">Batman</span></li>
-                                    <li class="answers"><span class="answer-text">Thạch Nguyên</span></li>
-                                    <li class="answers correct-answer"><span class="answer-text">Black Panther</span></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="question-item edit-question">
-                            <div class="question-control">
-                                <button class="button primary-button">Lưu</button>
-                                <button class="button outline-orange-button button-only-icon"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                            </div>
-                            <div class="question-content">
-                                <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " value="Captain America với Iron man ai giàu hơn" />
-                                <ul class="question-answers">
-                                    <li class="answers">
-                                        <div class="input-group">
-                                            <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                            <input name="name" type="text " class="form-input" placeholder="Câu trả lời " value="Ironman" />
-                                            <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                        </div>
-                                    </li>
-                                    <li class="answers">
-                                        <div class="input-group">
-                                            <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                            <input name="name" type="text " class="form-input" placeholder="Câu trả lời " value="Batman" />
-                                            <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                        </div>
-                                    </li>
-                                    <li class="answers">
-                                        <div class="input-group">
-                                            <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                            <input name="name" type="text " class="form-input" placeholder="Câu trả lời " value="Thạch Nguyên" />
-                                            <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                        </div>
-                                    </li>
-                                    <li class="answers correct-answer">
-                                        <div class="input-group">
-                                            <div class="input-group-addon prefix"><input type="checkbox" checked/></div>
-                                            <input name="name" type="text " class="form-input" placeholder="Câu trả lời " value="Black Panther" />
-                                            <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <div class="content-wrapper col-md-12" style="display: none">
