@@ -1436,3 +1436,7 @@ div.heading-action .editable-heading {
 .empty-lecture img {
     margin-bottom: 5px;
 }
+
+.upload-file-zone {
+    position: relative;
+}
