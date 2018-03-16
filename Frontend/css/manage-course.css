@@ -993,13 +993,44 @@ div.heading-action .editable-heading {
     margin: 0px !important;
 }
 
-.choose-file .file-container {
-    background: #000;
-    width: 100%;
-    height: 400px;
+.choose-file.already-chosen {
+    border-style: none;
 }
 
-.choose-file .file-description {
+.already-chosen .file-container {
+    width: 100%;
+}
+
+.slideshow-control {
+    background: #fff;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slideshow-control span.slide-progress {
+    margin: 0px 15px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.slideshow-control button {
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    color: #000;
+}
+
+.already-chosen .file-container img {
+    width: 100%;
+    height: 400px !important;
+}
+
+.already-chosen .file-description {
     text-align: left;
     font-size: 15px;
     display: flex;
@@ -1013,20 +1044,20 @@ div.heading-action .editable-heading {
     color: #20272d;
 }
 
-.choose-file .file-description .file-description-name {
+.already-chosen .file-description .file-description-name {
     width: 70%;
 }
 
-.choose-file .file-description .file-description-time {
+.already-chosen .file-description .file-description-time {
     width: 40%;
     text-align: right;
 }
 
-.choose-file .file-description i {
+.already-chosen .file-description i {
     margin-right: 10px;
 }
 
-.choose-file .file-action {
+.already-chosen .file-action {
     margin-top: 10px;
 }
 
@@ -1198,7 +1229,7 @@ div.heading-action .editable-heading {
 }
 
 .quiz-setting .save-setting {
-    width: 25%;
+    width: 20%;
     height: 44px;
     line-height: 44px;
     color: #fff;
