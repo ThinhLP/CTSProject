@@ -1,15 +1,60 @@
+a {
+    text-decoration: none;
+}
+
 .content-wrapper {
     display: flex;
     padding: 0;
 }
 
-.calendar-timetable-wrapper {
-    padding: 15px 15px 15px 15px;
-}
-
-.plan-progress-wrapper {
+.content-wrapper .left-container {
     padding: 15px 15px 15px 0px;
 }
+
+/* PLAN-PROGRESS-WRAPPER */
+
+.plan-progress-wrapper {
+    padding: 15px 0px 15px 15px;
+}
+
+.plan-progress-wrapper h2 {
+    font-weight: bolder;
+    font-size: 15px;
+    letter-spacing: .1px;
+    margin-bottom: 20px;
+    color: #545665;
+}
+
+.plan-progress-wrapper ul {
+    list-style: none;
+}
+
+.plan-progress-wrapper ul li {
+    border-left: 3px solid #add8e6;
+    background: #fff;
+    padding: 8px 15px;
+    margin-bottom: 13px;
+    letter-spacing: .48px;
+    line-height: 21px;
+    border-radius: 2px;
+    text-align: left;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
+}
+
+.plan-progress-wrapper ul li span.plan-name {
+    font-size: 14px;
+    font-weight: bolder!important;
+    color: #20272d !important;
+}
+
+.plan-progress-wrapper ul li span.plan-progress {
+    font-weight: 500;
+    font-size: 13px;
+    color: #b1b1b1;
+}
+
+/*------------------------------*/
 
 .section-report-chart {
     padding: 0;
@@ -21,6 +66,11 @@
     border-top-right-radius: 5px;
     border-top: 3px solid #ff7f45;
     border-bottom: 1px solid #e7eaed;
+    font-weight: bolder;
+    font-size: 15px;
+    letter-spacing: .1px;
+    margin-bottom: 20px;
+    color: #545665;
 }
 
 .section-report-chart .chart-title .chart-icon {
@@ -28,9 +78,11 @@
     color: #ff7f45;
 }
 
-.section-report-chart .chart-container {
+#calendar-timetable-wrapper .chart-container {
     width: 100%;
-    height: 250px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
