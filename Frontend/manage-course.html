@@ -444,7 +444,7 @@
                 </div>
             </div>
             <!-- Học viên -->
-            <div class="content-wrapper " id="trainee-wrapper ">
+            <div class="content-wrapper " id="trainee-wrapper">
                 <div class="section-wrapper row ">
                     <div class="section-heading col-md-3 ">
                         <h2 class="sub-heading ">
@@ -600,7 +600,7 @@
                 </div>
             </div>
             <!-- Đóng góp -->
-            <div class="content-wrapper " id="contribute-wrapper ">
+            <div class="content-wrapper " id="contribute-wrapper">
                 <div class="section-wrapper row ">
                     <div class="section-heading col-md-3 ">
                         <h2 class="sub-heading ">
@@ -910,21 +910,11 @@
     <script>
         $(function() {
             var page = new ManageCourse();
-            /*tippy('.add-lecture-btn');*/
-            tippy('.remove-lecture-btn');
         });
 
         $('.type-item').on('click', function() {
             $(this).toggleClass('unselect').toggleClass('select');
         });
-
-        $('#tokenfield').tokenfield({
-            autocomplete: {
-                source: ['red', 'blue', 'green', 'yellow', 'violet', 'brown', 'purple', 'black', 'white'],
-                delay: 100
-            },
-            showAutocompleteOnFocus: true
-        })
 
         /* Edit name section */
         $('.curriculum-lecture-action').on('click', function() {
