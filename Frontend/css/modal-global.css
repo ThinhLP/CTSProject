@@ -25,3 +25,35 @@
 #createProgramMoal #sandbox-container .input-group {
     display: flex;
 }
+
+/* CREATE-QUESTION-MOAL */
+
+#createQuestionMoal .modal-body {
+    font-size: 13px !important;
+}
+
+#createQuestionMoal #essay-question {
+    margin-top: 0px;
+    text-align: left;
+}
+
+#createQuestionMoal .content-detail.question-header {
+    display: flex;
+}
+
+#createQuestionMoal .question-body {
+    padding: 0px;
+    border: none;
+}
+
+#createQuestionMoal .question-demand {
+    width: 70%;
+    padding-right: 20px;
+}
+
+#createQuestionMoal .question-type {
+    width: 30%;
+    padding-left: 20px;
+}
+
+/*-------------------------------------------------*/

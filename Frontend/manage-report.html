@@ -93,27 +93,73 @@
             </div>
         </div>
         <div class="main-container">
-            <div class="content-wrapper">
-                <div class="section-content section-report-chart col-md-3">
-                    <div class="chart-title">
-                        <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch
+            <div class="content-wrapper col-md-12">
+                <div class="col-md-9 left-container">
+                    <div class="section-content section-report-chart" id="calendar-timetable-wrapper">
+                        <div class="chart-title">
+                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch
+                        </div>
+                        <div class="chart-container">
+                            <div id="barchart_material"></div>
+                        </div>
                     </div>
-                    <div class="chart-container">
-                        <div id="donutchart" style="width: 250px; height: 250px;"></div>
-                    </div>
+                    <!--<div id="barchart_material"></div>
+                    <div class="section-content section-report-chart col-md-3" style="display: none;">
+                        <div class="chart-title">
+                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch
+                        </div>
+                        <div class="chart-container">
+                            <div id="donutchart" style="width: 250px; height: 250px;"></div>
+                        </div>
+                    </div>-->
                 </div>
+                <div class="col-md-3 plan-progress-wrapper">
+                    <h2>Tiến độ các kế hoạch</h2>
+                    <ul>
+                        <li>
+                            <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="plan-name">Đào tạo Mobile Developer</span><br/>
+                                <span class="plan-progress">88/100 học viên hoàn thành</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="plan-name">Đào tạo Tester</span><br/>
+                                <span class="plan-progress">20/100 học viên hoàn thành</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="plan-name">Đào tạo Hack like, hack facebook</span><br/>
+                                <span class="plan-progress">100/100 học viên hoàn thành</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
-
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./dist/js/traisy.min.js "></script>
     <script type="text/javascript">
         google.charts.load('current', {
             'packages': ['corechart']
         });
-        google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawPieChart);
 
-        function drawChart() {
+        google.charts.load('current', {
+            'packages': ['bar']
+        });
+        google.charts.setOnLoadCallback(drawBarChart);
+
+        function drawPieChart() {
 
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],
@@ -145,6 +191,42 @@
             var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
 
             chart.draw(data, options);
+        }
+
+        function drawBarChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['', 'Công khai', 'Không công khai'],
+                ['Đào tạo Tester', 1000, 400],
+                ['Đào tạo Hack like, hack facebook', 1170, 460],
+                ['Đào tạo Web Developer', 660, 1120],
+                ['Đào tạo Mobile Developer', 1030, 540]
+            ]);
+
+
+
+            var options = {
+                chart: {
+                    /* title: 'Company Performance',
+                     subtitle: 'Sales, Expenses, and Profit: 2014-2017',*/
+                },
+                chartArea: {
+                    width: '80%',
+                    height: '100%',
+                },
+                legend: {
+                    position: "none"
+                },
+                colors: ['#ff7f', '#d95f02', '#7570b3'],
+                fontName: 'Open Sans',
+                fontSize: 15,
+                width: 600,
+                height: 300,
+                bars: 'horizontal' // Required for Material Bar Charts.
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
         }
 
     </script>
