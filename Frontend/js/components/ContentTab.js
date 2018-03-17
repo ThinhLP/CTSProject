@@ -1,6 +1,6 @@
 "use strict";
 
-function ContentTab(contentTabSelector, activeClass, confirmDlgInfo) {
+function ContentTab(contentTabSelector, activeClass, hasConfirmDialog) {
 
     var active = !activeClass ? 'active' : activeClass;
     var targetAttr = 'target';
@@ -8,9 +8,6 @@ function ContentTab(contentTabSelector, activeClass, confirmDlgInfo) {
 
     var inactiveTabClass = contentTabClass + '-inactive-tab';
     var inactiveTabSelector = '.' + inactiveTabClass;
-
-    var changeTabConfirmDialog = null;
-
 
     var eventBus = new EventBus();
     var EVENT_NAMES = {
@@ -47,22 +44,33 @@ function ContentTab(contentTabSelector, activeClass, confirmDlgInfo) {
 
         eventBus.dispatch(EVENT_NAMES.ON_CHANGE_TAB, target);
     };
+    
+    var onSwitchTab = function (targetSelector) {
+        if (targetSelector === null)
+            return;
+        var $trigger = $(targetSelector);
+        if (!$trigger.hasClass(contentTabClass)) {
+            $trigger = $trigger.closest(contentTabSelector);
+        }
+        var targetContentSelector = $trigger.attr(targetAttr);
+        hideAllContentOfSiblings($trigger);
+        $trigger.addClass(active);
+        $trigger.removeClass(inactiveTabClass);
+        $(targetContentSelector).show();
+
+        eventBus.dispatch(EVENT_NAMES.ON_CHANGE_TAB, targetSelector);
+    };
+
 
     var onclickTab = function (pos) {
         var $tabTarget = $(contentTabSelector).eq(pos);
-        //        $tabTarget.on('click', function() {
-        //            target = e.target;
-        //            if (!changeTabConfirmDialog || changeTabConfirmDialog == null) {
-        //                switchTab();
-        //            }
-        //        });
         $tabTarget.trigger('click');
     };
 
     var init = function () {
         $('body').on('click', contentTabSelector, function (e) {
             target = e.target;
-            if (changeTabConfirmDialog === null || changeTabConfirmDialog === undefined) {
+            if (!hasConfirmDialog) {
                 switchTab();
             }
         });
@@ -71,24 +79,6 @@ function ContentTab(contentTabSelector, activeClass, confirmDlgInfo) {
                 $(this).trigger('click');
             }
         });
-
-        if (confirmDlgInfo !== null && confirmDlgInfo !== undefined) {
-            // $(contentTabSelector).each(function (index) {
-            //     if (!$(this).hasClass('active')) {
-            //         $(this).addClass(inactiveTabClass);
-            //     }
-            // });
-            initInactiveTab();
-
-            changeTabConfirmDialog = new ConfirmDialog({
-                openButtonSelector: inactiveTabSelector,
-                modalSelector: confirmDlgInfo.modalSelector,
-                closeButtonSelector: confirmDlgInfo.closeButtonSelector
-            });
-            changeTabConfirmDialog.onClickYes(function () {
-                switchTab();
-            });
-        }
     };
 
     var initInactiveTab = function () {
@@ -105,7 +95,8 @@ function ContentTab(contentTabSelector, activeClass, confirmDlgInfo) {
     var instance = {
         onChangeTab: onChangeTab,
         onclickTab: onclickTab,
-        initInactiveTab: initInactiveTab
+        initInactiveTab: initInactiveTab,
+        onSwitchTab: onSwitchTab
     };
 
     return instance;
