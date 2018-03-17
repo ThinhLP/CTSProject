@@ -22,7 +22,7 @@ function Slideshow(configs) {
             slideIndex = 1
         }
         if (index < 1) {
-            slideIndex = x.length
+            slideIndex = $slides.length
         }
         
         $slides.hide();
@@ -35,11 +35,12 @@ function Slideshow(configs) {
         $(slideProgressSlt + ' ' + totalSlideSlt).text(totalSlides);
     };
     
-    var init = function() {
+    var initSlideshow = function() {
         totalSlides = $(slideSelector).length;
-        
         setSlideProgress(slideIndex, totalSlides);
         showSlide(slideIndex);
+        
+        addEventHandlers();
     };
     
     var addEventHandlers = function() {
@@ -51,13 +52,12 @@ function Slideshow(configs) {
             changeSlide(-1);
         });
         
-        $(slideSelector).on('click', function() {
+        $('body').on('click', slideSelector, function() {
             changeSlide(1);
         });
     };
-    
-    init();
-    addEventHandlers();
-    
-    return {};
+        
+    return {
+        initSlideshow: initSlideshow
+    };
 }
