@@ -119,7 +119,7 @@
                                 <div class="content-detail">
                                     <div class="choose-file" style="display: none">Kéo thả tập tin vào đây hoặc <button class="button outline-button">Chọn tập tin</button></div>
                                     <div class="choose-file already-chosen">
-                                        <div class="file-container">
+                                        <div class="file-container" id="slideshow">
                                             <div class="w3-content w3-display-container">
                                                 <img class="mySlides" src="./resources/images/course1.jpeg">
                                                 <img class="mySlides" src="./resources/images/course2.jpeg">
@@ -127,9 +127,9 @@
                                                 <img class="mySlides" src="./resources/images/plan2.jpg">
                                             </div>
                                             <div class="slideshow-control">
-                                                <button><i class="fa fa-caret-left" aria-hidden="true" onclick="plusDivs(-1)"></i></button>
-                                                <span class="slide-progress">1/45</span>
-                                                <button><i class="fa fa-caret-right" aria-hidden="true" onclick="plusDivs(1)"></i></button>
+                                                <button class="prevSlideBtn"><i class="fa fa-caret-left" aria-hidden="true"></i></button>
+                                                <span class="slide-progress"><span class="current-slide">1</span>/<span class="total-slides">45</span></span>
+                                                <button class="nextSlideBtn"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
                                             </div>
                                         </div>
                                         <div class="file-description">
@@ -390,31 +390,39 @@
             $('#summernote').summernote({
                 lang: 'vi-VN'
             });
+            
+            var slideShow = new Slideshow({
+                slideShowContainer: '#slideshow',
+                slideSelector: '.mySlides',
+                nextSlideBtn: '.nextSlideBtn',
+                prevSlideBtn: '.prevSlideBtn',
+                slideProgress: '.slide-progress'
+            });
 
             /*var questionType = new PopupTooltip('.select-question-type')*/
         });
 
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
+//        var slideIndex = 1;
+//        showDivs(slideIndex);
+//
+//        function plusDivs(n) {
+//            showDivs(slideIndex += n);
+//        }
+//
+//        function showDivs(n) {
+//            var i;
+//            var x = document.getElementsByClassName("mySlides");
+//            if (n > x.length) {
+//                slideIndex = 1
+//            }
+//            if (n < 1) {
+//                slideIndex = x.length
+//            }
+//            for (i = 0; i < x.length; i++) {
+//                x[i].style.display = "none";
+//            }
+//            x[slideIndex - 1].style.display = "block";
+//        }
 
     </script>
 </body>
