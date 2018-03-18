@@ -663,11 +663,19 @@ ul {
     margin-left: 7px;
 }
 
-.feedback-heading i {
+.feedback-heading i.feedback-more-option {
     float: right;
     font-size: 18px;
     color: #000;
+    line-height: 24px;
     cursor: pointer;
+}
+
+.feedback-heading-title {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: bolder;
+    margin-bottom: 10px;
 }
 
 .feedback-heading i:hover {
@@ -719,7 +727,7 @@ ul {
 
 .feedback-option {
     background: #fff;
-    width: 120px;
+    width: 160px;
     position: absolute;
     right: 0;
     margin-top: 30px;
@@ -750,6 +758,29 @@ ul {
     border-radius: 0;
     background: #fbfbfb!important;
     color: #ff7f45!important;
+}
+
+.feedback-status {
+    float: right;
+    margin-right: 20px;
+    font-size: 11px;
+    padding: 0px 10px;
+}
+
+.feedback-status i {
+    margin-right: 5px;
+}
+
+.feedback-status.success {
+    background: #43a047;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.feedback-status.warning {
+    background: #fbc02d;
+    color: #fff;
+    border-radius: 30px;
 }
 
 .feedback-footer {

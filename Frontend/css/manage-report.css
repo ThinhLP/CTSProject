@@ -31,6 +31,7 @@ a {
 
 .plan-progress-wrapper ul li {
     border-left: 3px solid #add8e6;
+    cursor: pointer;
     background: #fff;
     padding: 8px 15px;
     margin-bottom: 13px;
