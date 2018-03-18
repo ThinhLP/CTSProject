@@ -641,6 +641,10 @@ ul {
     width: 100%;
 }
 
+.feedback-panel.feedback-main-topic:not(:first-child) {
+    margin-top: 30px;
+}
+
 .feedback-body {
     flex: 1;
 }
@@ -747,7 +751,7 @@ ul {
 .feedback-footer {
     text-align: left;
     margin-top: -10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .feedback-footer button {

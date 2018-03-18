@@ -6,6 +6,7 @@
 <!-- TODO: Top 10 plan được nhiều learner tham gia nhất -->
 <!-- TODO: Top 10 khoá học có tương tác nhiều nhất -->
 <!-- TODO: Calendar show plan in range of time -->
+<!-- TODO: Tổng số learner đã hoàn thành tất cả plan hết hạn -->
 
 
 <!-- 1: list plan hiển thị % tổng số learner hoàn thành -> bấm vào show modal xem detail progress của từng learner-->
@@ -103,17 +104,38 @@
                             <div id="barchart_material"></div>
                         </div>
                     </div>
-                    <div class="section-content section-report-chart" id="calendar-timetable-wrapper">
+                    <div class="double-chart-container">
+                        <div class="chart-wrapper" id="calendar-timetable-wrapper">
+                            <div class="section-content section-report-chart">
+                                <div class="chart-title">
+                                    <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch
+                                </div>
+                                <div class="chart-container">
+                                    <div id="donutchart1" class="donutchart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-wrapper" id="calendar-timetable-wrapper">
+                            <div class="section-content section-report-chart">
+                                <div class="chart-title">
+                                    <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê
+                                </div>
+                                <div class="chart-container">
+                                    <div id="donutchart2" class="donutchart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="section-content section-report-chart" id="calendar-timetable-wrapper">
                         <div class="chart-title">
                             <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê
                         </div>
                         <div class="chart-container">
-                            <!--<div id="donutchart1" style="width: 250px; height: 250px;"></div>
-                            <div id="donutchart2" style="width: 250px; height: 250px;"></div>
-                            <div id="donutchart3" style="width: 250px; height: 250px;"></div>-->
-                            <!--<div id="timeline"></div>-->
+                            <div id="donutchart1" class="donutchart" style="width: 300px; height: 300px"></div>
+                            <div id="donutchart2" class="donutchart" style="width: 300px; height: 300px"></div>
+                            <div id="timeline"></div>
                         </div>
-                    </div>
+                    </div>-->
                     <!--<div id="barchart_material"></div>
                     <div class="section-content section-report-chart col-md-3" style="display: none;">
                         <div class="chart-title">
@@ -177,7 +199,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>
@@ -201,18 +222,24 @@
 
         function drawPieChart() {
 
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Khả dụng', 35],
+            var dataActiveAndOutdatePlan = google.visualization.arrayToDataTable([
+                ['Detail', 'Số kế hoạch khả dụng và hết hạn'],
+                ['Đang hoạt động', 35],
                 ['Hết hạn', 20],
+            ]);
+
+            var dataTotalLearnerFinish = google.visualization.arrayToDataTable([
+                ['Detail', 'Thống kê kết quả học viên'],
+                ['Học viên hoàn thành', 412],
+                ['Học viên chưa hoàn thành', 138],
             ]);
 
             var options = {
                 fontName: 'Open Sans',
                 fontSize: 15,
                 chartArea: {
-                    width: '80%',
-                    height: '80%'
+                    width: '95%',
+                    height: '95%'
                 },
                 pieHole: 0.55,
                 legend: 'none',
@@ -225,16 +252,16 @@
                     1: {
                         color: '#39A0ED'
                     }
-                }
+                },
+                height: 200,
+                width: 200,
             };
 
-            var chart1 = new google.visualization.PieChart(document.getElementById('donutchart1'));
-            var chart2 = new google.visualization.PieChart(document.getElementById('donutchart2'));
-            var chart3 = new google.visualization.PieChart(document.getElementById('donutchart3'));
+            var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
+            var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
 
-            chart1.draw(data, options);
-            chart2.draw(data, options);
-            chart3.draw(data, options);
+            chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options);
+            chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options);
         }
 
         function drawBarChart() {
