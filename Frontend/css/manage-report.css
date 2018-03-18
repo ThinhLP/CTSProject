@@ -64,7 +64,7 @@ a {
     padding: 10px 20px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-top: 3px solid #ff7f45;
+    border-top: 3px solid #add8e6;
     border-bottom: 1px solid #e7eaed;
     font-weight: bolder;
     font-size: 15px;
@@ -75,38 +75,43 @@ a {
 
 .section-report-chart .chart-title .chart-icon {
     margin-right: 15px;
-    color: #ff7f45;
+    color: #add8e6;
 }
 
 #calendar-timetable-wrapper .chart-container {
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-    height: 350px;
+    padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.chart-container > .donutchart {
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .section-report-chart .chart-container > div {
     float: right;
 }
 
-.section-report-chart .chart-number {
-    /*position: absolute;
-font-weight: 500;
-color: #191919;
-top: 50%;
-letter-spacing: 0.7px;
-left: 45%;
-font-size: 30px;*/
+.double-chart-container {
+    display: flex;
 }
 
-/*
-.section-report-chart .chart-container > span {
-    font-size: 35px;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
-    color: #ff7f45;
-}*/
+.double-chart-container .chart-wrapper {
+    width: 50%;
+}
+
+.double-chart-container .chart-wrapper:first-child {
+    padding-right: 10px;
+}
+
+.double-chart-container .chart-wrapper:last-child {
+    padding-left: 10px;
+}
+
+.double-chart-container .chart-container {
+    display: flex;
+    justify-content: center;
+}

@@ -6,6 +6,7 @@
 <!-- TODO: Top 10 plan được nhiều learner tham gia nhất -->
 <!-- TODO: Top 10 khoá học có tương tác nhiều nhất -->
 <!-- TODO: Calendar show plan in range of time -->
+<!-- TODO: Tổng số learner đã hoàn thành tất cả plan hết hạn -->
 
 
 <!-- 1: list plan hiển thị % tổng số learner hoàn thành -> bấm vào show modal xem detail progress của từng learner-->
@@ -97,12 +98,44 @@
                 <div class="col-md-9 left-container">
                     <div class="section-content section-report-chart" id="calendar-timetable-wrapper">
                         <div class="chart-title">
-                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch
+                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch công khai và không công khai
                         </div>
                         <div class="chart-container">
                             <div id="barchart_material"></div>
                         </div>
                     </div>
+                    <div class="double-chart-container">
+                        <div class="chart-wrapper" id="calendar-timetable-wrapper">
+                            <div class="section-content section-report-chart">
+                                <div class="chart-title">
+                                    <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê tổng số kế hoạch
+                                </div>
+                                <div class="chart-container">
+                                    <div id="donutchart1" class="donutchart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-wrapper" id="calendar-timetable-wrapper">
+                            <div class="section-content section-report-chart">
+                                <div class="chart-title">
+                                    <i class="fa fa-leanpub chart-icon" aria-hidden="true"></i>Kết quả học tập của học viên
+                                </div>
+                                <div class="chart-container">
+                                    <div id="donutchart2" class="donutchart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="section-content section-report-chart" id="calendar-timetable-wrapper">
+                        <div class="chart-title">
+                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê
+                        </div>
+                        <div class="chart-container">
+                            <div id="donutchart1" class="donutchart" style="width: 300px; height: 300px"></div>
+                            <div id="donutchart2" class="donutchart" style="width: 300px; height: 300px"></div>
+                            <div id="timeline"></div>
+                        </div>
+                    </div>-->
                     <!--<div id="barchart_material"></div>
                     <div class="section-content section-report-chart col-md-3" style="display: none;">
                         <div class="chart-title">
@@ -140,9 +173,32 @@
                                 <span class="plan-progress">100/100 học viên hoàn thành</span>
                             </a>
                         </li>
+                        <li>
+                            <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="plan-name">Đào tạo Mobile Developer</span><br/>
+                                <span class="plan-progress">88/100 học viên hoàn thành</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="plan-name">Đào tạo Tester</span><br/>
+                                <span class="plan-progress">20/100 học viên hoàn thành</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="plan-name">Đào tạo Hack like, hack facebook</span><br/>
+                                <span class="plan-progress">100/100 học viên hoàn thành</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>
@@ -159,20 +215,31 @@
         });
         google.charts.setOnLoadCallback(drawBarChart);
 
+        google.charts.load('current', {
+            'packages': ['timeline']
+        });
+        google.charts.setOnLoadCallback(drawTimelineChart);
+
         function drawPieChart() {
 
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Khả dụng', 35],
+            var dataActiveAndOutdatePlan = google.visualization.arrayToDataTable([
+                ['Detail', 'Số kế hoạch khả dụng và hết hạn'],
+                ['Đang hoạt động', 35],
                 ['Hết hạn', 20],
             ]);
 
-            var options = {
+            var dataTotalLearnerFinish = google.visualization.arrayToDataTable([
+                ['Detail', 'Thống kê kết quả học viên'],
+                ['Học viên hoàn thành', 412],
+                ['Học viên chưa hoàn thành', 138],
+            ]);
+
+            var options1 = {
                 fontName: 'Open Sans',
                 fontSize: 15,
                 chartArea: {
-                    width: '80%',
-                    height: '80%'
+                    width: '92%',
+                    height: '92%'
                 },
                 pieHole: 0.55,
                 legend: 'none',
@@ -180,17 +247,52 @@
                 pieSliceText: 'none',
                 slices: {
                     0: {
-                        color: '#ff7f45'
+                        color: '#4C6085'
                     },
                     1: {
-                        color: '#83BCA9'
+                        color: '#39A0ED'
                     }
-                }
+                },
+                height: 200,
+                width: 200,
             };
 
-            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            var options2 = {
+                fontName: 'Open Sans',
+                fontSize: 15,
+                chartArea: {
+                    width: '92%',
+                    height: '92%'
+                },
+                pieHole: 0.55,
+                legend: 'none',
+                pieStartAngle: 130,
+                pieSliceText: 'none',
+                /*slices: {
+                    0: {
+                        color: '#880044'
+                    },
+                    1: {
+                        color: '#DD1155'
+                    }
+                },*/
+                slices: {
+                    0: {
+                        color: '#496F5D'
+                    },
+                    1: {
+                        color: '#4C9F70'
+                    }
+                },
+                height: 200,
+                width: 200,
+            };
 
-            chart.draw(data, options);
+            var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
+            var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
+
+            chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options1);
+            chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options2);
         }
 
         function drawBarChart() {
@@ -213,20 +315,65 @@
                     width: '80%',
                     height: '100%',
                 },
+                bar: {
+                    groupWidth: "50%"
+                },
                 legend: {
                     position: "none"
                 },
-                colors: ['#ff7f', '#d95f02', '#7570b3'],
+                colors: ['#ff7f45', '#d95f02', '#7570b3'],
                 fontName: 'Open Sans',
                 fontSize: 15,
                 width: 600,
                 height: 300,
+                /*isStacked: true,*/
                 bars: 'horizontal' // Required for Material Bar Charts.
             };
 
             var chart = new google.charts.Bar(document.getElementById('barchart_material'));
 
             chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+
+        function drawTimelineChart() {
+            var container = document.getElementById('timeline');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+
+            dataTable.addColumn({
+                type: 'string',
+                id: 'President'
+            });
+            dataTable.addColumn({
+                type: 'date',
+                id: 'Start'
+            });
+            dataTable.addColumn({
+                type: 'date',
+                id: 'End'
+            });
+            dataTable.addRows([
+                ['Đào tạo Hack Like', new Date(2017, 5, 30), new Date(2017, 6, 30)],
+                ['Đào tạo Brute Force', new Date(2017, 4, 25), new Date(2017, 7, 15)],
+                ['Đào tạo Javascript Developer', new Date(2017, 8, 11), new Date(2017, 9, 20)],
+                ['Đào tạo Mobile Developer', new Date(2017, 11, 11), new Date(2018, 2, 5)]
+            ]);
+
+            var options = {
+                timeline: {
+                    groupByRowLabel: false,
+                    singleColor: '#1ea69a',
+                    barLabelStyle: {
+                        fontName: 'Open Sans',
+                        fontSize: 13
+                    }
+                },
+                fontName: 'Open Sans',
+                height: 500,
+                width: 700
+            };
+
+            chart.draw(dataTable, options);
         }
 
     </script>
