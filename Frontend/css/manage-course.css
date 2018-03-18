@@ -1067,7 +1067,7 @@ div.heading-action .editable-heading {
 }
 
 .add-question {
-    text-align: center;
+    /*    text-align: center;*/
 }
 
 .add-question input.form-input:first-child {
@@ -1077,9 +1077,10 @@ div.heading-action .editable-heading {
 }
 
 .add-question button {
-    height: 44px;
+   /* height: 44px;
     max-width: 100%;
     width: 100%;
+    */
 }
 
 .add-question .quiz-control {
@@ -1096,6 +1097,7 @@ div.heading-action .editable-heading {
 
 .add-question .input-group {
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .add-question .input-group .input-group-addon {
@@ -1260,12 +1262,12 @@ div.heading-action .editable-heading {
 }
 
 .question-container {
-/*    display: flex;*/
+    /*    display: flex;*/
     width: 100%;
 }
 
 .question-header {
-   display: flex;
+    display: flex;
     width: 100%;
 }
 .question-body .input-group-addon {
@@ -1291,6 +1293,7 @@ div.heading-action .editable-heading {
 }
 
 .question-remove {
+    text-align: center;
     width: 10%;
     border: 1px solid #ccc;
     height: 44px;
@@ -1670,7 +1673,8 @@ div.heading-action .editable-heading {
     display: none;
     background: #c35220;
     color: #fff;
-    position: relative;
+    position: absolute;
+    z-index:1000;
     line-height: 29px;
     font-size: 12px;
     font-weight: 600;
@@ -1860,4 +1864,29 @@ div.heading-action .editable-heading {
     border: none;
     line-height: 50px;
     padding: 0;
+}
+
+.popup-content-detail {
+    padding: 20px;
+}
+
+.select-question-type {
+    padding: 3px 20px;
+}
+.select-question-type.active {
+    background-color: #1ea69a !important;
+}
+
+.select-question-type.active a{
+    display: block;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.select-question-type.active a:hover{
+    color: #fff;
+    font-weight: bold;
 }
