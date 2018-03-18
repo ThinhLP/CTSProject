@@ -81,11 +81,11 @@ a {
 #calendar-timetable-wrapper .chart-container {
     width: 100%;
     padding-left: 50px;
-    padding-right: 50px;
+    /* padding-right: 50px; */
     height: 350px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .section-report-chart .chart-container > div {
