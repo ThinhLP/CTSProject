@@ -118,4 +118,12 @@ var Utils = {
             return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
         }).join(''));
     },
+    convertSeconds: function(duration) {
+        var min = Math.floor(duration / 60);
+        var sec = duration - min * 60;
+        return {
+            mins: min,
+            secs: sec
+        };
+    },
 };

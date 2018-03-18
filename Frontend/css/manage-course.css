@@ -1232,8 +1232,8 @@ div.heading-action .editable-heading {
     width: 20%;
     height: 44px;
     line-height: 44px;
-    color: #fff;
-    background: #1ea69a;
+    color: #1ea69a;
+    background: #fff;
     cursor: pointer;
     text-align: center;
     border-top-right-radius: 5px;
@@ -1246,7 +1246,7 @@ div.heading-action .editable-heading {
 }
 
 .quiz-setting .save-setting:hover {
-    background-color: #1b958a;
+    background-color: #d2edea;
     -webkit-transition: .25s;
     transition: .25s;
 }
