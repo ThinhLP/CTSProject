@@ -1821,7 +1821,8 @@ div.heading-action .editable-heading {
     border-radius: 5px;
     right: 0;
     margin-right: 34px;
-    margin-top: -288px;
+    bottom: 0;
+    margin-bottom: 160px;
 }
 
 .skill-list-wrapper {
