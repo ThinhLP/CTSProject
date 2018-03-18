@@ -1814,12 +1814,14 @@ div.heading-action .editable-heading {
 .skill-list {
     position: absolute;
     z-index: 200;
-    top: 219px;
     background-color: #fff;
     width: 280px;
-    box-shadow: 0px 3px 10px #e6e9ec, 0px 3px 10px #e6e9ec;
-    /*box-shadow: 3px 3px 3px 3px #e6e9ec;*/
-    transform: translateX(159%);
+    box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, .05);
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    right: 0;
+    margin-right: 34px;
+    margin-top: -288px;
 }
 
 .skill-list-wrapper {
