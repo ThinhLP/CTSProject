@@ -108,7 +108,7 @@
                         <div class="chart-wrapper" id="calendar-timetable-wrapper">
                             <div class="section-content section-report-chart">
                                 <div class="chart-title">
-                                    <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch
+                                    <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê tổng số kế hoạch
                                 </div>
                                 <div class="chart-container">
                                     <div id="donutchart1" class="donutchart"></div>
@@ -118,7 +118,7 @@
                         <div class="chart-wrapper" id="calendar-timetable-wrapper">
                             <div class="section-content section-report-chart">
                                 <div class="chart-title">
-                                    <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê
+                                    <i class="fa fa-leanpub chart-icon" aria-hidden="true"></i>Kết quả học tập của học viên
                                 </div>
                                 <div class="chart-container">
                                     <div id="donutchart2" class="donutchart"></div>
@@ -234,12 +234,12 @@
                 ['Học viên chưa hoàn thành', 138],
             ]);
 
-            var options = {
+            var options1 = {
                 fontName: 'Open Sans',
                 fontSize: 15,
                 chartArea: {
-                    width: '95%',
-                    height: '95%'
+                    width: '92%',
+                    height: '92%'
                 },
                 pieHole: 0.55,
                 legend: 'none',
@@ -257,11 +257,42 @@
                 width: 200,
             };
 
+            var options2 = {
+                fontName: 'Open Sans',
+                fontSize: 15,
+                chartArea: {
+                    width: '92%',
+                    height: '92%'
+                },
+                pieHole: 0.55,
+                legend: 'none',
+                pieStartAngle: 130,
+                pieSliceText: 'none',
+                /*slices: {
+                    0: {
+                        color: '#880044'
+                    },
+                    1: {
+                        color: '#DD1155'
+                    }
+                },*/
+                slices: {
+                    0: {
+                        color: '#496F5D'
+                    },
+                    1: {
+                        color: '#4C9F70'
+                    }
+                },
+                height: 200,
+                width: 200,
+            };
+
             var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
             var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
 
-            chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options);
-            chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options);
+            chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options1);
+            chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options2);
         }
 
         function drawBarChart() {
@@ -284,6 +315,9 @@
                     width: '80%',
                     height: '100%',
                 },
+                bar: {
+                    groupWidth: "50%"
+                },
                 legend: {
                     position: "none"
                 },
@@ -292,7 +326,7 @@
                 fontSize: 15,
                 width: 600,
                 height: 300,
-                isStacked: true,
+                /*isStacked: true,*/
                 bars: 'horizontal' // Required for Material Bar Charts.
             };
 

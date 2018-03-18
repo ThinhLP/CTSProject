@@ -713,6 +713,10 @@ ul {
     font-weight: 400;
 }
 
+.feedback-reply {
+    margin-bottom: 15px;
+}
+
 .feedback-option {
     background: #fff;
     width: 120px;
