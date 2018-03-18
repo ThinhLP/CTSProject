@@ -64,7 +64,7 @@ a {
     padding: 10px 20px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-top: 3px solid #ff7f45;
+    border-top: 3px solid #add8e6;
     border-bottom: 1px solid #e7eaed;
     font-weight: bolder;
     font-size: 15px;
@@ -75,7 +75,7 @@ a {
 
 .section-report-chart .chart-title .chart-icon {
     margin-right: 15px;
-    color: #ff7f45;
+    color: #add8e6;
 }
 
 #calendar-timetable-wrapper .chart-container {
