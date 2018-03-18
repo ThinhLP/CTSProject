@@ -114,7 +114,7 @@
                         </div>
 
                         <!-- Powerpoint -->
-                        <div id="#powerpoint-lecture-wrapper" style="display: block">
+                        <div id="#powerpoint-lecture-wrapper" style="display: none">
                             <div class="section-content">
                                 <div class="content-detail">
                                     <div class="choose-file" style="display: none">Kéo thả tập tin vào đây hoặc <button class="button outline-button">Chọn tập tin</button></div>
@@ -169,7 +169,7 @@
                         </div>
 
                         <!-- Quiz -->
-                        <div id="#quiz-lecture-wrapper" style="display: none">
+                        <div id="#quiz-lecture-wrapper" style="display: block">
                             <div class="section-content">
                                 <div class="content-detail">
                                     <div class="quiz-setting">
@@ -184,24 +184,10 @@
                                     </div>
                                 </div>
                                 <div class="add-question">
-                                    <div class="question-container">
-                                        <div class="question-order">
-                                            <span>Câu 1: </span>
-                                        </div>
-                                        <div class="question-content">
-                                            <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " value="Hello World là gì ?" />
-                                        </div>
-                                        <div class="question-remove">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="question-expand">
-                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-
                                     <!-- Câu hỏi tự luận -->
                                     <div class="question-container">
-                                        <div class="question-order">
+                                        <div class="question-header">
+                                            <div class="question-order">
                                             <span>Câu 2: </span>
                                         </div>
                                         <div class="question-content">
@@ -213,8 +199,10 @@
                                         <div class="question-expand">
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </div>
-                                    </div>
-                                    <div id="essay-question-wrapper" class="question-body" style="display: block;">
+                                        </div>
+                                    
+                                        
+                                        <div id="essay-question-wrapper" class="question-body" style="display: block;">
                                         <div class="input-group">
                                             <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
                                         </div>
@@ -222,54 +210,60 @@
                                             <h5>Giải thích đáp án</h5>
                                             <div class="editor">
                                                 <textarea name="name" class="form-textarea"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                
+
+                                    <!-- Câu hỏi MultipleChoice -->
+                                    <div class="question-container">
+                                        <div class="question-header">
+                                            <div class="question-order">
+                                                <span>Câu 4: </span>
+                                            </div>
+                                            <div class="question-content">
+                                                <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " value="Hello World là gì ?" />
+                                            </div>
+                                            <div class="question-remove">
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="question-expand">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+
+                                        <div id="multiple-question-wrapper" class="question-body" style="display: block">
+                                            <div class="input-group">
+                                                <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div class="input-group">
+                                                <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div class="input-group">
+                                                <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div class="input-group">
+                                                <div class="input-group-addon prefix"><input type="checkbox" /></div>
+                                                <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
+                                                <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
+                                            </div>
+                                            <button class="button gray-outline-green-button add-answer"><i class="fa fa-plus-square" aria-hidden="true"></i>Thêm câu trả lời</button>
+                                            <div class="question-explanation">
+                                                <h5>Giải thích đáp án</h5>
+                                                <div class="editor">
+                                                    <textarea name="name" class="form-textarea"></textarea>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Câu hỏi MultipleChoice -->
-                                    <div class="question-container">
-                                        <div class="question-order">
-                                            <span>Câu 4: </span>
-                                        </div>
-                                        <div class="question-content">
-                                            <input name="name" type="text " class="form-input " placeholder="Nhập câu hỏi " value="Hello World là gì ?" />
-                                        </div>
-                                        <div class="question-remove">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="question-expand">
-                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <div id="multiple-question-wrapper" class="question-body" style="display: block">
-                                        <div class="input-group">
-                                            <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                            <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                            <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                        </div>
-                                        <div class="input-group">
-                                            <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                            <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                            <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                        </div>
-                                        <div class="input-group">
-                                            <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                            <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                            <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                        </div>
-                                        <div class="input-group">
-                                            <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                            <input name="name" type="text " class="form-input" placeholder="Câu trả lời " />
-                                            <div class="input-group-addon postfix"><i class="fa fa-times" aria-hidden="true"></i></div>
-                                        </div>
-                                        <button class="button gray-outline-green-button add-answer"><i class="fa fa-plus-square" aria-hidden="true"></i>Thêm câu trả lời</button>
-                                        <div class="question-explanation">
-                                            <h5>Giải thích đáp án</h5>
-                                            <div class="editor">
-                                                <textarea name="name" class="form-textarea"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <button class="button btn-orange" data-toggle="modal" data-target="#createQuestionMoal">Thêm câu hỏi</button>
                                 </div>
@@ -390,7 +384,7 @@
             $('#summernote').summernote({
                 lang: 'vi-VN'
             });
-            
+
             var slideShow = new Slideshow({
                 slideShowContainer: '#slideshow',
                 slideSelector: '.mySlides',
@@ -402,27 +396,27 @@
             /*var questionType = new PopupTooltip('.select-question-type')*/
         });
 
-//        var slideIndex = 1;
-//        showDivs(slideIndex);
-//
-//        function plusDivs(n) {
-//            showDivs(slideIndex += n);
-//        }
-//
-//        function showDivs(n) {
-//            var i;
-//            var x = document.getElementsByClassName("mySlides");
-//            if (n > x.length) {
-//                slideIndex = 1
-//            }
-//            if (n < 1) {
-//                slideIndex = x.length
-//            }
-//            for (i = 0; i < x.length; i++) {
-//                x[i].style.display = "none";
-//            }
-//            x[slideIndex - 1].style.display = "block";
-//        }
+        //        var slideIndex = 1;
+        //        showDivs(slideIndex);
+        //
+        //        function plusDivs(n) {
+        //            showDivs(slideIndex += n);
+        //        }
+        //
+        //        function showDivs(n) {
+        //            var i;
+        //            var x = document.getElementsByClassName("mySlides");
+        //            if (n > x.length) {
+        //                slideIndex = 1
+        //            }
+        //            if (n < 1) {
+        //                slideIndex = x.length
+        //            }
+        //            for (i = 0; i < x.length; i++) {
+        //                x[i].style.display = "none";
+        //            }
+        //            x[slideIndex - 1].style.display = "block";
+        //        }
 
     </script>
 </body>
