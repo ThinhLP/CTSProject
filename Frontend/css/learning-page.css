@@ -287,6 +287,10 @@ header .lecture-nav a.nav-btn:hover {
     margin-top: 10px;
 }
 
+.standard-height {
+    height: 400px;
+}
+
 .course-section {
     margin-bottom: 10px;
 }
