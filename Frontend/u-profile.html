@@ -21,36 +21,142 @@
 </head>
 
 <body class="user-layout">
-    <div class="row">
-        <div class="sidebar">
-            <div class="profile-card">
-                <div class="user-info">
-                    <a href="#"><img width="100" height="100" class="avatar" src="./resources/images/avatar.jpg"></a>
-                    <h2>ThachNguyen</h2>
-                    <p>vothachnguyen96@gmail.com</p>
-                </div>
+    <div class="sidebar">
+        <div class="profile-card">
+            <div class="user-info">
+                <a href="#"><img width="100" height="100" class="avatar" src="./resources/images/avatar.jpg"></a>
+                <h2>ThachNguyen</h2>
+                <p>vothachnguyen96@gmail.com</p>
             </div>
-            <ul class="nav-sidebar">
-                <li class="nav-item">
-                    <a href="#"><i class="fa fa-building-o" aria-hidden="true"></i>Công ty của tôi</a>
-                </li>
-                <li class="nav-item selected">
-                    <a href="#"><i class="fa fa-tasks" aria-hidden="true"></i>Khoá học của tôi</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i>Cài đặt</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a>
-                </li>
-            </ul>
         </div>
-        <div class="main user-dashboard">
-            <div class="center-container">
-                <div class="content-box">
-
-                </div>
+        <ul class="nav-sidebar">
+            <li class="nav-item">
+                <a href="#"><i class="fa fa-building-o" aria-hidden="true"></i>Công ty của tôi</a>
+            </li>
+            <li class="nav-item selected">
+                <a href="#"><i class="fa fa-tasks" aria-hidden="true"></i>Khoá học của tôi</a>
+            </li>
+            <li class="nav-item">
+                <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i>Cài đặt</a>
+            </li>
+            <li class="nav-item">
+                <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a>
+            </li>
+        </ul>
+    </div>
+    <div class="main user-dashboard">
+        <div class="center-container">
+            <div class="content-box">
+                <form>
+                    <div class="form-group">
+                        <center>
+                            <img class="img-circle" src="./resources/images/avatar.jpg">
+                            <br>
+                            <a id="change-avatar" class="">Đổi ảnh đại diện</a>
+                        </center>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Họ tên</label>
+                        <div class="control-input">
+                            <input class="form-control" id="edit-user-name" maxlength="100" name="name" required="required" type="text">
+                            <span class="input-icon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Địa chỉ Email</label>
+                        <div class="control-input">
+                            <input class="form-control" id="edit-user-email" maxlength="100" name="email" required="required" type="email" value="nguyensuperman@gmail.com" readonly>
+                            <span class="input-icon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Chức danh</label>
+                        <div class="control-input">
+                            <input class="form-control" id="edit-user-title" maxlength="100" name="email" required="required" type="text">
+                            <span class="input-icon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Mật khẩu mới</label>
+                        <div class="control-input">
+                            <input class="form-control" name="password" type="password">
+                            <span class="input-icon"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="edit-user-password">Xác nhận lại mật khẩu</label>
+                        <div class="control-input">
+                            <input class="form-control" id="edit-user-confirm-password" name="password_confirmation" type="password">
+                            <span class="input-icon"></span>
+                        </div>
+                    </div>
+                    <!--<div class="form-group">
+                        <label class="control-label" for="edit-user-password">Để lưu lại thay đổi, hãy nhập mật khẩu hiện tại</label>
+                        <div class="control-input has-error">
+                            <input class="form-control" id="current-password" name="current_password" type="password" autocomplete="off">
+                            <span class="input-icon"></span>
+                        </div>
+                    </div>-->
+                    <div class="text-center">
+                        <input type="submit" name="commit" value="Lưu thay đổi" class="btn btn-orange">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+    <!--<div class="main user-dashboard">
+            <div class="center-container">
+                <div class="content-box">
+                    <form>
+                        <div class="form-group">
+                            <center>
+                                <img class="img-circle" src="https://s.gravatar.com/avatar/a0a7408889233b317bf4d427538f73c6?d=mm" alt="vothachnguyen96@gmail.com">
+                                <br><br>
+                            </center>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Họ tên</label>
+                            <div class="control-input">
+                                <input class="form-control" id="edit-user-name" maxlength="100" name="name" placeholder="Full Name" required="required" type="text" value="ThachNguyen">
+                                <span class="input-icon"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Chức danh</label>
+                            <div class="control-input">
+                                <input class="form-control" id="edit-user-email" maxlength="100" name="email" required="required" type="email">
+                                <span class="input-icon"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Mật khẩu mới</label>
+                            <div class="control-input">
+                                <input class="form-control" name="password" type="password" autocomplete="off">
+                                <span class="input-icon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="edit-user-password">Xác nhận lại mật khẩu</label>
+                            <div class="control-input">
+                                <input class="form-control" id="edit-user-confirm-password" name="password_confirmation" type="password" autocomplete="off">
+                                <span class="input-icon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="edit-user-password">Để lưu lại thay đổi, hãy nhập mật khẩu hiện tại</label>
+                            <div class="control-input has-error">
+                                <input class="form-control" id="current-password" name="current_password" type="password" autocomplete="off">
+                                <span class="input-icon"></span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" name="commit" value="Save changes" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>-->
 </body>

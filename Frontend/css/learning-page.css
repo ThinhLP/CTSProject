@@ -54,11 +54,25 @@ h5 {
     outline: none;
 }
 
+.btn-orange {
+    background: #FF7F45;
+    border: 1px solid #FF7F45;
+    outline: none;
+}
+
 .btn-primary:hover {
     outline: none;
     text-decoration: none;
     background: #088d83;
     border: 1px solid #088d83;
+    color: #fff;
+}
+
+.btn-orange:hover {
+    outline: none;
+    text-decoration: none;
+    background: #ff6d2c;
+    border: 1px solid #ff6d2c;
     color: #fff;
 }
 
@@ -522,20 +536,13 @@ header .lecture-nav a.nav-btn:hover {
 .user-layout {
     background: #F5F6F7;
     color: #2b3636;
+    display: flex;
+    width: 100%;
 }
 
 
 .user-layout .sidebar {
     width: 276px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding: 0;
-    z-index: 1000;
-    display: block;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: #fff;
     border-right: 1px solid #eee;
 }
@@ -612,22 +619,21 @@ header .lecture-nav a.nav-btn:hover {
 }
 
 .user-layout .user-dashboard {
-    position: absolute;
-    padding-right: 75px;
+    padding: 50px 50px 0px 50px;
     width: 100%;
-    padding-top: 28px;
-    padding-left: 315px;
 }
 
 .user-layout .user-dashboard h1 {
-    padding-left: 20px;
+    margin-bottom: 20px;
     font-size: 17px;
     font-weight: 600;
     color: #33353a;
 }
 
 .user-dashboard .center-container {
-    margin-left: 137px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-plan-container {
@@ -637,7 +643,7 @@ header .lecture-nav a.nav-btn:hover {
 
 .search-plan-container .search-input {
     display: block;
-    margin: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     height: 60px;
     background: #fff;
@@ -673,6 +679,7 @@ header .lecture-nav a.nav-btn:hover {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-left: -20px;
 }
 
 .plan-list .plan-card,
@@ -680,7 +687,6 @@ header .lecture-nav a.nav-btn:hover {
 .plan-education-program {
     display: block;
     width: 412px;
-    margin: 20px;
     padding: 0px;
     min-height: 400px;
     position: relative;
@@ -691,6 +697,10 @@ header .lecture-nav a.nav-btn:hover {
     transition: 0.15s all ease-in;
     background-position: center top;
     cursor: pointer;
+}
+
+.plan-list .plan-card {
+    margin: 20px;
 }
 
 .plan-detail,
