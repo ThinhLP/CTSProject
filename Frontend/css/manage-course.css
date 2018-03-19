@@ -676,6 +676,7 @@ ul {
     color: rgba(0, 0, 0, 0.87);
     font-weight: bolder;
     margin-bottom: 10px;
+    font-style: italic;
 }
 
 .feedback-heading i:hover {

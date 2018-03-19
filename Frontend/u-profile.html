@@ -7,17 +7,11 @@
     <title>Danh sách kế hoạch | Traisy</title>
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
-
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./resources/flowplayer/skin/all-skins.css" />
-    <link rel="stylesheet" href="./resources/flowplayer/skin/functional.css" />
     <link rel="stylesheet" href="./css/learning-page.css" />
     <link rel="stylesheet" href="./css/user-profile.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
-    <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
 </head>
 
 <body class="user-layout">
@@ -48,115 +42,63 @@
         <div class="center-container">
             <div class="content-box">
                 <form>
-                    <div class="form-group">
+                    <div class="form-group" style="position: relative">
                         <center>
-                            <img class="img-circle" src="./resources/images/avatar.jpg">
-                            <br>
-                            <a id="change-avatar" class="">Đổi ảnh đại diện</a>
+                            <img class="img-circle" target=".change-avatar-container" src="./resources/images/avatar.jpg">
+                            <div class="change-avatar-container" style="display: none">
+                                <i class="fa fa-camera " aria-hidden="true "></i><br/>Thay đổi
+                            </div>
                         </center>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label">Họ tên</label>
-                        <div class="control-input">
-                            <input class="form-control" id="edit-user-name" maxlength="100" name="name" required="required" type="text">
-                            <span class="input-icon"></span>
+                    <div class="form-group ">
+                        <label class="control-label ">Họ tên</label>
+                        <div class="control-input ">
+                            <input class="form-control " id="edit-user-name " maxlength="100 " name="name " required="required " type="text ">
+                            <span class="input-icon "></span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label">Địa chỉ Email</label>
-                        <div class="control-input">
-                            <input class="form-control" id="edit-user-email" maxlength="100" name="email" required="required" type="email" value="nguyensuperman@gmail.com" readonly>
-                            <span class="input-icon"></span>
+                    <div class="form-group ">
+                        <label class="control-label ">Địa chỉ Email</label>
+                        <div class="control-input ">
+                            <input class="form-control " id="edit-user-email " maxlength="100 " name="email " required="required " type="email " value="nguyensuperman@gmail.com " readonly>
+                            <span class="input-icon "></span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label">Chức danh</label>
-                        <div class="control-input">
-                            <input class="form-control" id="edit-user-title" maxlength="100" name="email" required="required" type="text">
-                            <span class="input-icon"></span>
+                    <div class="form-group ">
+                        <label class="control-label ">Chức danh</label>
+                        <div class="control-input ">
+                            <input class="form-control " id="edit-user-title " maxlength="100 " name="email " required="required " type="text ">
+                            <span class="input-icon "></span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label">Mật khẩu mới</label>
-                        <div class="control-input">
-                            <input class="form-control" name="password" type="password">
-                            <span class="input-icon"></span>
+                    <div class="form-group ">
+                        <label class="control-label ">Mật khẩu mới</label>
+                        <div class="control-input ">
+                            <input class="form-control " name="password " type="password ">
+                            <span class="input-icon "></span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label" for="edit-user-password">Xác nhận lại mật khẩu</label>
-                        <div class="control-input">
-                            <input class="form-control" id="edit-user-confirm-password" name="password_confirmation" type="password">
-                            <span class="input-icon"></span>
+                    <div class="form-group ">
+                        <label class="control-label " for="edit-user-password ">Xác nhận lại mật khẩu</label>
+                        <div class="control-input ">
+                            <input class="form-control " id="edit-user-confirm-password " name="password_confirmation " type="password ">
+                            <span class="input-icon "></span>
                         </div>
                     </div>
-                    <!--<div class="form-group">
-                        <label class="control-label" for="edit-user-password">Để lưu lại thay đổi, hãy nhập mật khẩu hiện tại</label>
-                        <div class="control-input has-error">
-                            <input class="form-control" id="current-password" name="current_password" type="password" autocomplete="off">
-                            <span class="input-icon"></span>
-                        </div>
-                    </div>-->
-                    <div class="text-center">
-                        <input type="submit" name="commit" value="Lưu thay đổi" class="btn btn-orange">
+                    <div class="text-center ">
+                        <input type="submit " name="commit " value="Lưu thay đổi " class="btn btn-orange ">
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <!--<div class="main user-dashboard">
-            <div class="center-container">
-                <div class="content-box">
-                    <form>
-                        <div class="form-group">
-                            <center>
-                                <img class="img-circle" src="https://s.gravatar.com/avatar/a0a7408889233b317bf4d427538f73c6?d=mm" alt="vothachnguyen96@gmail.com">
-                                <br><br>
-                            </center>
-                        </div>
+    <script src="./resources/jquery-3.3.1.min.js "></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js "></script>
+    <script src="./dist/js/traisy.min.js "></script>
+    <script>
+        $(function() {
+            var showChangeAvatar = new HoverTooltip('.img-circle');
+        });
 
-                        <div class="form-group">
-                            <label class="control-label">Họ tên</label>
-                            <div class="control-input">
-                                <input class="form-control" id="edit-user-name" maxlength="100" name="name" placeholder="Full Name" required="required" type="text" value="ThachNguyen">
-                                <span class="input-icon"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label">Chức danh</label>
-                            <div class="control-input">
-                                <input class="form-control" id="edit-user-email" maxlength="100" name="email" required="required" type="email">
-                                <span class="input-icon"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label">Mật khẩu mới</label>
-                            <div class="control-input">
-                                <input class="form-control" name="password" type="password" autocomplete="off">
-                                <span class="input-icon"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="edit-user-password">Xác nhận lại mật khẩu</label>
-                            <div class="control-input">
-                                <input class="form-control" id="edit-user-confirm-password" name="password_confirmation" type="password" autocomplete="off">
-                                <span class="input-icon"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="edit-user-password">Để lưu lại thay đổi, hãy nhập mật khẩu hiện tại</label>
-                            <div class="control-input has-error">
-                                <input class="form-control" id="current-password" name="current_password" type="password" autocomplete="off">
-                                <span class="input-icon"></span>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <input type="submit" name="commit" value="Save changes" class="btn btn-primary">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>-->
+    </script>
 </body>
