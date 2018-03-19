@@ -3,7 +3,6 @@
 function ManageLecture() {
     var instance = ManageMasterpage.call(this);
 
-
     var minuteSelector = '.min-time-input';
     var secondSelector = '.sec-time-input';
     var minuteMin = 0;
@@ -119,6 +118,64 @@ function ManageLecture() {
             return;
         }
     });
+    
+    var questionTypeDropdown = new PopupTooltip('.question-type-dropdown', 0);
 
+    var questionTypeTab = new ContentTab('.select-question-type');
+    
+    questionTypeTab.onChangeTab(function(target) {
+    
+        var type = $(target).closest('.select-question-type').attr('value');
+        if (type == "0") {
+            $('.question-type-dropdown .ques-type').text("Trắc nghiệm");  
+        } else {
+            $('.question-type-dropdown .ques-type').text("Tự luận");  
+        }
+        questionTypeDropdown.collapse();
+    });
+    
+    // answer 
+    var maxAnswers = 5;
+    
+    var isAbleToAddAnswer = function($wrapper) {
+         return $wrapper.find('.answer-wrapper').length < maxAnswers;
+    };
+    var isAbleToRemoveAnswer = function($wrapper) {
+         return $wrapper.find('.answer-wrapper').length > 1;
+    };
+    
+    var emptyAnswerElement = '<div class="input-group answer-wrapper">\
+                                            <div class="input-group-addon prefix">\<input type="checkbox" /></div>\
+                                            <input name="name" type="text" class="answer-content-input last-answer form-input" placeholder="Câu trả lời" />\
+<div class="alert-tooltip answer-error-tooltip" style="display: none;">\                   <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>\                    <span>Nội dung câu trả lời từ 5 đến 500 kí tự.</span>\
+</div>\
+                                            <div class="input-group-addon postfix remove-answer"><i class="fa fa-times" aria-hidden="true"></i></div>\
+                                        </div>';
+    
+    
+    $('body').on('keyup', '#createQuestionModal .last-answer', function() {
+        if (!isAbleToAddAnswer($('#createQuestionModal'))) {
+            return;
+        } 
+        $(this).removeClass('last-answer')
+        var $answerWrapper = $(this).closest('.answer-wrapper');
+        $answerWrapper.after(emptyAnswerElement);
+    });
+    
+    $('body').on('click', '#createQuestionModal .remove-answer', function() {
+        if (!isAbleToRemoveAnswer($('#createQuestionModal'))) {
+            return;
+        } 
+        $(this).closest('.answer-wrapper').remove();
+        
+        $('#createQuestionModal .answer-content-input').removeClass('last-answer');
+        $('#createQuestionModal .answer-content-input').last().addClass('last-answer');
+    });
+    
+    $('body').on('focusin', '.answer-content-input', function() {
+        $(this).siblings('.answer-error-tooltip').hide();
+        $(this).removeClass('has-error');
+    });
+                 
     return instance;
 }
