@@ -1394,6 +1394,7 @@ div.heading-action .editable-heading {
     justify-content: center;
     display: flex;
     height: 44px;
+    user-select: none;
 }
 
 .question-content {

@@ -176,6 +176,17 @@ function ManageLecture() {
         $(this).siblings('.answer-error-tooltip').hide();
         $(this).removeClass('has-error');
     });
-                 
+    
+    var questionCollapse = new Collapse('.question-expand', 300, true);
+    
+    var arrowHandler = function ($target, collapsed) {
+        var $arrow = $target.closest('.question-expand').find('i');
+        Utils.rotateArrow($arrow, collapsed);
+    };
+    questionCollapse.onBeforeToggle(function (e, collapsed) {
+        var $target = $(e.target);
+        arrowHandler($target, collapsed);
+    });
+    
     return instance;
 }
