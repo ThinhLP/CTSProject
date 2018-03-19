@@ -819,7 +819,7 @@ ul {
 .feedback-footer.feedback-edit-reply button.cancel-save-reply {
     color: #d4604b;
     background-color: #fff;
-    border: none;
+    border: none !important;
 }
 
 .feedback-footer.feedback-edit-reply button.cancel-save-reply:hover {
@@ -829,7 +829,11 @@ ul {
 }
 
 .feedback-footer.feedback-edit-reply button.cancel-save-reply::after {
-    font-weight: bolder;
+    display: block;
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
 
 .feedback-footer.feedback-edit-reply button:hover {
@@ -910,6 +914,7 @@ ul {
     display: flex;
     user-select: none;
     background: #fff;
+    min-height: 57px;
     margin-bottom: 1px;
     border-radius: 1px;
     font-size: 15px;

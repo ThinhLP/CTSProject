@@ -428,6 +428,7 @@ h5 {
 
 .program-name {
     min-width: 200px;
+    line-height: 47px;
 }
 
 .course-list-wrapper {
