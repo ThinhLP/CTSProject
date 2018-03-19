@@ -138,7 +138,6 @@
                                         </div>
                                         <div class="file-action">
                                             Kéo thả tập tin vào đây hoặc <button class="button outline-button">Thay đổi</button>
-                                            <!--<button class="button outline-button">Đổi tập tin</button>-->
                                         </div>
                                     </div>
 
@@ -147,13 +146,12 @@
                         </div>
 
                         <!-- Video -->
-                        <div id="#video-lecture-wrapper" style="display: none">
+                        <div id="#video-lecture-wrapper" style="display: block">
                             <div class="section-content">
                                 <div class="content-detail">
                                     <div class="choose-file" style="display: none">Kéo thả tập tin vào đây hoặc <button class="button outline-button">Chọn tập tin</button></div>
                                     <div class="choose-file already-chosen">
-                                        <div class="file-container">
-                                            <!-- VIDEO CONTAINER -->
+                                        <div class="file-container video-player">
                                         </div>
                                         <div class="file-description">
                                             <div class="file-description-name">IntroductionToProgramming.mp4</div>
@@ -161,7 +159,6 @@
                                         </div>
                                         <div class="file-action">
                                             Kéo thả tập tin vào đây hoặc <button class="button outline-button">Thay đổi</button>
-                                            <!--<button class="button outline-button">Đổi tập tin</button>-->
                                         </div>
                                     </div>
                                 </div>
@@ -169,7 +166,7 @@
                         </div>
 
                         <!-- Quiz -->
-                        <div id="#quiz-lecture-wrapper" style="display: block">
+                        <div id="#quiz-lecture-wrapper" style="display: none">
                             <div class="section-content">
                                 <div class="content-detail">
                                     <div class="quiz-setting">
@@ -325,7 +322,7 @@
                                     <div class="answer-list">
                                         <div class="input-group answer-wrapper">
                                             <div class="input-group-addon prefix"><input type="checkbox" /></div>
-                                            <input name="name" type="text" class="answer-content-input form-input" placeholder="Câu trả lời"/>
+                                            <input name="name" type="text" class="answer-content-input form-input" placeholder="Câu trả lời" />
                                             <div class="input-group-addon postfix remove-answer"><i class="fa fa-times" aria-hidden="true"></i></div>
                                         </div>
                                         <div class="input-group answer-wrapper">
@@ -342,11 +339,11 @@
                                     </div>
                                 </div>
                                 <div class="question-explanation">
-                                        <label>Giải thích đáp án</label>
-                                        <div class="editor">
-                                            <textarea name="name" class="form-textarea"></textarea>
-                                        </div>
+                                    <label>Giải thích đáp án</label>
+                                    <div class="editor">
+                                        <textarea name="name" class="form-textarea"></textarea>
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
