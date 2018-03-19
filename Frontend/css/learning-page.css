@@ -382,6 +382,10 @@ header .lecture-nav a.nav-btn:hover {
     padding-right: 5px;
 }
 
+.course-section ul.section-list .section-item .item .lecture-icon i {
+    width: 20px;
+}
+
 .course-section ul.section-list .section-item .lecture-name {
     font-weight: 200;
 }
