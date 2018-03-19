@@ -798,6 +798,10 @@ ul {
     cursor: pointer;
 }
 
+.feedback-reply .feedback-footer button {
+    margin-top: 20px;
+}
+
 .feedback-footer button i {
     color: #1ea69a;
     margin-right: 5px;
@@ -1180,7 +1184,7 @@ div.heading-action .editable-heading {
 }
 
 .add-question button {
-   /* height: 44px;
+    /* height: 44px;
     max-width: 100%;
     width: 100%;
     */
@@ -1778,7 +1782,7 @@ div.heading-action .editable-heading {
     background: #c35220;
     color: #fff;
     position: absolute;
-    z-index:1000;
+    z-index: 1000;
     line-height: 29px;
     font-size: 12px;
     font-weight: 600;
@@ -1980,11 +1984,12 @@ div.heading-action .editable-heading {
 .select-question-type {
     padding: 3px 20px;
 }
+
 .select-question-type.active {
     background-color: #1ea69a !important;
 }
 
-.select-question-type.active a{
+.select-question-type.active a {
     display: block;
     clear: both;
     font-weight: normal;
@@ -1993,7 +1998,7 @@ div.heading-action .editable-heading {
     white-space: nowrap;
 }
 
-.select-question-type.active a:hover{
+.select-question-type.active a:hover {
     color: #fff;
     font-weight: bold;
 }
