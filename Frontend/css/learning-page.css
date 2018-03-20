@@ -159,6 +159,141 @@ header .lecture-nav a.nav-btn:hover {
     color: #ffffff !important;
 }
 
+/*----------------------------------------*/
+
+.course-overview-wrapper {
+    width: 100%;
+    min-height: 250px;
+    background: #fff;
+    padding: 0px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px #e3e7ea;
+    transition: 0.15s all ease-in;
+    margin-bottom: 50px;
+}
+
+.course-picture-container {
+    width: 100%;
+    height: 500px;
+    background-image: url(/resources/images/course1.jpeg);
+    height: 50vh;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.course-picture-container .dark-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000, rgba(0, 0, 0, 0.1));
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+}
+
+.course-picture-container .course-introduction {
+    text-align: left;
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.course-picture-container .course-introduction .course-name {
+    font-weight: 700;
+    font-size: 35px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.course-picture-container .course-introduction .course-detail {
+    font-weight: 100;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 10px;
+    padding-right: 200px;
+}
+
+.course-picture-container .course-introduction .course-author {
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 16px;
+    /*background: #ff7f45;
+    padding: 5px 15px;
+    border-radius: 20px;
+    align-self: flex-start;*/
+    cursor: pointer;
+}
+
+.course-skills-wrapper {
+    display: flex;
+}
+
+.course-skills-wrapper .course-skill {
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 100;
+    margin-bottom: 10px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    border-radius: 20px;
+    align-self: flex-start;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.course-skills-wrapper .course-skill:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.course-lecture-wrapper {
+    width: 100%;
+    padding: 50px;
+}
+
+.course-lecture-wrapper .course-content-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.course-lecture-wrapper .course-section {
+    padding: 0;
+    margin-top: 20px;
+}
+
+.course-lecture-wrapper .course-section .section-title {
+    border: none;
+}
+
+.course-lecture-wrapper .course-section .section-item {
+    border: none !important;
+}
+
+.course-lecture-wrapper .course-section .section-item .item:hover {
+    background-color: #d4ebe9;
+    /*background-color: #f1f1f1;*/
+    /*border: 1px solid #1ea69a;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;*/
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.course-lecture-wrapper .course-section:last-child {
+    margin-bottom: 0px;
+}
+
+
+/*----------------------------------------*/
+
 .default-avatar {
     width: 30px;
     height: 30px;
@@ -385,8 +520,8 @@ header .lecture-nav a.nav-btn:hover {
     border-left: 1px solid rgba(255, 63, 32, 0.1);
     margin: -11px;
     padding: 10px;
-    margin-left: 41px;
-    padding-right: 70px;
+    margin-left: 40px;
+    padding-right: 20px;
 }
 
 .course-section ul.section-list .section-item.completed .btn-primary {
