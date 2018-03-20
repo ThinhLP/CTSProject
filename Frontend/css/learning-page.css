@@ -124,10 +124,6 @@ header .lecture-nav a.nav-btn:hover {
     width: 100%;
 }
 
-@media (min-width: 768px) .navbar-header {
-    float: left;
-}
-
 .menu-left {
     width: 349px;
     height: 46px !important;
@@ -288,7 +284,8 @@ header .lecture-nav a.nav-btn:hover {
 }
 
 .standard-height {
-    height: 400px;
+    height: 500px;
+    margin-bottom: 30px;
 }
 
 .course-section {
