@@ -517,11 +517,11 @@ header .lecture-nav a.nav-btn:hover {
 }
 
 .course-section ul.section-list .section-item .title-container {
-    border-left: 1px solid rgba(255, 63, 32, 0.1);
+    /*border-left: 1px solid rgba(255, 63, 32, 0.1);
     margin: -11px;
     padding: 10px;
     margin-left: 40px;
-    padding-right: 20px;
+    padding-right: 20px;*/
 }
 
 .course-section ul.section-list .section-item.completed .btn-primary {
