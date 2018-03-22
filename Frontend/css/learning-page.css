@@ -1221,6 +1221,10 @@ header .lecture-nav a.nav-btn:hover {
     text-decoration: underline;
 }
 
+.quiz-answer-note:nth-child(2) {
+    margin-top: 15px;
+}
+
 .quiz-answer.incorrect {
     border: 1px solid #e74c3c !important;
 }
