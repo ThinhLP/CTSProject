@@ -260,8 +260,7 @@ header .lecture-nav a.nav-btn:hover {
     margin-top: -100px;
 }
 
-.course-control button {
-    padding: 10px 15px;
+.course-control a {
     background: #ff7f45;
     width: 100px;
     height: 100px;
@@ -270,10 +269,13 @@ header .lecture-nav a.nav-btn:hover {
     font-weight: 600;
     cursor: pointer;
     color: #fff;
+    text-align: center;
+    line-height: 90px;
     border: 4px solid #fff;
+    text-decoration: none;
 }
 
-.course-control button:hover {
+.course-control a:hover {
     transition: .225s ease-out;
     background: #ff6621;
 }
