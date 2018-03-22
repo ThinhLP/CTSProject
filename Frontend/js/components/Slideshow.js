@@ -9,11 +9,21 @@ function Slideshow(configs) {
     var currentSlideSlt = '.current-slide';
     var totalSlideSlt = '.total-slides';
     var totalSlides = 0;
+    var clickToNextSlide = configs.clickToNextSlide == undefined ? true : configs.clickToNextSlide;
     
     var slideIndex = !configs.startSlide ? 1 : configs.startSlide;
     
     var changeSlide = function(n) {
         showSlide(slideIndex += n);
+    };
+    
+    var eventBus = new EventBus();
+    var onChangeSlide = function(eventHandler) {
+        eventBus.on('onChangeSlide', eventHandler);
+    };
+    
+    var getTotalSlides = function() {
+        return totalSlides;
     };
     
     var showSlide = function(index) {
@@ -28,6 +38,8 @@ function Slideshow(configs) {
         $slides.hide();
         $slides.eq(slideIndex - 1).show();
         setSlideProgress(slideIndex, totalSlides);
+        eventBus.dispatch('onChangeSlide', slideIndex);
+        
     };
     
     var setSlideProgress = function(currentSlide) {
@@ -52,12 +64,17 @@ function Slideshow(configs) {
             changeSlide(-1);
         });
         
-        $('body').on('click', slideSelector, function() {
-            changeSlide(1);
-        });
+        if (clickToNextSlide) {
+             $('body').on('click', slideSelector, function() {
+                changeSlide(1);
+            });
+        }
+       
     };
         
     return {
-        initSlideshow: initSlideshow
+        initSlideshow: initSlideshow,
+        onChangeSlide: onChangeSlide,
+        getTotalSlides: getTotalSlides
     };
 }
