@@ -1128,6 +1128,27 @@ div.heading-action .editable-heading {
     margin-left: 5px;
 }
 
+.edit-item-name-action {
+    margin-top: -3px;
+}
+
+
+.edit-item-content-action .curriculum-lecture-action,
+.edit-item-name-action .curriculum-lecture-action {
+    padding: 10px 13px;
+    border: 1px solid transparent;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.edit-item-content-action .curriculum-lecture-action:hover,
+.edit-item-name-action .curriculum-lecture-action:hover {
+    background: #dce1e3;
+    border: 1px solid #dce1e3;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
 .choose-file {
     text-align: center;
     bottom: 0px;

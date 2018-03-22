@@ -631,6 +631,33 @@ h5 {
     width: 35%;
 }
 
+.course-start-end-time {
+    height: 40px;
+    margin: 50px 50px -15px 50px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.course-start-end-time div {
+    text-align: center;
+    width: 25%;
+    line-height: 40px;
+}
+
+.course-start-end-time div:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #FAFAFA;
+    border-right: 1px solid #ccc;
+}
+
+.course-start-end-time div:nth-child(3) {
+    background: #FAFAFA;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
 .program-list {
     border-radius: 4px;
     background: #FFF;

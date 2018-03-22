@@ -15,6 +15,7 @@ a {
 
 .plan-progress-wrapper {
     padding: 15px 0px 15px 15px;
+    height: 800px;
 }
 
 .plan-progress-wrapper h2 {
@@ -53,6 +54,10 @@ a {
     font-weight: 500;
     font-size: 13px;
     color: #b1b1b1;
+}
+
+.plan-progress-wrapper ul li span.plan-activity {
+    color: #8094a5;
 }
 
 /*------------------------------*/
@@ -115,4 +120,68 @@ a {
 .double-chart-container .chart-container {
     display: flex;
     justify-content: center;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 24px;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table-learner-detail-wrapper {
+    width: 100%;
+}
+
+.table-data {
+    height: 55px;
+}
+
+.table-data:hover {
+    background: #f5f6f7;
+}
+
+.table-data .view-detail {
+    background: #2196F3;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.table-data .progress-detail {
+    background: #9C27B0;
+    padding: 5px 20px;
+    color: #fff;
+    border-radius: 20px;
+
+}
+
+.table-header,
+td {
+    padding: 7px 13px;
+    border-bottom: 1px solid #eef0f0;
+    color: #000;
+    line-height: 20px;
+    font-size: 14px;
+    border-top: 0;
+    /*letter-spacing: .5px;*/
+    text-align: left;
+}
+
+.table-header {
+    font-weight: bolder;
+}
+
+.check-select-user {
+    margin-right: 15px;
+}
+
+td {
+    cursor: pointer;
+    font-size: 13px;
+    text-transform: none;
+    padding: 7px 13px!important;
+    line-height: 29px;
 }
