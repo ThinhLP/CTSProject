@@ -1075,6 +1075,7 @@ header .lecture-nav a.nav-btn:hover {
 .quiz-wrapper {
     border: 1px solid #d7dada;
     border-radius: 5px;
+    min-height:500px;
 }
 
 .quiz-wrapper .quiz {
@@ -1811,4 +1812,43 @@ header .lecture-nav a.nav-btn:hover {
 
 .progress-circle.p100 .value-bar {
     transform: rotate(360deg);
+}
+
+/** Format for slide show **/
+
+.slides-container img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+.slideshow-control {
+    background: #fff;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slideshow-control span.slide-progress {
+    margin: 0px 15px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.slideshow-control button {
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    color: #000;
+}
+
+.question-list .question-wrapper {
+    display: none;
+}
+.question-list .question-wrapper:first-child {
+    display: block;
 }
