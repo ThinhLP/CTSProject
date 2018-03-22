@@ -1109,6 +1109,7 @@ header .lecture-nav a.nav-btn:hover {
 .quiz-result-wrapper .quiz-question {
     text-align: left !important;
     margin: 0 0px 20px !important;
+    display: flex;
 }
 
 .quiz-wrapper .quiz .quiz-answer {
@@ -1123,11 +1124,10 @@ header .lecture-nav a.nav-btn:hover {
     color: #818181;
 }
 
-.quiz-result-wrapper .quiz-answer {
+/*.quiz-result-wrapper .quiz-answer {
     display: block !important;
     padding: 10px 20px !important;
-}
-
+}*/
 
 .editor {
     height: 150px;
@@ -1193,11 +1193,19 @@ header .lecture-nav a.nav-btn:hover {
     padding-bottom: 10px;
 }
 
-.quiz-wrapper .quiz .quiz-answer:hover {
+.quiz-wrapper .quiz .quiz-answer:not(.nohover):hover {
     background: #f7f7f7;
     color: #000;
     border: 1px solid #d7dada;
 }
+
+.quiz-result-wrapper .quiz-essay {
+    padding: 10px 20px !important;
+}
+
+/*.quiz-result-wrapper .quiz-answer:hover {
+    background: none;
+}*/
 
 .quiz-wrapper .quiz .quiz-answer.selected {
     border: 1px solid #d7dada;
@@ -1248,9 +1256,8 @@ header .lecture-nav a.nav-btn:hover {
 }
 
 .quiz-wrapper .quiz .quiz-result-wrapper .quiz-answer-icon i {
-    float: right;
-    margin-top: -18px;
-    margin-right: -50px;
+    margin-top: 4px;
+    margin-left: -30px;
     display: none;
 }
 
