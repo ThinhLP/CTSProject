@@ -1075,12 +1075,12 @@ header .lecture-nav a.nav-btn:hover {
 .quiz-wrapper {
     border: 1px solid #d7dada;
     border-radius: 5px;
-    min-height:500px;
+    min-height: 500px;
 }
 
 .quiz-wrapper .quiz {
-    padding: 35px 35px 80px 35px;
-    max-width: 550px;
+    padding: 35px 0px 80px 0px;
+    max-width: 620px;
     margin: 0 auto;
 }
 
@@ -1101,6 +1101,10 @@ header .lecture-nav a.nav-btn:hover {
 
 .quiz-wrapper .quiz .quiz-action-result {
     margin-bottom: 50px !important;
+}
+
+.quiz-wrapper .quiz .quiz-action-result .quiz-do-again i {
+    margin-right: 10px;
 }
 
 .quiz-result-wrapper {
@@ -1274,14 +1278,21 @@ header .lecture-nav a.nav-btn:hover {
     display: flex;
     height: 40px;
     width: 100%;
-    padding: 0px 70px;
+    padding: 0px 30px;
 }
 
 .quiz .quiz-result-detail > div {
-    width: 50%;
     line-height: 40px;
     text-align: center;
     border: 1px solid #ccc;
+}
+
+.quiz .quiz-result-detail > div:nth-child(1) {
+    width: 40%;
+}
+
+.quiz .quiz-result-detail > div:nth-child(2) {
+    width: 60%;
 }
 
 .quiz .quiz-result-detail .result-wrapper-left {
@@ -1290,6 +1301,16 @@ header .lecture-nav a.nav-btn:hover {
     background: #eee;
     text-align: left;
     padding-left: 10px;
+}
+
+.quiz .quiz-result-detail.middle {
+    border: none !important;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+.quiz .quiz-result-detail.middle > div {
+    border-bottom: none !important;
 }
 
 .quiz .quiz-result-detail .result-wrapper-right {
@@ -1849,6 +1870,7 @@ header .lecture-nav a.nav-btn:hover {
 .question-list .question-wrapper {
     display: none;
 }
+
 .question-list .question-wrapper:first-child {
     display: block;
 }
