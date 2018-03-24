@@ -2,13 +2,25 @@ a {
     text-decoration: none;
 }
 
+i {
+    margin-right: 10px;
+}
+
 .content-wrapper {
     display: flex;
     padding: 0;
 }
 
+.content-wrapper.one-container {
+    display: block;
+}
+
 .content-wrapper .left-container {
     padding: 15px 15px 15px 0px;
+}
+
+.content-wrapper .center-container {
+    padding: 15px 0px 15px 0px;
 }
 
 /* PLAN-PROGRESS-WRAPPER */
@@ -79,6 +91,10 @@ a {
     color: #545665;
 }
 
+.section-report-chart .chart-title i {
+    color: #add8e6;
+}
+
 .section-report-chart .chart-title .chart-icon {
     margin-right: 15px;
     color: #add8e6;
@@ -95,6 +111,28 @@ a {
 .chart-container > .donutchart {
     margin-right: 10px;
     margin-left: 10px;
+}
+
+
+.chart-container .empty-detail-container {
+    float: none !important;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.chart-container .empty-detail-container div {
+    margin-top: 30px;
+}
+
+.chart-container .empty-detail-container div > span {
+    background: #FFF;
+    padding: 5px 12px;
+    color: #2196F3;
+    border-radius: 20px;
+    border: 1px solid #2196F3;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .section-report-chart .chart-container > div {
@@ -133,6 +171,22 @@ table {
 
 .table-learner-detail-wrapper {
     width: 100%;
+    border: none;
+    box-shadow: none;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+.table-learner-detail-wrapper h2 {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.table-learner-detail-wrapper .search-box {
+    float: right;
+    margin-right: 0px;
+    width: 250px;
 }
 
 .table-data {
@@ -144,10 +198,20 @@ table {
 }
 
 .table-data .view-detail {
-    background: #2196F3;
-    padding: 5px 10px;
-    color: #fff;
+    background: #FFF;
+    padding: 5px 12px;
+    color: #2196F3;
     border-radius: 20px;
+    border: 1px solid #2196F3;
+}
+
+.table-data .view-detail i {
+    margin-right: 0
+}
+
+.table-data .view-detail:hover {
+    background: #e8f4fd;
+    transition: .25s;
 }
 
 .table-data .progress-detail {
@@ -155,12 +219,15 @@ table {
     padding: 5px 20px;
     color: #fff;
     border-radius: 20px;
-
+    height: 28px;
+    line-height: 18px;
+    text-align: center;
+    width: 100%;
 }
 
 .table-header,
-td {
-    padding: 7px 13px;
+.list-learner td {
+    padding: 7px 0px;
     border-bottom: 1px solid #eef0f0;
     color: #000;
     line-height: 20px;
@@ -178,10 +245,147 @@ td {
     margin-right: 15px;
 }
 
-td {
+.list-learner td {
     cursor: pointer;
     font-size: 13px;
     text-transform: none;
-    padding: 7px 13px!important;
+    padding: 7px 0px !important;
     line-height: 29px;
+}
+
+td.view-detail-row {
+    text-align: right;
+}
+
+.detail-info-container {
+    float: none !important;
+    padding: 20px;
+    height: 1000px;
+}
+
+.detail-info-container h2 {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.select-learner-plans {
+    padding: 6px 13px;
+    text-align: left;
+    background: #fff;
+    color: #47807b;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    cursor: pointer;
+}
+
+.select-learner-plans i {
+    margin-left: 7px;
+    color: #809196!important;
+    float: right;
+    margin-top: 4px;
+}
+
+.select-learner-plans .feedback-option.plan-option {
+    width: 450px;
+    position: absolute;
+    left: 20px;
+    margin-top: 15px;
+}
+
+.select-learner-plans:hover {
+    background: #fff;
+    transition: .25s;
+    color: #1ea69a!important;
+    border: 1px solid #1ea69a!important;
+}
+
+.detail-info-container .learner-info-wrapper {
+    display: flex;
+    padding-left: 20px;
+}
+
+.detail-info-container .learner-avatar {
+    width: 20%;
+}
+
+.detail-info-container .learner-detail {
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: #2c2c2c;
+    /*border: 1px solid #eee;
+padding: 20px;
+box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
+border-radius: .1875rem;*/
+}
+
+.detail-info-container .learner-detail h1 {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.detail-info-container .learner-detail h5 {
+    font-size: 15px;
+}
+
+.detail-info-container .learner-detail td {
+    width: 85px;
+}
+
+.detail-info-container .learner-detail > table > tbody > tr > td.title-learner {
+    color: #47505e;
+}
+
+.detail-info-container .learner-detail > table > tbody > tr > td.content {
+    color: #20272d;
+    font-weight: bolder;
+}
+
+.detail-info-container .learner-avatar img {
+    object-fit: cover;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
+    border-radius: .1875rem;
+}
+
+.detail-info-container .learner-plan-progress {
+    width: 20%;
+    margin-right: 10px;
+    margin-left: 20px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
+    border-radius: .1875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.detail-info-container .learner-plan-progress .darker {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: .1875rem;
+    z-index: 1;
+}
+
+.detail-info-container .learner-plan-progress .image-plan {
+    position: absolute;
+    z-index: 0;
+    height: 167px;
+    border-radius: .1875rem;
+}
+
+.detail-info-container .learner-plan-progress .image-plan img {
+    border-radius: .1875rem;
+}
+
+.detail-info-container .learner-plan-progress .learn-plan-percentage {
+    z-index: 2;
+}
+
+.program-participated-wrapper {
+    padding: 20px;
+    margin-top: 30px;
 }
