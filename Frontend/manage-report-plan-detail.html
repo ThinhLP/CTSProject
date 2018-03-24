@@ -78,92 +78,214 @@
             </div>
         </div>
         <div class="main-container">
-            <div class="content-wrapper col-md-12">
-                <div class="col-md-9 left-container">
-                    <div class="section-content section-report-chart" id="calendar-timetable-wrapper">
+            <div class="content-wrapper one-container col-md-12">
+                <div class="col-md-12 center-container">
+                    <div class="section-content section-report-chart">
                         <div class="chart-title">
-                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch công khai và không công khai
+                            <i class="fa fa-tasks" aria-hidden="true"></i>Danh sách các học viên
                         </div>
-                        <div class="chart-container">
-                            <div id="barchart_material"></div>
-                        </div>
-                    </div>
-                    <div class="double-chart-container">
-                        <div class="chart-wrapper" id="calendar-timetable-wrapper">
-                            <div class="section-content section-report-chart">
-                                <div class="chart-title">
-                                    <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê tổng số kế hoạch
-                                </div>
-                                <div class="chart-container">
-                                    <div id="donutchart1" class="donutchart"></div>
-                                </div>
+                        <div class="table-learner-detail-wrapper section-content">
+                            <div class="search-box col-md-6 ">
+                                <input name="name " type="text " class="form-input " placeholder="Tìm kiếm học viên " />
+                                <div class="icon-search "><i class="fa fa-search "></i></div>
                             </div>
-                        </div>
-                        <!-- Thống kê số học viên boàn thành tiến độ và bị trễ tiến độ  -->
-                        <div class="chart-wrapper" id="calendar-timetable-wrapper">
-                            <div class="section-content section-report-chart">
-                                <div class="chart-title">
-                                    <i class="fa fa-leanpub chart-icon" aria-hidden="true"></i>Kết quả học tập của học viên
-                                </div>
-                                <div class="chart-container">
-                                    <div id="donutchart2" class="donutchart"></div>
+                            <table class="list-learner">
+                                <tbody>
+                                    <tr>
+                                        <th class="table-header">Họ tên</th>
+                                        <th class="table-header">Địa chỉ Email</th>
+                                        <th class="table-header">Ngày tham gia</th>
+                                        <th class="table-header">Phòng ban</th>
+                                        <!--<th class="table-header">Tiến độ học</th>-->
+                                        <th class="table-header"></th>
+                                    </tr>
+                                    <tr class="table-data">
+                                        <td>Võ Thạch Nguyên</td>
+                                        <td>nguyen.superman@gmail.com</td>
+                                        <td>15/03/2018</td>
+                                        <td>SRU</td>
+                                        <!--<td><span class="progress-detail">55%</span></td>-->
+                                        <!--<td><span class="view-detail"><i class="fa fa-info" aria-hidden="true"></i></span></td>-->
+                                        <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                    </tr>
+                                    <tr class="table-data">
+                                        <td>Võ Thạch Nguyên</td>
+                                        <td>nguyen.superman@gmail.com</td>
+                                        <td>15/03/2018</td>
+                                        <td>BUSCU</td>
+                                        <!--<td><span class="progress-detail">55%</span></td>-->
+                                        <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                    </tr>
+                                    <tr class="table-data">
+                                        <td>Võ Thạch Nguyên</td>
+                                        <td>nguyen.superman@gmail.com</td>
+                                        <td>15/03/2018</td>
+                                        <td>FSU</td>
+                                        <!--<td><span class="progress-detail">55%</span></td>-->
+                                        <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                    </tr>
+                                    <tr class="table-data">
+                                        <td>Võ Thạch Nguyên</td>
+                                        <td>nguyen.superman@gmail.com</td>
+                                        <td>15/03/2018</td>
+                                        <td>Quản lí nhân sự</td>
+                                        <!--<td><span class="progress-detail">55%</span></td>-->
+                                        <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pagination-container ">
+                                <div style="display: inline-block ">
+                                    <ul class="pagination ">
+                                        <li class="page-item "><a href="# " class="page-link ">&#9664;<div class="ripple-container "></div></a></li>
+                                        <li class="page-item "><a href="# " class="page-link ">1</a></li>
+                                        <li class="page-item "><a href="# " class="page-link ">2</a></li>
+                                        <li class="active page-item "><a href="# " class="page-link ">3</a></li>
+                                        <li class="page-item "><a href="# " class="page-link ">4</a></li>
+                                        <li class="page-item "><a href="# " class="page-link ">5</a></li>
+                                        <li class="page-item "><a href="# " class="page-link ">&#9654;</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 plan-progress-wrapper">
-                    <h2>Tiến độ các kế hoạch</h2>
-                    <ul>
-                        <li data-toggle="modal" data-target="#viewDetailModal">
-                            <a>
-                                <span class="plan-name">Đào tạo Web Developer</span><br/>
-                                <span class="plan-progress">64/100 học viên hoàn thành</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="plan-name">Đào tạo Mobile Developer</span><br/>
-                                <span class="plan-progress">88/100 học viên hoàn thành</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="plan-name">Đào tạo Tester</span><br/>
-                                <span class="plan-progress">20/100 học viên hoàn thành</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="plan-name">Đào tạo Hack like, hack facebook</span><br/>
-                                <span class="plan-progress">100/100 học viên hoàn thành</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="plan-name">Đào tạo Web Developer</span><br/>
-                                <span class="plan-progress">64/100 học viên hoàn thành</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="plan-name">Đào tạo Mobile Developer</span><br/>
-                                <span class="plan-progress">88/100 học viên hoàn thành</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="plan-name">Đào tạo Tester</span><br/>
-                                <span class="plan-progress">20/100 học viên hoàn thành</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="plan-name">Đào tạo Hack like, hack facebook</span><br/>
-                                <span class="plan-progress">100/100 học viên hoàn thành</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="col-md-12 center-container">
+                    <div class="section-content section-report-chart">
+                        <div class="chart-title">
+                            <i class="fa fa-tasks" aria-hidden="true"></i>Thông tin chi tiết học viên
+                        </div>
+                        <div class="chart-container">
+                            <div class="empty-detail-container" id="empty-detail-learner-info" style="display: none;">
+                                <img src="./resources/images/icon-users.svg" /><br/>
+                                <div>Nhấn <span>Xem chi tiết</span> để xem thông tin học viên</div>
+                            </div>
+                            <div class="detail-info-container" style="display: block;">
+                                <div class="learner-info-wrapper">
+                                    <div class="learner-avatar">
+                                        <img src="./resources/images/sample_avatar.jpg" style="width: 100%; height: 167px;" />
+                                    </div>
+                                    <div class="learner-plan-progress">
+                                        <div class="darker"></div>
+                                        <div class="image-plan">
+                                            <img src="./resources/images/course1.jpeg" style="width: 100%; height: 100%;" />
+                                        </div>
+                                        <div class="learn-plan-percentage">
+                                            <div class="progress-circle p10 ">
+                                                <span>10%</span>
+                                                <div class="left-half-clipper ">
+                                                    <div class="first50-bar "></div>
+                                                    <div class="value-bar "></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="learner-detail">
+                                        <h1>Lê Phúc Thịnh</h1>
+                                        <table border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="title-learner">Phòng ban:</td>
+                                                    <td class="content">SRUUUUUU</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-learner">Chức vụ:</td>
+                                                    <td class="content">Project Member</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-learner">Email:</td>
+                                                    <td class="content">thinhpl@superman.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-learner">Ngày tạo tài khoản:</td>
+                                                    <td class="content">Thứ 5, 22/11/2016</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-learner">Số lần đăng nhập:</td>
+                                                    <td class="content">31</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="title-learner">Đăng nhập lần cuối:</td>
+                                                    <td class="content">Thứ 6, 13/3/2018</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--<h5>Phòng ban: SRUUUUUU</h5>
+                                        <h5>Chức vụ: Project Member</h5>
+                                        <h5>Email: thinhpl@superman.com</h5>-->
+                                    </div>
+                                </div>
+                                <div class="program-participated-wrapper">
+                                    <table class="list-learner">
+                                        <tbody>
+                                            <tr>
+                                                <th class="table-header">Tên chương trình</th>
+                                                <th class="table-header">Thời gian bắt đầu</th>
+                                                <th class="table-header">Thời gian kết thúc</th>
+                                                <th class="table-header">Tiến độ học</th>
+                                                <th class="table-header"></th>
+                                            </tr>
+                                            <tr class="table-data">
+                                                <td>Đào tạo hacker</td>
+                                                <td>11/09/2017</td>
+                                                <td>15/03/2018</td>
+                                                <td>
+                                                    <div class="progress-detail">55%</div>
+                                                </td>
+                                                <!--<td><span class="progress-detail">55%</span></td>-->
+                                                <!--<td><span class="view-detail"><i class="fa fa-info" aria-hidden="true"></i></span></td>-->
+                                                <!--<td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>-->
+                                            </tr>
+                                            <tr class="table-data">
+                                                <td>Đào tạo hack like</td>
+                                                <td>22/11/2017</td>
+                                                <td>15/03/2018</td>
+                                                <td>
+                                                    <div class="progress-detail">55%</div>
+                                                </td>
+                                                <!--<td><span class="progress-detail">55%</span></td>-->
+                                                <!--<td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>-->
+                                            </tr>
+                                            <tr class="table-data">
+                                                <td>Đào tạo hack fanpage</td>
+                                                <td>01/02/2018</td>
+                                                <td>15/03/2018</td>
+                                                <td>
+                                                    <div class="progress-detail">55%</div>
+                                                </td>
+                                                <!--<td><span class="progress-detail">55%</span></td>-->
+                                                <!--<td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>-->
+                                            </tr>
+                                            <tr class="table-data">
+                                                <td>Đào tạo hack comment</td>
+                                                <td>11/11/2017</td>
+                                                <td>15/03/2018</td>
+                                                <td>
+                                                    <div class="progress-detail">55%</div>
+                                                </td>
+                                                <!--<td><span class="progress-detail">55%</span></td>-->
+                                                <!--<td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>-->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--<div>
+                                    <h2>Tổng quan</h2>
+                                </div>
+                                <div class="select-learner-plans">
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <a class="choose-plan">Chọn kế hoạch</a>
+                                    <ul class="feedback-option plan-option" style="display: none">
+                                        <li>Đào tạo Web Developer</li>
+                                        <li>Đào tạo Mobile Developer</li>
+                                        <li>Đào tạo hack like, hack facebook</li>
+                                        <li>Đào tạo cách pass môn thầy Khánh</li>
+                                        <li>Đào tạo cách giết chết những thằng ngu</li>
+                                    </ul>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -175,7 +297,16 @@
     <script src="./dist/js/traisy.min.js "></script>
 
     <script type="text/javascript">
-        google.charts.load('current', {
+        $(function() {
+            $('.choose-plan').on('click', function() {
+                var parent = $(this).closest('.detail-info-container')
+                parent.find('.feedback-option').show()
+            });
+        });
+
+
+
+        /*google.charts.load('current', {
             'packages': ['corechart']
         });
         google.charts.setOnLoadCallback(drawPieChart);
@@ -243,14 +374,6 @@
                 legend: 'none',
                 pieStartAngle: 130,
                 pieSliceText: 'none',
-                /*slices: {
-                    0: {
-                        color: '#880044'
-                    },
-                    1: {
-                        color: '#DD1155'
-                    }
-                },*/
                 slices: {
                     0: {
                         color: '#496F5D'
@@ -283,8 +406,6 @@
 
             var options = {
                 chart: {
-                    /* title: 'Company Performance',
-                     subtitle: 'Sales, Expenses, and Profit: 2014-2017',*/
                 },
                 chartArea: {
                     width: '80%',
@@ -301,8 +422,8 @@
                 fontSize: 15,
                 width: 600,
                 height: 300,
-                /*isStacked: true,*/
-                bars: 'horizontal' // Required for Material Bar Charts.
+
+                bars: 'horizontal'
             };
 
             var chart = new google.charts.Bar(document.getElementById('barchart_material'));
@@ -382,7 +503,7 @@
 
             var chart = new google.visualization.PieChart(document.getElementById('plan-detail-chart'));
             chart.draw(data, options);
-        }
+        }*/
 
     </script>
 </body>

@@ -243,10 +243,14 @@ h2.sub-heading .small {
 
 .form-input:focus {
     border-color: #c2c2c2;
+    -webkit-transition: .25s;
+    transition: .25s;
 }
 
 .form-input.has-error:focus {
     border-color: #d4604b;
+    -webkit-transition: .25s;
+    transition: .25s;
 }
 
 .course-media {
