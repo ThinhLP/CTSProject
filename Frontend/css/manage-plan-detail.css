@@ -623,6 +623,21 @@ h5 {
     background: #fff;
 }
 
+.education-tab-item .item-unselect{
+    display: block;
+}
+
+.education-tab-item .item-select {
+    display: none;
+}
+
+.education-tab-item.active .item-unselect {
+    display: none;
+}
+.education-tab-item.active .item-select {
+    display: block;
+}
+
 /*.education-side-bar li:last-child {
     border-bottom: 0px;
 }*/
@@ -683,6 +698,12 @@ h5 {
     margin-bottom: 0;
 }
 
+.program-item-img {
+    width: 115px;
+    height: 115px; 
+    border-radius: 5%;
+} 
+
 .program-item img {
     width: 115px;
     height: 115px;
@@ -690,6 +711,7 @@ h5 {
     z-index: 2;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
 }
+
 
 
 .program-item div.program-content {

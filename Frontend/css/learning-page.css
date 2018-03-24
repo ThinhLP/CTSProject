@@ -540,7 +540,6 @@ header .lecture-nav a.nav-btn:hover {
     margin-left: 5px;
     padding-top: 11px;
     margin-right: 20px;
-    padding-right: 16px;
 }
 
 .course-section ul.section-list .section-item .status-icon {
@@ -2016,4 +2015,23 @@ header .lecture-nav a.nav-btn:hover {
     display: block;
     z-index: 100;
     background: #fff;
+}
+
+.feedback-option li {
+    padding: 8px 14px!important;
+    -webkit-transition: none;
+    transition: none;
+    font-size: 12px;
+    color: #80848e;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    text-transform: none;
+}
+
+.feedback-option li:hover {
+    border-radius: 0;
+    background: #fbfbfb!important;
+    color: #ff7f45!important;
 }

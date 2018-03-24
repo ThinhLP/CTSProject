@@ -37,7 +37,7 @@ a#change-avatar {
 .img-circle {
     border-radius: 50%;
     width: 120px;
-    margin-bottom: 10px;
+    height: 120px;
     z-index: 1;
     cursor: pointer;
 }
