@@ -39,92 +39,98 @@
             </div>
         </div>
     </header>
-    <div class="course-sidebar">
-        <div class="minimize-sidebar">
-            <i class="fa fa-compress" aria-hidden="true"></i>Thu nhỏ cửa sổ
-        </div>
-        <h2>Introduction to Javascript</h2>
-        <div class="course-progress">
-            <div class="progressbar">
-                <div class="progressbar-fill" style="min-width: 47%;"></div>
+    <div class="course-main-container">
+        <div class="course-sidebar" style="display: block">
+            <div class="minimize-sidebar">
+                <i class="fa fa-compress" aria-hidden="true"></i>Thu nhỏ cửa sổ
             </div>
-            <div class="small course-progress"><span class="percentage">47%</span></div>
-        </div>
-        <div class="row lecture-sidebar">
-            <div class="col-sm-12 course-section">
-                <div class="section-title">Chương 1: Javascript căn bản</div>
-                <ul class="section-list">
-                    <li class="section-item completed">
-                        <a class="item">
+            <h2>Introduction to Javascript</h2>
+            <div class="course-progress">
+                <div class="progressbar">
+                    <div class="progressbar-fill" style="min-width: 47%;"></div>
+                </div>
+                <div class="small course-progress"><span class="percentage">47%</span></div>
+            </div>
+            <div class="row lecture-sidebar">
+                <div class="col-sm-12 course-section">
+                    <div class="section-title">Chương 1: Javascript căn bản</div>
+                    <ul class="section-list">
+                        <li class="section-item completed">
+                            <a class="item">
                         <span class="status-container"><i class="fa fa-check-circle status-icon" aria-hidden="true"></i></span>
                         <div class="title-container">
                         <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
                         <span class="lecture-name">Bài 1: Hello World</span>
                         </div>
                         </a>
-                    </li>
+                        </li>
 
-                    <li class="section-item incomplete next-lecture">
-                        <a class="item">
+                        <li class="section-item incomplete next-lecture">
+                            <a class="item">
                         <span class="status-container"><i class="fa fa-adjust status-icon" aria-hidden="true"></i></span>
                         <div class="title-container">
                         <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
                         <span class="lecture-name">Bài 2: Lâp trình hướng đối tượng</span>
                         </div>
                         </a>
-                    </li>
+                        </li>
 
-                    <li class="section-item incomplete">
-                        <a class="item">
+                        <li class="section-item incomplete">
+                            <a class="item">
                         <span class="status-container"><i class="fa fa-circle-o status-icon" aria-hidden="true"></i></span>
                         <div class="title-container">
                         <span class="lecture-icon"><i class="fa fa-file-text"></i></span>
                         <span class="lecture-name">Bài 3: Làm việc với database</span>
                         </div>
                         </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="course-mainbar lecture-content">
-        <h2 id="lecture_heading" class="section-title">Bài 3: Làm việc với database</h2>
-        <div class="quiz-wrapper">
-            <div class="quiz-timing">15:45</div>
-            <div class="quiz">
-                <div class="quiz-progress">1/15</div>
-                <div class="quiz-question">Hello World là gì ?</div>
-                <div>
-                    <div class="quiz-answer">
-                        <div class="answer-selection" style="display: none"><input type="checkbox" /></div>
-                        <div class="answer-selection" style="display: block"><input type="radio" name="answer-value" /></div>
-                        <div class="answer-description">Chào thế giới</div>
-                    </div>
-                    <div class="quiz-answer">
-                        <div class="answer-selection" style="display: none"><input type="checkbox" /></div>
-                        <div class="answer-selection" style="display: block"><input type="radio" name="answer-value" /></div>
-                        <div class="answer-description">Chào Nguyên</div>
-                    </div>
-                    <div class="quiz-answer">
-                        <div class="answer-selection" style="display: none"><input type="checkbox" /></div>
-                        <div class="answer-selection" style="display: block"><input type="radio" name="answer-value" /></div>
-                        <div class="answer-description">Chào quan viên hai họ</div>
-                    </div>
-                    <div class="quiz-answer">
-                        <div class="answer-selection" style="display: none"><input type="checkbox" /></div>
-                        <div class="answer-selection" style="display: block"><input type="radio" name="answer-value" /></div>
-                        <div class="answer-description">Chào chư vị bồi thẩm đoàn</div>
-                    </div>
-                </div>
-                <div class="editor">
-                    <textarea name="name" class="form-textarea" placeholder="Điền câu trả lời ở đây"></textarea>
-                </div>
-                <div class="quiz-action">
-                    <div class="quiz-next pull-right btn btn-primary">Kế tiếp</div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <div class="expand-sidebar" style="display: none" title="Mở rộng cửa sổ">
+            <i class="fa fa-expand" aria-hidden="true"></i>
+        </div>
+        <div class="course-mainbar lecture-content">
+            <h2 id="lecture_heading" class="section-title">Bài 3: Làm việc với database</h2>
+            <div class="quiz-wrapper">
+                <div class="quiz-timing">15:45</div>
+                <div class="quiz">
+                    <div class="quiz-progress">1/15</div>
+                    <div class="quiz-question">Hello World là gì ?</div>
+                    <div>
+                        <div class="quiz-answer">
+                            <div class="answer-selection" style="display: none"><input type="checkbox" /></div>
+                            <div class="answer-selection" style="display: block"><input type="radio" name="answer-value" /></div>
+                            <div class="answer-description">Chào thế giới</div>
+                        </div>
+                        <div class="quiz-answer">
+                            <div class="answer-selection" style="display: none"><input type="checkbox" /></div>
+                            <div class="answer-selection" style="display: block"><input type="radio" name="answer-value" /></div>
+                            <div class="answer-description">Chào Nguyên</div>
+                        </div>
+                        <div class="quiz-answer">
+                            <div class="answer-selection" style="display: none"><input type="checkbox" /></div>
+                            <div class="answer-selection" style="display: block"><input type="radio" name="answer-value" /></div>
+                            <div class="answer-description">Chào quan viên hai họ</div>
+                        </div>
+                        <div class="quiz-answer">
+                            <div class="answer-selection" style="display: none"><input type="checkbox" /></div>
+                            <div class="answer-selection" style="display: block"><input type="radio" name="answer-value" /></div>
+                            <div class="answer-description">Chào chư vị bồi thẩm đoàn</div>
+                        </div>
+                    </div>
+                    <div class="editor">
+                        <textarea name="name" class="form-textarea" placeholder="Điền câu trả lời ở đây"></textarea>
+                    </div>
+                    <div class="quiz-action">
+                        <div class="quiz-next pull-right btn btn-primary">Kế tiếp</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <script src="./resources/jquery-3.3.1.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
@@ -132,6 +138,7 @@
     <script src="./resources/flowplayer/dash/dash.mediaplayer.min.js"></script>
     <script src="./resources/flowplayer/dash/flowplayer.dashjs.js"></script>
     <script src="./resources/PlayerLoader.js"></script>
+    <script src="./resources/tippy.all.min.js"></script>
     <script src="./dist/js/traisy.min.js "></script>
     <script>
         $(document).ready(function() {
@@ -159,7 +166,27 @@
         });
 
         $(function() {
-            var page = new ManageMasterpage();
+            /*var page = new ManageMasterpage();*/
+
+            tippy('.expand-sidebar', {
+                placement: 'right',
+            })
+
+            tippy('.minimize-sidebar', {
+                placement: 'right',
+            })
+
+            $('.minimize-sidebar').on('click', function() {
+                var parent = $(this).closest('.course-main-container')
+                parent.find('.course-sidebar').hide()
+                parent.find('.expand-sidebar').show()
+            })
+
+            $('.expand-sidebar').on('click', function() {
+                var parent = $(this).closest('.course-main-container')
+                parent.find('.expand-sidebar').hide()
+                parent.find('.course-sidebar').show()
+            })
         });
 
     </script>

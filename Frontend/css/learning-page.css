@@ -9,9 +9,7 @@ html {
 }
 
 body {
-    min-height: 100%;
     position: relative;
-    margin: 0 !important;
     background-color: #fff;
 }
 
@@ -91,8 +89,6 @@ header.learner-navbar {
 
 header.full-width {
     background-color: #2b3636;
-    top: 0;
-    position: fixed;
     width: 100%;
 }
 
@@ -344,18 +340,38 @@ header .lecture-nav a.nav-btn:hover {
     vertical-align: middle;
 }
 
+.course-main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.expand-sidebar {
+    background: red;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 45%;
+    border-top-right-radius: 50%;
+    line-height: 50px;
+    padding-left: 15px;
+    border-bottom-right-radius: 50%;
+    left: 0px;
+    color: #fff;
+    background: #ccc;
+    z-index: 100;
+    cursor: pointer;
+}
+
 .course-sidebar {
-    width: 350px;
-    margin-top: 46px;
+    width: 40%;
     background-color: #f7f7f7;
     height: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
     border-right: 1px solid #D7DADB;
-    padding-bottom: 30px;
+    position: relative;
+    /*padding-bottom: 30px;
     position: fixed;
     overflow: scroll;
-    display: inline-block;
+    display: inline-block;*/
 }
 
 .course-sidebar img.course-image {
@@ -365,15 +381,16 @@ header .lecture-nav a.nav-btn:hover {
 }
 
 .course-sidebar .minimize-sidebar {
-    left: 25%;
+    left: 17%;
     background: #ccc;
-    width: 50%;
+    width: 200px;
     height: 46px;
     position: absolute;
     border-radius: 50px;
     margin-bottom: 10px;
-    z-index: 100;
-    bottom: 46px;
+    padding-left: 20px;
+    padding-right: 20px;
+    bottom: 0;
     color: #fff;
     text-align: center;
     line-height: 46px;
@@ -459,10 +476,9 @@ header .lecture-nav a.nav-btn:hover {
 }
 
 .course-mainbar {
-    margin-left: 350px;
+    width: 100%;
     background: #fff;
-    padding: 40px;
-    padding-top: 100px;
+    padding: 60px;
     height: auto;
 }
 
@@ -1088,7 +1104,7 @@ header .lecture-nav a.nav-btn:hover {
 }
 
 .quiz-wrapper .quiz {
-    padding: 35px 0px 80px 0px;
+    padding: 35px 20px 80px 20px;
     max-width: 620px;
     margin: 0 auto;
 }
