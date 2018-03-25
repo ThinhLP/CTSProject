@@ -112,6 +112,14 @@ header .lecture-nav a.nav-btn {
     border-left: 1px solid rgba(215, 218, 219, 0.3);
 }
 
+header .lecture-nav a.nav-btn i {
+    margin-right: 5px;
+}
+
+header .lecture-nav a.nav-btn.complete i {
+    margin-left: 5px;
+}
+
 header .lecture-nav a.nav-btn.complete,
 header .lecture-nav a.nav-btn:hover {
     background: #09A59A;
