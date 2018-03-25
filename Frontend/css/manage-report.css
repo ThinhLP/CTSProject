@@ -253,6 +253,20 @@ table {
     line-height: 29px;
 }
 
+.list-learner td .card-progress-wrapper {
+    margin-bottom: 0px !important;
+}
+
+.list-learner td .card-progress-bar {
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 13px;
+}
+
+.list-learner td .completed-progress {
+    height: 13px;
+}
+
 td.view-detail-row {
     text-align: right;
 }
