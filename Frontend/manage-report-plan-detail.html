@@ -82,49 +82,177 @@
                 <div class="col-md-12 center-container">
                     <div class="section-content section-report-chart">
                         <div class="chart-title">
-                            <i class="fa fa-tasks" aria-hidden="true"></i>Danh sách các học viên
+                            <i class="fa fa-tasks" aria-hidden="true"></i>Danh sách các học viên và tác giả
                         </div>
                         <div class="table-learner-detail-wrapper section-content">
+                            <div id="barchart_values" style="width: 800px; height: 150px;"></div>
+                            <div class="search-box col-md-6 dropdown-type-user">
+                                <a>Học viên</a>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <ul class="feedback-option type-user" style="display: none">
+                                    <li class="choose-show-learner">Học viên</li>
+                                    <li class="choose-show-author">Tác giả</li>
+                                </ul>
+                            </div>
                             <div class="search-box col-md-6 ">
-                                <input name="name " type="text " class="form-input " placeholder="Tìm kiếm học viên " />
+                                <input name="name " type="text " class="form-input search-user" placeholder="Tìm kiếm học viên " />
                                 <div class="icon-search "><i class="fa fa-search "></i></div>
                             </div>
-                            <table class="list-learner">
-                                <tbody>
-                                    <tr>
-                                        <th class="table-header">Họ tên</th>
-                                        <th class="table-header">Ngày tham gia</th>
-                                        <th class="table-header">Phòng ban</th>
-                                        <th class="table-header">Tiến độ học</th>
-                                        <th class="table-header"></th>
-                                    </tr>
-                                    <tr class="table-data">
-                                        <td>Võ Thạch Nguyên</td>
-                                        <td>15/03/2018</td>
-                                        <td>SRU</td>
-                                        <td>
-                                            <div class="card-progress-wrapper ">
-                                                <div class="card-progress-bar ">
-                                                    <div class="completed-progress " style="width: 20%; "></div>
+                            <div id="list-learner-wrapper" style="display: block">
+                                <table class="list-learner">
+                                    <tbody>
+                                        <tr>
+                                            <th class="table-header">Họ tên</th>
+                                            <th class="table-header">Ngày tham gia</th>
+                                            <th class="table-header">Phòng ban</th>
+                                            <th class="table-header">Tiến độ học</th>
+                                            <th class="table-header"></th>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Võ Thạch Nguyên</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>
+                                                <div class="card-progress-wrapper ">
+                                                    <div class="card-progress-bar ">
+                                                        <div class="completed-progress " style="width: 55%; "></div>
+                                                    </div>
+                                                    <div class="percentage">55%</div>
                                                 </div>
-                                                <div class="percentage">20%</div>
-                                            </div>
-                                        </td>
-                                        <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="pagination-container ">
-                                <div style="display: inline-block ">
-                                    <ul class="pagination ">
-                                        <li class="page-item "><a href="# " class="page-link ">&#9664;<div class="ripple-container "></div></a></li>
-                                        <li class="page-item "><a href="# " class="page-link ">1</a></li>
-                                        <li class="page-item "><a href="# " class="page-link ">2</a></li>
-                                        <li class="active page-item "><a href="# " class="page-link ">3</a></li>
-                                        <li class="page-item "><a href="# " class="page-link ">4</a></li>
-                                        <li class="page-item "><a href="# " class="page-link ">5</a></li>
-                                        <li class="page-item "><a href="# " class="page-link ">&#9654;</a></li>
-                                    </ul>
+                                            </td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Phúc Lê Thịnh</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>
+                                                <div class="card-progress-wrapper ">
+                                                    <div class="card-progress-bar ">
+                                                        <div class="completed-progress " style="width: 5%; "></div>
+                                                    </div>
+                                                    <div class="percentage">5%</div>
+                                                </div>
+                                            </td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Phạm Chánh Hưng</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>
+                                                <div class="card-progress-wrapper ">
+                                                    <div class="card-progress-bar ">
+                                                        <div class="completed-progress " style="width: 25%; "></div>
+                                                    </div>
+                                                    <div class="percentage">25%</div>
+                                                </div>
+                                            </td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Hưng Chánh Phạm</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>
+                                                <div class="card-progress-wrapper ">
+                                                    <div class="card-progress-bar ">
+                                                        <div class="completed-progress " style="width: 89%; "></div>
+                                                    </div>
+                                                    <div class="percentage">89%</div>
+                                                </div>
+                                            </td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Lê Phúc Thịnh</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>
+                                                <div class="card-progress-wrapper ">
+                                                    <div class="card-progress-bar ">
+                                                        <div class="completed-progress " style="width: 64%; "></div>
+                                                    </div>
+                                                    <div class="percentage">64%</div>
+                                                </div>
+                                            </td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="pagination-container ">
+                                    <div style="display: inline-block ">
+                                        <ul class="pagination ">
+                                            <li class="page-item "><a href="# " class="page-link ">&#9664;<div class="ripple-container "></div></a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">1</a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">2</a></li>
+                                            <li class="active page-item "><a href="# " class="page-link ">3</a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">4</a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">5</a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">&#9654;</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="list-author-wrapper" style="display: none">
+                                <table class="list-learner">
+                                    <tbody>
+                                        <tr>
+                                            <th class="table-header">Họ tên</th>
+                                            <th class="table-header">Ngày tham gia</th>
+                                            <th class="table-header">Phòng ban</th>
+                                            <th class="table-header">Số khoá học đã tạo</th>
+                                            <th class="table-header"></th>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Võ Thạch Nguyên</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>31</td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Thạch Nguyên Võ</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>12</td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Nguyên Võ Thạch</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>7</td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Võ Nguyên Thạch</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>4</td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                        <tr class="table-data">
+                                            <td>Nguyên Thạch Võ</td>
+                                            <td>15/03/2018</td>
+                                            <td>SRU</td>
+                                            <td>25</td>
+                                            <td class="view-detail-row"><span class="view-detail">Xem chi tiết</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="pagination-container ">
+                                    <div style="display: inline-block ">
+                                        <ul class="pagination ">
+                                            <li class="page-item "><a href="# " class="page-link ">&#9664;<div class="ripple-container "></div></a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">1</a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">2</a></li>
+                                            <li class="active page-item "><a href="# " class="page-link ">3</a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">4</a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">5</a></li>
+                                            <li class="page-item "><a href="# " class="page-link ">&#9654;</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -301,278 +429,286 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--<div class="program-participated-wrapper" style="display: block">
-                                    <table class="list-learner">
-                                        <tbody>
-                                            <tr>
-                                                <th class="table-header">Tên chương trình</th>
-                                                <th class="table-header">Thời gian bắt đầu</th>
-                                                <th class="table-header">Thời gian kết thúc</th>
-                                                <th class="table-header">Tiến độ học</th>
-                                                <th class="table-header"></th>
-                                            </tr>
-                                            <tr class="table-data">
-                                                <td>Đào tạo hacker</td>
-                                                <td>11/09/2017</td>
-                                                <td>15/03/2018</td>
-                                                <td>
-                                                    <div class="progress-detail">55%</div>
-                                                </td>
-                                            </tr>
-                                            <tr class="table-data">
-                                                <td>Đào tạo hack like</td>
-                                                <td>22/11/2017</td>
-                                                <td>15/03/2018</td>
-                                                <td>
-                                                    <div class="progress-detail">55%</div>
-                                                </td>
-                                            </tr>
-                                            <tr class="table-data">
-                                                <td>Đào tạo hack fanpage</td>
-                                                <td>01/02/2018</td>
-                                                <td>15/03/2018</td>
-                                                <td>
-                                                    <div class="progress-detail">55%</div>
-                                                </td>
-                                            </tr>
-                                            <tr class="table-data">
-                                                <td>Đào tạo hack comment</td>
-                                                <td>11/11/2017</td>
-                                                <td>15/03/2018</td>
-                                                <td>
-                                                    <div class="progress-detail">55%</div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>-->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="./resources/jquery-3.3.1.min.js"></script>
-        <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script src="./dist/js/traisy.min.js "></script>
+    <script src="./resources/jquery-3.3.1.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./dist/js/traisy.min.js "></script>
 
-        <script type="text/javascript">
-            $(function() {
-                $('.choose-plan').on('click', function() {
-                    var parent = $(this).closest('.detail-info-container')
-                    parent.find('.feedback-option').show()
-                });
-
-
-                $('.program-item').on('click', function() {
-                    var parent = $(this).closest('.program-course-info-wrapper')
-                    parent.find('.not-select-program').hide()
-                    parent.find('.list-course-wrapper').show()
-                })
+    <script type="text/javascript">
+        $(function() {
+            $('.choose-plan').on('click', function() {
+                var parent = $(this).closest('.detail-info-container')
+                parent.find('.feedback-option').show()
             });
 
 
-
-            /*google.charts.load('current', {
-                'packages': ['corechart']
+            $('.program-item').on('click', function() {
+                var parent = $(this).closest('.program-course-info-wrapper')
+                parent.find('.not-select-program').hide()
+                parent.find('.list-course-wrapper').show()
             });
-            google.charts.setOnLoadCallback(drawPieChart);
 
-            google.charts.load('current', {
-                'packages': ['bar']
+            $('.dropdown-type-user').on('click', function() {
+                var parent = $(this).closest('.table-learner-detail-wrapper')
+                parent.find('.type-user').show()
             });
-            google.charts.setOnLoadCallback(drawBarChart);
 
-            google.charts.load('current', {
-                'packages': ['timeline']
+            $('.choose-show-learner').on('click', function() {
+                var parent = $(this).closest('.table-learner-detail-wrapper')
+                parent.find('.search-user').attr('placeholder', 'Tìm kiếm học viên')
+                parent.find('#list-learner-wrapper').show();
+                parent.find('#list-author-wrapper').hide();
+                parent.find('.type-user').hide();
             });
-            google.charts.setOnLoadCallback(drawTimelineChart);
 
-            google.charts.load("current", {
-                packages: ["corechart"]
+            $('.choose-show-author').on('click', function() {
+                var parent = $(this).closest('.table-learner-detail-wrapper')
+                parent.find('.search-user').attr('placeholder', 'Tìm kiếm tác giả')
+                parent.find('#list-learner-wrapper').hide();
+                parent.find('#list-author-wrapper').show();
             });
-            google.charts.setOnLoadCallback(drawPlanDetailChart);
+        });
 
-            function drawPieChart() {
+        google.charts.load('current', {
+            'packages': ['bar']
+        });
+        google.charts.setOnLoadCallback(drawChart);
 
-                var dataActiveAndOutdatePlan = google.visualization.arrayToDataTable([
-                    ['Detail', 'Số kế hoạch khả dụng và hết hạn'],
-                    ['Đang hoạt động', 35],
-                    ['Hết hạn', 20],
-                ]);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['', 'Số lượng'],
+                ["Học viên", 44],
+                ["Tác giả", 31],
+            ]);
 
-                var dataTotalLearnerFinish = google.visualization.arrayToDataTable([
-                    ['Detail', 'Thống kê kết quả học viên'],
-                    ['Học viên hoàn thành đúng tiến độ', 412],
-                    ['Học viên bị trễ tiến độ', 138],
-                ]);
+            var options = {
+                colors: ['#1ea69a', '#1ea69a'],
+                width: 800,
+                height: 150,
+                bar: {
+                    groupWidth: "80%"
+                },
+                legend: {
+                    position: 'none'
+                },
+                fontName: 'Open Sans',
+                fontSize: 14,
+                bars: 'horizontal',
+            };
+            var chart = new google.charts.Bar(document.getElementById('barchart_values'));
+            chart.draw(data, options);
+            /*google.visualization.BarChart(document.getElementById("barchart_values"));
+                       chart.draw(view, options);*/
+        }
 
-                var options1 = {
-                    fontName: 'Open Sans',
-                    fontSize: 15,
-                    chartArea: {
-                        width: '92%',
-                        height: '92%'
+
+
+        /*google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawPieChart);
+
+        google.charts.load('current', {
+            'packages': ['bar']
+        });
+        google.charts.setOnLoadCallback(drawBarChart);
+
+        google.charts.load('current', {
+            'packages': ['timeline']
+        });
+        google.charts.setOnLoadCallback(drawTimelineChart);
+
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+        google.charts.setOnLoadCallback(drawPlanDetailChart);
+
+        function drawPieChart() {
+
+            var dataActiveAndOutdatePlan = google.visualization.arrayToDataTable([
+                ['Detail', 'Số kế hoạch khả dụng và hết hạn'],
+                ['Đang hoạt động', 35],
+                ['Hết hạn', 20],
+            ]);
+
+            var dataTotalLearnerFinish = google.visualization.arrayToDataTable([
+                ['Detail', 'Thống kê kết quả học viên'],
+                ['Học viên hoàn thành đúng tiến độ', 412],
+                ['Học viên bị trễ tiến độ', 138],
+            ]);
+
+            var options1 = {
+                fontName: 'Open Sans',
+                fontSize: 15,
+                chartArea: {
+                    width: '92%',
+                    height: '92%'
+                },
+                pieHole: 0.55,
+                legend: 'none',
+                pieStartAngle: 130,
+                pieSliceText: 'none',
+                slices: {
+                    0: {
+                        color: '#4C6085'
                     },
-                    pieHole: 0.55,
-                    legend: 'none',
-                    pieStartAngle: 130,
-                    pieSliceText: 'none',
-                    slices: {
-                        0: {
-                            color: '#4C6085'
-                        },
-                        1: {
-                            color: '#39A0ED'
-                        }
+                    1: {
+                        color: '#39A0ED'
+                    }
+                },
+                height: 200,
+                width: 200,
+            };
+
+            var options2 = {
+                fontName: 'Open Sans',
+                fontSize: 15,
+                chartArea: {
+                    width: '92%',
+                    height: '92%'
+                },
+                pieHole: 0.55,
+                legend: 'none',
+                pieStartAngle: 130,
+                pieSliceText: 'none',
+                slices: {
+                    0: {
+                        color: '#496F5D'
                     },
-                    height: 200,
-                    width: 200,
-                };
+                    1: {
+                        color: '#4C9F70'
+                    }
+                },
+                height: 200,
+                width: 200,
+            };
 
-                var options2 = {
-                    fontName: 'Open Sans',
-                    fontSize: 15,
-                    chartArea: {
-                        width: '92%',
-                        height: '92%'
+            var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
+            var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
+
+            chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options1);
+            chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options2);
+        }
+
+        function drawBarChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['', 'Công khai', 'Không công khai'],
+                ['Đào tạo Tester', 1000, 400],
+                ['Đào tạo Hack like, hack facebook', 1170, 460],
+                ['Đào tạo Web Developer', 660, 1120],
+                ['Đào tạo Mobile Developer', 1030, 540]
+            ]);
+
+
+
+            var options = {
+                chart: {
+                },
+                chartArea: {
+                    width: '80%',
+                    height: '100%',
+                },
+                bar: {
+                    groupWidth: "50%"
+                },
+                legend: {
+                    position: "none"
+                },
+                colors: ['#ff7f45', '#d95f02', '#7570b3'],
+                fontName: 'Open Sans',
+                fontSize: 15,
+                width: 600,
+                height: 300,
+
+                bars: 'horizontal'
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+
+        function drawTimelineChart() {
+            var container = document.getElementById('timeline');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+
+            dataTable.addColumn({
+                type: 'string',
+                id: 'President'
+            });
+            dataTable.addColumn({
+                type: 'date',
+                id: 'Start'
+            });
+            dataTable.addColumn({
+                type: 'date',
+                id: 'End'
+            });
+            dataTable.addRows([
+                ['Đào tạo Hack Like', new Date(2017, 5, 30), new Date(2017, 6, 30)],
+                ['Đào tạo Brute Force', new Date(2017, 4, 25), new Date(2017, 7, 15)],
+                ['Đào tạo Javascript Developer', new Date(2017, 8, 11), new Date(2017, 9, 20)],
+                ['Đào tạo Mobile Developer', new Date(2017, 11, 11), new Date(2018, 2, 5)]
+            ]);
+
+            var options = {
+                timeline: {
+                    groupByRowLabel: false,
+                    singleColor: '#1ea69a',
+                    barLabelStyle: {
+                        fontName: 'Open Sans',
+                        fontSize: 13
+                    }
+                },
+                fontName: 'Open Sans',
+                height: 500,
+                width: 700
+            };
+
+            chart.draw(dataTable, options);
+        }
+
+        function drawPlanDetailChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Học viên đã hoàn thành', 11],
+                ['Học viên chưa hoàn thành', 2],
+            ]);
+
+            var options = {
+                fontName: 'Open Sans',
+                fontSize: 15,
+                chartArea: {
+                    width: '90%',
+                    height: '90%'
+                },
+                is3D: true,
+                slices: {
+                    0: {
+                        color: '#496F5D'
                     },
-                    pieHole: 0.55,
-                    legend: 'none',
-                    pieStartAngle: 130,
-                    pieSliceText: 'none',
-                    slices: {
-                        0: {
-                            color: '#496F5D'
-                        },
-                        1: {
-                            color: '#4C9F70'
-                        }
-                    },
-                    height: 200,
-                    width: 200,
-                };
+                    1: {
+                        color: '#4C9F70'
+                    }
+                },
+                height: 220,
+                width: 220,
+                legend: 'none',
+                pieSliceText: 'value',
+            };
 
-                var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
-                var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
+            var chart = new google.visualization.PieChart(document.getElementById('plan-detail-chart'));
+            chart.draw(data, options);
+        }*/
 
-                chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options1);
-                chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options2);
-            }
-
-            function drawBarChart() {
-                var data = google.visualization.arrayToDataTable([
-                    ['', 'Công khai', 'Không công khai'],
-                    ['Đào tạo Tester', 1000, 400],
-                    ['Đào tạo Hack like, hack facebook', 1170, 460],
-                    ['Đào tạo Web Developer', 660, 1120],
-                    ['Đào tạo Mobile Developer', 1030, 540]
-                ]);
-
-
-
-                var options = {
-                    chart: {
-                    },
-                    chartArea: {
-                        width: '80%',
-                        height: '100%',
-                    },
-                    bar: {
-                        groupWidth: "50%"
-                    },
-                    legend: {
-                        position: "none"
-                    },
-                    colors: ['#ff7f45', '#d95f02', '#7570b3'],
-                    fontName: 'Open Sans',
-                    fontSize: 15,
-                    width: 600,
-                    height: 300,
-
-                    bars: 'horizontal'
-                };
-
-                var chart = new google.charts.Bar(document.getElementById('barchart_material'));
-
-                chart.draw(data, google.charts.Bar.convertOptions(options));
-            }
-
-            function drawTimelineChart() {
-                var container = document.getElementById('timeline');
-                var chart = new google.visualization.Timeline(container);
-                var dataTable = new google.visualization.DataTable();
-
-                dataTable.addColumn({
-                    type: 'string',
-                    id: 'President'
-                });
-                dataTable.addColumn({
-                    type: 'date',
-                    id: 'Start'
-                });
-                dataTable.addColumn({
-                    type: 'date',
-                    id: 'End'
-                });
-                dataTable.addRows([
-                    ['Đào tạo Hack Like', new Date(2017, 5, 30), new Date(2017, 6, 30)],
-                    ['Đào tạo Brute Force', new Date(2017, 4, 25), new Date(2017, 7, 15)],
-                    ['Đào tạo Javascript Developer', new Date(2017, 8, 11), new Date(2017, 9, 20)],
-                    ['Đào tạo Mobile Developer', new Date(2017, 11, 11), new Date(2018, 2, 5)]
-                ]);
-
-                var options = {
-                    timeline: {
-                        groupByRowLabel: false,
-                        singleColor: '#1ea69a',
-                        barLabelStyle: {
-                            fontName: 'Open Sans',
-                            fontSize: 13
-                        }
-                    },
-                    fontName: 'Open Sans',
-                    height: 500,
-                    width: 700
-                };
-
-                chart.draw(dataTable, options);
-            }
-
-            function drawPlanDetailChart() {
-                var data = google.visualization.arrayToDataTable([
-                    ['Task', 'Hours per Day'],
-                    ['Học viên đã hoàn thành', 11],
-                    ['Học viên chưa hoàn thành', 2],
-                ]);
-
-                var options = {
-                    fontName: 'Open Sans',
-                    fontSize: 15,
-                    chartArea: {
-                        width: '90%',
-                        height: '90%'
-                    },
-                    is3D: true,
-                    slices: {
-                        0: {
-                            color: '#496F5D'
-                        },
-                        1: {
-                            color: '#4C9F70'
-                        }
-                    },
-                    height: 220,
-                    width: 220,
-                    legend: 'none',
-                    pieSliceText: 'value',
-                };
-
-                var chart = new google.visualization.PieChart(document.getElementById('plan-detail-chart'));
-                chart.draw(data, options);
-            }*/
-
-        </script>
+    </script>
 </body>
