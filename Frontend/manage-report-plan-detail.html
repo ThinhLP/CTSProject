@@ -231,7 +231,7 @@
                                                     <div class="program-item">
                                                         <div class="program-proress"><span>55%</span></div>
                                                         <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java căn bản</h4>
+                                                            <h4>Lập trình Java hơi căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
                                                     </div>
@@ -240,7 +240,7 @@
                                                     <div class="program-item">
                                                         <div class="program-proress"><span>55%</span></div>
                                                         <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java căn bản</h4>
+                                                            <h4>Lập trình Java khá căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
                                                     </div>
@@ -249,7 +249,7 @@
                                                     <div class="program-item">
                                                         <div class="program-proress"><span>55%</span></div>
                                                         <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java căn bản</h4>
+                                                            <h4>Lập trình Java đại căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
                                                     </div>
@@ -258,7 +258,7 @@
                                                     <div class="program-item">
                                                         <div class="program-proress"><span>55%</span></div>
                                                         <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java</h4>
+                                                            <h4>Lập trình Java siêu căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
                                                     </div>
@@ -268,10 +268,8 @@
                                     </div>
                                     <div class="course-participated-wrapper">
                                         <h4>Thông tin các khoá học</h4>
-                                        <div class="not-select-program" style="display: flex">
-                                            <div>
-                                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><br/> Chọn một chương trình để xem chi tiết các khoá học
-                                            </div>
+                                        <div class="not-select-program" style="display: block">
+                                            Chọn một chương trình để xem chi tiết các khoá học
                                         </div>
                                         <div class="list-course-wrapper" style="display: none">
                                             <ul>
@@ -288,7 +286,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="course-item-info">
-                                                        <h4>Giới thiệu về Java</h4>
+                                                        <h4>Java vỡ lòng 1</h4>
                                                         <div class="card-progress-wrapper ">
                                                             <div class="card-progress-bar ">
                                                                 <div class="completed-progress " style="width: 20%; "></div>
@@ -299,7 +297,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="course-item-info">
-                                                        <h4>Giới thiệu về Java</h4>
+                                                        <h4>Java vỡ lòng 2</h4>
                                                         <div class="card-progress-wrapper ">
                                                             <div class="card-progress-bar ">
                                                                 <div class="completed-progress " style="width: 20%; "></div>
@@ -310,7 +308,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="course-item-info">
-                                                        <h4>Giới thiệu về Java</h4>
+                                                        <h4>Java vỡ lòng 3</h4>
                                                         <div class="card-progress-wrapper ">
                                                             <div class="card-progress-bar ">
                                                                 <div class="completed-progress " style="width: 20%; "></div>
@@ -386,6 +384,13 @@
                     var parent = $(this).closest('.detail-info-container')
                     parent.find('.feedback-option').show()
                 });
+
+
+                $('.program-item').on('click', function() {
+                    var parent = $(this).closest('.program-course-info-wrapper')
+                    parent.find('.not-select-program').hide()
+                    parent.find('.list-course-wrapper').show()
+                })
             });
 
 
