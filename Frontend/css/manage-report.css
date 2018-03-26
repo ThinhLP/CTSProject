@@ -100,7 +100,7 @@ i {
     color: #add8e6;
 }
 
-#calendar-timetable-wrapper .chart-container {
+.calendar-timetable-wrapper .chart-container {
     width: 100%;
     padding-bottom: 30px;
     display: flex;
