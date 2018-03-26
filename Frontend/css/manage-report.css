@@ -363,6 +363,13 @@ td.view-detail-row {
     padding-right: 20px;
 }
 
+.detail-info-container .author-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;*/
+}
+
 .detail-info-container .learner-avatar {
     width: 20%;
 }
@@ -461,6 +468,10 @@ border-radius: .1875rem;*/
     box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
+.learner-avatar.author-avatar .avatar-container {
+    margin-left: 45%;
+}
+
 .learner-avatar .progress-bar-container {
     margin-left: 10px;
     position: relative;
@@ -472,6 +483,17 @@ border-radius: .1875rem;*/
     background-size: cover;
     border-radius: 6px!important;
     box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.learner-avatar .progress-bar-container.fake-progress {
+    width: 30%;
+    background: #fff;
+    box-shadow: none;
+}
+
+.author-info-wrapper .avatar-container {
+    width: 60%;
+    margin-right: 50px;
 }
 
 .learner-avatar .progress-bar-container .darker {
@@ -588,6 +610,10 @@ border-radius: .1875rem;*/
     margin-top: 20px;
     border-radius: 5px;
     border-left: 3px solid #1ea69a;
+}
+
+#author-information .list-course-wrapper li .course-item-info {
+    height: 100px !important;
 }
 
 .list-course-wrapper li .course-item-info h4 {
