@@ -115,25 +115,26 @@
                             <div id="barchart_material"></div>
                         </div>
                     </div>
-                    <div class="double-chart-container">
-                        <div class="chart-wrapper" id="calendar-timetable-wrapper">
+                    <div class="double-chart-container small-width">
+                        <div class="chart-wrapper">
                             <div class="section-content section-report-chart">
                                 <div class="chart-title">
                                     <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê tổng số kế hoạch
                                 </div>
-                                <div class="chart-container">
+                                <div class="chart-container small-width">
                                     <div id="donutchart1" class="donutchart"></div>
+                                    <div class="center-value">150</div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Thống kê số học viên boàn thành tiến độ và bị trễ tiến độ  -->
-                        <div class="chart-wrapper" id="calendar-timetable-wrapper">
+                        <div class="chart-wrapper">
                             <div class="section-content section-report-chart">
                                 <div class="chart-title">
                                     <i class="fa fa-leanpub chart-icon" aria-hidden="true"></i>Kết quả học tập của học viên
                                 </div>
-                                <div class="chart-container">
+                                <div class="chart-container small-width">
                                     <div id="donutchart2" class="donutchart"></div>
+                                    <div class="center-value">150</div>
                                 </div>
                             </div>
                         </div>
@@ -209,6 +210,12 @@
                                 <span class="plan-progress">100/100 học viên hoàn thành</span>
                             </a>
                         </li>
+                        <li class="view-more-plan">
+                            <a>
+                                <span class="plan-name">Xem thêm 20 kế hoạch nữa</span><br/>
+                                <!--<span class="plan-progress">100/100 học viên hoàn thành</span>-->
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -251,20 +258,25 @@
 
             var dataTotalLearnerFinish = google.visualization.arrayToDataTable([
                 ['Detail', 'Thống kê kết quả học viên'],
-                ['Học viên hoàn thành đúng tiến độ', 412],
-                ['Học viên bị trễ tiến độ', 138],
+                ['Đúng tiến độ', 412],
+                ['Trễ tiến độ', 138],
             ]);
 
             var options1 = {
                 fontName: 'Open Sans',
                 fontSize: 15,
                 chartArea: {
-                    width: '92%',
-                    height: '92%'
+                    width: '100%',
+                    height: '80%',
                 },
-                pieHole: 0.55,
-                legend: 'none',
-                pieStartAngle: 130,
+                pieHole: 0.5,
+                legend: {
+                    position: 'right',
+                    alignment: 'center',
+                    textStyle: {
+                        fontSize: 14
+                    },
+                },
                 pieSliceText: 'none',
                 slices: {
                     0: {
@@ -275,19 +287,24 @@
                     }
                 },
                 height: 200,
-                width: 200,
+                width: 300,
             };
 
             var options2 = {
                 fontName: 'Open Sans',
                 fontSize: 15,
                 chartArea: {
-                    width: '92%',
-                    height: '92%'
+                    width: '100%',
+                    height: '80%',
                 },
-                pieHole: 0.55,
-                legend: 'none',
-                pieStartAngle: 130,
+                pieHole: 0.5,
+                legend: {
+                    position: 'right',
+                    alignment: 'center',
+                    textStyle: {
+                        fontSize: 14
+                    },
+                },
                 pieSliceText: 'none',
                 slices: {
                     0: {
@@ -298,7 +315,7 @@
                     }
                 },
                 height: 200,
-                width: 200,
+                width: 300,
             };
 
             var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
