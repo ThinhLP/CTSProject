@@ -59,7 +59,7 @@ i {
 .plan-progress-wrapper ul li span.plan-name {
     font-size: 14px;
     font-weight: bolder!important;
-    color: #20272d !important;
+    color: #20272d;
 }
 
 .plan-progress-wrapper ul li.view-more-plan {
@@ -339,8 +339,9 @@ td.view-detail-row {
 }
 
 .detail-info-container {
-    float: none !important;
+    /*float: none !important;*/
     padding: 20px;
+    width: 100%;
 }
 
 .detail-info-container h2 {
@@ -580,7 +581,7 @@ border-radius: .1875rem;*/
     border-radius: 5px;
     border: 1px solid #eee;
     margin-top: 20px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .list-program-wrapper li .program-item:hover {
@@ -595,13 +596,14 @@ border-radius: .1875rem;*/
 .list-program-wrapper li .program-item .program-proress {
     width: 20%;
     text-align: center;
-    line-height: 75px;
     border-right: 1px solid #eee;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background: #ff7f45;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
-
 
 .list-program-wrapper li .program-item .program-proress span {
     font-size: 18px;
@@ -624,6 +626,7 @@ border-radius: .1875rem;*/
     font-size: 14px;
     font-weight: 500;
     color: #444;
+    margin-bottom: 0;
 }
 
 .list-course-wrapper li .course-item-info {

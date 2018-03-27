@@ -7,18 +7,13 @@
     <title>Báo cáo | Traisy</title>
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
-
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/new-global.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
     <link rel="stylesheet" href="./css/manage-page.css" />
     <link rel="stylesheet" href="./css/manage-course.css" />
     <link rel="stylesheet" href="./css/manage-report.css" />
-    <link rel="stylesheet" href="./css/modal-global.css" />
-    <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
 </head>
 
 <body>
@@ -28,7 +23,6 @@
             </a>
             <span class="search-btn"><i class="fa fa-search"></i></span>
         </div>
-
         <div class="user-info">
             <a class="user-detail" href="#">
                 <img class="user-avatar" src="../resources/images/man.png" />
@@ -289,11 +283,11 @@
                             <i class="fa fa-tasks" aria-hidden="true"></i>Thông tin chi tiết
                         </div>
                         <div class="chart-container">
-                            <div class="empty-detail-container" id="empty-detail-learner-info" style="display: block;">
+                            <div class="empty-detail-container" id="empty-detail-learner-info" style="display: none;">
                                 <img src="./resources/images/icon-users.svg" /><br/>
                                 <div>Nhấn <span>Xem chi tiết</span> để xem thông tin cụ thể</div>
                             </div>
-                            <div id="leaner-information" class="detail-info-container" style="display: none;">
+                            <div id="leaner-information" class="detail-info-container" style="display: block;">
                                 <div class="learner-name"><span>Lê Phúc Thịnh</span></div>
                                 <div class="learner-info-wrapper">
                                     <div class="learner-statistic">
@@ -351,12 +345,32 @@
                                         <h4>Danh sách các chương trình tham gia</h4>
                                         <div class="list-program-wrapper">
                                             <ul>
-                                                <li class="program-item active">
+                                                <li>
+                                                    <div class="program-item active">
                                                         <div class="program-proress"><span>55%</span></div>
                                                         <div class="program-info-wrapper">
                                                             <h4>Lập trình Java căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="program-item active">
+                                                        <div class="program-proress"><span>55%</span></div>
+                                                        <div class="program-info-wrapper">
+                                                            <h4>Lập trình Java căn bản</h4>
+                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="program-item active">
+                                                        <div class="program-proress"><span>55%</span></div>
+                                                        <div class="program-info-wrapper">
+                                                            <h4>Lập trình Java căn bản</h4>
+                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
