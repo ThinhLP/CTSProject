@@ -119,10 +119,10 @@ i {
 
 .chart-container .center-value {
     position: absolute;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 0;
     margin-left: -65px;
-    font-weight: 500;
+    font-weight: bolder;
     color: #20272d;
 }
 
@@ -575,7 +575,7 @@ border-radius: .1875rem;*/
 }
 
 .list-program-wrapper li .program-item {
-    height: 75px;
+    min-height: 75px;
     display: flex;
     border-radius: 5px;
     border: 1px solid #eee;
@@ -593,7 +593,7 @@ border-radius: .1875rem;*/
 }
 
 .list-program-wrapper li .program-item .program-proress {
-    width: 15%;
+    width: 20%;
     text-align: center;
     line-height: 75px;
     border-right: 1px solid #eee;

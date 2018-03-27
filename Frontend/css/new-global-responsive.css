@@ -18,7 +18,9 @@
          width: calc(100% - 225px);
     }
     
-    .responsive-button span {
+}
+@media (min-width: 1000px) {
+     .responsive-button span {
         display: inline-block;
     }
 
@@ -30,3 +32,9 @@
     }
 }
 
+@media (min-width: 850px) {
+    .main-container {
+        padding: 40px 60px 25px 60px;
+    }
+   
+}

@@ -100,6 +100,20 @@ var Utils = {
         var year = date.getFullYear();
         return day + '/' + month + '/' + year;
     },
+    convertTimestampToFullDate: function (timestamp) {
+        if (!timestamp || timestamp == null) {
+            return '';
+        }
+        var date = new Date(timestamp);
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        
+        return hour+':'+ min + ':' + sec + ' ' + day + '/' + month + '/' + year;
+    },
     updateOrder: function (selector, numberSelector) {
         $(selector).each(function (index) {
             console.log(index);
@@ -125,5 +139,14 @@ var Utils = {
             mins: min,
             secs: sec
         };
+    },
+    scrollWindow: function (pos, callback) {
+        $('html, body').animate({
+            scrollTop: pos
+        }, 400, function () {
+            if (callback) {
+                callback();
+            }
+        });
     },
 };
