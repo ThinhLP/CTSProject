@@ -12,38 +12,36 @@
     <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
 
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./resources/flowplayer/skin/all-skins.css" />
-    <link rel="stylesheet" href="./resources/flowplayer/skin/functional.css" />
     <link rel="stylesheet" href="./css/learning-page.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
     <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
 </head>
 
 
-<body>
-    <header class="learner-navbar full-width">
-        <div class="navbar-header">
+<body class="body">
+    <div class="header-bar">
+        <div class="header-menu-left">
             <div class="menu-left">
                 <span>Trở về</span>
             </div>
-            <!--<div class="lecture-nav">
-                <a class="nav-btn" href="/courses/299583/lectures/4631883" id="lecture_previous_button">
-                <i class="fa fa-arrow-left"></i>&nbsp;<span class="nav-text">Bài học trước</span>
-                </a>
-                <a class="nav-btn complete" href="" id="lecture_complete_button">
-                <span class="nav-text">Hoàn thành ngay và học tiếp</span>&nbsp;<i class="fa fa-arrow-right"></i>
-                </a>
-            </div>-->
-            <div class="menu-right">
-                <img src="./resources/images/avatar-learner.png" class="default-avatar" />
+            <div class="minimize-sidebar" title="Thu nhỏ cửa sổ" style="display: block;">
+                <span><i class="fa fa-compress" aria-hidden="true"></i></span>
+            </div>
+            <div class="expand-sidebar" title="Mở rộng cửa sổ" style="display: none">
+                <span><i class="fa fa-expand" aria-hidden="true"></i></span>
             </div>
         </div>
-    </header>
+        <div class="header-menu-right">
+            <!--<div class="nav-btn" id="lecture_previous_button">
+                <i class="fa fa-arrow-left"></i><span class="nav-text">Bài học trước</span>
+            </div>-->
+            <div class="nav-btn complete" id="lecture_complete_button">
+                <span class="nav-text">Hoàn thành ngay và học tiếp</span><i class="fa fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
     <div class="course-main-container">
         <div class="course-sidebar" style="display: block">
-            <div class="minimize-sidebar">
-                <i class="fa fa-compress" aria-hidden="true"></i>Thu nhỏ cửa sổ
-            </div>
             <h2>Introduction to Javascript</h2>
             <div class="course-progress">
                 <div class="progressbar">
@@ -88,9 +86,6 @@
                 </div>
             </div>
         </div>
-        <div class="expand-sidebar" style="display: none" title="Mở rộng cửa sổ">
-            <i class="fa fa-expand" aria-hidden="true"></i>
-        </div>
         <div class="course-mainbar lecture-content">
             <h2 id="lecture_heading" class="section-title">Bài 3: Làm việc với database</h2>
             <div class="quiz-wrapper">
@@ -131,61 +126,23 @@
         </div>
     </div>
 
-
     <script src="./resources/jquery-3.3.1.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./resources/flowplayer/flowplayer.min.js"></script>
-    <script src="./resources/flowplayer/dash/dash.mediaplayer.min.js"></script>
-    <script src="./resources/flowplayer/dash/flowplayer.dashjs.js"></script>
-    <script src="./resources/PlayerLoader.js"></script>
-    <script src="./resources/tippy.all.min.js"></script>
     <script src="./dist/js/traisy.min.js "></script>
     <script>
-        $(document).ready(function() {
-            var playerData = {
-                key: "$710417913228974",
-                ratio: 9 / 16,
-                brand: {
-                    showOnOrigin: true,
-                    text: "<a class='block-logo-small'  href='http://block.vn' target='_blank'>block.vn</a>"
-                },
-                embed: false,
-                splash: true,
-                clip: {
-                    autoplay: false,
-                    sources: [{
-                        type: "application/dash+xml",
-                        src: 'http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd'
-                    }],
-                    scaling: 'half'
-                }
-            };
-            playerData.poster = "./resource/images/VideoPoster.jpg";
-            $("#player").flowplayer(playerData);
-
-        });
-
         $(function() {
-            /*var page = new ManageMasterpage();*/
-
-            tippy('.expand-sidebar', {
-                placement: 'right',
-            })
-
-            tippy('.minimize-sidebar', {
-                placement: 'right',
-            })
-
             $('.minimize-sidebar').on('click', function() {
-                var parent = $(this).closest('.course-main-container')
+                var parent = $(this).closest('.body')
                 parent.find('.course-sidebar').hide()
                 parent.find('.expand-sidebar').show()
+                $(this).hide()
             })
 
             $('.expand-sidebar').on('click', function() {
-                var parent = $(this).closest('.course-main-container')
+                var parent = $(this).closest('.body')
                 parent.find('.expand-sidebar').hide()
                 parent.find('.course-sidebar').show()
+                parent.find('.minimize-sidebar').show()
             })
         });
 
