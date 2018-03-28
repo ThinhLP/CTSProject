@@ -1,78 +1,3 @@
-/*.border-bottom-shadow {
-    -webkit-box-shadow:0 4px 6px -6px #dee2e6;
-    -moz-box-shadow:0 4px 6px -6px #dee2e6;
-    box-shadow:0px 5px 1px -1px #dee2e6;
-}
-
-.detail {
-    color: deepskyblue;
-}
-
-.viewMode {
-    display: none;
-}
-
-.viewMode {
-    display: table-cell;
-}
-
-.editable {
-    display: none;
-}
-
-.group-button{
-    text-align: right;
-}
-
-.label {
-    color: white;
-    padding: 5px;
-    width: 100px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.label-danger {
-    background: #d9534f;
-}
-
-.label-success {
-    background: #5cb85c;
-}
-
-.search-text {
-    display: inline-block;
-    width: 200px;
-}
-
-.btn-Add {
-    text-align: right;
-}
-
-.btn-info {
-    height: 35px;
-    width: 35px;
-    margin: 0!important;
-    line-height: 10px!important;
-    padding: 0 10px;
-}
-
-.form-group {
-    margin: 0!important;
-}
-
-th {
-    padding-top: 0!important;
-}
-
-label {
-    margin-top: 10px;
-}
-
-select {
-    min-height: 40px;
-}*/
-
 table {
     width: 100%;
     max-width: 100%;
@@ -96,10 +21,8 @@ td {
     border-bottom: 1px solid #eef0f0;
     color: #000;
     line-height: 20px;
-    text-transform: uppercase;
     font-size: 14px;
     border-top: 0;
-    letter-spacing: .5px;
     text-align: left;
 }
 
@@ -117,4 +40,39 @@ td {
     text-transform: none;
     padding: 7px 13px!important;
     line-height: 29px;
+}
+
+td.row-action {
+    text-align: right;
+}
+
+td.row-action button {
+    border-radius: 50%;
+    width: 37px;
+    padding: 6px 9px;
+    height: 37px;
+    background: #fff;
+    color: #47807b;
+    border: 1px solid #a9a9a9;
+    cursor: pointer;
+    line-height: 1.083;
+}
+
+td.row-action button:hover {
+    transition: .3s;
+    background: #fff;
+    border-color: #1ea69a;
+    color: #1ea69a;
+}
+
+td.row-action button.remove-item {
+    color: #d4604b;
+}
+
+td.row-action button.remove-item:hover {
+    border-color: #d4604b;
+}
+
+td.row-action button:first-child {
+    margin-right: 10px;
 }

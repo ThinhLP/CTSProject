@@ -7,10 +7,8 @@
     <title>Quản lý người dùng | Traisy</title>
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
-
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/new-global.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
@@ -80,42 +78,57 @@
             </div>
         </div>
         <div class="main-container">
-            <!--<div class="content-wrapper">
-                <div class="search-box-container"></div>
-            </div>-->
             <div class="content-wrapper">
                 <div class="section-content">
                     <table>
                         <tbody>
                             <tr>
-                                <th class="table-header"><input type="checkbox" class="check-select-user" /> Họ tên</th>
+                                <th class="table-header">Họ tên</th>
+                                <th class="table-header">Tên đăng nhập</th>
                                 <th class="table-header">Địa chỉ Email</th>
                                 <th class="table-header">Chức vụ</th>
-                                <th class="table-header">Ngày tham gia</th>
+                                <th class="table-header">Trạng thái</th>
+                                <th class="table-header"></th>
                             </tr>
                             <tr class="table-data">
-                                <td><input type="checkbox" class="check-select-user" style="display: inline-block;" />Võ Thạch Nguyên</td>
+                                <td>Võ Thạch Nguyên</td>
+                                <td>superman</td>
                                 <td>nguyen.superman@gmail.com</td>
                                 <td>Giảng viên</td>
-                                <td>15/03/2018</td>
+                                <td>Hoạt động</td>
+                                <td class="row-action">
+                                    <button class="edit-item"  title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                </td>
                             </tr>
                             <tr class="table-data">
-                                <td><input type="checkbox" class="check-select-user" style="display: inline-block;" />Võ Thạch Nguyên</td>
+                                <td>Võ Thạch Nguyên</td>
+                                <td>ironman</td>
                                 <td>nguyen.superman@gmail.com</td>
                                 <td>Giảng viên</td>
-                                <td>15/03/2018</td>
+                                <td>Hoạt động</td>
+                                <td class="row-action">
+                                    <button class="edit-item"  title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                </td>
                             </tr>
                             <tr class="table-data">
-                                <td><input type="checkbox" class="check-select-user" style="display: inline-block;" />Võ Thạch Nguyên</td>
+                                <td>Võ Thạch Nguyên</td>
+                                <td>hulk</td>
                                 <td>nguyen.superman@gmail.com</td>
                                 <td>Giảng viên</td>
-                                <td>15/03/2018</td>
+                                <td>Hoạt động</td>
+                                <td class="row-action">
+                                    <button class="edit-item"  title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                </td>
                             </tr>
                             <tr class="table-data">
-                                <td><input type="checkbox" class="check-select-user" style="display: inline-block;" />Võ Thạch Nguyên</td>
+                                <td>Võ Thạch Nguyên</td>
+                                <td>wonder_wonman_cute</td>
                                 <td>nguyen.superman@gmail.com</td>
                                 <td>Giảng viên</td>
-                                <td>15/03/2018</td>
+                                <td>Hoạt động</td>
+                                <td class="row-action">
+                                    <button class="edit-item" title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -123,4 +136,14 @@
             </div>
         </div>
     </div>
+
+    <script src="./resources/tippy.all.min.js"></script>
+    <script>
+        $(function() {
+            tippy('.edit-item', {
+                placement: 'left'
+            });
+        })
+
+    </script>
 </body>

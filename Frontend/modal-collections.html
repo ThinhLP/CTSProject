@@ -87,8 +87,7 @@
             </ul>
         </div>
         <div class="main-container">
-
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#createProgramMoal">Open Modal</button>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#createSkillModal">Open Modal</button>
 
             <!-- Xoá 1 chương học -->
             <div id="myModal" class="modal fade" role="dialog">
@@ -128,7 +127,7 @@
             </div>
 
             <!-- Feedback Popup -->
-            <div id="addFeedBackMoal" class="modal fade" role="dialog">
+            <div id="addFeedBackModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -149,7 +148,7 @@
             </div>
 
             <!-- Create Program Popup -->
-            <div id="createProgramMoal" class="modal fade" role="dialog">
+            <div id="createProgramModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -180,7 +179,171 @@
                 </div>
             </div>
 
+            <!-- Create User Popup -->
+            <div id="createUserModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <strong class="modal-title">Thêm người dùng mới</strong>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="content-detail">
+                                <label>Tên đăng nhập</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Mật khẩu</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Họ và tên</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Chức vụ</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Vai trò</label><br/>
+                                <div class="dropdown-select-form">
+                                    <a>Học viên</a>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <ul class="type-select" style="display: none">
+                                        <li class="choose-show-learner">Học viên</li>
+                                        <li class="choose-show-author">Tác giả</li>
+                                        <li class="choose-show-manager">Quản lí</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-detail">
+                                <label>Trạng thái</label><br/>
+                                <div class="dropdown-select-form">
+                                    <a>Hoạt động</a>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <ul class="type-select" style="display: none">
+                                        <li>Ngưng hoạt động</li>
+                                        <li>Hoạt động</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button primary-button" data-dismiss="modal">Thêm</button>
+                            <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Update User Popup -->
+            <div id="updateUserModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <strong class="modal-title">Thêm người dùng mới</strong>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="content-detail">
+                                <label>Tên đăng nhập</label><br/>
+                                <input name="name" type="text" class="form-input" value="hihihihi" readonly />
+                            </div>
+                            <div class="content-detail">
+                                <label>Mật khẩu</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Họ và tên</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Chức vụ</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Vai trò</label><br/>
+                                <div class="dropdown-select-form">
+                                    <a>Học viên</a>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <ul class="type-select" style="display: none">
+                                        <li class="choose-show-learner">Học viên</li>
+                                        <li class="choose-show-author">Tác giả</li>
+                                        <li class="choose-show-manager">Quản lí</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-detail">
+                                <label>Trạng thái</label><br/>
+                                <div class="dropdown-select-form">
+                                    <a>Hoạt động</a>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <ul class="type-select" style="display: none">
+                                        <li>Ngưng hoạt động</li>
+                                        <li>Hoạt động</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button primary-button" data-dismiss="modal">Thêm</button>
+                            <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create Skill Popup -->
+            <div id="createSkillModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <strong class="modal-title">Thêm kĩ năng</strong>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="content-detail">
+                                <label>Tên kĩ năng</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Mô tả kĩ năng</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button primary-button" data-dismiss="modal">Thêm</button>
+                            <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Update Skill Popup -->
+            <div id="updateSkillModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <strong class="modal-title">Thêm kĩ năng</strong>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="content-detail">
+                                <label>Tên kĩ năng</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                            <div class="content-detail">
+                                <label>Mô tả kĩ năng</label><br/>
+                                <input name="name" type="text" class="form-input" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button primary-button" data-dismiss="modal">Thêm</button>
+                            <button type="button" class="button outline-button" data-dismiss="modal">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

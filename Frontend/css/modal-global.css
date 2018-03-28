@@ -27,6 +27,71 @@
     font-size: 15px;
 }
 
+.modal-body .content-detail,
+.modal-body .dropdown-select-form {
+    margin-bottom: 17px;
+}
+
+.dropdown-select-form {
+    margin-left: 0px;
+    float: left;
+    border: 1px solid #dbdbdb;
+    line-height: 44px;
+    border-radius: 5px;
+    height: 44px;
+    padding: 0px 15px;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+}
+
+.dropdown-select-form a {
+    text-decoration: none;
+}
+
+.dropdown-select-form i {
+    line-height: 44px;
+    float: right;
+}
+
+.dropdown-select-form:hover {
+    border-color: #47807b;
+    transition: .3s;
+}
+
+.type-select {
+    top: 46px;
+    width: 160px;
+    background: #fff;
+    position: absolute;
+    left: -1px;
+    box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, .05);
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    display: block;
+    z-index: 100;
+}
+
+.type-select li {
+    padding: 0px 14px !important;
+    transition: none;
+    font-size: 12px;
+    color: #80848e;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    text-transform: none;
+}
+
+.type-select li:hover {
+    border-radius: 0;
+    background: #fbfbfb!important;
+    color: #ff7f45!important;
+}
+
+/*---------------------------------------*/
+
 #createProgramMoal #sandbox-container .input-group {
     display: flex;
 }
