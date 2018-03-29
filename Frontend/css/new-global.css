@@ -273,6 +273,8 @@ ul {
     width: 100%;
     display: flex;
     margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 

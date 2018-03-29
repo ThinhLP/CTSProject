@@ -1845,7 +1845,7 @@ div.heading-action .editable-heading {
 .nav-top-action {
     width: 170px;
     text-align: right;
-    margin-right: 15px;
+    /*margin-right: 15px;*/
 }
 
 .nav-top-input input {
