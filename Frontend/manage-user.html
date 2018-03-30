@@ -82,6 +82,10 @@
         <div class="main-container">
             <div class="content-wrapper">
                 <div class="section-content">
+                    <div class="search-box col-md-6 no-margin small-width" style="float: right">
+                        <input name="name" type="text" class="form-input search-user" placeholder="Tìm kiếm nguời dùng" />
+                        <div class="icon-search "><i class="fa fa-search "></i></div>
+                    </div>
                     <table>
                         <tbody>
                             <tr>
@@ -99,7 +103,7 @@
                                 <td>Giảng viên</td>
                                 <td>Hoạt động</td>
                                 <td class="row-action">
-                                    <button class="edit-item"  title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                    <button class="edit-item" title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                             <tr class="table-data">
@@ -109,7 +113,7 @@
                                 <td>Giảng viên</td>
                                 <td>Hoạt động</td>
                                 <td class="row-action">
-                                    <button class="edit-item"  title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                    <button class="edit-item" title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                             <tr class="table-data">
@@ -119,7 +123,7 @@
                                 <td>Giảng viên</td>
                                 <td>Hoạt động</td>
                                 <td class="row-action">
-                                    <button class="edit-item"  title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                    <button class="edit-item" title="Sửa thông tin"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
                             <tr class="table-data">
@@ -152,12 +156,13 @@
         </div>
     </div>
 
+    <script src="./resources/jquery-3.3.1.min.js "></script>
     <script src="./resources/tippy.all.min.js"></script>
     <script>
         $(function() {
             tippy('.edit-item', {
-                placement: 'left'
-            });
+                placement: 'top'
+            })
         })
 
     </script>
