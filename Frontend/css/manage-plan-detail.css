@@ -426,6 +426,12 @@ h5 {
     margin-right: 20px;
 }
 
+.curriculum-item .option-plan {
+    width: 180px;
+    right: 45px;
+    top: 25px;
+}
+
 .program-name {
     min-width: 200px;
     line-height: 47px;
@@ -434,8 +440,6 @@ h5 {
 .course-list-wrapper {
     display: none;
 }
-
-.plan-containner {}
 
 .plan-wrapper {
     width: 100%;
@@ -623,7 +627,7 @@ h5 {
     background: #fff;
 }
 
-.education-tab-item .item-unselect{
+.education-tab-item .item-unselect {
     display: block;
 }
 
@@ -634,6 +638,7 @@ h5 {
 .education-tab-item.active .item-unselect {
     display: none;
 }
+
 .education-tab-item.active .item-select {
     display: block;
 }
@@ -700,9 +705,9 @@ h5 {
 
 .program-item-img {
     width: 115px;
-    height: 115px; 
+    height: 115px;
     border-radius: 5%;
-} 
+}
 
 .program-item img {
     width: 115px;
