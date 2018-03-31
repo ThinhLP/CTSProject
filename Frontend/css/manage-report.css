@@ -574,7 +574,7 @@ border-radius: .1875rem;*/
     margin-top: 20px;
 }
 
-.list-program-wrapper li .program-item {
+.list-program-wrapper .program-item {
     min-height: 75px;
     display: flex;
     border-radius: 5px;
@@ -583,16 +583,16 @@ border-radius: .1875rem;*/
     cursor: pointer;
 }
 
-.list-program-wrapper li .program-item:hover {
+.list-program-wrapper .program-item:hover {
     transition: .3s;
     background: rgba(255, 127, 69, 0.1);
 }
 
-.list-program-wrapper li .program-item.active {
+.list-program-wrapper .program-item.active {
     border-color: #ff7f45;
 }
 
-.list-program-wrapper li .program-item .program-proress {
+.list-program-wrapper .program-item .program-proress {
     width: 20%;
     text-align: center;
     border-right: 1px solid #eee;
@@ -604,24 +604,24 @@ border-radius: .1875rem;*/
     display: flex;
 }
 
-.list-program-wrapper li .program-item .program-proress span {
+.list-program-wrapper .program-item .program-proress span {
     font-size: 18px;
     font-weight: 700;
     color: #fff;
 }
 
-.list-program-wrapper li .program-item .program-info-wrapper {
+.list-program-wrapper .program-item .program-info-wrapper {
     width: 85%;
     padding: 15px;
 }
 
-.list-program-wrapper li .program-item .program-info-wrapper h4 {
+.list-program-wrapper .program-item .program-info-wrapper h4 {
     font-size: 16px;
     font-weight: 700;
     color: #000;
 }
 
-.list-program-wrapper li .program-item .program-info-wrapper h5 {
+.list-program-wrapper .program-item .program-info-wrapper h5 {
     font-size: 14px;
     font-weight: 500;
     color: #444;

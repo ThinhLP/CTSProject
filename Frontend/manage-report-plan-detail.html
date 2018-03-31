@@ -105,12 +105,12 @@
                             <i class="fa fa-tasks" aria-hidden="true"></i>Danh sách các học viên và tác giả
                         </div>
                         <div class="table-learner-detail-wrapper section-content">
-                            <div class="search-box col-md-6 dropdown-type-user">
-                                <a>Học viên</a>
+                            <div class="search-box col-md-6 dropdown-type-user" target=".type-user">
+                                <a class="dropdown-label">Học viên</a>
                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 <ul class="feedback-option type-user" style="display: none">
-                                    <li class="choose-show-learner">Học viên</li>
-                                    <li class="choose-show-author">Tác giả</li>
+                                    <li class="choose-show-learner choose-user-type">Học viên</li>
+                                    <li class="choose-show-author choose-user-type">Tác giả</li>
                                 </ul>
                             </div>
                             <div class="search-box col-md-6 ">
@@ -345,32 +345,26 @@
                                         <h4>Danh sách các chương trình tham gia</h4>
                                         <div class="list-program-wrapper">
                                             <ul>
-                                                <li>
-                                                    <div class="program-item active">
+                                                <li class="program-item active">
                                                         <div class="program-proress"><span>55%</span></div>
                                                         <div class="program-info-wrapper">
                                                             <h4>Lập trình Java căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
-                                                    </div>
                                                 </li>
-                                                <li>
-                                                    <div class="program-item active">
+                                                <li class="program-item">
                                                         <div class="program-proress"><span>55%</span></div>
                                                         <div class="program-info-wrapper">
                                                             <h4>Lập trình Java căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
-                                                    </div>
                                                 </li>
-                                                <li>
-                                                    <div class="program-item active">
+                                                <li class="program-item">
                                                         <div class="program-proress"><span>55%</span></div>
                                                         <div class="program-info-wrapper">
                                                             <h4>Lập trình Java căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
-                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -475,45 +469,11 @@
                                         <h4>Các chương trình tham gia đóng góp</h4>
                                         <div class="list-program-wrapper">
                                             <ul>
-                                                <li>
-                                                    <div class="program-item active">
+                                                <li class="program-item active">
                                                         <div class="program-info-wrapper">
                                                             <h4>Lập trình Java căn bản</h4>
                                                             <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
                                                         </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="program-item">
-                                                        <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java hơi căn bản</h4>
-                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="program-item">
-                                                        <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java khá căn bản</h4>
-                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="program-item">
-                                                        <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java đại căn bản</h4>
-                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="program-item">
-                                                        <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java siêu căn bản</h4>
-                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
-                                                        </div>
-                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -581,11 +541,6 @@
                 var parent = $(this).closest('.program-course-info-wrapper')
                 parent.find('.not-select-program').hide()
                 parent.find('.list-course-wrapper').show()
-            });
-
-            $('.dropdown-type-user').on('click', function() {
-                var parent = $(this).closest('.table-learner-detail-wrapper')
-                parent.find('.type-user').show()
             });
 
             $('.choose-show-learner').on('click', function() {
