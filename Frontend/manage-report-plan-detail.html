@@ -80,9 +80,15 @@
                                 <div class="chart-title">
                                     <i class="fa fa-pie-chart chart-icon" aria-hidden="true"></i>Thống kê kết quả học tập của học viên
                                 </div>
-                                <div class="chart-container">
+                                <div class="chart-container" style="display: none">
                                     <div id="donutchart1" class="donutchart"></div>
                                     <div class="center-value">55</div>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="empty-data">
+                                        <img src="./resources/images/icon-kb-search.svg" /><br/>
+                                        <div>Hiện tại chưa có báo cáo về dữ liệu này</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -91,9 +97,15 @@
                                 <div class="chart-title">
                                     <i class="fa fa-users chart-icon" aria-hidden="true"></i>Thống kê số học viên và tác giả
                                 </div>
-                                <div class="chart-container">
+                                <div class="chart-container" style="display: none">
                                     <div id="donutchart2" class="donutchart"></div>
                                     <div class="center-value">150</div>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="empty-data">
+                                        <img src="./resources/images/icon-kb-search.svg" /><br/>
+                                        <div>Hiện tại chưa có báo cáo về dữ liệu này</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +299,7 @@
                                 <img src="./resources/images/icon-users.svg" /><br/>
                                 <div>Nhấn <span>Xem chi tiết</span> để xem thông tin cụ thể</div>
                             </div>
-                            <div id="leaner-information" class="detail-info-container" style="display: block;">
+                            <div id="leaner-information" class="detail-info-container" style="display: none;">
                                 <div class="learner-name"><span>Lê Phúc Thịnh</span></div>
                                 <div class="learner-info-wrapper">
                                     <div class="learner-statistic">
@@ -346,25 +358,25 @@
                                         <div class="list-program-wrapper">
                                             <ul>
                                                 <li class="program-item active">
-                                                        <div class="program-proress"><span>55%</span></div>
-                                                        <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java căn bản</h4>
-                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
-                                                        </div>
+                                                    <div class="program-proress"><span>55%</span></div>
+                                                    <div class="program-info-wrapper">
+                                                        <h4>Lập trình Java căn bản</h4>
+                                                        <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
+                                                    </div>
                                                 </li>
                                                 <li class="program-item">
-                                                        <div class="program-proress"><span>55%</span></div>
-                                                        <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java căn bản</h4>
-                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
-                                                        </div>
+                                                    <div class="program-proress"><span>55%</span></div>
+                                                    <div class="program-info-wrapper">
+                                                        <h4>Lập trình Java căn bản</h4>
+                                                        <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
+                                                    </div>
                                                 </li>
                                                 <li class="program-item">
-                                                        <div class="program-proress"><span>55%</span></div>
-                                                        <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java căn bản</h4>
-                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
-                                                        </div>
+                                                    <div class="program-proress"><span>55%</span></div>
+                                                    <div class="program-info-wrapper">
+                                                        <h4>Lập trình Java căn bản</h4>
+                                                        <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -425,12 +437,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="author-information" class="detail-info-container" style="display: none;">
+                            <div id="author-information" class="detail-info-container" style="display: block;">
                                 <div class="learner-name"><span>Lê Phúc Thịnh</span></div>
                                 <div class="learner-info-wrapper author-info-wrapper">
                                     <div class="learner-avatar">
-                                        <div class="progress-bar-container fake-progress">
-                                        </div>
                                         <div class="avatar-container"></div>
                                     </div>
                                     <div class="learner-statistic">
@@ -470,48 +480,62 @@
                                         <div class="list-program-wrapper">
                                             <ul>
                                                 <li class="program-item active">
-                                                        <div class="program-info-wrapper">
-                                                            <h4>Lập trình Java căn bản</h4>
-                                                            <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
-                                                        </div>
+                                                    <div class="program-info-wrapper">
+                                                        <h4>Lập trình Java căn bản</h4>
+                                                        <h5>Thời gian: 19/02/2018 - 31/12/2108</h5>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="course-participated-wrapper">
                                         <h4>Thông tin các khoá học</h4>
-                                        <div class="not-select-program" style="display: block">
+                                        <div class="not-select-program" style="display: none">
                                             Chọn một chương trình để xem chi tiết các khoá học
                                         </div>
-                                        <div class="list-course-wrapper" style="display: none">
+                                        <div class="list-course-wrapper" style="display: block">
                                             <ul>
                                                 <li>
-                                                    <div class="course-item-info ">
-                                                        <h4>Giới thiệu về Java</h4>
-                                                        <h5>Ngày tạo: 19/02/2018</h5>
-                                                        <h5>Trạng thái: Mới tạo</h5>
+                                                    <div class="course-chart-detail">
+                                                        <div class="chart-container">
+                                                            <div id="donutchart3" class="donutchart"></div>
+                                                        </div>
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="course-item-info">
-                                                        <h4>Java vỡ lòng 1</h4>
-                                                        <h5>Ngày tạo: 19/02/2018</h5>
-                                                        <h5>Trạng thái: Đang tạo</h5>
+                                                    <div class="course-type" title="Không công khai">
+                                                        <i class="fa fa-lock" aria-hidden="true"></i>
                                                     </div>
-                                                </li>
-                                                <li>
                                                     <div class="course-item-info">
                                                         <h4>Java vỡ lòng 2</h4>
                                                         <h5>Ngày tạo: 19/02/2018</h5>
-                                                        <h5>Trạng thái: Đã hoàn thành</h5>
+                                                        <h5>Trạng thái: Không công khai</h5>
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="course-item-info">
-                                                        <h4>Java vỡ lòng 3</h4>
-                                                        <h5>Ngày tạo: 19/02/2018</h5>
-                                                        <h5>Trạng thái: Mới tạo</h5>
+                                                    <div class="course-type" title="Công khai">
+                                                        <i class="fa fa-globe" aria-hidden="true"></i>
                                                     </div>
+                                                    <div class="course-item-info">
+                                                        <h4>Java vỡ lòng 2</h4>
+                                                        <h5>Ngày tạo: 19/02/2018</h5>
+                                                        <h5>Trạng thái: Công khai</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="course-type" title="Đang kiểm duyệt">
+                                                        <i class="fa fa-hourglass-half" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="course-item-info">
+                                                        <h4>Java vỡ lòng 2</h4>
+                                                        <h5>Ngày tạo: 19/02/2018</h5>
+                                                        <h5>Trạng thái: Đang kiểm duyệt</h5>
+                                                    </div>
+                                                </li>
+                                                <li class="emty-course-data">
+                                                    <span>
+                                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>Không có thông tin về khoá học
+                                                    </span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -528,10 +552,16 @@
     <script src="./resources/jquery-3.3.1.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./resources/tippy.all.min.js"></script>
     <script src="./dist/js/traisy.min.js "></script>
 
     <script type="text/javascript">
         $(function() {
+
+            tippy('.course-type', {
+                placement: 'left'
+            })
+
             $('.choose-plan').on('click', function() {
                 var parent = $(this).closest('.detail-info-container')
                 parent.find('.feedback-option').show()
@@ -576,6 +606,13 @@
                 ['Detail', 'Thống kê số học viên và tác giả trong kế hoạch'],
                 ['Học viên', 412],
                 ['Tác giả', 138],
+            ]);
+
+            var dataCourseOfAuthor = google.visualization.arrayToDataTable([
+                ['Detail', 'Thống kê về khoá học'],
+                ['Công khai', 412],
+                ['Không công khai', 50],
+                ['Đang kiểm duyệt', 138],
             ]);
 
             var options1 = {
@@ -635,11 +672,47 @@
                 width: 350,
             };
 
+            var options3 = {
+                fontName: 'Open Sans',
+                fontSize: 15,
+                chartArea: {
+                    width: '100%',
+                    height: '80%',
+                },
+                /*pieHole: 0.5,*/
+                legend: {
+                    position: 'right',
+                    alignment: 'center',
+                    textStyle: {
+                        fontSize: 14
+                    },
+                },
+                /*pieSliceText: 'none',*/
+                pieSliceTextStyle: {
+                    fontSize: 14
+                },
+                slices: {
+                    0: {
+                        color: '#00695C'
+                    },
+                    1: {
+                        color: '#009688'
+                    },
+                    2: {
+                        color: '#4DB6AC'
+                    }
+                },
+                height: 200,
+                width: 350,
+            };
+
             var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
             var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
+            var chartCourseOfAuthor = new google.visualization.PieChart(document.getElementById('donutchart3'));
 
             chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options1);
             chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options2);
+            chartCourseOfAuthor.draw(dataCourseOfAuthor, options3);
         }
 
     </script>
