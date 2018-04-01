@@ -722,6 +722,10 @@ border-radius: .1875rem;*/
     height: 75px;
     justify-content: center;
     line-height: 75px;
+    border: 1px solid #eee;
+    display: flex;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 .course-participated-wrapper .not-select-program {
@@ -748,4 +752,8 @@ border-radius: .1875rem;*/
 
 .no-result h5 {
     color: rgba(0, 0, 0, 0.6);
+}
+
+.author-course {
+    cursor: pointer;
 }
