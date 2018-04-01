@@ -108,13 +108,21 @@ i {
     color: #add8e6;
 }
 
-.chart-container {
+.chart-container,
+.chart-container.empty-data {
     width: 100%;
     padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.empty-data {
+    width: 350px;
+    height: 200px;
+    padding-top: 30px;
+    text-align: center;
 }
 
 .chart-container .center-value {
@@ -459,6 +467,10 @@ border-radius: .1875rem;*/
     display: flex;
 }
 
+.author-info-wrapper .learner-avatar {
+    justify-content: center;
+}
+
 .statistic-item {
     display: flex;
     margin-bottom: 20px;
@@ -629,13 +641,64 @@ border-radius: .1875rem;*/
     margin-bottom: 0;
 }
 
-.list-course-wrapper li .course-item-info {
-    padding: 15px;
-    height: 75px;
+.list-course-wrapper li .course-chart-detail {
     border: 1px solid #eee;
     margin-top: 20px;
     border-radius: 5px;
+    padding: 15px;
+}
+
+.list-course-wrapper li .course-chart-detail .chart-container {
+    padding-bottom: 0px;
+}
+
+.list-course-wrapper li:not(:first-child) {
+    border: 1px solid #eee;
+    display: flex;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.list-course-wrapper li .course-type {
+    width: 40px;
+    border: 1px solid #1ea69a;
+    margin-top: 30px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 5px;
+    background: #fff;
+    color: #1ea69a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.list-course-wrapper li .course-type:hover {
+    background: #e8f6f4;
+}
+
+.list-course-wrapper li .course-type i {
+    margin-right: 0;
+}
+
+.list-course-wrapper li .course-item-info {
+    padding: 15px;
+    height: 75px;
+}
+
+#leaner-information .list-course-wrapper li {
+    border: 1px solid #eee;
+    display: flex;
+    border-radius: 5px;
+    margin-top: 20px;
     border-left: 3px solid #1ea69a;
+}
+
+#leaner-information .list-course-wrapper li .course-item-info {
+    width: 100%;
 }
 
 #author-information .list-course-wrapper li .course-item-info {
@@ -653,6 +716,12 @@ border-radius: .1875rem;*/
     font-size: 14px;
     font-weight: 500;
     color: #444;
+}
+
+.list-course-wrapper li.emty-course-data {
+    height: 75px;
+    justify-content: center;
+    line-height: 75px;
 }
 
 .course-participated-wrapper .not-select-program {
