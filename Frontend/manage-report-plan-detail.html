@@ -80,11 +80,11 @@
                                 <div class="chart-title">
                                     <i class="fa fa-pie-chart chart-icon" aria-hidden="true"></i>Thống kê kết quả học tập của học viên
                                 </div>
-                                <div class="chart-container" style="display: none">
+                                <div class="chart-container" style="display: block">
                                     <div id="donutchart1" class="donutchart"></div>
                                     <div class="center-value">55</div>
                                 </div>
-                                <div class="chart-container">
+                                <div class="chart-container" style="display: none">
                                     <div class="empty-data">
                                         <img src="./resources/images/icon-kb-search.svg" /><br/>
                                         <div>Hiện tại chưa có báo cáo về dữ liệu này</div>
@@ -97,11 +97,11 @@
                                 <div class="chart-title">
                                     <i class="fa fa-users chart-icon" aria-hidden="true"></i>Thống kê số học viên và tác giả
                                 </div>
-                                <div class="chart-container" style="display: none">
+                                <div class="chart-container" style="display: block">
                                     <div id="donutchart2" class="donutchart"></div>
                                     <div class="center-value">150</div>
                                 </div>
-                                <div class="chart-container">
+                                <div class="chart-container" style="display: none">
                                     <div class="empty-data">
                                         <img src="./resources/images/icon-kb-search.svg" /><br/>
                                         <div>Hiện tại chưa có báo cáo về dữ liệu này</div>
@@ -515,16 +515,12 @@
                                         <div class="not-select-program" style="display: none">
                                             Chọn một chương trình để xem chi tiết các khoá học
                                         </div>
-<<<<<<< HEAD
                                         <div class="list-course-wrapper" style="display: none">
-=======
-                                        <div class="list-course-wrapper author-courses" style="display: block">
->>>>>>> 39a4b84c815f13e0f08fb7df81f36c4f62f2fe30
                                             <ul>
                                                 <li>
                                                     <div class="course-chart-detail">
-                                                        <div class="chart-container">
-                                                            <div id="donutchart3" class="donutchart"></div>
+                                                        <div id="chart-author-course">
+                                                            <div id="donutchart3" class="donutchart" style="width: 350px; height: 200px;"></div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -636,9 +632,9 @@
 
             var dataCourseOfAuthor = google.visualization.arrayToDataTable([
                 ['Detail', 'Thống kê về khoá học'],
-                ['Công khai', 412],
-                ['Không công khai', 50],
-                ['Đang kiểm duyệt', 138],
+                ['Công khai', 50],
+                ['Không công khai', 12],
+                ['Đang kiểm duyệt', 20],
             ]);
 
             var options1 = {
@@ -699,13 +695,16 @@
             };
 
             var options3 = {
+                width: 350,
+                height: 200,
                 fontName: 'Open Sans',
                 fontSize: 15,
                 chartArea: {
+                    right: 50,
+                    left: 10,
                     width: '100%',
-                    height: '80%',
+                    height: '100%'
                 },
-                /*pieHole: 0.5,*/
                 legend: {
                     position: 'right',
                     alignment: 'center',
@@ -713,7 +712,7 @@
                         fontSize: 14
                     },
                 },
-                /*pieSliceText: 'none',*/
+                pieSliceText: 'value',
                 pieSliceTextStyle: {
                     fontSize: 14
                 },
@@ -728,8 +727,6 @@
                         color: '#4DB6AC'
                     }
                 },
-                height: 200,
-                width: 354,
             };
 
             var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
