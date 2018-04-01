@@ -320,7 +320,8 @@ table {
     margin-right: 15px;
 }
 
-.list-learner td, .list-author td {
+.list-learner td,
+.list-author td {
     cursor: pointer;
     font-size: 13px;
     text-transform: none;
@@ -628,6 +629,14 @@ border-radius: .1875rem;*/
     padding: 15px;
 }
 
+#leaner-information .program-info-wrapper {
+    height: 75px;
+}
+
+#author-information .program-info-wrapper {
+    height: 100px;
+}
+
 .list-program-wrapper .program-item .program-info-wrapper h4 {
     font-size: 16px;
     font-weight: 700;
@@ -638,7 +647,7 @@ border-radius: .1875rem;*/
     font-size: 14px;
     font-weight: 500;
     color: #444;
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
 }
 
 .list-course-wrapper li .course-chart-detail {
