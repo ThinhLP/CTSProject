@@ -293,7 +293,8 @@ table {
 }
 
 .table-header,
-.list-learner td {
+.list-learner td,
+.list-author td {
     padding: 7px 0px;
     border-bottom: 1px solid #eef0f0;
     color: #000;
@@ -311,7 +312,7 @@ table {
     margin-right: 15px;
 }
 
-.list-learner td {
+.list-learner td, .list-author td {
     cursor: pointer;
     font-size: 13px;
     text-transform: none;
@@ -661,4 +662,21 @@ border-radius: .1875rem;*/
     line-height: 75px;
     border-radius: 5px;
     text-align: center;
+}
+
+.no-result {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.no-result img {
+    width: 128px;
+    height: 128px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.no-result h5 {
+    color: rgba(0, 0, 0, 0.6);
 }
