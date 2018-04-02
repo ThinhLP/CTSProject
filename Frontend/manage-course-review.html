@@ -87,7 +87,7 @@
                     <table>
                         <tbody>
                             <tr>
-                                <th class="table-header"><input type="checkbox" class="select-course">Khoá học</th>
+                                <th class="table-header"><input type="checkbox" class="select-all-course" onclick="checkAll(this)">Khoá học</th>
                                 <th class="table-header">Giảng viên</th>
                                 <th class="table-header">Ngày tạo</th>
                                 <th class="table-header"></th>
@@ -147,4 +147,32 @@
             </div>
         </div>
     </div>
+
+    <script src="./resources/jquery-3.3.1.min.js"></script>
+    <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./resources/tippy.all.min.js"></script>
+    <script src="./dist/js/traisy.min.js "></script>
+    <script>
+        /*$(document).ready(function() {
+                                                    $('.select-all-course').click(function() {
+                                                        $("input:checkbox").attr('checked', true);
+                                                    });
+                                                    $('.select-all-course').click(function() {
+                                                        $("input:checkbox").attr('checked', false);
+                                                    });
+                                                });*/
+
+        function checkAll(allCheckbox) {
+            var allCheckboxes = document.getElementsByClassName('select-course');
+            for (var i = 0; i < allCheckboxes.length; i++) {
+                var curCheckbox = allCheckboxes[i];
+                curCheckbox.checked = allCheckbox.checked;
+                /*if (curCheckbox.id != 'all') {
+                    curCheckbox.checked = allCheckbox.checked;
+                }*/
+            }
+        }
+
+    </script>
 </body>
