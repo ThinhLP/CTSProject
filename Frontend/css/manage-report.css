@@ -138,12 +138,29 @@ i {
     margin-left: -58px;
 }
 
-
 .chart-container > .donutchart {
     margin-right: 10px;
     margin-left: 10px;
 }
 
+
+#donutchart3 g text:not(:first-child) {
+    text-anchor: middle;
+}
+
+/*
+#donutchart3 g:nth-child(1) > text {
+    text-anchor: start;
+}
+
+#donutchart3 g:nth-child(3) > text {
+    text-anchor: middle;
+}
+*/
+
+/*#donutchart3 g:nth-child(3) text {
+    text-anchor: end;
+}*/
 
 .chart-container .empty-detail-container {
     float: none !important;
