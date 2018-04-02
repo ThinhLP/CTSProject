@@ -212,6 +212,7 @@ ul {
 }
 
 .dashboard-item {
+    position: relative;
     min-height: 30px;
     margin-bottom: 10px;
 }
@@ -231,6 +232,29 @@ ul {
 .nav-title:hover a,
 .add-button:hover {
     color: #fff;
+}
+
+.dashboard-item .number-course-review {
+    opacity: 0;
+    background: #FB404B;
+    margin-left: 8px;
+    padding: 0px 4px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.dashboard-item.active .number-course-review,
+.dashboard-item:hover .number-course-review {
+    opacity: 1;
+}
+
+.dashboard-item .dot-notification {
+    color: #FB404B;
+    position: absolute;
+    font-size: 10px;
+    left: -4px;
+    top: -3px;
 }
 
 .nav-title-wrapper {

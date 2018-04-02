@@ -30,6 +30,10 @@ td {
     font-weight: bolder;
 }
 
+input[type=checkbox] {
+    margin-right: 10px;
+}
+
 .check-select-user {
     margin-right: 15px;
 }
@@ -63,6 +67,36 @@ td.row-action button:hover {
     background: #fff;
     border-color: #1ea69a;
     color: #1ea69a;
+}
+
+td.row-action .text-button {
+    height: 30px;
+    height: 30px;
+    background: #FFF;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+td.row-action .text-button.view-info-course {
+    width: 75px;
+    color: #2196F3;
+    border: 1px solid #2196F3;
+}
+
+td.row-action .text-button.accept-course {
+    width: 65px;
+    color: #ff7f45;
+    border: 1px solid #ff7f45;
+}
+
+td.row-action .text-button.view-info-course:hover {
+    background: #e8f4fd;
+    transition: .25s;
+}
+
+td.row-action .text-button.accept-course:hover {
+    background: #fff2ec;
+    transition: .25s;
 }
 
 td.row-action button.remove-item {
