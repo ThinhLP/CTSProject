@@ -81,8 +81,9 @@
                                     <i class="fa fa-pie-chart chart-icon" aria-hidden="true"></i>Thống kê kết quả học tập của học viên
                                 </div>
                                 <div class="chart-container" style="display: block">
-                                    <div id="donutchart1" class="donutchart"></div>
-                                    <div class="center-value">55</div>
+                                    <canvas id="dataLearnerProgress" width="350" height="200"></canvas>
+                                    <!--<div id="donutchart1" class="donutchart"></div>
+                                    <div class="center-value">55</div>-->
                                 </div>
                                 <div class="chart-container" style="display: none">
                                     <div class="empty-data">
@@ -98,8 +99,9 @@
                                     <i class="fa fa-users chart-icon" aria-hidden="true"></i>Thống kê số học viên và tác giả
                                 </div>
                                 <div class="chart-container" style="display: block">
-                                    <div id="donutchart2" class="donutchart"></div>
-                                    <div class="center-value">150</div>
+                                    <canvas id="dataLearnerAuthor" width="350" height="200"></canvas>
+                                    <!--<div id="donutchart2" class="donutchart"></div>
+                                    <div class="center-value">150</div>-->
                                 </div>
                                 <div class="chart-container" style="display: none">
                                     <div class="empty-data">
@@ -520,7 +522,8 @@
                                                 <li>
                                                     <div class="course-chart-detail">
                                                         <div id="chart-author-course">
-                                                            <div id="donutchart3" class="donutchart" style="width: 350px; height: 200px;"></div>
+                                                            <canvas id="dataCourse" width="350" height="200"></canvas>
+                                                            <!--<div id="donutchart3" class="donutchart" style="width: 350px; height: 200px;"></div>-->
                                                         </div>
                                                     </div>
                                                 </li>
@@ -576,8 +579,134 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="./resources/tippy.all.min.js"></script>
     <script src="./dist/js/traisy.min.js "></script>
+    <script src="./resources/Chart.js"></script>
+    <script src="./resources/Chart.min.js"></script>
+    <script src="./resources/Chart.PieceLabel.min.js"></script>
 
     <script type="text/javascript">
+        var chartLearnerProgress = document.getElementById("dataLearnerProgress");
+        var dataLearnerProgress = new Chart(chartLearnerProgress, {
+            type: 'doughnut',
+            data: {
+                labels: ["Hoàn thành", "Chưa hoàn thành"],
+                datasets: [{
+                    data: [12, 19],
+                    backgroundColor: [
+                        '#F46036',
+                        '#ffbfa2'
+                    ],
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'right',
+                    align: 'center',
+                    labels: {
+                        boxWidth: 20,
+                        /*padding: 10,*/
+                        fontFamily: 'Open Sans',
+                    },
+                },
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                pieceLabel: {
+                    render: 'percentage',
+                    fontColor: 'white',
+                    fontSize: 14,
+                    fontFamily: 'Open Sans',
+                    precision: 2
+                }
+            }
+        });
+
+        var chartLearnerAuthor = document.getElementById("dataLearnerAuthor");
+        var dataLearnerAuthor = new Chart(chartLearnerAuthor, {
+            type: 'doughnut',
+            data: {
+                labels: ["Giảng viên", "Học viên"],
+                datasets: [{
+                    data: [156, 56],
+                    backgroundColor: [
+                        '#414770',
+                        '#7F7CAF'
+                    ],
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'right',
+                    align: 'center',
+                    labels: {
+                        boxWidth: 20,
+                        fontFamily: 'Open Sans',
+                    },
+                },
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                pieceLabel: {
+                    render: 'percentage',
+                    fontColor: 'white',
+                    fontSize: 14,
+                    fontFamily: 'Open Sans',
+                    precision: 2
+                }
+            }
+        });
+
+        var chartCourse = document.getElementById("dataCourse");
+        var dataCourse = new Chart(chartCourse, {
+            type: 'pie',
+            data: {
+                labels: ["Công khai", "Không công khai", "Đang kiểm duyệt"],
+                datasets: [{
+                    data: [156, 56, 80],
+                    backgroundColor: [
+                        '#00695C',
+                        '#009688',
+                        '#4DB6AC'
+                    ],
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'right',
+                    align: 'center',
+                    labels: {
+                        boxWidth: 20,
+                        fontFamily: 'Open Sans',
+                    },
+                },
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                pieceLabel: {
+                    render: 'percentage',
+                    fontColor: 'white',
+                    fontSize: 14,
+                    fontFamily: 'Open Sans',
+                    precision: 2
+                }
+            }
+        });
+
+
         $(function() {
 
             tippy('.course-type', {
@@ -610,133 +739,6 @@
                 parent.find('#list-author-wrapper').show();
             });
         });
-
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawPieChart);
-
-        function drawPieChart() {
-
-            var dataActiveAndOutdatePlan = google.visualization.arrayToDataTable([
-                ['Detail', 'Số học viên hoàn thành và chưa hoàn thành'],
-                ['Hoàn thành', 35],
-                ['Chưa hoàn thành', 20],
-            ]);
-
-            var dataTotalLearnerFinish = google.visualization.arrayToDataTable([
-                ['Detail', 'Thống kê số học viên và tác giả trong kế hoạch'],
-                ['Học viên', 412],
-                ['Tác giả', 138],
-            ]);
-
-            var dataCourseOfAuthor = google.visualization.arrayToDataTable([
-                ['Detail', 'Thống kê về khoá học'],
-                ['Công khai', 50],
-                ['Không công khai', 12],
-                ['Đang kiểm duyệt', 20],
-            ]);
-
-            var options1 = {
-                fontName: 'Open Sans',
-                fontSize: 15,
-                chartArea: {
-                    width: '100%',
-                    height: '80%',
-                },
-                pieHole: 0.5,
-                legend: {
-                    position: 'right',
-                    alignment: 'center',
-                    textStyle: {
-                        fontSize: 14
-                    },
-                },
-                pieSliceText: 'none',
-                slices: {
-                    0: {
-                        color: '#F46036'
-                    },
-                    1: {
-                        color: '#ffbfa2'
-                    }
-                },
-                height: 200,
-                width: 350,
-            };
-
-            var options2 = {
-                fontName: 'Open Sans',
-                fontSize: 15,
-                chartArea: {
-                    width: '100%',
-                    height: '80%',
-                    /*right: 150,*/
-                },
-                pieHole: 0.5,
-                legend: {
-                    position: 'right',
-                    alignment: 'center',
-                    textStyle: {
-                        fontSize: 14
-                    },
-                },
-                pieSliceText: 'none',
-                slices: {
-                    0: {
-                        color: '#414770'
-                    },
-                    1: {
-                        color: '#7F7CAF'
-                    }
-                },
-                height: 200,
-                width: 350,
-            };
-
-            var options3 = {
-                width: 350,
-                height: 200,
-                fontName: 'Open Sans',
-                fontSize: 15,
-                chartArea: {
-                    right: 50,
-                    left: 10,
-                    width: '100%',
-                    height: '100%'
-                },
-                legend: {
-                    position: 'right',
-                    alignment: 'center',
-                    textStyle: {
-                        fontSize: 14
-                    },
-                },
-                pieSliceText: 'value',
-                pieSliceTextStyle: {
-                    fontSize: 14
-                },
-                slices: {
-                    0: {
-                        color: '#00695C'
-                    },
-                    1: {
-                        color: '#009688'
-                    },
-                    2: {
-                        color: '#4DB6AC'
-                    }
-                },
-            };
-
-            var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
-            var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
-            var chartCourseOfAuthor = new google.visualization.PieChart(document.getElementById('donutchart3'));
-
-            chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options1);
-            chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options2);
-            chartCourseOfAuthor.draw(dataCourseOfAuthor, options3);
-        }
 
     </script>
 </body>
