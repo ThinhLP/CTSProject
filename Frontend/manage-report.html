@@ -34,10 +34,7 @@
     <title>Báo cáo | Traisy</title>
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
-
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/new-global.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
@@ -45,7 +42,6 @@
     <link rel="stylesheet" href="./css/manage-course.css" />
     <link rel="stylesheet" href="./css/manage-report.css" />
     <link rel="stylesheet" href="./css/modal-global.css" />
-    <link rel="stylesheet" href="resources/stepper/noncounter-stepper.css" />
 </head>
 
 <body>
@@ -111,10 +107,10 @@
                 <div class="col-md-9 left-container">
                     <div class="section-content section-report-chart" id="calendar-timetable-wrapper">
                         <div class="chart-title">
-                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch công khai và không công khai
+                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số học viên và giảng viên
                         </div>
                         <div class="chart-container">
-                            <div id="barchart_material"></div>
+                            <canvas id="dataLearnerAuthor"></canvas>
                         </div>
                     </div>
                     <div class="double-chart-container small-width">
@@ -124,8 +120,7 @@
                                     <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê tổng số kế hoạch
                                 </div>
                                 <div class="chart-container small-width">
-                                    <div id="donutchart1" class="donutchart"></div>
-                                    <div class="center-value">150</div>
+                                    <canvas id="dataTotalPlan" width="350" height="200"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -135,31 +130,11 @@
                                     <i class="fa fa-leanpub chart-icon" aria-hidden="true"></i>Kết quả học tập của học viên
                                 </div>
                                 <div class="chart-container small-width">
-                                    <div id="donutchart2" class="donutchart"></div>
-                                    <div class="center-value">150</div>
+                                    <canvas id="dataLearnerProgress" width="350" height="200"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--<div class="section-content section-report-chart" id="calendar-timetable-wrapper">
-                        <div class="chart-title">
-                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Thống kê
-                        </div>
-                        <div class="chart-container">
-                            <div id="donutchart1" class="donutchart" style="width: 300px; height: 300px"></div>
-                            <div id="donutchart2" class="donutchart" style="width: 300px; height: 300px"></div>
-                            <div id="timeline"></div>
-                        </div>
-                    </div>-->
-                    <!--<div id="barchart_material"></div>
-                    <div class="section-content section-report-chart col-md-3" style="display: none;">
-                        <div class="chart-title">
-                            <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số kế hoạch
-                        </div>
-                        <div class="chart-container">
-                            <div id="donutchart" style="width: 250px; height: 250px;"></div>
-                        </div>
-                    </div>-->
                 </div>
                 <div class="col-md-3 plan-progress-wrapper">
                     <h2>Tiến độ các kế hoạch</h2>
@@ -212,12 +187,6 @@
                                 <span class="plan-progress">100/100 học viên hoàn thành</span>
                             </a>
                         </li>
-                        <li class="view-more-plan">
-                            <a>
-                                <span class="plan-name">Xem thêm 20 kế hoạch nữa</span><br/>
-                                <!--<span class="plan-progress">100/100 học viên hoàn thành</span>-->
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -227,95 +196,94 @@
     <script src="./resources/jquery-3.3.1.min.js"></script>
     <script src="./resources/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./resources/Chart.js"></script>
+    <script src="./resources/Chart.min.js"></script>
+    <script src="./resources/Chart.PieceLabel.min.js"></script>
     <script src="./dist/js/traisy.min.js "></script>
 
     <script type="text/javascript">
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawPieChart);
-
-        google.charts.load('current', {
-            'packages': ['bar']
-        });
-        google.charts.setOnLoadCallback(drawBarChart);
-
-        google.charts.load('current', {
-            'packages': ['timeline']
-        });
-        google.charts.setOnLoadCallback(drawTimelineChart);
-
-        google.charts.load("current", {
-            packages: ["corechart"]
-        });
-        google.charts.setOnLoadCallback(drawPlanDetailChart);
-
-        function drawPieChart() {
-
-            var dataActiveAndOutdatePlan = google.visualization.arrayToDataTable([
-                ['Detail', 'Số kế hoạch khả dụng và hết hạn'],
-                ['Đang hoạt động', 35],
-                ['Hết hạn', 20],
-            ]);
-
-            var dataTotalLearnerFinish = google.visualization.arrayToDataTable([
-                ['Detail', 'Thống kê kết quả học viên'],
-                ['Đúng tiến độ', 412],
-                ['Trễ tiến độ', 138],
-            ]);
-
-            var options1 = {
-                fontName: 'Open Sans',
-                fontSize: 15,
-                chartArea: {
-                    width: '100%',
-                    height: '80%',
+        var chartAuthorLearner = document.getElementById("dataLearnerAuthor").getContext('2d');
+        var dataAuthorLearner = new Chart(chartAuthorLearner, {
+            type: 'horizontalBar',
+            data: {
+                labels: ["Đào tạo Hacklike", "Đào tạo Hacklike 1", "Đào tạo Hacklike 2"],
+                fontFamily: 'Open Sans',
+                datasets: [{
+                    label: "Học viên",
+                    backgroundColor: "rgba(75, 192, 192, 0.5)",
+                    borderColor: "rgba(75, 192, 192, 1)",
+                    data: [3, 7, 4],
+                    borderWidth: 1
+                }, {
+                    label: "Giảng viên",
+                    backgroundColor: "rgba(54, 162, 235, 0.5)",
+                    borderColor: "rgba(54, 162, 235, 1)",
+                    data: [10, 12, 10],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                tooltips: {
+                    titleFontFamily: 'Open Sans',
+                    bodyFontFamily: 'Open Sans',
                 },
-                pieHole: 0.5,
+                barThickness: 5,
+                barValueSpacing: 10,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            min: 0,
+                        }
+                    }]
+                },
                 legend: {
-                    position: 'right',
-                    alignment: 'center',
-                    textStyle: {
-                        fontSize: 14
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 20,
+                        fontFamily: 'Open Sans',
                     },
                 },
-                pieSliceText: 'none',
-                slices: {
-                    0: {
-                        color: '#4C6085'
-                    },
-                    1: {
-                        color: '#39A0ED'
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 50,
+                        top: 0,
+                        bottom: 0
                     }
                 },
-                height: 200,
-                width: 300,
-            };
+            }
+        });
 
-            var options2 = {
-                fontName: 'Open Sans',
-                fontSize: 15,
-                chartArea: {
-                    width: '100%',
-                    height: '80%',
-                },
-                pieHole: 0.5,
+        var chartTotalPlan = document.getElementById("dataTotalPlan").getContext('2d');
+        var dataTotalPlan = new Chart(chartTotalPlan, {
+            type: 'pie',
+            data: {
+                labels: ["Đang hoạt động", "Hết hạn"],
+                datasets: [{
+                    data: [455, 211],
+                    backgroundColor: [
+                        '#FF7F45',
+                        '#ffa57c'
+                    ],
+                }]
+            },
+            options: {
                 legend: {
                     position: 'right',
-                    alignment: 'center',
-                    textStyle: {
-                        fontSize: 14
+                    labels: {
+                        boxWidth: 20,
+                        fontFamily: 'Open Sans',
                     },
                 },
-                pieSliceText: 'none',
-                slices: {
-                    0: {
-                        color: '#496F5D'
-                    },
-                    1: {
-                        color: '#4C9F70'
+                layout: {
+                    padding: {
+                        left: 30,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
                     }
                 },
+<<<<<<< HEAD
                 height: 200,
                 width: 300,
             };
@@ -424,20 +392,57 @@
                 slices: {
                     0: {
                         color: '#496F5D'
+=======
+                pieceLabel: {
+                    render: 'percentage',
+                    fontColor: 'white',
+                    fontSize: 14,
+                    fontFamily: 'Open Sans',
+                    precision: 2
+                }
+            }
+        });
+
+        var chartLearnerProgress = document.getElementById("dataLearnerProgress").getContext('2d');
+        var dataLearnerProgress = new Chart(chartLearnerProgress, {
+            type: 'pie',
+            data: {
+                labels: ["Đúng tiến độ", "Trễ tiến độ"],
+                datasets: [{
+                    data: [121, 50],
+                    backgroundColor: [
+                        '#176D81',
+                        '#71ADB5'
+                    ],
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'right',
+                    align: 'center',
+                    labels: {
+                        boxWidth: 20,
+                        fontFamily: 'Open Sans',
+>>>>>>> 14e05ecc5686bc54352edd13f12045e6e36eb162
                     },
-                    1: {
-                        color: '#4C9F70'
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
                     }
                 },
-                height: 220,
-                width: 220,
-                legend: 'none',
-                pieSliceText: 'value',
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('plan-detail-chart'));
-            chart.draw(data, options);
-        }
+                pieceLabel: {
+                    render: 'value',
+                    fontColor: 'white',
+                    fontSize: 14,
+                    fontFamily: 'Open Sans',
+                    precision: 2
+                }
+            }
+        });
 
     </script>
 </body>
