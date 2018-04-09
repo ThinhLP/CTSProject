@@ -109,13 +109,16 @@ i {
 }
 
 .chart-container,
-.chart-container.empty-data {
+.chart-container .empty-data {
     width: 100%;
     padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.chart-statistic {
+    height: 200px;
 }
 
 .empty-data {

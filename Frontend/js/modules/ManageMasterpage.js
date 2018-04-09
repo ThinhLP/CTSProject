@@ -73,14 +73,14 @@ function ManageMasterpage() {
             $('.nav-top').css('width', 'calc(100% - 225px)');
         }
     };
-    
-    var handleHamburgerButtonStatus = function() {
+
+    var handleHamburgerButtonStatus = function () {
         var windowWidth = $(window).width();
         if (windowWidth <= MIN_DESKTOP_WIDTH) {
             $(hamburgerButtonSlt).attr('collapsed', 'true');
         } else {
             $(hamburgerButtonSlt).attr('collapsed', 'false');
-        }  
+        }
     };
 
     $(hamburgerButtonSlt).click(function () {
@@ -130,6 +130,18 @@ function ManageMasterpage() {
         });
 
     };
+
+    $('.minimize-sidebar').on('click', function () {
+        $('.course-sidebar').hide();
+        $('.expand-sidebar').show();
+        $(this).hide();
+    });
+
+    $('.expand-sidebar').on('click', function () {
+        $('.course-sidebar').show();
+        $('.expand-sidebar').hide();
+        $('.minimize-sidebar').show();
+    });
 
     addEventHandlers();
 

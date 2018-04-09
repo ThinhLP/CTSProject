@@ -98,6 +98,12 @@ var Utils = {
         var day = date.getDate();
         var month = date.getMonth() + 1;
         var year = date.getFullYear();
+        if (day < 10) {
+            day = '0' + day;
+        }
+        if (month < 10) {
+            month = '0' + month;
+        }
         return day + '/' + month + '/' + year;
     },
     convertTimestampToFullDate: function (timestamp) {
@@ -111,7 +117,21 @@ var Utils = {
         var hour = date.getHours();
         var min = date.getMinutes();
         var sec = date.getSeconds();
-        
+        if (day < 10) {
+            day = '0' + day;
+        }
+        if (month < 10) {
+            month = '0' + month;
+        }
+        if (hour < 10) {
+            hour = '0' + hour;
+        }
+        if (min < 10) {
+            min = '0' + min;
+        }
+        if (sec < 10) {
+            sec = '0' + sec;
+        }
         return hour+':'+ min + ':' + sec + ' ' + day + '/' + month + '/' + year;
     },
     updateOrder: function (selector, numberSelector) {
