@@ -7,7 +7,7 @@ i {
 }
 
 .content-wrapper {
-    display: flex;
+    display: block;
     padding: 0;
 }
 
@@ -16,7 +16,8 @@ i {
 }
 
 .content-wrapper .left-container {
-    padding: 15px 15px 15px 0px;
+    width: 100%;
+    padding: 0px 0px 15px 0px;
 }
 
 .content-wrapper .center-container {
@@ -26,8 +27,8 @@ i {
 /* PLAN-PROGRESS-WRAPPER */
 
 .plan-progress-wrapper {
-    padding: 15px 0px 15px 15px;
-    height: 800px;
+    width: 100%;
+    padding: 0px 0px 15px 0px;
 }
 
 .plan-progress-wrapper h2 {
@@ -38,11 +39,34 @@ i {
     color: #545665;
 }
 
-.plan-progress-wrapper ul {
-    list-style: none;
+.plan-progress-wrapper .list-plan-progress-wrapper {
+    width: 100%;
 }
 
-.plan-progress-wrapper ul li {
+.plan-progress-wrapper .row-plan-wrapper {
+    display: flex;
+}
+
+.plan-progress-wrapper .row-plan-wrapper div {
+    width: 50%;
+    border-radius: 5px !important;
+}
+
+.plan-progress-wrapper .row-plan-wrapper div:first-child {
+    margin-right: 10px;
+}
+
+.plan-progress-wrapper .row-plan-wrapper div:last-child {
+    margin-left: 10px;
+}
+
+.plan-progress-wrapper ul {
+    list-style: none;
+    display: none;
+}
+
+.plan-progress-wrapper ul li,
+.plan-progress-wrapper .row-plan-wrapper div {
     border-left: 3px solid #add8e6;
     cursor: pointer;
     background: #fff;
@@ -56,21 +80,21 @@ i {
     box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
 }
 
-.plan-progress-wrapper ul li span.plan-name {
+.plan-progress-wrapper span.plan-name {
     font-size: 14px;
     font-weight: bolder!important;
     color: #20272d;
 }
 
-.plan-progress-wrapper ul li.view-more-plan {
+/*.plan-progress-wrapper ul li.view-more-plan {
     border-left: 3px solid #90ee90;
 }
 
 .plan-progress-wrapper ul li.view-more-plan span.plan-name {
     border-bottom: 1px solid #20272d;
-}
+}*/
 
-.plan-progress-wrapper ul li span.plan-progress {
+.plan-progress-wrapper span.plan-progress {
     font-weight: 500;
     font-size: 13px;
     color: #b1b1b1;
@@ -117,6 +141,7 @@ i {
     align-items: center;
     position: relative;
 }
+
 .chart-statistic {
     height: 200px;
 }

@@ -3,24 +3,49 @@
         width: 225px;
         display: block;
     }
-   
+
     .fake-panel {
         width: 225px;
         min-width: 225px;
         display: block;
     }
-    
+
     .main-container {
         width: calc(100% - 225px);
     }
     .fix-nav-top {
         left: 225px;
-         width: calc(100% - 225px);
+        width: calc(100% - 225px);
     }
-    
 }
+
+@media (min-width:1350px) {
+    .report-container .content-wrapper {
+        display: flex;
+    }
+
+    .report-container .left-container {
+        padding: 15px 15px 15px 0px;
+        width: 70%;
+    }
+
+    .report-container .plan-progress-wrapper {
+        padding: 0px 0px 15px 30px;
+        width: 30%;
+        height: 800px;
+    }
+
+    .report-container .plan-progress-wrapper .list-plan-progress-wrapper {
+        display: none;
+    }
+
+    .report-container .plan-progress-wrapper ul {
+        display: block;
+    }
+}
+
 @media (min-width: 1000px) {
-     .responsive-button span {
+    .responsive-button span {
         display: inline-block;
     }
 
@@ -36,5 +61,5 @@
     .main-container {
         padding: 40px 60px 25px 60px;
     }
-   
+
 }

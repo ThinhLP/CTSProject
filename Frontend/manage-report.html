@@ -37,11 +37,12 @@
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/new-global.css" />
-    <link rel="stylesheet" href="./css/new-global-responsive.css" />
+    <link rel="stylesheet" href="./css/modal-global.css" />
     <link rel="stylesheet" href="./css/manage-page.css" />
     <link rel="stylesheet" href="./css/manage-course.css" />
     <link rel="stylesheet" href="./css/manage-report.css" />
-    <link rel="stylesheet" href="./css/modal-global.css" />
+    <link rel="stylesheet" href="./css/manage-report-responsive.css" />
+    <link rel="stylesheet" href="./css/new-global-responsive.css" />
 </head>
 
 <body>
@@ -102,9 +103,9 @@
                 <span class="nav-top-title">Báo cáo</span>
             </div>
         </div>
-        <div class="main-container">
+        <div class="main-container report-container">
             <div class="content-wrapper col-md-12">
-                <div class="col-md-9 left-container">
+                <div class="left-container">
                     <div class="section-content section-report-chart" id="calendar-timetable-wrapper">
                         <div class="chart-title">
                             <i class="fa fa-calendar chart-icon" aria-hidden="true"></i>Tổng số học viên và giảng viên
@@ -136,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 plan-progress-wrapper">
+                <div class="plan-progress-wrapper">
                     <h2>Tiến độ các kế hoạch</h2>
                     <ul>
                         <li data-toggle="modal" data-target="#viewDetailModal">
@@ -188,6 +189,64 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="list-plan-progress-wrapper">
+                        <div class="row-plan-wrapper">
+                            <div>
+                                <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                            </div>
+                            <div>
+                                <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="row-plan-wrapper">
+                            <div>
+                                <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                            </div>
+                            <div>
+                                <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="row-plan-wrapper">
+                            <div>
+                                <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                            </div>
+                            <div>
+                                <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="row-plan-wrapper">
+                            <div>
+                                <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                            </div>
+                            <div>
+                                <a>
+                                <span class="plan-name">Đào tạo Web Developer</span><br/>
+                                <span class="plan-progress">64/100 học viên hoàn thành</span>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -283,26 +342,65 @@
                         bottom: 10
                     }
                 },
-<<<<<<< HEAD
                 height: 200,
                 width: 300,
-            };
+            }
+        });
 
-            var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
-            var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
+        var chartLearnerProgress = document.getElementById("dataLearnerProgress").getContext('2d');
+        var dataLearnerProgress = new Chart(chartLearnerProgress, {
+            type: 'pie',
+            data: {
+                labels: ["Đúng tiến độ", "Trễ tiến độ"],
+                datasets: [{
+                    data: [121, 50],
+                    backgroundColor: [
+                        '#176D81',
+                        '#71ADB5'
+                    ],
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'right',
+                    align: 'center',
+                    labels: {
+                        boxWidth: 20,
+                        fontFamily: 'Open Sans',
+                    },
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                pieceLabel: {
+                    render: 'value',
+                    fontColor: 'white',
+                    fontSize: 14,
+                    fontFamily: 'Open Sans',
+                    precision: 2
+                }
+            }
+        });
+        /*
+                            var chartActiveOutdatePlan = new google.visualization.PieChart(document.getElementById('donutchart1'));
+                            var chartTotalLearnerFinish = new google.visualization.PieChart(document.getElementById('donutchart2'));
 
-            chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options1);
-            chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options2);
-        }
+                            chartActiveOutdatePlan.draw(dataActiveAndOutdatePlan, options1);
+                            chartTotalLearnerFinish.draw(dataTotalLearnerFinish, options2);*/
 
-        function drawBarChart() {
+        /*function drawBarChart() {
             var data = google.visualization.arrayToDataTable([
                 ['', 'Công khai', 'Không công khai'],
                 ['Đào tạo Tester', 1000, 400],
                 ['Đào tạo Hack like, hack facebook', 1170, 460],
                 ['Đào tạo Web Developer', 660, 1120],
                 ['Đào tạo Mobile Developer', 1030, 540],
-                  ['Đào tạo Web Developer', 660, 1120],
+                ['Đào tạo Web Developer', 660, 1120],
                 ['Đào tạo Mobile Developer', 1030, 540]
             ]);
 
@@ -310,8 +408,7 @@
 
             var options = {
                 chart: {
-                    /* title: 'Company Performance',
-                     subtitle: 'Sales, Expenses, and Profit: 2014-2017',*/
+                    
                 },
                 chartArea: {
                     width: '80%',
@@ -324,16 +421,16 @@
                 fontSize: 15,
                 width: 500,
                 height: 400,
-                /*isStacked: true,*/
-                bars: 'horizontal' // Required for Material Bar Charts.
+                isStacked: true,
+                bars: 'horizontal'
             };
 
             var chart = new google.charts.Bar(document.getElementById('barchart_material'));
 
             chart.draw(data, google.charts.Bar.convertOptions(options));
-        }
+        }*/
 
-        function drawTimelineChart() {
+        /*function drawTimelineChart() {
             var container = document.getElementById('timeline');
             var chart = new google.visualization.Timeline(container);
             var dataTable = new google.visualization.DataTable();
@@ -372,9 +469,9 @@
             };
 
             chart.draw(dataTable, options);
-        }
+        }*/
 
-        function drawPlanDetailChart() {
+        /*function drawPlanDetailChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],
                 ['Học viên đã hoàn thành', 11],
@@ -391,58 +488,58 @@
                 is3D: true,
                 slices: {
                     0: {
-                        color: '#496F5D'
-=======
-                pieceLabel: {
-                    render: 'percentage',
-                    fontColor: 'white',
-                    fontSize: 14,
-                    fontFamily: 'Open Sans',
-                    precision: 2
-                }
-            }
-        });
-
-        var chartLearnerProgress = document.getElementById("dataLearnerProgress").getContext('2d');
-        var dataLearnerProgress = new Chart(chartLearnerProgress, {
-            type: 'pie',
-            data: {
-                labels: ["Đúng tiến độ", "Trễ tiến độ"],
-                datasets: [{
-                    data: [121, 50],
-                    backgroundColor: [
-                        '#176D81',
-                        '#71ADB5'
-                    ],
-                }]
-            },
-            options: {
-                legend: {
-                    position: 'right',
-                    align: 'center',
-                    labels: {
-                        boxWidth: 20,
-                        fontFamily: 'Open Sans',
->>>>>>> 14e05ecc5686bc54352edd13f12045e6e36eb162
-                    },
-                },
-                layout: {
-                    padding: {
-                        left: 50,
-                        right: 10,
-                        top: 10,
-                        bottom: 10
+                        color: '#496F5D' ===
+                            ===
+                            =
+                            pieceLabel: {
+                                render: 'percentage',
+                                fontColor: 'white',
+                                fontSize: 14,
+                                fontFamily: 'Open Sans',
+                                precision: 2
+                            }
                     }
+                });
+
+            var chartLearnerProgress = document.getElementById("dataLearnerProgress").getContext('2d');
+            var dataLearnerProgress = new Chart(chartLearnerProgress, {
+                type: 'pie',
+                data: {
+                    labels: ["Đúng tiến độ", "Trễ tiến độ"],
+                    datasets: [{
+                        data: [121, 50],
+                        backgroundColor: [
+                            '#176D81',
+                            '#71ADB5'
+                        ],
+                    }]
                 },
-                pieceLabel: {
-                    render: 'value',
-                    fontColor: 'white',
-                    fontSize: 14,
-                    fontFamily: 'Open Sans',
-                    precision: 2
+                options: {
+                    legend: {
+                        position: 'right',
+                        align: 'center',
+                        labels: {
+                            boxWidth: 20,
+                            fontFamily: 'Open Sans',
+                        },
+                    },
+                    layout: {
+                        padding: {
+                            left: 50,
+                            right: 10,
+                            top: 10,
+                            bottom: 10
+                        }
+                    },
+                    pieceLabel: {
+                        render: 'value',
+                        fontColor: 'white',
+                        fontSize: 14,
+                        fontFamily: 'Open Sans',
+                        precision: 2
+                    }
                 }
-            }
-        });
+            });*/
 
     </script>
 </body>

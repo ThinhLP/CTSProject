@@ -65,4 +65,12 @@
         padding-right: 20px;
 */
     }
+
+    .report-container .content-wrapper {
+        display: flex;
+    }
+
+    .plan-progress-wrapper {}
+
+
 }
