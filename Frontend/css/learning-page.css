@@ -707,8 +707,10 @@ h5 {
 
 .user-layout .sidebar {
     width: 276px;
+    height: 100vh;
     background-color: #fff;
     border-right: 1px solid #eee;
+    position: fixed;
 }
 
 .user-layout .sidebar .profile-card {
@@ -785,6 +787,7 @@ h5 {
 .user-layout .user-dashboard {
     padding: 50px 50px 0px 50px;
     width: 100%;
+    margin-left: 276px;
 }
 
 .user-layout .user-dashboard h1 {
