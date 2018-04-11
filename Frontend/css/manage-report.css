@@ -41,23 +41,14 @@ i {
 
 .plan-progress-wrapper .list-plan-progress-wrapper {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .plan-progress-wrapper .row-plan-wrapper {
-    display: flex;
-}
-
-.plan-progress-wrapper .row-plan-wrapper div {
-    width: 50%;
     border-radius: 5px !important;
-}
-
-.plan-progress-wrapper .row-plan-wrapper div:first-child {
-    margin-right: 10px;
-}
-
-.plan-progress-wrapper .row-plan-wrapper div:last-child {
-    margin-left: 10px;
+    flex-basis: 49%;
 }
 
 .plan-progress-wrapper ul {
@@ -66,7 +57,7 @@ i {
 }
 
 .plan-progress-wrapper ul li,
-.plan-progress-wrapper .row-plan-wrapper div {
+.plan-progress-wrapper .row-plan-wrapper {
     border-left: 3px solid #add8e6;
     cursor: pointer;
     background: #fff;
