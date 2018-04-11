@@ -127,10 +127,10 @@
 
 /*-------------------------------------------------*/
 
-#addFeedbackModal .editor {
+#createFeedbackModalWhenEmpty .editor,
+#createFeedbackModal .editor {
     margin-top: 20px !important;
 }
-
 
 /*-------------------------------------------------*/
 
