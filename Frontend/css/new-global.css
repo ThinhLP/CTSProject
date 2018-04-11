@@ -585,8 +585,7 @@ ul {
     border: 1px solid #1ea69a;
 }
 
-.outline-button:hover {
-    /*border: 1px solid #1b958a;*/
+.outline-button:hover:not(.public-course-button) {
     background-color: #d2edea;
 }
 
@@ -596,7 +595,7 @@ ul {
     border: 1px solid #ff7f45;
 }
 
-.outline-orange-button:hover {
+.outline-orange-button:hover:not(.private-course-button) {
     background-color: #ffe5d9;
 }
 
