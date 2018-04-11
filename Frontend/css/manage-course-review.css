@@ -35,6 +35,10 @@
     transition: .3s;
 }
 
+.list-review-course-wrapper .course-item-container:hover .read-more:after {
+    width: 100%;
+}
+
 .course-item-container .course-image {
     width: 150px;
 }
@@ -50,6 +54,17 @@
     width: 100%;
     padding: 15px 20px 15px 20px;
     height: 100%;
+    position: relative;
+}
+
+.course-item-container .course-summary-info h1 {
+    background: #ff7f45;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff;
+    padding: 4px 10px;
+    display: inline-block;
+    /*margin-left: -40px;*/
 }
 
 .course-item-container .course-summary-info h2 {
@@ -64,8 +79,57 @@
     color: #444;
 }
 
-.course-item-container .course-summary-info .read-more {
+.course-item-container .course-summary-info h5 {
+    background: #1ea69a;
+    display: inline-block;
+    color: #fff;
+}
+
+.course-item-container .read-more {
     float: right;
-    color: #1ea69a;
-    /*border-bottom: 1px solid #1ea69a;*/
+    color: #1ea69a !important;
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 10px;
+}
+
+.course-item-container .read-more::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #1ea69a;
+    transition: width .2s;
+}
+
+.course-privacy {
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-bottom-left-radius: 30px;
+}
+
+.course-privacy.public-status {
+    background: #1ea69a;
+    padding-left: 14px;
+    padding-top: 3px;
+    font-size: 16px;
+}
+
+.course-privacy.private-status {
+    background: #ff7f45;
+    padding-left: 15px;
+    padding-top: 3px;
+    font-size: 16px;
+}
+
+.course-privacy.review-status {
+    background: #2196F3;
+    padding-left: 15px;
+    padding-top: 3px;
+    font-size: 14px;
 }
