@@ -600,6 +600,16 @@ ul {
     background-color: #ffe5d9;
 }
 
+.outline-blue-button {
+    color: #2196F3;
+    background-color: #FFF;
+    border: 1px solid #2196F3;
+}
+
+.outline-blue-button:hover:not(.course-in-review) {
+    background-color: #e8f4fd;
+}
+
 .gray-outline-green-button {
     color: #1ea69a;
     background-color: #FFF;
