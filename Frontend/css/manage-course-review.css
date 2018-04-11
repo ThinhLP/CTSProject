@@ -1,3 +1,28 @@
+.empty-course-review-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-course-review-wrapper .empty-container {
+    text-align: center;
+    padding: 150px 0px;
+}
+
+.empty-course-review-wrapper img {
+    width: 220px;
+}
+
+.empty-course-review-wrapper h2 {
+    margin-top: 20px;
+}
+
+.empty-course-review-wrapper .create-course-now {
+    color: #ff7f45;
+    cursor: pointer;
+    border-bottom: 1px solid #ff7f45;
+}
+
 .plan-container {
     margin-bottom: 30px;
 }
@@ -67,7 +92,8 @@
     /*margin-left: -40px;*/
 }
 
-.course-item-container .course-summary-info h2 {
+.course-item-container .course-summary-info h2,
+.empty-course-review-wrapper h2 {
     font-size: 16px;
     font-weight: 700;
     color: #000;
