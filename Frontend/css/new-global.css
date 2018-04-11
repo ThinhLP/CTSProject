@@ -167,7 +167,7 @@ ul {
     background-color: #fff;
     color: #80848e;
     top: -100%;
-    transform: translateY(-17px);
+    transform: translateY(-50%);
     left: 0;
     font-size: 13px;
     margin: 0;
