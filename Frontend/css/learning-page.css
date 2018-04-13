@@ -824,7 +824,8 @@ h5 {
 }
 
 .search-plan-container .search-input {
-    width: 50%;
+    /*width: 50%;*/
+    width: 454px;
     font-size: 15px;
 }
 
@@ -839,17 +840,18 @@ h5 {
 
 .search-input i {
     font-size: 18px;
-    color: #323232;
+    color: #878787;
 }
 
 .plan-list {
-    display: flex;
+    margin-left: -20px;
+    margin-right: 20px;
+    /*display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: -20px;
+    margin-left: -20px;*/
 }
 
-.plan-list .plan-card,
 .plan-detail,
 .plan-education-program {
     display: block;
@@ -867,7 +869,25 @@ h5 {
 }
 
 .plan-list .plan-card {
-    margin: 20px;
+    display: block;
+    width: 412px;
+    padding: 0px;
+    position: relative;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 20px #e3e7ea;
+    transition: 0.15s all ease-in;
+    background-position: center top;
+    cursor: pointer;
+}
+
+.plan-list .plan-card {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    height: 250px;
 }
 
 .plan-detail,
@@ -922,7 +942,7 @@ h5 {
     transform: translateY(-4px);
 }
 
-.plan-list .plan-card .plan-info {
+/*.plan-list .plan-card .plan-info {
     background: #fff;
     position: absolute;
     width: 100%;
@@ -934,6 +954,17 @@ h5 {
     border-bottom-right-radius: 5px;
     padding: 20px 20px 30px 30px;
     min-height: 140px;
+}*/
+
+.plan-list .plan-card .plan-info {
+    background: #fff;
+    width: 50%;
+    bottom: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 20px 20px 30px 30px;
 }
 
 .plan-list .plan-card .plan-favicon {
@@ -955,32 +986,31 @@ h5 {
 
 .plan-list .plan-card .plan-image {
     position: relative;
+    width: 50%;
 }
 
-.plan-list .plan-card .plan-image .plan-outdate {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+.plan-list .plan-outdate {
     background-color: #000;
     opacity: 0.5;
     position: absolute;
     z-index: 10;
     text-align: center;
     width: 100%;
-    height: 226px;
+    height: 100%;
 }
 
-.plan-list .plan-card .plan-image .plan-progress {
+.plan-list .plan-progress {
     z-index: 15;
     position: absolute;
     width: 100%;
-    height: 226px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .plan-list .plan-card .plan-image .plan-outdate > div {
-    margin-top: 60px;
+    margin-top: 75px;
     font-size: 25px;
     color: #FFF;
 }
@@ -991,8 +1021,9 @@ h5 {
 
 .plan-list .plan-card .plan-image img {
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     width: 100%;
+    height: 100%;
     z-index: 1;
 }
 

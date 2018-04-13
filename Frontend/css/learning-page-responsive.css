@@ -1,0 +1,72 @@
+@media (min-width:1280px) {
+    .plan-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: -20px;
+    }
+
+    .plan-list .plan-card,
+    .plan-detail,
+    .plan-education-program {
+        display: block;
+        width: 412px;
+        padding: 0px;
+        min-height: 400px;
+        position: relative;
+        border-radius: 5px;
+        background-size: 130%;
+        background-repeat: no-repeat;
+        box-shadow: 0 8px 20px #e3e7ea;
+        transition: 0.15s all ease-in;
+        background-position: center top;
+        cursor: pointer;
+    }
+
+    .plan-list .plan-card {
+        margin: 20px;
+    }
+
+    .plan-list .plan-card .plan-image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+    .plan-list .plan-outdate {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: #000;
+        opacity: 0.5;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+
+    .plan-list .plan-card .plan-image img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .plan-list .plan-card .plan-info {
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        height: 175px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 20px 20px 30px 30px;
+        min-height: 140px;
+    }
+
+    .plan-list .plan-card .plan-image .plan-outdate,
+    .plan-list .plan-card .plan-image .plan-progress {
+        height: 85%;
+        z-index: 0;
+    }
+}
