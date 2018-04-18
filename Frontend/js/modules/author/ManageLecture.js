@@ -3,6 +3,8 @@
 function ManageLecture() {
     var instance = ManageMasterpage.call(this);
 
+    var eventBus = new EventBus();
+    
     var minuteSelector = '.min-time-input';
     var secondSelector = '.sec-time-input';
     var minuteMin = 0;
@@ -162,6 +164,19 @@ function ManageLecture() {
         $answerWrapper.after(emptyAnswerElement);
     });
     
+     $('body').on('click', '.add-answer', function() {
+        var $wrapper = $(this).closest('.question-body').find('.answer-list');
+         
+        if (!isAbleToAddAnswer($wrapper)) {
+            return;
+        } 
+         
+        $wrapper.append(emptyAnswerElement);
+        if (!isAbleToAddAnswer($wrapper)) {
+            $(this).hide();
+        }
+    });
+    
     $('body').on('click', '#createQuestionModal .remove-answer', function() {
         if (!isAbleToRemoveAnswer($('#createQuestionModal'))) {
             return;
@@ -171,6 +186,24 @@ function ManageLecture() {
         $('#createQuestionModal .answer-content-input').removeClass('last-answer');
         $('#createQuestionModal .answer-content-input').last().addClass('last-answer');
     });
+    
+    instance.onRemoveAnswer = function(eventHandler) {
+        eventBus.on('REMOVE_ANSWER', eventHandler);
+    };
+    
+    $('body').on('click', '.question-body .remove-answer', function() {
+        var $wrapper = $(this).closest('.question-body');
+        if (!isAbleToRemoveAnswer($wrapper)) {
+            return;
+        } 
+        
+        var answerId = $(this).attr('value');
+        var questionId = $wrapper.attr('value');
+        
+        eventBus.dispatch('REMOVE_ANSWER', questionId, answerId, $(this).closest('.answer-wrapper'));
+    });
+    
+    
     
     $('body').on('focusin', '.answer-content-input', function() {
         $(this).siblings('.answer-error-tooltip').hide();
