@@ -28,7 +28,7 @@ ul {
 }
 
 .pagination > .page-item > .page-link,
-.pagination > .page-item > span, 
+.pagination > .page-item > span,
 .pagination > .prev-page-btn > .page-link,
 .pagination > .next-page-btn > .page-link {
     border: 0;
@@ -69,7 +69,7 @@ ul {
 .pagination > .page-item.active > a:hover,
 .pagination > .page-item.active > span,
 .pagination > .page-item.active > span:focus,
-.pagination > .page-item.active > span:hover{
+.pagination > .page-item.active > span:hover {
     background-color: #1ea69a;
     border-color: #1ea69a;
     /*box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);*/
@@ -1134,6 +1134,16 @@ div.heading-action .editable-heading {
     margin-top: -3px;
 }
 
+.curriculum-lecture-item .type-lecture {
+    font-size: 13px;
+    background: #dce1e3;
+    padding: 0px 15px;
+    border-radius: 20px;
+    color: #63707e;
+    margin-right: 10px;
+    width: 110px;
+    text-align: center;
+}
 
 .edit-item-content-action .curriculum-lecture-action,
 .edit-item-name-action .curriculum-lecture-action {
