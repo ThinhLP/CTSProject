@@ -1403,7 +1403,8 @@ div.heading-action .editable-heading {
     border-right: 0;
 }
 
-.quiz-setting .setting-min-score-title {
+.setting-min-score-title,
+.setting-mandatory-question {
     width: 40%;
     background: #fafafa;
     text-align: center;
@@ -1413,6 +1414,14 @@ div.heading-action .editable-heading {
     border: 1px solid #ccc;
     border-right: 0;
     border-left: 0;
+}
+
+.setting-mandatory-question {
+    border-right: 0px;
+}
+
+.setting-mandatory-question input {
+    margin-top: 0px;
 }
 
 .quiz-setting input:first-child {
