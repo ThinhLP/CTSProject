@@ -441,7 +441,7 @@ h5 {
 }
 
 .course-section .section-title {
-    background: #e8e8e8;
+    background: #d8d8d8;
     padding: 10px 16px;
     margin: 0;
     font-size: 15px;
@@ -462,16 +462,21 @@ h5 {
     cursor: pointer;
 }
 
-.course-section ul.section-list .section-item.completed a:hover {
+.course-section .section-item.completed a:hover {
     background: #dcefed !important;
     color: #000 !important;
 }
 
-.course-section ul.section-list .section-item.completed .item {
-    color: #b8b8b8;
-    background: #f0f0f0;
-    transition: 0.1s ease-in-out all;
+.course-section .section-item.incomplete:not(.no-hover) a:hover {
+    background: #dcefed !important;
+    color: #000 !important;
 }
+
+/*.course-section ul.section-list .section-item.completed .item {
+    color: #b8b8b8;
+    background: #d8d8d8;
+    transition: 0.1s ease-in-out all;
+}*/
 
 .course-section ul.section-list .section-item.next-lecture .item {
     color: #2b3636;
@@ -488,6 +493,7 @@ h5 {
     color: #676767;
     text-decoration: none;
     font-weight: 200;
+    transition: .3s;
 }
 
 .course-section ul.section-list .section-item .status-container {
@@ -501,6 +507,11 @@ h5 {
 
 .course-section ul.section-list .section-item .status-icon {
     font-size: 20px;
+}
+
+.course-section ul.section-list .section-item.lock-lecture .status-icon {
+    font-size: 22px;
+    margin-left: 3px;
 }
 
 .course-section ul.section-list .section-item.incomplete .status-icon {
@@ -531,6 +542,20 @@ h5 {
 .course-section ul.section-list .section-item .item .lecture-icon {
     padding-right: 5px;
 }
+
+.course-section ul.section-list .section-item.lock-lecture .item {
+    color: #b8b8b8;
+    background: #f0f0f0;
+    cursor: default;
+}
+
+
+/*.course-section ul.section-list .section-item .item .lecture-icon.lecture-lock {
+    float: right;
+    padding-right: 0px;
+    font-size: 21px;
+    margin-top: -3px;
+}*/
 
 .course-section ul.section-list .section-item .item .lecture-icon i {
     width: 20px;
