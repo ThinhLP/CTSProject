@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quản lý khoá học | Traisy</title>
     <link rel="stylesheet" href="./resources/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./resources/sliptree-bootstrap-tokenfield/dist/css/bootstrap-tokenfield.css" />
+    <!--<link rel="stylesheet" href="./resources/sliptree-bootstrap-tokenfield/dist/css/bootstrap-tokenfield.css" />-->
     <link href="./resources/images/small-logo.png" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css" />
-
     <link rel="stylesheet" href="./css/new-global.css" />
     <link rel="stylesheet" href="./css/new-global-responsive.css" />
     <link rel="stylesheet" href="./css/manage-page.css" />
@@ -155,10 +151,10 @@
                         </h2>
                     </div>
                     <div class="section-setting col-md-9">
-                        <div class="section-setting-item">
+                        <!--<div class="section-setting-item">
                             <img src="./resources/images/garbage.svg" />
                             <h4>Xoá khoá học</h4>
-                        </div>
+                        </div>-->
                         <div class="section-setting-item">
                             <img src="./resources/images/send.svg" />
                             <h4>Gửi kiểm duyệt</h4>
@@ -280,10 +276,34 @@
                                             </div>
                                             <div class="section-action">
                                                 <div class="edit-item-content-action" style="display: none;">
-                                                    <a>Văn bản</a>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-eye-slash"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon"><i class="fa fa-edit"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon" data-toggle="modal" data-target="#removeSectionModal"><i class="fa fa-trash"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!--LectureType - Updated -->
+                                    <li class="curriculum-lecture-item ">
+                                        <div class="curriculum-lecture-heading curriculum-wrapper ">
+                                            <div class="heading-action section-heading-action ">
+                                                <div class="increment-section ">
+                                                    <i class="fa fa-bars move-section "></i>Bài <span class="lec_no ">2</span>:</div>
+                                                <div class="editable-heading lecture-title " contenteditable="false " spellcheck="false "><span class="lecture-name ">Bai so 1</span><button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-pencil " aria-hidden="true "></i></button></div>
+                                                <div class="editable-heading section-title input-name " contenteditable="false " spellcheck="false " style="display: none; ">
+                                                    <input name="name " type="text " class="form-input " placeholder="Nhập tên chương học " />
+                                                </div>
+                                            </div>
+                                            <div class="section-action ">
+                                                <div class="edit-item-content-action ">
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon lecture-type"><i class="fa fa-file-text"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-eye "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-edit "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon " data-toggle="modal " data-target="#removeSectionModal "><i class="fa fa-trash "></i></button>
+                                                </div>
+                                                <div class="edit-item-name-action " style="display: none; ">
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon save-edit-lecture-name "><i class="fa fa-check " aria-hidden="true "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon cancel-edit-lecture-name "><i class="fa fa-times " aria-hidden="true "></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -292,7 +312,7 @@
                                         <div class="curriculum-lecture-heading curriculum-wrapper ">
                                             <div class="heading-action section-heading-action ">
                                                 <div class="increment-section ">
-                                                    <i class="fa fa-bars move-section "></i><label class="type-lecture">Văn bản</label>Bài <span class="lec_no ">2</span>:</div>
+                                                    <i class="fa fa-bars move-section "></i>Bài <span class="lec_no ">2</span>:</div>
                                                 <div class="editable-heading lecture-title " contenteditable="false " spellcheck="false "><span class="lecture-name ">Bai so 1</span><button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-pencil " aria-hidden="true "></i></button></div>
                                                 <div class="editable-heading section-title input-name " contenteditable="false " spellcheck="false " style="display: none; ">
                                                     <input name="name " type="text " class="form-input " placeholder="Nhập tên chương học " />
@@ -300,6 +320,55 @@
                                             </div>
                                             <div class="section-action ">
                                                 <div class="edit-item-content-action ">
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon lecture-type"><i class="fa fa-object-ungroup"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-eye "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-edit "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon " data-toggle="modal " data-target="#removeSectionModal "><i class="fa fa-trash "></i></button>
+                                                </div>
+                                                <div class="edit-item-name-action " style="display: none; ">
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon save-edit-lecture-name "><i class="fa fa-check " aria-hidden="true "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon cancel-edit-lecture-name "><i class="fa fa-times " aria-hidden="true "></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="curriculum-lecture-item ">
+                                        <div class="curriculum-lecture-heading curriculum-wrapper ">
+                                            <div class="heading-action section-heading-action ">
+                                                <div class="increment-section ">
+                                                    <i class="fa fa-bars move-section "></i>Bài <span class="lec_no ">2</span>:</div>
+                                                <div class="editable-heading lecture-title " contenteditable="false " spellcheck="false "><span class="lecture-name ">Bai so 1</span><button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-pencil " aria-hidden="true "></i></button></div>
+                                                <div class="editable-heading section-title input-name " contenteditable="false " spellcheck="false " style="display: none; ">
+                                                    <input name="name " type="text " class="form-input " placeholder="Nhập tên chương học " />
+                                                </div>
+                                            </div>
+                                            <div class="section-action ">
+                                                <div class="edit-item-content-action ">
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon lecture-type"><i class="fa fa-youtube-play"></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-eye "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-edit "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon " data-toggle="modal " data-target="#removeSectionModal "><i class="fa fa-trash "></i></button>
+                                                </div>
+                                                <div class="edit-item-name-action " style="display: none; ">
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon save-edit-lecture-name "><i class="fa fa-check " aria-hidden="true "></i></button>
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon cancel-edit-lecture-name "><i class="fa fa-times " aria-hidden="true "></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="curriculum-lecture-item ">
+                                        <div class="curriculum-lecture-heading curriculum-wrapper ">
+                                            <div class="heading-action section-heading-action ">
+                                                <div class="increment-section ">
+                                                    <i class="fa fa-bars move-section "></i>Bài <span class="lec_no ">2</span>:</div>
+                                                <div class="editable-heading lecture-title " contenteditable="false " spellcheck="false "><span class="lecture-name ">Bai so 1</span><button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-pencil " aria-hidden="true "></i></button></div>
+                                                <div class="editable-heading section-title input-name " contenteditable="false " spellcheck="false " style="display: none; ">
+                                                    <input name="name " type="text " class="form-input " placeholder="Nhập tên chương học " />
+                                                </div>
+                                            </div>
+                                            <div class="section-action ">
+                                                <div class="edit-item-content-action ">
+                                                    <button class="curriculum-lecture-action curriculum-lecture-icon lecture-type"><i class="fa fa-question"></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-eye "></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon "><i class="fa fa-edit "></i></button>
                                                     <button class="curriculum-lecture-action curriculum-lecture-icon " data-toggle="modal " data-target="#removeSectionModal "><i class="fa fa-trash "></i></button>
@@ -1054,7 +1123,7 @@
             var page = new ManageCourse();
         });
 
-        $('.add-first-new-feedback').on('click', function() {
+        /*$('.add-first-new-feedback').on('click', function() {
             var parent = $(this).closest('.section-content');
             parent.find('#feedback-empty').hide();
             parent.find('#feedback-no-empty').show();
@@ -1069,7 +1138,7 @@
             $(this).toggleClass('unselect').toggleClass('select');
         });
 
-        /* Edit name section */
+
         $('.curriculum-lecture-action').on('click', function() {
             $(this).hide();
             var parent = $(this).closest('.curriculum-heading');
@@ -1102,7 +1171,7 @@
             parent.find('.section-name').text(parent.find('.form-input').val());
         });
 
-        /* Edit name lecture */
+
         $('.curriculum-lecture-action').on('click', function() {
             $(this).hide();
             var parent = $(this).closest('.curriculum-lecture-item');
@@ -1138,12 +1207,6 @@
         $('.skill-select').on('click', function() {
             var parent = $(this).closest('.skill-wrapper');
             parent.find('.skill-list').show();
-        });
-
-        /*$(document).on('mouseenter', '.course-image', function() {
-            $(this).find(":button ").show();
-        }).on('mouseleave', '.divbutton', function() {
-            $(this).find(":button ").hide();
         });*/
 
     </script>

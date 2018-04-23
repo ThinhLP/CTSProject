@@ -1153,12 +1153,16 @@ div.heading-action .editable-heading {
     margin-left: 0px;
 }
 
-.edit-item-content-action .curriculum-lecture-action:hover,
+.edit-item-content-action .curriculum-lecture-action:not(.lecture-type):hover,
 .edit-item-name-action .curriculum-lecture-action:hover {
     background: #dce1e3;
     border: 1px solid #dce1e3;
     -webkit-transition: .3s ease-out;
     transition: .3s ease-out;
+}
+
+.edit-item-content-action .curriculum-lecture-action.lecture-type {
+    cursor: default;
 }
 
 .choose-file {
