@@ -401,6 +401,19 @@ h5 {
     margin-top: 15px;
 }
 
+.course-info h4 {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.course-info h5 {
+    margin-top: 0px;
+    font-weight: 400;
+}
+
+.course-info h5 i {
+    margin-right: 5px;
+}
 
 .card-course p {
     font-size: 13px;
