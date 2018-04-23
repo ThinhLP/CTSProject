@@ -30,17 +30,15 @@
 
 .modal-body .content-detail,
 .modal-body .dropdown-select-form {
-    margin-bottom: 17px;
+    margin-bottom: 20px;
 }
 
 .dropdown-select-form {
     margin-left: 0px;
     float: left;
     border: 1px solid #dbdbdb;
-    line-height: 35px;
     border-radius: 5px;
-    height: 44px;
-    padding: 0px 15px;
+    padding: 10px 15px;
     cursor: pointer;
     width: 100%;
     position: relative;
@@ -51,7 +49,6 @@
 }
 
 .dropdown-select-form i {
-    line-height: 44px;
     float: right;
 }
 
@@ -61,8 +58,7 @@
 }
 
 .type-select {
-    top: 46px;
-    /*width: 160px;*/
+    top: 45px;
     width: 100%;
     background: #fff;
     position: absolute;
@@ -75,7 +71,7 @@
 }
 
 .type-select li {
-    padding: 0px 14px !important;
+    padding: 8px 14px !important;
     transition: none;
     font-size: 12px;
     color: #80848e;
