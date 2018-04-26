@@ -71,19 +71,15 @@ i {
     box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .04);
 }
 
+.plan-progress-wrapper ul li.plan-outdate {
+    border-left-color: #ababab;
+}
+
 .plan-progress-wrapper span.plan-name {
     font-size: 14px;
     font-weight: bolder!important;
     color: #20272d;
 }
-
-/*.plan-progress-wrapper ul li.view-more-plan {
-    border-left: 3px solid #90ee90;
-}
-
-.plan-progress-wrapper ul li.view-more-plan span.plan-name {
-    border-bottom: 1px solid #20272d;
-}*/
 
 .plan-progress-wrapper span.plan-progress {
     font-weight: 500;
@@ -346,14 +342,6 @@ table {
     font-size: 14px;
     border-top: 0;
     text-align: left;
-}
-
-.list-learner.not-finish-plan td.row-action {
-    text-align: right;
-}
-
-.list-learner.not-finish-plan td.row-action button {
-    padding: 6px 11px;
 }
 
 .table-header {
@@ -832,4 +820,22 @@ border-radius: .1875rem;*/
     height: 20px;
     line-height: 16px;
     top: 4px;
+}
+
+.plan-outdate-alert-container {
+    display: flex;
+    background-color: #fff3f3;
+    height: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ffafaf;
+    color: #d44d4d;
+    line-height: 50px;
+    padding-left: 20px;
+    font-weight: bolder;
+}
+
+.plan-outdate-alert-container i {
+    line-height: 50px;
 }
