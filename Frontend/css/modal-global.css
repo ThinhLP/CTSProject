@@ -141,3 +141,37 @@
 #createCourseModal .dropdown-select-form {
     margin-bottom: 30px;
 }
+
+/*-------------------------------------------------*/
+
+#learnerNotFinishModal .learner-wrapper {}
+
+#learnerNotFinishModal tr td:last-child {
+    text-align: right;
+}
+
+#learnerNotFinishModal .card-progress-wrapper {
+    margin-bottom: 0px;
+}
+
+#learnerNotFinishModal .card-progress-bar {
+    height: 15px;
+    border-radius: 10px;
+}
+
+#learnerNotFinishModal .completed-progress {
+    height: 15px;
+}
+
+#learnerNotFinishModal .view-detail {
+    background: #FFF;
+    padding: 5px 12px;
+    color: #2196F3;
+    border-radius: 20px;
+    border: 1px solid #2196F3;
+}
+
+#learnerNotFinishModal .view-detail:hover {
+    background: #e8f4fd;
+    transition: .25s;
+}
