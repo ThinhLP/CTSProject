@@ -822,20 +822,41 @@ border-radius: .1875rem;*/
     top: 4px;
 }
 
-.plan-outdate-alert-container {
+.plan-alert-container {
     display: flex;
-    background-color: #fff3f3;
     height: 50px;
     margin-bottom: 30px;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #ffafaf;
-    color: #d44d4d;
     line-height: 50px;
-    padding-left: 20px;
-    font-weight: bolder;
+    font-weight: 500;
 }
 
-.plan-outdate-alert-container i {
+.plan-alert-container.outdate-plan {
+    background-color: #fff3f3;
+    border: 1px solid #ffafaf;
+    color: #d44d4d;
+}
+
+.plan-alert-container.valid-plan {
+    background-color: #e8f4fd;
+    border: 1px solid #2196F3;
+    color: #2196F3;
+}
+
+.plan-alert-container div:first-child {
+    width: 130px;
+    border-right: 1px solid #ffafaf;
+    text-align: center;
     line-height: 50px;
+    font-weight: bolder;
+    margin-right: 20px;
+}
+
+.plan-alert-container.valid-plan div:first-child {
+    border-right: 1px solid #2196F3;
+}
+
+.plan-alert-container div:first-child i {
+    margin-right: 10px;
 }
