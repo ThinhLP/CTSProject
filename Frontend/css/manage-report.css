@@ -830,6 +830,11 @@ border-radius: .1875rem;*/
     border-radius: 5px;
     line-height: 50px;
     font-weight: 500;
+    padding-left: 20px;
+}
+
+.plan-alert-container i {
+    line-height: 50px;
 }
 
 .plan-alert-container.outdate-plan {
@@ -844,19 +849,6 @@ border-radius: .1875rem;*/
     color: #2196F3;
 }
 
-.plan-alert-container div:first-child {
-    width: 130px;
-    border-right: 1px solid #ffafaf;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bolder;
-    margin-right: 20px;
-}
-
-.plan-alert-container.valid-plan div:first-child {
-    border-right: 1px solid #2196F3;
-}
-
-.plan-alert-container div:first-child i {
-    margin-right: 10px;
+.plan-alert-container.valid-plan i {
+    font-size: 20px;
 }
