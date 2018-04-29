@@ -120,7 +120,7 @@ i {
 }
 
 .chart-container,
-.chart-container .empty-data {
+.chart-container {
     width: 100%;
     padding-bottom: 30px;
     display: flex;
@@ -129,16 +129,33 @@ i {
     position: relative;
 }
 
+.empty-data {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 272px;
+}
+
+.empty-data .empty-data-img {
+    background-image: url(/resources/images/icon_students.svg);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
 .chart-statistic {
     height: 200px;
 }
 
-.empty-data {
+/*.empty-data {
     width: 350px;
     height: 200px;
     padding-top: 30px;
     text-align: center;
-}
+}*/
 
 .chart-container .center-value {
     position: absolute;
