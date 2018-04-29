@@ -75,3 +75,49 @@
     white-space: nowrap;
     height: 19px;
 }
+
+.list-brand-user .table-header {
+    padding: 7px 0px;
+}
+
+.list-brand-user td.view-detail-row {
+    text-align: center;
+}
+
+.list-brand-user .image-brand {
+    background-image: url(/resources/images/brand1.jpg);
+    width: 100px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+.list-brand-user .add-user {
+    background: #FFF;
+    padding: 5px 12px;
+    color: #FF7F45;
+    border-radius: 20px;
+    border: 1px solid #FF7F45;
+}
+
+.list-brand-user .add-user:hover {
+    background: #fff2ec;
+    transition: .25s;
+}
+
+.list-brand-user .empty-container {
+    text-align: center;
+    padding: 150px 0px;
+}
+
+.list-brand-user .empty-container img {
+    width: 220px;
+    margin-bottom: 50px;
+}
+
+.list-brand-user .empty-container h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
