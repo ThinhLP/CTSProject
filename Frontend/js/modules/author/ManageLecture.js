@@ -196,7 +196,7 @@ function ManageLecture() {
         if (!isAbleToRemoveAnswer($wrapper)) {
             return;
         } 
-        
+
         var answerId = $(this).attr('value');
         var questionId = $wrapper.attr('value');
         
