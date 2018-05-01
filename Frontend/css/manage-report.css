@@ -95,8 +95,12 @@ i {
 
 .section-report-chart {
     padding: 0;
+}
+
+.section-report-chart.plan-detail-chart {
     height: auto;
     min-height: 100%;
+    margin-bottom: 0px;
 }
 
 .section-report-chart .chart-title {
